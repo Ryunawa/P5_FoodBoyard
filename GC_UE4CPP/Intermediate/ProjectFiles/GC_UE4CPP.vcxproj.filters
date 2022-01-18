@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <None Include="..\..\GC_UE4CPP.uproject" />
+    <Filter Include="Source">
+      <UniqueIdentifier>{B98A2449-02ED-4F15-A674-44A6BF9BF285}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\GC_UE4CPP.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\Source\GC_UE4CPPEditor.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <Filter Include="Config">
+      <UniqueIdentifier>{3A9F4AC1-679D-41E3-9C83-58A6AE3E1177}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\DefaultEditor.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEngine.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultGame.ini">
+      <Filter>Config</Filter>
+    </None>
+    <Filter Include="Source\GC_UE4CPP">
+      <UniqueIdentifier>{A7202A70-1F86-4B5A-A7BF-6C783F12A6C0}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\GC_UE4CPP\AI_Behaviour.cpp">
+      <Filter>Source\GC_UE4CPP</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\GC_UE4CPP\AI_Behaviour.h">
+      <Filter>Source\GC_UE4CPP</Filter>
+    </ClInclude>
+    <None Include="..\..\Source\GC_UE4CPP\GC_UE4CPP.Build.cs">
+      <Filter>Source\GC_UE4CPP</Filter>
+    </None>
+    <ClCompile Include="..\..\Source\GC_UE4CPP\GC_UE4CPP.cpp">
+      <Filter>Source\GC_UE4CPP</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\GC_UE4CPP\GC_UE4CPP.h">
+      <Filter>Source\GC_UE4CPP</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\GC_UE4CPP\GC_UE4CPPGameModeBase.cpp">
+      <Filter>Source\GC_UE4CPP</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\GC_UE4CPP\GC_UE4CPPGameModeBase.h">
+      <Filter>Source\GC_UE4CPP</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
