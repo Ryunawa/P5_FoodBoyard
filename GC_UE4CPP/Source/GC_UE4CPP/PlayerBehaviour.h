@@ -30,5 +30,6 @@ public:
 
     // Input variables
     FVector CurrentVelocity;
+    float Speed;
 
 };

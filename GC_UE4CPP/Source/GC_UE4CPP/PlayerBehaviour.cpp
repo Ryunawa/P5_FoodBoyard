@@ -5,6 +5,7 @@ APlayerBehaviour::APlayerBehaviour()
 {
     // Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
     PrimaryActorTick.bCanEverTick = true;
+    Speed = 400.0f;
 
 }
 
@@ -39,11 +40,11 @@ void APlayerBehaviour::SetupPlayerInputComponent(UInputComponent* PlayerInputCom
 
 void APlayerBehaviour::Move_XAxis(float AxisValue)
 {
-
+    CurrentVelocity.X = FMath::Clamp(AxisValue, -1.0f, 1.0f) * Speed;
 }
 
 
 void APlayerBehaviour::Move_YAxis(float AxisValue)
 {
-
+    CurrentVelocity.Y = FMath::Clamp(AxisValue, -1.0f, 1.0f) * Speed;
 }
