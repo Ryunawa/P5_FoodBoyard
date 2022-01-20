@@ -1,19 +1,22 @@
 #include "PlayerBehaviour.h"
-#include "HeadMountedDisplayFunctionLibrary.h"
 #include "Camera/CameraComponent.h"
 #include "Components/CapsuleComponent.h"
 #include "Components/InputComponent.h"
 #include "GameFramework/CharacterMovementComponent.h"
-#include "GameFramework/Controller.h"
 #include "GameFramework/SpringArmComponent.h"
+
+using namespace std;
 
 // Sets default values
 APlayerBehaviour::APlayerBehaviour()
 {
-    // Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
+    // Set this character to call Tick() every frame.
     PrimaryActorTick.bCanEverTick = true;
     Speed = 400.0f;
-
+	ZoomIndex = 1;
+	ZoomValues.Add(600);
+	ZoomValues.Add(1000);
+	ZoomValues.Add(1400);
 
 	// Set size for collision capsule
 	GetCapsuleComponent()->InitCapsuleSize(42.f, 96.0f);
@@ -22,7 +25,7 @@ APlayerBehaviour::APlayerBehaviour()
 	TurnRate = 45.f;
 	LookUpRate = 45.f;
 
-	// Don't rotate when the controller rotates. Let that just affect the camera.
+	// Don't rotate when the controller rotates.
 	bUseControllerRotationPitch = false;
 	bUseControllerRotationYaw = false;
 	bUseControllerRotationRoll = false;
@@ -32,14 +35,13 @@ APlayerBehaviour::APlayerBehaviour()
 	// Create a camera boom (pulls in towards the player if there is a collision)
 	CameraBoom = CreateDefaultSubobject<USpringArmComponent>(TEXT("CameraBoom"));
 	CameraBoom->SetupAttachment(RootComponent);
-	CameraBoom->TargetArmLength = 300.0f; // The camera follows at this distance behind the character	
+	CameraBoom->TargetArmLength = ZoomValues[ZoomIndex]; // Set the distance between the camera and the character	
 	CameraBoom->bUsePawnControlRotation = true;
 
 	// Create a follow camera
 	FollowCamera = CreateDefaultSubobject<UCameraComponent>(TEXT("FollowCamera"));
 	FollowCamera->SetupAttachment(CameraBoom, USpringArmComponent::SocketName);
 	FollowCamera->bUsePawnControlRotation = false;
-
 }
 
 
@@ -58,7 +60,6 @@ void APlayerBehaviour::LookUpAtRate(float Rate)
 void APlayerBehaviour::BeginPlay()
 {
     Super::BeginPlay();
-
 }
 
 // Called every frame
@@ -78,7 +79,7 @@ void APlayerBehaviour::SetupPlayerInputComponent(UInputComponent* PlayerInputCom
 {
     Super::SetupPlayerInputComponent(PlayerInputComponent);
 
-    // Respond every frame to the values of our two movement axes, "MoveX" and "MoveY".
+    // Respond every frame to the values of our two movement axes, MoveX and MoveY.
     InputComponent->BindAxis("MoveX", this, &APlayerBehaviour::Move_XAxis);
     InputComponent->BindAxis("MoveY", this, &APlayerBehaviour::Move_YAxis);
 
@@ -89,16 +90,38 @@ void APlayerBehaviour::SetupPlayerInputComponent(UInputComponent* PlayerInputCom
 	PlayerInputComponent->BindAxis("TurnRate", this, &APlayerBehaviour::TurnAtRate);
 	PlayerInputComponent->BindAxis("LookUpRate", this, &APlayerBehaviour::LookUpAtRate);
 	PlayerInputComponent->BindAxis("Turn", this, &APawn::AddControllerYawInput);
-	PlayerInputComponent->BindAxis("LookUp", this, &APawn::AddControllerPitchInput);
+	PlayerInputComponent->BindAxis("Zoom", this, &APlayerBehaviour::Zoom);
 }
 
-void APlayerBehaviour::Move_XAxis(float AxisValue)
+void APlayerBehaviour::Move_XAxis(float Rate)
 {
-    CurrentVelocity.X = FMath::Clamp(AxisValue, -1.0f, 1.0f) * Speed;
+    CurrentVelocity.X = FMath::Clamp(Rate, -1.0f, 1.0f) * Speed;
 }
 
-
-void APlayerBehaviour::Move_YAxis(float AxisValue)
+void APlayerBehaviour::Move_YAxis(float Rate)
 {
-    CurrentVelocity.Y = FMath::Clamp(AxisValue, -1.0f, 1.0f) * Speed;
+    CurrentVelocity.Y = FMath::Clamp(Rate, -1.0f, 1.0f) * Speed;
+}
+
+//Add 1 to the value of ZoomIndex
+void APlayerBehaviour::Zoom(float Rate)
+{
+	if(ZoomIndex < 2 && Rate < 0)
+	{
+		ZoomIndex++;
+		UE_LOG(LogTemp, Warning, TEXT("%d"), ZoomIndex);
+		SetCameraDistance(ZoomIndex);
+	}
+
+	if(ZoomIndex > 0 && Rate > 0)
+	{
+		ZoomIndex--;
+		UE_LOG(LogTemp, Warning, TEXT("%d"), ZoomIndex);
+		SetCameraDistance(ZoomIndex);
+	}
+}
+
+void APlayerBehaviour::SetCameraDistance(int Index)
+{
+	CameraBoom->TargetArmLength = ZoomValues[Index];
 }

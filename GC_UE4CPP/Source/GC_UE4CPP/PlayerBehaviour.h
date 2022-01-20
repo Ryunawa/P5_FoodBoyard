@@ -2,7 +2,10 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
+#include <iostream>
 #include "PlayerBehaviour.generated.h"
+
+using namespace std;
 
 UCLASS()
 class GC_UE4CPP_API APlayerBehaviour : public ACharacter
@@ -24,7 +27,6 @@ public:
     
     UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera)
     float TurnRate;
-
     
     UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera)
     float LookUpRate;
@@ -35,26 +37,26 @@ protected:
 
     virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
-
+    // Input methods
+    void Move_XAxis(float Rate);
+    void Move_YAxis(float Rate);
     void TurnAtRate(float Rate);
     void LookUpAtRate(float Rate);
+    void Zoom(float Rate);
+    void SetCameraDistance(int Index);
+    
+    // Input variables
+    FVector CurrentVelocity;
+    TArray<int> ZoomValues;
+    float Speed;
+    int ZoomIndex;
 
 public:
     // Called every frame
     virtual void Tick(float DeltaTime) override;
 
-
-    // Input functions
-    void Move_XAxis(float AxisValue); //ligne qui crée problème
-    void Move_YAxis(float AxisValue); //ligne qui crée problème
-
-    // Input variables
-    FVector CurrentVelocity;
-    float Speed;
-
     // Returns CameraBoom subobject 
     FORCEINLINE class USpringArmComponent* GetCameraBoom() const { return CameraBoom; }
     // Returns FollowCamera subobject
     FORCEINLINE class UCameraComponent* GetFollowCamera() const { return FollowCamera; }
-
 };
