@@ -25,25 +25,22 @@ public:
 
 	/** Base turn rate, in deg/sec. Other scaling may affect final turn rate. */
     UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera)
-        float BaseTurnRate;
+    float TurnRate;
 
     /** Base look up/down rate, in deg/sec. Other scaling may affect final rate. */
     UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera)
-        float BaseLookUpRate;
+    float LookUpRate;
 
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
-
-
-
-	
-	
-protected:
-	// APawn interface
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
-	// End of APawn interface
+
+	
+	void TurnAtRate(float Rate);
+	void LookUpAtRate(float Rate);
+
 
 public:	
 	// Called every frame
