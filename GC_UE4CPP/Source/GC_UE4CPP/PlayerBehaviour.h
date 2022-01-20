@@ -9,11 +9,11 @@ class GC_UE4CPP_API APlayerBehaviour : public ACharacter
 {
     GENERATED_BODY()
 
-    /** Camera boom positioning the camera behind the character */
+    // Camera boom positioning the camera behind the character 
     UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera, meta = (AllowPrivateAccess = "true"))
     class USpringArmComponent* CameraBoom;
 
-    /** Follow camera */
+    // Follow camera
     UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera, meta = (AllowPrivateAccess = "true"))
     class UCameraComponent* FollowCamera;
 
@@ -21,11 +21,11 @@ public:
     // Sets default values for this character's properties
     APlayerBehaviour();
 
-    /** Base turn rate, in deg/sec. Other scaling may affect final turn rate. */
+    
     UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera)
     float TurnRate;
 
-    /** Base look up/down rate, in deg/sec. Other scaling may affect final rate. */
+    
     UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera)
     float LookUpRate;
 
@@ -52,9 +52,9 @@ public:
     FVector CurrentVelocity;
     float Speed;
 
-    /** Returns CameraBoom subobject **/
+    // Returns CameraBoom subobject 
     FORCEINLINE class USpringArmComponent* GetCameraBoom() const { return CameraBoom; }
-    /** Returns FollowCamera subobject **/
+    // Returns FollowCamera subobject
     FORCEINLINE class UCameraComponent* GetFollowCamera() const { return FollowCamera; }
 
 };

@@ -1,4 +1,4 @@
-// Fill out your copyright notice in the Description page of Project Settings.
+
 
 
 #include "CameraCharacter.h"
@@ -7,9 +7,7 @@
 #include "GameFramework/CharacterMovementComponent.h"
 #include "Components/CapsuleComponent.h"
 
-//#include "GameFramework/Controller.h"
-//#include "Components/InputComponent.h"
-//#include "HeadMountedDisplayFunctionLibrary.h"
+
 
 // Sets default values
 ACameraCharacter::ACameraCharacter()
@@ -47,7 +45,7 @@ ACameraCharacter::ACameraCharacter()
 }
 
 
-
+//camera input
 void ACameraCharacter::SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent)
 {
 	check(PlayerInputComponent);

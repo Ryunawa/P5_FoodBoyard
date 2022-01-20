@@ -68,7 +68,7 @@ void EmptyLinkFunctionForGeneratedCodeCameraCharacter() {}
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ACameraCharacter_Statics::NewProp_CameraBoom_MetaData[] = {
 		{ "AllowPrivateAccess", "true" },
 		{ "Category", "Camera" },
-		{ "Comment", "/** Camera boom positioning the camera behind the character */" },
+		{ "Comment", "// Camera boom positioning the camera behind the character \n" },
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "CameraCharacter.h" },
 		{ "ToolTip", "Camera boom positioning the camera behind the character" },
@@ -79,7 +79,7 @@ void EmptyLinkFunctionForGeneratedCodeCameraCharacter() {}
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ACameraCharacter_Statics::NewProp_FollowCamera_MetaData[] = {
 		{ "AllowPrivateAccess", "true" },
 		{ "Category", "Camera" },
-		{ "Comment", "/** Follow camera */" },
+		{ "Comment", "// Follow camera \n" },
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "CameraCharacter.h" },
 		{ "ToolTip", "Follow camera" },
@@ -89,18 +89,14 @@ void EmptyLinkFunctionForGeneratedCodeCameraCharacter() {}
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ACameraCharacter_Statics::NewProp_TurnRate_MetaData[] = {
 		{ "Category", "Camera" },
-		{ "Comment", "/** Base turn rate, in deg/sec. Other scaling may affect final turn rate. */" },
 		{ "ModuleRelativePath", "CameraCharacter.h" },
-		{ "ToolTip", "Base turn rate, in deg/sec. Other scaling may affect final turn rate." },
 	};
 #endif
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ACameraCharacter_Statics::NewProp_TurnRate = { "TurnRate", nullptr, (EPropertyFlags)0x0010000000020015, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ACameraCharacter, TurnRate), METADATA_PARAMS(Z_Construct_UClass_ACameraCharacter_Statics::NewProp_TurnRate_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ACameraCharacter_Statics::NewProp_TurnRate_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ACameraCharacter_Statics::NewProp_LookUpRate_MetaData[] = {
 		{ "Category", "Camera" },
-		{ "Comment", "/** Base look up/down rate, in deg/sec. Other scaling may affect final rate. */" },
 		{ "ModuleRelativePath", "CameraCharacter.h" },
-		{ "ToolTip", "Base look up/down rate, in deg/sec. Other scaling may affect final rate." },
 	};
 #endif
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ACameraCharacter_Statics::NewProp_LookUpRate = { "LookUpRate", nullptr, (EPropertyFlags)0x0010000000020015, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ACameraCharacter, LookUpRate), METADATA_PARAMS(Z_Construct_UClass_ACameraCharacter_Statics::NewProp_LookUpRate_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ACameraCharacter_Statics::NewProp_LookUpRate_MetaData)) };
@@ -137,7 +133,7 @@ void EmptyLinkFunctionForGeneratedCodeCameraCharacter() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ACameraCharacter, 3954469880);
+	IMPLEMENT_CLASS(ACameraCharacter, 4218170573);
 	template<> GC_UE4CPP_API UClass* StaticClass<ACameraCharacter>()
 	{
 		return ACameraCharacter::StaticClass();
