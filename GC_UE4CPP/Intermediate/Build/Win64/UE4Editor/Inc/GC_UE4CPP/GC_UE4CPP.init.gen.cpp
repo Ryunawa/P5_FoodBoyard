@@ -21,8 +21,13 @@ void EmptyLinkFunctionForGeneratedCodeGC_UE4CPP_init() {}
 				nullptr,
 				0,
 				PKG_CompiledIn | 0x00000000,
+<<<<<<< HEAD
 				0x70B2E06D,
 				0xD99CBED7,
+=======
+				0x602DBEDC,
+				0xE14B6645,
+>>>>>>> origin/CaméraLény
 				METADATA_PARAMS(nullptr, 0)
 			};
 			UE4CodeGen_Private::ConstructUPackage(ReturnPackage, PackageParams);
