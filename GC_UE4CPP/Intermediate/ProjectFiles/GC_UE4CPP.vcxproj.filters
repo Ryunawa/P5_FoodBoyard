@@ -3,7 +3,11 @@
   <ItemGroup>
     <None Include="..\..\GC_UE4CPP.uproject" />
     <Filter Include="Source">
+<<<<<<< HEAD
+      <UniqueIdentifier>{9EF4C2A9-31D3-444E-AB79-062501977BF9}</UniqueIdentifier>
+=======
       <UniqueIdentifier>{6F8EBC82-D040-43EA-B092-D54EAE0CDB2D}</UniqueIdentifier>
+>>>>>>> origin/CaméraLény
     </Filter>
     <None Include="..\..\Source\GC_UE4CPP.Target.cs">
       <Filter>Source</Filter>
@@ -12,7 +16,11 @@
       <Filter>Source</Filter>
     </None>
     <Filter Include="Config">
+<<<<<<< HEAD
+      <UniqueIdentifier>{8C64E3EB-E32D-4F82-BB77-935BF2B61094}</UniqueIdentifier>
+=======
       <UniqueIdentifier>{AD851A50-9DC1-48D4-9FF7-B29E454A44D0}</UniqueIdentifier>
+>>>>>>> origin/CaméraLény
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -27,7 +35,11 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\GC_UE4CPP">
+<<<<<<< HEAD
+      <UniqueIdentifier>{B7A64AE5-C365-4792-A6B9-C95590ECAA42}</UniqueIdentifier>
+=======
       <UniqueIdentifier>{7D47E396-8678-49CF-AD4B-ED4E633A6366}</UniqueIdentifier>
+>>>>>>> origin/CaméraLény
     </Filter>
     <ClCompile Include="..\..\Source\GC_UE4CPP\CameraCharacter.cpp">
       <Filter>Source\GC_UE4CPP</Filter>
@@ -54,6 +66,12 @@
       <Filter>Source\GC_UE4CPP</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\GC_UE4CPP\PlayerBehaviour.h">
+      <Filter>Source\GC_UE4CPP</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\GC_UE4CPP\UI.cpp">
+      <Filter>Source\GC_UE4CPP</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\GC_UE4CPP\UI.h">
       <Filter>Source\GC_UE4CPP</Filter>
     </ClInclude>
   </ItemGroup>
