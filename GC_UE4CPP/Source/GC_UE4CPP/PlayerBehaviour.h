@@ -23,22 +23,26 @@ public:
 
     /** Base turn rate, in deg/sec. Other scaling may affect final turn rate. */
     UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera)
-        float BaseTurnRate;
+    float TurnRate;
 
     /** Base look up/down rate, in deg/sec. Other scaling may affect final rate. */
     UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera)
-        float BaseLookUpRate;
+    float LookUpRate;
 
 protected:
     // Called when the game starts or when spawned
     virtual void BeginPlay() override;
 
+    virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
+
+
+    void TurnAtRate(float Rate);
+    void LookUpAtRate(float Rate);
+
 public:
     // Called every frame
     virtual void Tick(float DeltaTime) override;
 
-    // Called to bind functionality to input
-    virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
     // Input functions
     void Move_XAxis(float AxisValue); //ligne qui crée problème
@@ -47,5 +51,10 @@ public:
     // Input variables
     FVector CurrentVelocity;
     float Speed;
+
+    /** Returns CameraBoom subobject **/
+    FORCEINLINE class USpringArmComponent* GetCameraBoom() const { return CameraBoom; }
+    /** Returns FollowCamera subobject **/
+    FORCEINLINE class UCameraComponent* GetFollowCamera() const { return FollowCamera; }
 
 };
