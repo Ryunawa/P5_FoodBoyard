@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\GC_UE4CPP.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{F916B4FA-331B-46FB-9FE1-665C63792B13}</UniqueIdentifier>
+      <UniqueIdentifier>{6F8EBC82-D040-43EA-B092-D54EAE0CDB2D}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\GC_UE4CPP.Target.cs">
       <Filter>Source</Filter>
@@ -12,7 +12,7 @@
       <Filter>Source</Filter>
     </None>
     <Filter Include="Config">
-      <UniqueIdentifier>{C07FB91C-5FDF-4143-9EF4-22DD123BEF7E}</UniqueIdentifier>
+      <UniqueIdentifier>{AD851A50-9DC1-48D4-9FF7-B29E454A44D0}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -27,8 +27,14 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\GC_UE4CPP">
-      <UniqueIdentifier>{BBD39D6F-6101-47F4-B166-A06A289F79E9}</UniqueIdentifier>
+      <UniqueIdentifier>{7D47E396-8678-49CF-AD4B-ED4E633A6366}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\GC_UE4CPP\CameraCharacter.cpp">
+      <Filter>Source\GC_UE4CPP</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\GC_UE4CPP\CameraCharacter.h">
+      <Filter>Source\GC_UE4CPP</Filter>
+    </ClInclude>
     <None Include="..\..\Source\GC_UE4CPP\GC_UE4CPP.Build.cs">
       <Filter>Source\GC_UE4CPP</Filter>
     </None>
