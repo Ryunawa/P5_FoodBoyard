@@ -26,10 +26,10 @@ public:
 
     
     UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera)
-    float TurnRate;
+    float TurnRate = 45.0f;
     
     UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera)
-    float LookUpRate;
+    float LookUpRate = 45.0f;
 
 protected:
     // Called when the game starts or when spawned
@@ -48,8 +48,8 @@ protected:
     // Input variables
     FVector CurrentVelocity;
     TArray<int> ZoomValues;
-    float Speed;
-    int ZoomIndex;
+    float Speed = 400.0f;
+    int ZoomIndex = 1;
 
 public:
     // Called every frame

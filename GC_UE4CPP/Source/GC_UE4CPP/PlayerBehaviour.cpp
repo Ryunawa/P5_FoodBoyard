@@ -5,26 +5,20 @@
 #include "GameFramework/CharacterMovementComponent.h"
 #include "GameFramework/SpringArmComponent.h"
 
-using namespace std;
 
 // Sets default values
 APlayerBehaviour::APlayerBehaviour()
 {
     // Set this character to call Tick() every frame.
     PrimaryActorTick.bCanEverTick = true;
-    Speed = 400.0f;
-	ZoomIndex = 1;
-	ZoomValues.Add(600);
+	ZoomValues.Add(400);
+	ZoomValues.Add(700);
 	ZoomValues.Add(1000);
 	ZoomValues.Add(1400);
 
 	// Set size for collision capsule
 	GetCapsuleComponent()->InitCapsuleSize(42.f, 96.0f);
-
-	// set our turn rates for input
-	TurnRate = 45.f;
-	LookUpRate = 45.f;
-
+	
 	// Don't rotate when the controller rotates.
 	bUseControllerRotationPitch = false;
 	bUseControllerRotationYaw = false;
@@ -45,22 +39,24 @@ APlayerBehaviour::APlayerBehaviour()
 }
 
 
-
 void APlayerBehaviour::TurnAtRate(float Rate)
 {
 	AddControllerYawInput(Rate * TurnRate * GetWorld()->GetDeltaSeconds());
 }
+
 
 void APlayerBehaviour::LookUpAtRate(float Rate)
 {
 	AddControllerPitchInput(Rate * LookUpRate * GetWorld()->GetDeltaSeconds());
 }
 
+
 // Called when the game starts or when spawned
 void APlayerBehaviour::BeginPlay()
 {
     Super::BeginPlay();
 }
+
 
 // Called every frame
 void APlayerBehaviour::Tick(float DeltaTime)
@@ -73,6 +69,7 @@ void APlayerBehaviour::Tick(float DeltaTime)
         SetActorLocation(NewLocation);
     }
 }
+
 
 // Called to bind functionality to input
 void APlayerBehaviour::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
@@ -93,6 +90,7 @@ void APlayerBehaviour::SetupPlayerInputComponent(UInputComponent* PlayerInputCom
 	PlayerInputComponent->BindAxis("Zoom", this, &APlayerBehaviour::Zoom);
 }
 
+
 void APlayerBehaviour::Move_XAxis(float Rate)
 {
     CurrentVelocity.X = FMath::Clamp(Rate, -1.0f, 1.0f) * Speed;
@@ -103,23 +101,25 @@ void APlayerBehaviour::Move_YAxis(float Rate)
     CurrentVelocity.Y = FMath::Clamp(Rate, -1.0f, 1.0f) * Speed;
 }
 
+
 //Add 1 to the value of ZoomIndex
 void APlayerBehaviour::Zoom(float Rate)
 {
-	if(ZoomIndex < 2 && Rate < 0)
+	if(ZoomIndex < 3 && Rate < 0)
 	{
 		ZoomIndex++;
-		UE_LOG(LogTemp, Warning, TEXT("%d"), ZoomIndex);
+		UE_LOG(LogTemp, Warning, TEXT("Niveau de zoom: %d"), ZoomIndex);
 		SetCameraDistance(ZoomIndex);
 	}
 
 	if(ZoomIndex > 0 && Rate > 0)
 	{
 		ZoomIndex--;
-		UE_LOG(LogTemp, Warning, TEXT("%d"), ZoomIndex);
+		UE_LOG(LogTemp, Warning, TEXT("Niveau de zoom: %d"), ZoomIndex);
 		SetCameraDistance(ZoomIndex);
 	}
 }
+
 
 void APlayerBehaviour::SetCameraDistance(int Index)
 {

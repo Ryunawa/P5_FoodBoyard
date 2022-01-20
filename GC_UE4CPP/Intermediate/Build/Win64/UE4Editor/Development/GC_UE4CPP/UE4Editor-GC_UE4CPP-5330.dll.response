@@ -74,7 +74,7 @@
 "setupapi.lib"
 "dwmapi.lib"
 "imm32.lib"
-/OUT:"C:\Users\robin\Documents\GitHub\P5_UE4\GC_UE4CPP\Binaries\Win64\UE4Editor-GC_UE4CPP-1725.dll"
-/IMPLIB:"C:\Users\robin\Documents\GitHub\P5_UE4\GC_UE4CPP\Intermediate\Build\Win64\UE4Editor\Development\GC_UE4CPP\UE4Editor-GC_UE4CPP-1725.suppressed.lib"
-/PDB:"C:\Users\robin\Documents\GitHub\P5_UE4\GC_UE4CPP\Binaries\Win64\UE4Editor-GC_UE4CPP-1725.pdb"
+/OUT:"C:\Users\robin\Documents\GitHub\P5_UE4\GC_UE4CPP\Binaries\Win64\UE4Editor-GC_UE4CPP-5330.dll"
+/IMPLIB:"C:\Users\robin\Documents\GitHub\P5_UE4\GC_UE4CPP\Intermediate\Build\Win64\UE4Editor\Development\GC_UE4CPP\UE4Editor-GC_UE4CPP-5330.suppressed.lib"
+/PDB:"C:\Users\robin\Documents\GitHub\P5_UE4\GC_UE4CPP\Binaries\Win64\UE4Editor-GC_UE4CPP-5330.pdb"
 /ignore:4078
