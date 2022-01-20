@@ -36,6 +36,9 @@ APlayerBehaviour::APlayerBehaviour()
 	FollowCamera = CreateDefaultSubobject<UCameraComponent>(TEXT("FollowCamera"));
 	FollowCamera->SetupAttachment(CameraBoom, USpringArmComponent::SocketName);
 	FollowCamera->bUsePawnControlRotation = false;
+
+	GetCharacterMovement()->bOrientRotationToMovement = true;
+	GetCharacterMovement()->RotationRate = FRotator(0, 540, 0);
 }
 
 
@@ -93,12 +96,13 @@ void APlayerBehaviour::SetupPlayerInputComponent(UInputComponent* PlayerInputCom
 
 void APlayerBehaviour::Move_XAxis(float Rate)
 {
-    CurrentVelocity.X = FMath::Clamp(Rate, -1.0f, 1.0f) * Speed;
+	
+	AddMovementInput(GetFollowCamera()->GetForwardVector(), Rate * Speed);
 }
 
 void APlayerBehaviour::Move_YAxis(float Rate)
 {
-    CurrentVelocity.Y = FMath::Clamp(Rate, -1.0f, 1.0f) * Speed;
+	AddMovementInput(GetFollowCamera()->GetRightVector(), Rate * Speed);
 }
 
 

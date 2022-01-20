@@ -6358,3 +6358,1102 @@ LogConfig: Setting CVar [[r.setres:1280x720]]
 [2022.01.20-21.13.51:498][696]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
 [2022.01.20-21.13.51:535][696]LogUObjectHash: Compacting FUObjectHashTables data took   3.43ms
 [2022.01.20-21.13.51:572][697]LogPlayLevel: Display: Destroying online subsystem :Context_25
+[2022.01.20-21.14.28:525][229]LogVSAccessor: Warning: Couldn't access Visual Studio
+[2022.01.20-21.14.28:530][229]Candidate modules for hot reload:
+[2022.01.20-21.14.28:530][229]  GC_UE4CPP
+[2022.01.20-21.14.28:530][229]Launching UnrealBuildTool... [E:/EpicGamesLibrary/UE_4.27/Engine/Binaries/DotNET/UnrealBuildTool.exe  -ModuleWithSuffix=GC_UE4CPP,9709 GC_UE4CPPEditor Win64 Development -Project="C:/Users/robin/Documents/GitHub/P5_UE4/GC_UE4CPP/GC_UE4CPP.uproject" "C:/Users/robin/Documents/GitHub/P5_UE4/GC_UE4CPP/GC_UE4CPP.uproject"  -IgnoreJunk]
+[2022.01.20-21.14.28:538][229]Warning: Starting HotReload took  0.0s.
+[2022.01.20-21.14.32:139][574]CompilerResultsLog: New page: Compilation - 20 janv. 2022 à 23:14:32
+[2022.01.20-21.14.32:139][574]CompilerResultsLog: Using 'git status' to determine working set for adaptive non-unity build (C:\Users\robin\Documents\GitHub\P5_UE4).
+[2022.01.20-21.14.32:139][574]CompilerResultsLog: Building GC_UE4CPPEditor...
+[2022.01.20-21.14.32:139][574]CompilerResultsLog: Using Visual Studio 2019 14.29.30139 toolchain (D:\Visual Studio\VC\Tools\MSVC\14.29.30133) and Windows 10.0.19041.0 SDK (C:\Program Files (x86)\Windows Kits\10).
+[2022.01.20-21.14.32:139][574]CompilerResultsLog: Building 4 actions with 16 processes...
+[2022.01.20-21.14.32:139][574]CompilerResultsLog:   [1/4] PlayerBehaviour.cpp
+[2022.01.20-21.14.32:139][574]CompilerResultsLog:   [2/4] UE4Editor-GC_UE4CPP-9709.lib
+[2022.01.20-21.14.32:139][574]CompilerResultsLog:      Cr?ation de la biblioth?que C:\Users\robin\Documents\GitHub\P5_UE4\GC_UE4CPP\Intermediate\Build\Win64\UE4Editor\Development\GC_UE4CPP\UE4Editor-GC_UE4CPP-9709.lib et de l'objet C:\Users\robin\Documents\GitHub\P5_UE4\GC_UE4CPP\Intermediate\Build\Win64\UE4Editor\Development\GC_UE4CPP\UE4Editor-GC_UE4CPP-9709.exp
+[2022.01.20-21.14.32:139][574]CompilerResultsLog:   [3/4] UE4Editor-GC_UE4CPP-9709.dll
+[2022.01.20-21.14.32:139][574]CompilerResultsLog:      Cr?ation de la biblioth?que C:\Users\robin\Documents\GitHub\P5_UE4\GC_UE4CPP\Intermediate\Build\Win64\UE4Editor\Development\GC_UE4CPP\UE4Editor-GC_UE4CPP-9709.suppressed.lib et de l'objet C:\Users\robin\Documents\GitHub\P5_UE4\GC_UE4CPP\Intermediate\Build\Win64\UE4Editor\Development\GC_UE4CPP\UE4Editor-GC_UE4CPP-9709.suppressed.exp
+[2022.01.20-21.14.32:139][574]CompilerResultsLog:   [4/4] GC_UE4CPPEditor.target
+[2022.01.20-21.14.32:139][574]CompilerResultsLog: Total time in Parallel executor: 2,66 seconds
+[2022.01.20-21.14.32:139][574]CompilerResultsLog: Total execution time: 3,48 seconds
+[2022.01.20-21.14.32:139][574]LogMainFrame: MainFrame: Module compiling took 3.613 seconds
+[2022.01.20-21.14.32:166][574]LogHotReload: Re-instancing PlayerBehaviour after hot-reload.
+[2022.01.20-21.14.32:204][574]LogNativeClassHierarchy: Verbose: Native class hierarchy updated for 'GC_UE4CPP' in 0.0003 seconds. Added 4 classes and 2 folders.
+[2022.01.20-21.14.32:211][574]Display: HotReload successful (0 functions remapped  0 scriptstructs remapped)
+[2022.01.20-21.14.32:281][574]LogNativeClassHierarchy: Verbose: Native class hierarchy populated in 0.0106 seconds. Added 3826 classes and 930 folders.
+[2022.01.20-21.14.32:281][574]Display: HotReload took  3.8s.
+[2022.01.20-21.14.33:000][611]LogTemp: Repeating last play command: Selected Viewport
+[2022.01.20-21.14.33:014][611]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2022.01.20-21.14.33:014][611]PIE: New page: PIE session: MapLény (20 janv. 2022 à 23:14:33)
+[2022.01.20-21.14.33:043][611]LogPlayLevel: Creating play world package: /Game/Leny_camera/Map/UEDPIE_0_MapLény
+[2022.01.20-21.14.33:045][611]LogPlayLevel: PIE: StaticDuplicateObject took: (0.002080s)
+[2022.01.20-21.14.33:046][611]LogAIModule: Creating AISystem for world MapLény
+[2022.01.20-21.14.33:046][611]LogPlayLevel: PIE: World Init took: (0.001264s)
+[2022.01.20-21.14.33:046][611]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Leny_camera/Map/MapLény.MapLény to /Game/Leny_camera/Map/UEDPIE_0_MapLény.MapLény (0.003536s)
+[2022.01.20-21.14.33:116][611]LogUObjectHash: Compacting FUObjectHashTables data took   4.52ms
+[2022.01.20-21.14.33:117][611]LogAudio: Display: Creating Audio Device:                 Id: 21, Scope: Unique, Realtime: True
+[2022.01.20-21.14.33:117][611]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2022.01.20-21.14.33:117][611]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2022.01.20-21.14.33:117][611]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2022.01.20-21.14.33:117][611]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2022.01.20-21.14.33:117][611]LogAudioMixer: Display: 	Number of buffers to queue:			  2
+[2022.01.20-21.14.33:117][611]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2022.01.20-21.14.33:117][611]LogAudioMixer: Display: 	Number of Async Source Workers:		  0
+[2022.01.20-21.14.33:117][611]LogAudio: Display: AudioDevice MaxSources: 32
+[2022.01.20-21.14.33:118][611]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2022.01.20-21.14.33:118][611]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2022.01.20-21.14.33:118][611]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2022.01.20-21.14.33:118][611]LogAudioMixer: Display: Initializing audio mixer.
+[2022.01.20-21.14.33:123][611]LogAudioMixer: Display: 0: FrontLeft
+[2022.01.20-21.14.33:124][611]LogAudioMixer: Display: 1: FrontRight
+[2022.01.20-21.14.33:133][611]LogAudioMixer: Display: Using Audio Device Casque pour téléphone (HyperX 7.1 Audio)
+[2022.01.20-21.14.33:133][611]LogAudioMixer: Display: Initializing Sound Submixes...
+[2022.01.20-21.14.33:133][611]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2022.01.20-21.14.33:133][611]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2022.01.20-21.14.33:134][611]LogAudioMixer: Display: Creating Master Submix 'MasterEQSubmixDefault'
+[2022.01.20-21.14.33:134][611]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called
+[2022.01.20-21.14.33:134][611]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048
+[2022.01.20-21.14.33:135][611]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal()
+[2022.01.20-21.14.33:135][611]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time
+[2022.01.20-21.14.33:135][611]LogInit: FAudioDevice initialized.
+[2022.01.20-21.14.33:135][611]LogAudio: Display: Audio Device (ID: 21) registered with world 'MapLény'.
+[2022.01.20-21.14.33:143][611]LogLoad: Game class is 'BP_GameMode_C'
+[2022.01.20-21.14.33:144][611]LogWorld: Bringing World /Game/Leny_camera/Map/UEDPIE_0_MapLény.MapLény up for play (max tick rate 0) at 2022.01.20-22.14.33
+[2022.01.20-21.14.33:144][611]LogWorld: Bringing up level for play took: 0.000549
+[2022.01.20-21.14.33:144][611]LogOnline: OSS: Creating online subsystem instance for: :Context_26
+[2022.01.20-21.14.33:146][611]PIE: Server logged in
+[2022.01.20-21.14.33:147][611]PIE: Play in editor total start time 0,139 seconds.
+[2022.01.20-21.14.41:168][529]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2022.01.20-21.14.41:168][529]LogWorld: BeginTearingDown for /Game/Leny_camera/Map/UEDPIE_0_MapLény
+[2022.01.20-21.14.41:168][529]LogWorld: UWorld::CleanupWorld for MapLény, bSessionEnded=true, bCleanupResources=true
+[2022.01.20-21.14.41:168][529]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2022.01.20-21.14.41:176][529]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2022.01.20-21.14.41:192][529]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2022.01.20-21.14.41:211][529]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2022.01.20-21.14.41:211][529]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called
+[2022.01.20-21.14.41:212][529]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called
+[2022.01.20-21.14.41:215][529]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2022.01.20-21.14.41:218][529]LogUObjectHash: Compacting FUObjectHashTables data took   2.99ms
+[2022.01.20-21.14.41:256][530]LogPlayLevel: Display: Destroying online subsystem :Context_26
+[2022.01.20-21.14.50:908][746]LogVSAccessor: Warning: Couldn't access Visual Studio
+[2022.01.20-21.14.50:913][746]Candidate modules for hot reload:
+[2022.01.20-21.14.50:913][746]  GC_UE4CPP
+[2022.01.20-21.14.50:913][746]Launching UnrealBuildTool... [E:/EpicGamesLibrary/UE_4.27/Engine/Binaries/DotNET/UnrealBuildTool.exe  -ModuleWithSuffix=GC_UE4CPP,2887 GC_UE4CPPEditor Win64 Development -Project="C:/Users/robin/Documents/GitHub/P5_UE4/GC_UE4CPP/GC_UE4CPP.uproject" "C:/Users/robin/Documents/GitHub/P5_UE4/GC_UE4CPP/GC_UE4CPP.uproject"  -IgnoreJunk]
+[2022.01.20-21.14.50:923][746]Warning: Starting HotReload took  0.0s.
+[2022.01.20-21.14.54:784][ 73]CompilerResultsLog: New page: Compilation - 20 janv. 2022 à 23:14:54
+[2022.01.20-21.14.54:784][ 73]CompilerResultsLog: Using 'git status' to determine working set for adaptive non-unity build (C:\Users\robin\Documents\GitHub\P5_UE4).
+[2022.01.20-21.14.54:784][ 73]CompilerResultsLog: Building GC_UE4CPPEditor...
+[2022.01.20-21.14.54:784][ 73]CompilerResultsLog: Using Visual Studio 2019 14.29.30139 toolchain (D:\Visual Studio\VC\Tools\MSVC\14.29.30133) and Windows 10.0.19041.0 SDK (C:\Program Files (x86)\Windows Kits\10).
+[2022.01.20-21.14.54:785][ 73]CompilerResultsLog: Building 4 actions with 16 processes...
+[2022.01.20-21.14.54:785][ 73]CompilerResultsLog:   [1/4] PlayerBehaviour.cpp
+[2022.01.20-21.14.54:785][ 73]CompilerResultsLog:   [2/4] UE4Editor-GC_UE4CPP-2887.lib
+[2022.01.20-21.14.54:785][ 73]CompilerResultsLog:      Cr?ation de la biblioth?que C:\Users\robin\Documents\GitHub\P5_UE4\GC_UE4CPP\Intermediate\Build\Win64\UE4Editor\Development\GC_UE4CPP\UE4Editor-GC_UE4CPP-2887.lib et de l'objet C:\Users\robin\Documents\GitHub\P5_UE4\GC_UE4CPP\Intermediate\Build\Win64\UE4Editor\Development\GC_UE4CPP\UE4Editor-GC_UE4CPP-2887.exp
+[2022.01.20-21.14.54:785][ 73]CompilerResultsLog:   [3/4] UE4Editor-GC_UE4CPP-2887.dll
+[2022.01.20-21.14.54:785][ 73]CompilerResultsLog:      Cr?ation de la biblioth?que C:\Users\robin\Documents\GitHub\P5_UE4\GC_UE4CPP\Intermediate\Build\Win64\UE4Editor\Development\GC_UE4CPP\UE4Editor-GC_UE4CPP-2887.suppressed.lib et de l'objet C:\Users\robin\Documents\GitHub\P5_UE4\GC_UE4CPP\Intermediate\Build\Win64\UE4Editor\Development\GC_UE4CPP\UE4Editor-GC_UE4CPP-2887.suppressed.exp
+[2022.01.20-21.14.54:785][ 73]CompilerResultsLog:   [4/4] GC_UE4CPPEditor.target
+[2022.01.20-21.14.54:785][ 73]CompilerResultsLog: Total time in Parallel executor: 2,70 seconds
+[2022.01.20-21.14.54:785][ 73]CompilerResultsLog: Total execution time: 3,70 seconds
+[2022.01.20-21.14.54:785][ 73]LogMainFrame: MainFrame: Module compiling took 3.876 seconds
+[2022.01.20-21.14.54:810][ 73]LogHotReload: Re-instancing PlayerBehaviour after hot-reload.
+[2022.01.20-21.14.54:848][ 73]LogNativeClassHierarchy: Verbose: Native class hierarchy updated for 'GC_UE4CPP' in 0.0003 seconds. Added 4 classes and 2 folders.
+[2022.01.20-21.14.54:855][ 73]Display: HotReload successful (0 functions remapped  0 scriptstructs remapped)
+[2022.01.20-21.14.54:925][ 73]LogNativeClassHierarchy: Verbose: Native class hierarchy populated in 0.0097 seconds. Added 3826 classes and 930 folders.
+[2022.01.20-21.14.54:925][ 73]Display: HotReload took  4.0s.
+[2022.01.20-21.14.55:956][140]LogTemp: Repeating last play command: Selected Viewport
+[2022.01.20-21.14.55:970][140]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2022.01.20-21.14.55:970][140]PIE: New page: PIE session: MapLény (20 janv. 2022 à 23:14:55)
+[2022.01.20-21.14.55:993][140]LogPlayLevel: Creating play world package: /Game/Leny_camera/Map/UEDPIE_0_MapLény
+[2022.01.20-21.14.55:995][140]LogPlayLevel: PIE: StaticDuplicateObject took: (0.002047s)
+[2022.01.20-21.14.55:996][140]LogAIModule: Creating AISystem for world MapLény
+[2022.01.20-21.14.55:996][140]LogPlayLevel: PIE: World Init took: (0.001207s)
+[2022.01.20-21.14.55:996][140]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Leny_camera/Map/MapLény.MapLény to /Game/Leny_camera/Map/UEDPIE_0_MapLény.MapLény (0.003423s)
+[2022.01.20-21.14.56:062][140]LogUObjectHash: Compacting FUObjectHashTables data took   4.28ms
+[2022.01.20-21.14.56:063][140]LogAudio: Display: Creating Audio Device:                 Id: 22, Scope: Unique, Realtime: True
+[2022.01.20-21.14.56:063][140]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2022.01.20-21.14.56:063][140]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2022.01.20-21.14.56:063][140]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2022.01.20-21.14.56:063][140]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2022.01.20-21.14.56:063][140]LogAudioMixer: Display: 	Number of buffers to queue:			  2
+[2022.01.20-21.14.56:063][140]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2022.01.20-21.14.56:063][140]LogAudioMixer: Display: 	Number of Async Source Workers:		  0
+[2022.01.20-21.14.56:063][140]LogAudio: Display: AudioDevice MaxSources: 32
+[2022.01.20-21.14.56:064][140]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2022.01.20-21.14.56:064][140]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2022.01.20-21.14.56:064][140]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2022.01.20-21.14.56:064][140]LogAudioMixer: Display: Initializing audio mixer.
+[2022.01.20-21.14.56:069][140]LogAudioMixer: Display: 0: FrontLeft
+[2022.01.20-21.14.56:070][140]LogAudioMixer: Display: 1: FrontRight
+[2022.01.20-21.14.56:079][140]LogAudioMixer: Display: Using Audio Device Casque pour téléphone (HyperX 7.1 Audio)
+[2022.01.20-21.14.56:079][140]LogAudioMixer: Display: Initializing Sound Submixes...
+[2022.01.20-21.14.56:079][140]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2022.01.20-21.14.56:079][140]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2022.01.20-21.14.56:080][140]LogAudioMixer: Display: Creating Master Submix 'MasterEQSubmixDefault'
+[2022.01.20-21.14.56:080][140]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called
+[2022.01.20-21.14.56:080][140]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048
+[2022.01.20-21.14.56:081][140]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal()
+[2022.01.20-21.14.56:081][140]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time
+[2022.01.20-21.14.56:081][140]LogInit: FAudioDevice initialized.
+[2022.01.20-21.14.56:081][140]LogAudio: Display: Audio Device (ID: 22) registered with world 'MapLény'.
+[2022.01.20-21.14.56:089][140]LogLoad: Game class is 'BP_GameMode_C'
+[2022.01.20-21.14.56:090][140]LogWorld: Bringing World /Game/Leny_camera/Map/UEDPIE_0_MapLény.MapLény up for play (max tick rate 0) at 2022.01.20-22.14.56
+[2022.01.20-21.14.56:090][140]LogWorld: Bringing up level for play took: 0.000506
+[2022.01.20-21.14.56:090][140]LogOnline: OSS: Creating online subsystem instance for: :Context_27
+[2022.01.20-21.14.56:093][140]PIE: Server logged in
+[2022.01.20-21.14.56:094][140]PIE: Play in editor total start time 0,128 seconds.
+[2022.01.20-21.14.59:310][508]LogTemp: Warning: Niveau de zoom: 2
+[2022.01.20-21.14.59:635][547]LogTemp: Warning: Niveau de zoom: 1
+[2022.01.20-21.14.59:743][560]LogTemp: Warning: Niveau de zoom: 0
+[2022.01.20-21.15.00:500][640]LogTemp: Warning: Niveau de zoom: 1
+[2022.01.20-21.15.00:591][651]LogTemp: Warning: Niveau de zoom: 2
+[2022.01.20-21.15.00:733][668]LogTemp: Warning: Niveau de zoom: 3
+[2022.01.20-21.15.05:578][245]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2022.01.20-21.15.05:578][245]LogWorld: BeginTearingDown for /Game/Leny_camera/Map/UEDPIE_0_MapLény
+[2022.01.20-21.15.05:578][245]LogWorld: UWorld::CleanupWorld for MapLény, bSessionEnded=true, bCleanupResources=true
+[2022.01.20-21.15.05:578][245]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2022.01.20-21.15.05:586][245]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2022.01.20-21.15.05:603][245]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2022.01.20-21.15.05:622][245]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2022.01.20-21.15.05:623][245]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called
+[2022.01.20-21.15.05:624][245]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called
+[2022.01.20-21.15.05:626][245]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2022.01.20-21.15.05:659][245]LogUObjectHash: Compacting FUObjectHashTables data took   3.31ms
+[2022.01.20-21.15.05:698][246]LogPlayLevel: Display: Destroying online subsystem :Context_27
+[2022.01.20-21.15.20:851][992]LogVSAccessor: Warning: Couldn't access Visual Studio
+[2022.01.20-21.15.20:854][992]Candidate modules for hot reload:
+[2022.01.20-21.15.20:854][992]  GC_UE4CPP
+[2022.01.20-21.15.20:854][992]Launching UnrealBuildTool... [E:/EpicGamesLibrary/UE_4.27/Engine/Binaries/DotNET/UnrealBuildTool.exe  -ModuleWithSuffix=GC_UE4CPP,6177 GC_UE4CPPEditor Win64 Development -Project="C:/Users/robin/Documents/GitHub/P5_UE4/GC_UE4CPP/GC_UE4CPP.uproject" "C:/Users/robin/Documents/GitHub/P5_UE4/GC_UE4CPP/GC_UE4CPP.uproject"  -IgnoreJunk]
+[2022.01.20-21.15.20:862][992]Warning: Starting HotReload took  0.0s.
+[2022.01.20-21.15.24:619][335]CompilerResultsLog: New page: Compilation - 20 janv. 2022 à 23:15:24
+[2022.01.20-21.15.24:619][335]CompilerResultsLog: Using 'git status' to determine working set for adaptive non-unity build (C:\Users\robin\Documents\GitHub\P5_UE4).
+[2022.01.20-21.15.24:619][335]CompilerResultsLog: Building GC_UE4CPPEditor...
+[2022.01.20-21.15.24:619][335]CompilerResultsLog: Using Visual Studio 2019 14.29.30139 toolchain (D:\Visual Studio\VC\Tools\MSVC\14.29.30133) and Windows 10.0.19041.0 SDK (C:\Program Files (x86)\Windows Kits\10).
+[2022.01.20-21.15.24:619][335]CompilerResultsLog: Building 4 actions with 16 processes...
+[2022.01.20-21.15.24:619][335]CompilerResultsLog:   [1/4] PlayerBehaviour.cpp
+[2022.01.20-21.15.24:619][335]CompilerResultsLog:   [2/4] UE4Editor-GC_UE4CPP-6177.lib
+[2022.01.20-21.15.24:619][335]CompilerResultsLog:      Cr?ation de la biblioth?que C:\Users\robin\Documents\GitHub\P5_UE4\GC_UE4CPP\Intermediate\Build\Win64\UE4Editor\Development\GC_UE4CPP\UE4Editor-GC_UE4CPP-6177.lib et de l'objet C:\Users\robin\Documents\GitHub\P5_UE4\GC_UE4CPP\Intermediate\Build\Win64\UE4Editor\Development\GC_UE4CPP\UE4Editor-GC_UE4CPP-6177.exp
+[2022.01.20-21.15.24:619][335]CompilerResultsLog:   [3/4] UE4Editor-GC_UE4CPP-6177.dll
+[2022.01.20-21.15.24:619][335]CompilerResultsLog:      Cr?ation de la biblioth?que C:\Users\robin\Documents\GitHub\P5_UE4\GC_UE4CPP\Intermediate\Build\Win64\UE4Editor\Development\GC_UE4CPP\UE4Editor-GC_UE4CPP-6177.suppressed.lib et de l'objet C:\Users\robin\Documents\GitHub\P5_UE4\GC_UE4CPP\Intermediate\Build\Win64\UE4Editor\Development\GC_UE4CPP\UE4Editor-GC_UE4CPP-6177.suppressed.exp
+[2022.01.20-21.15.24:619][335]CompilerResultsLog:   [4/4] GC_UE4CPPEditor.target
+[2022.01.20-21.15.24:619][335]CompilerResultsLog: Total time in Parallel executor: 2,84 seconds
+[2022.01.20-21.15.24:619][335]CompilerResultsLog: Total execution time: 3,64 seconds
+[2022.01.20-21.15.24:619][335]LogMainFrame: MainFrame: Module compiling took 3.769 seconds
+[2022.01.20-21.15.24:658][335]LogHotReload: Re-instancing PlayerBehaviour after hot-reload.
+[2022.01.20-21.15.24:701][335]LogNativeClassHierarchy: Verbose: Native class hierarchy updated for 'GC_UE4CPP' in 0.0003 seconds. Added 4 classes and 2 folders.
+[2022.01.20-21.15.24:709][335]Display: HotReload successful (0 functions remapped  0 scriptstructs remapped)
+[2022.01.20-21.15.24:785][335]LogNativeClassHierarchy: Verbose: Native class hierarchy populated in 0.0113 seconds. Added 3826 classes and 930 folders.
+[2022.01.20-21.15.24:785][335]Display: HotReload took  3.9s.
+[2022.01.20-21.15.25:491][375]LogTemp: Repeating last play command: Selected Viewport
+[2022.01.20-21.15.25:505][375]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2022.01.20-21.15.25:505][375]PIE: New page: PIE session: MapLény (20 janv. 2022 à 23:15:25)
+[2022.01.20-21.15.25:543][375]LogPlayLevel: Creating play world package: /Game/Leny_camera/Map/UEDPIE_0_MapLény
+[2022.01.20-21.15.25:545][375]LogPlayLevel: PIE: StaticDuplicateObject took: (0.002082s)
+[2022.01.20-21.15.25:546][375]LogAIModule: Creating AISystem for world MapLény
+[2022.01.20-21.15.25:546][375]LogPlayLevel: PIE: World Init took: (0.001171s)
+[2022.01.20-21.15.25:546][375]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Leny_camera/Map/MapLény.MapLény to /Game/Leny_camera/Map/UEDPIE_0_MapLény.MapLény (0.003493s)
+[2022.01.20-21.15.25:608][375]LogUObjectHash: Compacting FUObjectHashTables data took   4.31ms
+[2022.01.20-21.15.25:610][375]LogAudio: Display: Creating Audio Device:                 Id: 23, Scope: Unique, Realtime: True
+[2022.01.20-21.15.25:610][375]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2022.01.20-21.15.25:610][375]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2022.01.20-21.15.25:610][375]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2022.01.20-21.15.25:610][375]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2022.01.20-21.15.25:610][375]LogAudioMixer: Display: 	Number of buffers to queue:			  2
+[2022.01.20-21.15.25:610][375]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2022.01.20-21.15.25:610][375]LogAudioMixer: Display: 	Number of Async Source Workers:		  0
+[2022.01.20-21.15.25:610][375]LogAudio: Display: AudioDevice MaxSources: 32
+[2022.01.20-21.15.25:610][375]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2022.01.20-21.15.25:610][375]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2022.01.20-21.15.25:610][375]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2022.01.20-21.15.25:610][375]LogAudioMixer: Display: Initializing audio mixer.
+[2022.01.20-21.15.25:616][375]LogAudioMixer: Display: 0: FrontLeft
+[2022.01.20-21.15.25:616][375]LogAudioMixer: Display: 1: FrontRight
+[2022.01.20-21.15.25:626][375]LogAudioMixer: Display: Using Audio Device Casque pour téléphone (HyperX 7.1 Audio)
+[2022.01.20-21.15.25:626][375]LogAudioMixer: Display: Initializing Sound Submixes...
+[2022.01.20-21.15.25:626][375]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2022.01.20-21.15.25:626][375]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2022.01.20-21.15.25:626][375]LogAudioMixer: Display: Creating Master Submix 'MasterEQSubmixDefault'
+[2022.01.20-21.15.25:626][375]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called
+[2022.01.20-21.15.25:626][375]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048
+[2022.01.20-21.15.25:628][375]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal()
+[2022.01.20-21.15.25:628][375]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time
+[2022.01.20-21.15.25:628][375]LogInit: FAudioDevice initialized.
+[2022.01.20-21.15.25:628][375]LogAudio: Display: Audio Device (ID: 23) registered with world 'MapLény'.
+[2022.01.20-21.15.25:633][375]LogLoad: Game class is 'BP_GameMode_C'
+[2022.01.20-21.15.25:634][375]LogWorld: Bringing World /Game/Leny_camera/Map/UEDPIE_0_MapLény.MapLény up for play (max tick rate 0) at 2022.01.20-22.15.25
+[2022.01.20-21.15.25:634][375]LogWorld: Bringing up level for play took: 0.000507
+[2022.01.20-21.15.25:634][375]LogOnline: OSS: Creating online subsystem instance for: :Context_28
+[2022.01.20-21.15.25:637][375]PIE: Server logged in
+[2022.01.20-21.15.25:638][375]PIE: Play in editor total start time 0,138 seconds.
+[2022.01.20-21.15.29:988][867]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2022.01.20-21.15.29:988][867]LogWorld: BeginTearingDown for /Game/Leny_camera/Map/UEDPIE_0_MapLény
+[2022.01.20-21.15.29:988][867]LogWorld: UWorld::CleanupWorld for MapLény, bSessionEnded=true, bCleanupResources=true
+[2022.01.20-21.15.29:988][867]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2022.01.20-21.15.29:998][867]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2022.01.20-21.15.30:016][867]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2022.01.20-21.15.30:033][867]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2022.01.20-21.15.30:036][867]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called
+[2022.01.20-21.15.30:037][867]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called
+[2022.01.20-21.15.30:039][867]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2022.01.20-21.15.30:069][867]LogUObjectHash: Compacting FUObjectHashTables data took   3.00ms
+[2022.01.20-21.15.30:107][868]LogPlayLevel: Display: Destroying online subsystem :Context_28
+[2022.01.20-21.17.14:808][465]LogVSAccessor: Warning: Couldn't access Visual Studio
+[2022.01.20-21.17.14:812][465]Candidate modules for hot reload:
+[2022.01.20-21.17.14:812][465]  GC_UE4CPP
+[2022.01.20-21.17.14:812][465]Launching UnrealBuildTool... [E:/EpicGamesLibrary/UE_4.27/Engine/Binaries/DotNET/UnrealBuildTool.exe  -ModuleWithSuffix=GC_UE4CPP,1040 GC_UE4CPPEditor Win64 Development -Project="C:/Users/robin/Documents/GitHub/P5_UE4/GC_UE4CPP/GC_UE4CPP.uproject" "C:/Users/robin/Documents/GitHub/P5_UE4/GC_UE4CPP/GC_UE4CPP.uproject"  -IgnoreJunk]
+[2022.01.20-21.17.14:821][465]Warning: Starting HotReload took  0.0s.
+[2022.01.20-21.17.18:643][791]CompilerResultsLog: New page: Compilation - 20 janv. 2022 à 23:17:18
+[2022.01.20-21.17.18:643][791]CompilerResultsLog: Using 'git status' to determine working set for adaptive non-unity build (C:\Users\robin\Documents\GitHub\P5_UE4).
+[2022.01.20-21.17.18:643][791]CompilerResultsLog: Building GC_UE4CPPEditor...
+[2022.01.20-21.17.18:643][791]CompilerResultsLog: Using Visual Studio 2019 14.29.30139 toolchain (D:\Visual Studio\VC\Tools\MSVC\14.29.30133) and Windows 10.0.19041.0 SDK (C:\Program Files (x86)\Windows Kits\10).
+[2022.01.20-21.17.18:643][791]CompilerResultsLog: Building 4 actions with 16 processes...
+[2022.01.20-21.17.18:644][791]CompilerResultsLog:   [1/4] PlayerBehaviour.cpp
+[2022.01.20-21.17.18:644][791]CompilerResultsLog:   [2/4] UE4Editor-GC_UE4CPP-1040.lib
+[2022.01.20-21.17.18:644][791]CompilerResultsLog:      Cr?ation de la biblioth?que C:\Users\robin\Documents\GitHub\P5_UE4\GC_UE4CPP\Intermediate\Build\Win64\UE4Editor\Development\GC_UE4CPP\UE4Editor-GC_UE4CPP-1040.lib et de l'objet C:\Users\robin\Documents\GitHub\P5_UE4\GC_UE4CPP\Intermediate\Build\Win64\UE4Editor\Development\GC_UE4CPP\UE4Editor-GC_UE4CPP-1040.exp
+[2022.01.20-21.17.18:644][791]CompilerResultsLog:   [3/4] UE4Editor-GC_UE4CPP-1040.dll
+[2022.01.20-21.17.18:644][791]CompilerResultsLog:      Cr?ation de la biblioth?que C:\Users\robin\Documents\GitHub\P5_UE4\GC_UE4CPP\Intermediate\Build\Win64\UE4Editor\Development\GC_UE4CPP\UE4Editor-GC_UE4CPP-1040.suppressed.lib et de l'objet C:\Users\robin\Documents\GitHub\P5_UE4\GC_UE4CPP\Intermediate\Build\Win64\UE4Editor\Development\GC_UE4CPP\UE4Editor-GC_UE4CPP-1040.suppressed.exp
+[2022.01.20-21.17.18:644][791]CompilerResultsLog:   [4/4] GC_UE4CPPEditor.target
+[2022.01.20-21.17.18:644][791]CompilerResultsLog: Total time in Parallel executor: 2,71 seconds
+[2022.01.20-21.17.18:644][791]CompilerResultsLog: Total execution time: 3,71 seconds
+[2022.01.20-21.17.18:644][791]LogMainFrame: MainFrame: Module compiling took 3.835 seconds
+[2022.01.20-21.17.18:668][791]LogHotReload: Re-instancing PlayerBehaviour after hot-reload.
+[2022.01.20-21.17.18:710][791]LogNativeClassHierarchy: Verbose: Native class hierarchy updated for 'GC_UE4CPP' in 0.0003 seconds. Added 4 classes and 2 folders.
+[2022.01.20-21.17.18:716][791]Display: HotReload successful (0 functions remapped  0 scriptstructs remapped)
+[2022.01.20-21.17.18:788][791]LogNativeClassHierarchy: Verbose: Native class hierarchy populated in 0.0113 seconds. Added 3826 classes and 930 folders.
+[2022.01.20-21.17.18:789][791]Display: HotReload took  4.0s.
+[2022.01.20-21.17.20:373][936]LogTemp: Repeating last play command: Selected Viewport
+[2022.01.20-21.17.20:387][936]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2022.01.20-21.17.20:387][936]PIE: New page: PIE session: MapLény (20 janv. 2022 à 23:17:20)
+[2022.01.20-21.17.20:422][936]LogPlayLevel: Creating play world package: /Game/Leny_camera/Map/UEDPIE_0_MapLény
+[2022.01.20-21.17.20:424][936]LogPlayLevel: PIE: StaticDuplicateObject took: (0.002079s)
+[2022.01.20-21.17.20:425][936]LogAIModule: Creating AISystem for world MapLény
+[2022.01.20-21.17.20:425][936]LogPlayLevel: PIE: World Init took: (0.001254s)
+[2022.01.20-21.17.20:425][936]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Leny_camera/Map/MapLény.MapLény to /Game/Leny_camera/Map/UEDPIE_0_MapLény.MapLény (0.003527s)
+[2022.01.20-21.17.20:493][936]LogUObjectHash: Compacting FUObjectHashTables data took   4.38ms
+[2022.01.20-21.17.20:494][936]LogAudio: Display: Creating Audio Device:                 Id: 24, Scope: Unique, Realtime: True
+[2022.01.20-21.17.20:494][936]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2022.01.20-21.17.20:494][936]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2022.01.20-21.17.20:494][936]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2022.01.20-21.17.20:494][936]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2022.01.20-21.17.20:494][936]LogAudioMixer: Display: 	Number of buffers to queue:			  2
+[2022.01.20-21.17.20:494][936]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2022.01.20-21.17.20:494][936]LogAudioMixer: Display: 	Number of Async Source Workers:		  0
+[2022.01.20-21.17.20:494][936]LogAudio: Display: AudioDevice MaxSources: 32
+[2022.01.20-21.17.20:495][936]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2022.01.20-21.17.20:495][936]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2022.01.20-21.17.20:495][936]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2022.01.20-21.17.20:495][936]LogAudioMixer: Display: Initializing audio mixer.
+[2022.01.20-21.17.20:500][936]LogAudioMixer: Display: 0: FrontLeft
+[2022.01.20-21.17.20:500][936]LogAudioMixer: Display: 1: FrontRight
+[2022.01.20-21.17.20:510][936]LogAudioMixer: Display: Using Audio Device Casque pour téléphone (HyperX 7.1 Audio)
+[2022.01.20-21.17.20:510][936]LogAudioMixer: Display: Initializing Sound Submixes...
+[2022.01.20-21.17.20:510][936]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2022.01.20-21.17.20:510][936]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2022.01.20-21.17.20:511][936]LogAudioMixer: Display: Creating Master Submix 'MasterEQSubmixDefault'
+[2022.01.20-21.17.20:511][936]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called
+[2022.01.20-21.17.20:511][936]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048
+[2022.01.20-21.17.20:512][936]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal()
+[2022.01.20-21.17.20:512][936]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time
+[2022.01.20-21.17.20:512][936]LogInit: FAudioDevice initialized.
+[2022.01.20-21.17.20:512][936]LogAudio: Display: Audio Device (ID: 24) registered with world 'MapLény'.
+[2022.01.20-21.17.20:524][936]LogLoad: Game class is 'BP_GameMode_C'
+[2022.01.20-21.17.20:525][936]LogWorld: Bringing World /Game/Leny_camera/Map/UEDPIE_0_MapLény.MapLény up for play (max tick rate 0) at 2022.01.20-22.17.20
+[2022.01.20-21.17.20:525][936]LogWorld: Bringing up level for play took: 0.000539
+[2022.01.20-21.17.20:526][936]LogOnline: OSS: Creating online subsystem instance for: :Context_29
+[2022.01.20-21.17.20:528][936]PIE: Server logged in
+[2022.01.20-21.17.20:529][936]PIE: Play in editor total start time 0,147 seconds.
+[2022.01.20-21.17.31:447][216]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2022.01.20-21.17.31:447][216]LogWorld: BeginTearingDown for /Game/Leny_camera/Map/UEDPIE_0_MapLény
+[2022.01.20-21.17.31:448][216]LogWorld: UWorld::CleanupWorld for MapLény, bSessionEnded=true, bCleanupResources=true
+[2022.01.20-21.17.31:448][216]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2022.01.20-21.17.31:459][216]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2022.01.20-21.17.31:478][216]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2022.01.20-21.17.31:496][216]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2022.01.20-21.17.31:497][216]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called
+[2022.01.20-21.17.31:498][216]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called
+[2022.01.20-21.17.31:501][216]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2022.01.20-21.17.31:533][216]LogUObjectHash: Compacting FUObjectHashTables data took   3.41ms
+[2022.01.20-21.17.31:571][217]LogPlayLevel: Display: Destroying online subsystem :Context_29
+[2022.01.20-21.18.37:805][ 62]LogTemp: Repeating last play command: Selected Viewport
+[2022.01.20-21.18.37:818][ 62]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2022.01.20-21.18.37:818][ 62]PIE: New page: PIE session: MapLény (20 janv. 2022 à 23:18:37)
+[2022.01.20-21.18.37:819][ 62]LogPlayLevel: Creating play world package: /Game/Leny_camera/Map/UEDPIE_0_MapLény
+[2022.01.20-21.18.37:821][ 62]LogPlayLevel: PIE: StaticDuplicateObject took: (0.001914s)
+[2022.01.20-21.18.37:825][ 62]LogAIModule: Creating AISystem for world MapLény
+[2022.01.20-21.18.37:825][ 62]LogPlayLevel: PIE: World Init took: (0.004655s)
+[2022.01.20-21.18.37:825][ 62]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Leny_camera/Map/MapLény.MapLény to /Game/Leny_camera/Map/UEDPIE_0_MapLény.MapLény (0.006686s)
+[2022.01.20-21.18.37:848][ 62]LogUObjectHash: Compacting FUObjectHashTables data took   2.70ms
+[2022.01.20-21.18.37:855][ 62]LogAudio: Display: Creating Audio Device:                 Id: 25, Scope: Unique, Realtime: True
+[2022.01.20-21.18.37:855][ 62]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2022.01.20-21.18.37:855][ 62]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2022.01.20-21.18.37:855][ 62]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2022.01.20-21.18.37:855][ 62]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2022.01.20-21.18.37:855][ 62]LogAudioMixer: Display: 	Number of buffers to queue:			  2
+[2022.01.20-21.18.37:855][ 62]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2022.01.20-21.18.37:855][ 62]LogAudioMixer: Display: 	Number of Async Source Workers:		  0
+[2022.01.20-21.18.37:855][ 62]LogAudio: Display: AudioDevice MaxSources: 32
+[2022.01.20-21.18.37:856][ 62]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2022.01.20-21.18.37:856][ 62]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2022.01.20-21.18.37:856][ 62]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2022.01.20-21.18.37:856][ 62]LogAudioMixer: Display: Initializing audio mixer.
+[2022.01.20-21.18.37:862][ 62]LogAudioMixer: Display: 0: FrontLeft
+[2022.01.20-21.18.37:862][ 62]LogAudioMixer: Display: 1: FrontRight
+[2022.01.20-21.18.37:871][ 62]LogAudioMixer: Display: Using Audio Device Casque pour téléphone (HyperX 7.1 Audio)
+[2022.01.20-21.18.37:871][ 62]LogAudioMixer: Display: Initializing Sound Submixes...
+[2022.01.20-21.18.37:871][ 62]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2022.01.20-21.18.37:871][ 62]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2022.01.20-21.18.37:872][ 62]LogAudioMixer: Display: Creating Master Submix 'MasterEQSubmixDefault'
+[2022.01.20-21.18.37:872][ 62]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called
+[2022.01.20-21.18.37:872][ 62]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048
+[2022.01.20-21.18.37:873][ 62]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal()
+[2022.01.20-21.18.37:873][ 62]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time
+[2022.01.20-21.18.37:873][ 62]LogInit: FAudioDevice initialized.
+[2022.01.20-21.18.37:873][ 62]LogAudio: Display: Audio Device (ID: 25) registered with world 'MapLény'.
+[2022.01.20-21.18.37:933][ 62]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2022.01.20-21.18.37:934][ 62]LogLoad: Game class is 'BP_GameMode_C'
+[2022.01.20-21.18.37:935][ 62]LogWorld: Bringing World /Game/Leny_camera/Map/UEDPIE_0_MapLény.MapLény up for play (max tick rate 0) at 2022.01.20-22.18.37
+[2022.01.20-21.18.37:935][ 62]LogWorld: Bringing up level for play took: 0.000602
+[2022.01.20-21.18.37:935][ 62]LogOnline: OSS: Creating online subsystem instance for: :Context_31
+[2022.01.20-21.18.37:940][ 62]PIE: Server logged in
+[2022.01.20-21.18.37:940][ 62]PIE: Play in editor total start time 0,126 seconds.
+[2022.01.20-21.18.37:973][ 63]LogRenderer: Reallocating scene render targets to support 1340x808 Format 10 NumSamples 1 (Frame:1).
+[2022.01.20-21.18.39:246][199]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2022.01.20-21.18.39:246][199]LogWorld: BeginTearingDown for /Game/Leny_camera/Map/UEDPIE_0_MapLény
+[2022.01.20-21.18.39:247][199]LogSlate: Window 'GC_UE4CPP Preview [NetMode: Standalone]  (64-bit/Windows) ' being destroyed
+[2022.01.20-21.18.39:255][199]LogWorld: UWorld::CleanupWorld for MapLény, bSessionEnded=true, bCleanupResources=true
+[2022.01.20-21.18.39:255][199]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2022.01.20-21.18.39:265][199]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2022.01.20-21.18.39:283][199]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2022.01.20-21.18.39:302][199]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called
+[2022.01.20-21.18.39:304][199]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called
+[2022.01.20-21.18.39:310][199]LogUObjectHash: Compacting FUObjectHashTables data took   2.53ms
+[2022.01.20-21.18.39:330][200]LogPlayLevel: Display: Destroying online subsystem :Context_31
+[2022.01.20-21.18.40:798][359]LogVSAccessor: Warning: Couldn't access Visual Studio
+[2022.01.20-21.18.40:802][359]Candidate modules for hot reload:
+[2022.01.20-21.18.40:802][359]  GC_UE4CPP
+[2022.01.20-21.18.40:802][359]Launching UnrealBuildTool... [E:/EpicGamesLibrary/UE_4.27/Engine/Binaries/DotNET/UnrealBuildTool.exe  -ModuleWithSuffix=GC_UE4CPP,6577 GC_UE4CPPEditor Win64 Development -Project="C:/Users/robin/Documents/GitHub/P5_UE4/GC_UE4CPP/GC_UE4CPP.uproject" "C:/Users/robin/Documents/GitHub/P5_UE4/GC_UE4CPP/GC_UE4CPP.uproject"  -IgnoreJunk]
+[2022.01.20-21.18.40:810][359]Warning: Starting HotReload took  0.0s.
+[2022.01.20-21.18.42:965][520]CompilerResultsLog: New page: Compilation - 20 janv. 2022 à 23:18:42
+[2022.01.20-21.18.42:965][520]CompilerResultsLog: Using 'git status' to determine working set for adaptive non-unity build (C:\Users\robin\Documents\GitHub\P5_UE4).
+[2022.01.20-21.18.42:965][520]CompilerResultsLog: Building GC_UE4CPPEditor...
+[2022.01.20-21.18.42:965][520]CompilerResultsLog: Using Visual Studio 2019 14.29.30139 toolchain (D:\Visual Studio\VC\Tools\MSVC\14.29.30133) and Windows 10.0.19041.0 SDK (C:\Program Files (x86)\Windows Kits\10).
+[2022.01.20-21.18.42:965][520]CompilerResultsLog: Building 3 actions with 16 processes...
+[2022.01.20-21.18.42:965][520]CompilerResultsLog:   [1/3] UE4Editor-GC_UE4CPP-6577.lib
+[2022.01.20-21.18.42:965][520]CompilerResultsLog:      Cr?ation de la biblioth?que C:\Users\robin\Documents\GitHub\P5_UE4\GC_UE4CPP\Intermediate\Build\Win64\UE4Editor\Development\GC_UE4CPP\UE4Editor-GC_UE4CPP-6577.lib et de l'objet C:\Users\robin\Documents\GitHub\P5_UE4\GC_UE4CPP\Intermediate\Build\Win64\UE4Editor\Development\GC_UE4CPP\UE4Editor-GC_UE4CPP-6577.exp
+[2022.01.20-21.18.42:965][520]CompilerResultsLog:   [2/3] UE4Editor-GC_UE4CPP-6577.dll
+[2022.01.20-21.18.42:965][520]CompilerResultsLog:      Cr?ation de la biblioth?que C:\Users\robin\Documents\GitHub\P5_UE4\GC_UE4CPP\Intermediate\Build\Win64\UE4Editor\Development\GC_UE4CPP\UE4Editor-GC_UE4CPP-6577.suppressed.lib et de l'objet C:\Users\robin\Documents\GitHub\P5_UE4\GC_UE4CPP\Intermediate\Build\Win64\UE4Editor\Development\GC_UE4CPP\UE4Editor-GC_UE4CPP-6577.suppressed.exp
+[2022.01.20-21.18.42:965][520]CompilerResultsLog:   [3/3] GC_UE4CPPEditor.target
+[2022.01.20-21.18.42:965][520]CompilerResultsLog: Total time in Parallel executor: 1,21 seconds
+[2022.01.20-21.18.42:965][520]CompilerResultsLog: Total execution time: 2,05 seconds
+[2022.01.20-21.18.42:965][520]LogMainFrame: MainFrame: Module compiling took 2.167 seconds
+[2022.01.20-21.18.42:991][520]LogNativeClassHierarchy: Verbose: Native class hierarchy updated for 'GC_UE4CPP' in 0.0003 seconds. Added 4 classes and 2 folders.
+[2022.01.20-21.18.42:999][520]Display: HotReload successful (0 functions remapped  0 scriptstructs remapped)
+[2022.01.20-21.18.43:071][520]LogNativeClassHierarchy: Verbose: Native class hierarchy populated in 0.0103 seconds. Added 3826 classes and 930 folders.
+[2022.01.20-21.18.43:071][520]Display: HotReload took  2.3s.
+[2022.01.20-21.18.43:794][563]LogTemp: Repeating last play command: Selected Viewport
+[2022.01.20-21.18.43:808][563]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2022.01.20-21.18.43:808][563]PIE: New page: PIE session: MapLény (20 janv. 2022 à 23:18:43)
+[2022.01.20-21.18.43:832][563]LogPlayLevel: Creating play world package: /Game/Leny_camera/Map/UEDPIE_0_MapLény
+[2022.01.20-21.18.43:834][563]LogPlayLevel: PIE: StaticDuplicateObject took: (0.002460s)
+[2022.01.20-21.18.43:835][563]LogAIModule: Creating AISystem for world MapLény
+[2022.01.20-21.18.43:836][563]LogPlayLevel: PIE: World Init took: (0.001368s)
+[2022.01.20-21.18.43:836][563]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Leny_camera/Map/MapLény.MapLény to /Game/Leny_camera/Map/UEDPIE_0_MapLény.MapLény (0.004048s)
+[2022.01.20-21.18.43:900][563]LogUObjectHash: Compacting FUObjectHashTables data took   4.27ms
+[2022.01.20-21.18.43:903][563]LogAudio: Display: Creating Audio Device:                 Id: 26, Scope: Unique, Realtime: True
+[2022.01.20-21.18.43:903][563]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2022.01.20-21.18.43:903][563]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2022.01.20-21.18.43:903][563]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2022.01.20-21.18.43:903][563]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2022.01.20-21.18.43:903][563]LogAudioMixer: Display: 	Number of buffers to queue:			  2
+[2022.01.20-21.18.43:903][563]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2022.01.20-21.18.43:903][563]LogAudioMixer: Display: 	Number of Async Source Workers:		  0
+[2022.01.20-21.18.43:903][563]LogAudio: Display: AudioDevice MaxSources: 32
+[2022.01.20-21.18.43:903][563]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2022.01.20-21.18.43:903][563]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2022.01.20-21.18.43:903][563]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2022.01.20-21.18.43:903][563]LogAudioMixer: Display: Initializing audio mixer.
+[2022.01.20-21.18.43:910][563]LogAudioMixer: Display: 0: FrontLeft
+[2022.01.20-21.18.43:910][563]LogAudioMixer: Display: 1: FrontRight
+[2022.01.20-21.18.43:919][563]LogAudioMixer: Display: Using Audio Device Casque pour téléphone (HyperX 7.1 Audio)
+[2022.01.20-21.18.43:919][563]LogAudioMixer: Display: Initializing Sound Submixes...
+[2022.01.20-21.18.43:919][563]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2022.01.20-21.18.43:919][563]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2022.01.20-21.18.43:920][563]LogAudioMixer: Display: Creating Master Submix 'MasterEQSubmixDefault'
+[2022.01.20-21.18.43:920][563]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called
+[2022.01.20-21.18.43:920][563]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048
+[2022.01.20-21.18.43:921][563]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal()
+[2022.01.20-21.18.43:921][563]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time
+[2022.01.20-21.18.43:922][563]LogInit: FAudioDevice initialized.
+[2022.01.20-21.18.43:922][563]LogAudio: Display: Audio Device (ID: 26) registered with world 'MapLény'.
+[2022.01.20-21.18.43:930][563]LogLoad: Game class is 'BP_GameMode_C'
+[2022.01.20-21.18.43:932][563]LogWorld: Bringing World /Game/Leny_camera/Map/UEDPIE_0_MapLény.MapLény up for play (max tick rate 0) at 2022.01.20-22.18.43
+[2022.01.20-21.18.43:932][563]LogWorld: Bringing up level for play took: 0.000638
+[2022.01.20-21.18.43:932][563]LogOnline: OSS: Creating online subsystem instance for: :Context_32
+[2022.01.20-21.18.43:935][563]PIE: Server logged in
+[2022.01.20-21.18.43:936][563]PIE: Play in editor total start time 0,134 seconds.
+[2022.01.20-21.19.08:296][448]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2022.01.20-21.19.08:296][448]LogWorld: BeginTearingDown for /Game/Leny_camera/Map/UEDPIE_0_MapLény
+[2022.01.20-21.19.08:296][448]LogWorld: UWorld::CleanupWorld for MapLény, bSessionEnded=true, bCleanupResources=true
+[2022.01.20-21.19.08:297][448]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2022.01.20-21.19.08:304][448]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2022.01.20-21.19.08:322][448]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2022.01.20-21.19.08:341][448]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2022.01.20-21.19.08:342][448]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called
+[2022.01.20-21.19.08:344][448]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called
+[2022.01.20-21.19.08:346][448]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2022.01.20-21.19.08:378][448]LogUObjectHash: Compacting FUObjectHashTables data took   3.46ms
+[2022.01.20-21.19.08:417][449]LogPlayLevel: Display: Destroying online subsystem :Context_32
+[2022.01.20-21.21.49:578][924]LogVSAccessor: Warning: Couldn't access Visual Studio
+[2022.01.20-21.21.49:679][924]Candidate modules for hot reload:
+[2022.01.20-21.21.49:679][924]  GC_UE4CPP
+[2022.01.20-21.21.49:679][924]Launching UnrealBuildTool... [E:/EpicGamesLibrary/UE_4.27/Engine/Binaries/DotNET/UnrealBuildTool.exe  -ModuleWithSuffix=GC_UE4CPP,5529 GC_UE4CPPEditor Win64 Development -Project="C:/Users/robin/Documents/GitHub/P5_UE4/GC_UE4CPP/GC_UE4CPP.uproject" "C:/Users/robin/Documents/GitHub/P5_UE4/GC_UE4CPP/GC_UE4CPP.uproject"  -IgnoreJunk]
+[2022.01.20-21.21.49:687][924]Warning: Starting HotReload took  0.1s.
+[2022.01.20-21.21.53:545][338]CompilerResultsLog: New page: Compilation - 20 janv. 2022 à 23:21:53
+[2022.01.20-21.21.53:545][338]CompilerResultsLog: Using 'git status' to determine working set for adaptive non-unity build (C:\Users\robin\Documents\GitHub\P5_UE4).
+[2022.01.20-21.21.53:545][338]CompilerResultsLog: Building GC_UE4CPPEditor...
+[2022.01.20-21.21.53:546][338]CompilerResultsLog: Using Visual Studio 2019 14.29.30139 toolchain (D:\Visual Studio\VC\Tools\MSVC\14.29.30133) and Windows 10.0.19041.0 SDK (C:\Program Files (x86)\Windows Kits\10).
+[2022.01.20-21.21.53:546][338]CompilerResultsLog: Building 4 actions with 16 processes...
+[2022.01.20-21.21.53:546][338]CompilerResultsLog:   [1/4] PlayerBehaviour.cpp
+[2022.01.20-21.21.53:546][338]CompilerResultsLog:   [2/4] UE4Editor-GC_UE4CPP-5529.lib
+[2022.01.20-21.21.53:546][338]CompilerResultsLog:      Cr?ation de la biblioth?que C:\Users\robin\Documents\GitHub\P5_UE4\GC_UE4CPP\Intermediate\Build\Win64\UE4Editor\Development\GC_UE4CPP\UE4Editor-GC_UE4CPP-5529.lib et de l'objet C:\Users\robin\Documents\GitHub\P5_UE4\GC_UE4CPP\Intermediate\Build\Win64\UE4Editor\Development\GC_UE4CPP\UE4Editor-GC_UE4CPP-5529.exp
+[2022.01.20-21.21.53:546][338]CompilerResultsLog:   [3/4] UE4Editor-GC_UE4CPP-5529.dll
+[2022.01.20-21.21.53:546][338]CompilerResultsLog:      Cr?ation de la biblioth?que C:\Users\robin\Documents\GitHub\P5_UE4\GC_UE4CPP\Intermediate\Build\Win64\UE4Editor\Development\GC_UE4CPP\UE4Editor-GC_UE4CPP-5529.suppressed.lib et de l'objet C:\Users\robin\Documents\GitHub\P5_UE4\GC_UE4CPP\Intermediate\Build\Win64\UE4Editor\Development\GC_UE4CPP\UE4Editor-GC_UE4CPP-5529.suppressed.exp
+[2022.01.20-21.21.53:546][338]CompilerResultsLog:   [4/4] GC_UE4CPPEditor.target
+[2022.01.20-21.21.53:546][338]CompilerResultsLog: Total time in Parallel executor: 2,93 seconds
+[2022.01.20-21.21.53:546][338]CompilerResultsLog: Total execution time: 3,75 seconds
+[2022.01.20-21.21.53:546][338]LogMainFrame: MainFrame: Module compiling took 3.967 seconds
+[2022.01.20-21.21.53:573][338]LogHotReload: Re-instancing PlayerBehaviour after hot-reload.
+[2022.01.20-21.21.53:622][338]LogNativeClassHierarchy: Verbose: Native class hierarchy updated for 'GC_UE4CPP' in 0.0003 seconds. Added 4 classes and 2 folders.
+[2022.01.20-21.21.53:628][338]Display: HotReload successful (0 functions remapped  0 scriptstructs remapped)
+[2022.01.20-21.21.53:697][338]LogNativeClassHierarchy: Verbose: Native class hierarchy populated in 0.0098 seconds. Added 3826 classes and 930 folders.
+[2022.01.20-21.21.53:697][338]Display: HotReload took  4.1s.
+[2022.01.20-21.21.57:224][678]LogTemp: Repeating last play command: Selected Viewport
+[2022.01.20-21.21.57:238][678]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2022.01.20-21.21.57:238][678]PIE: New page: PIE session: MapLény (20 janv. 2022 à 23:21:57)
+[2022.01.20-21.21.57:238][678]LogPlayLevel: Creating play world package: /Game/Leny_camera/Map/UEDPIE_0_MapLény
+[2022.01.20-21.21.57:240][678]LogPlayLevel: PIE: StaticDuplicateObject took: (0.002200s)
+[2022.01.20-21.21.57:241][678]LogAIModule: Creating AISystem for world MapLény
+[2022.01.20-21.21.57:241][678]LogPlayLevel: PIE: World Init took: (0.001068s)
+[2022.01.20-21.21.57:241][678]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Leny_camera/Map/MapLény.MapLény to /Game/Leny_camera/Map/UEDPIE_0_MapLény.MapLény (0.003415s)
+[2022.01.20-21.21.57:332][678]LogUObjectHash: Compacting FUObjectHashTables data took   4.54ms
+[2022.01.20-21.21.57:333][678]LogAudio: Display: Creating Audio Device:                 Id: 27, Scope: Unique, Realtime: True
+[2022.01.20-21.21.57:333][678]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2022.01.20-21.21.57:333][678]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2022.01.20-21.21.57:333][678]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2022.01.20-21.21.57:333][678]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2022.01.20-21.21.57:333][678]LogAudioMixer: Display: 	Number of buffers to queue:			  2
+[2022.01.20-21.21.57:333][678]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2022.01.20-21.21.57:333][678]LogAudioMixer: Display: 	Number of Async Source Workers:		  0
+[2022.01.20-21.21.57:333][678]LogAudio: Display: AudioDevice MaxSources: 32
+[2022.01.20-21.21.57:333][678]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2022.01.20-21.21.57:333][678]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2022.01.20-21.21.57:333][678]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2022.01.20-21.21.57:333][678]LogAudioMixer: Display: Initializing audio mixer.
+[2022.01.20-21.21.57:339][678]LogAudioMixer: Display: 0: FrontLeft
+[2022.01.20-21.21.57:339][678]LogAudioMixer: Display: 1: FrontRight
+[2022.01.20-21.21.57:349][678]LogAudioMixer: Display: Using Audio Device Casque pour téléphone (HyperX 7.1 Audio)
+[2022.01.20-21.21.57:349][678]LogAudioMixer: Display: Initializing Sound Submixes...
+[2022.01.20-21.21.57:349][678]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2022.01.20-21.21.57:349][678]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2022.01.20-21.21.57:350][678]LogAudioMixer: Display: Creating Master Submix 'MasterEQSubmixDefault'
+[2022.01.20-21.21.57:350][678]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called
+[2022.01.20-21.21.57:350][678]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048
+[2022.01.20-21.21.57:352][678]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal()
+[2022.01.20-21.21.57:352][678]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time
+[2022.01.20-21.21.57:352][678]LogInit: FAudioDevice initialized.
+[2022.01.20-21.21.57:352][678]LogAudio: Display: Audio Device (ID: 27) registered with world 'MapLény'.
+[2022.01.20-21.21.57:360][678]LogLoad: Game class is 'BP_GameMode_C'
+[2022.01.20-21.21.57:361][678]LogWorld: Bringing World /Game/Leny_camera/Map/UEDPIE_0_MapLény.MapLény up for play (max tick rate 0) at 2022.01.20-22.21.57
+[2022.01.20-21.21.57:362][678]LogWorld: Bringing up level for play took: 0.000684
+[2022.01.20-21.21.57:362][678]LogOnline: OSS: Creating online subsystem instance for: :Context_33
+[2022.01.20-21.21.57:365][678]PIE: Server logged in
+[2022.01.20-21.21.57:366][678]PIE: Play in editor total start time 0,133 seconds.
+[2022.01.20-21.22.07:965][908]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2022.01.20-21.22.07:965][908]LogWorld: BeginTearingDown for /Game/Leny_camera/Map/UEDPIE_0_MapLény
+[2022.01.20-21.22.07:965][908]LogWorld: UWorld::CleanupWorld for MapLény, bSessionEnded=true, bCleanupResources=true
+[2022.01.20-21.22.07:966][908]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2022.01.20-21.22.07:971][908]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2022.01.20-21.22.07:988][908]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2022.01.20-21.22.08:007][908]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2022.01.20-21.22.08:007][908]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called
+[2022.01.20-21.22.08:008][908]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called
+[2022.01.20-21.22.08:011][908]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2022.01.20-21.22.08:015][908]LogUObjectHash: Compacting FUObjectHashTables data took   3.37ms
+[2022.01.20-21.22.08:048][909]LogPlayLevel: Display: Destroying online subsystem :Context_33
+[2022.01.20-21.23.08:529][288]LogVSAccessor: Warning: Couldn't access Visual Studio
+[2022.01.20-21.23.08:533][288]Candidate modules for hot reload:
+[2022.01.20-21.23.08:533][288]  GC_UE4CPP
+[2022.01.20-21.23.08:533][288]Launching UnrealBuildTool... [E:/EpicGamesLibrary/UE_4.27/Engine/Binaries/DotNET/UnrealBuildTool.exe  -ModuleWithSuffix=GC_UE4CPP,1282 GC_UE4CPPEditor Win64 Development -Project="C:/Users/robin/Documents/GitHub/P5_UE4/GC_UE4CPP/GC_UE4CPP.uproject" "C:/Users/robin/Documents/GitHub/P5_UE4/GC_UE4CPP/GC_UE4CPP.uproject"  -IgnoreJunk]
+[2022.01.20-21.23.08:540][288]Warning: Starting HotReload took  0.0s.
+[2022.01.20-21.23.12:239][660]CompilerResultsLog: New page: Compilation - 20 janv. 2022 à 23:23:12
+[2022.01.20-21.23.12:240][660]CompilerResultsLog: Using 'git status' to determine working set for adaptive non-unity build (C:\Users\robin\Documents\GitHub\P5_UE4).
+[2022.01.20-21.23.12:240][660]CompilerResultsLog: Building GC_UE4CPPEditor...
+[2022.01.20-21.23.12:240][660]CompilerResultsLog: Using Visual Studio 2019 14.29.30139 toolchain (D:\Visual Studio\VC\Tools\MSVC\14.29.30133) and Windows 10.0.19041.0 SDK (C:\Program Files (x86)\Windows Kits\10).
+[2022.01.20-21.23.12:240][660]CompilerResultsLog: Building 4 actions with 16 processes...
+[2022.01.20-21.23.12:240][660]CompilerResultsLog:   [1/4] PlayerBehaviour.cpp
+[2022.01.20-21.23.12:240][660]CompilerResultsLog:   [2/4] UE4Editor-GC_UE4CPP-1282.lib
+[2022.01.20-21.23.12:240][660]CompilerResultsLog:      Cr?ation de la biblioth?que C:\Users\robin\Documents\GitHub\P5_UE4\GC_UE4CPP\Intermediate\Build\Win64\UE4Editor\Development\GC_UE4CPP\UE4Editor-GC_UE4CPP-1282.lib et de l'objet C:\Users\robin\Documents\GitHub\P5_UE4\GC_UE4CPP\Intermediate\Build\Win64\UE4Editor\Development\GC_UE4CPP\UE4Editor-GC_UE4CPP-1282.exp
+[2022.01.20-21.23.12:240][660]CompilerResultsLog:   [3/4] UE4Editor-GC_UE4CPP-1282.dll
+[2022.01.20-21.23.12:240][660]CompilerResultsLog:      Cr?ation de la biblioth?que C:\Users\robin\Documents\GitHub\P5_UE4\GC_UE4CPP\Intermediate\Build\Win64\UE4Editor\Development\GC_UE4CPP\UE4Editor-GC_UE4CPP-1282.suppressed.lib et de l'objet C:\Users\robin\Documents\GitHub\P5_UE4\GC_UE4CPP\Intermediate\Build\Win64\UE4Editor\Development\GC_UE4CPP\UE4Editor-GC_UE4CPP-1282.suppressed.exp
+[2022.01.20-21.23.12:240][660]CompilerResultsLog:   [4/4] GC_UE4CPPEditor.target
+[2022.01.20-21.23.12:240][660]CompilerResultsLog: Total time in Parallel executor: 2,70 seconds
+[2022.01.20-21.23.12:240][660]CompilerResultsLog: Total execution time: 3,59 seconds
+[2022.01.20-21.23.12:240][660]LogMainFrame: MainFrame: Module compiling took 3.711 seconds
+[2022.01.20-21.23.12:265][660]LogHotReload: Re-instancing PlayerBehaviour after hot-reload.
+[2022.01.20-21.23.12:313][660]LogNativeClassHierarchy: Verbose: Native class hierarchy updated for 'GC_UE4CPP' in 0.0003 seconds. Added 4 classes and 2 folders.
+[2022.01.20-21.23.12:320][660]Display: HotReload successful (0 functions remapped  0 scriptstructs remapped)
+[2022.01.20-21.23.12:390][660]LogNativeClassHierarchy: Verbose: Native class hierarchy populated in 0.0100 seconds. Added 3826 classes and 930 folders.
+[2022.01.20-21.23.12:390][660]Display: HotReload took  3.9s.
+[2022.01.20-21.23.15:083][929]LogTemp: Repeating last play command: Selected Viewport
+[2022.01.20-21.23.15:097][929]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2022.01.20-21.23.15:097][929]PIE: New page: PIE session: MapLény (20 janv. 2022 à 23:23:15)
+[2022.01.20-21.23.15:097][929]LogPlayLevel: Creating play world package: /Game/Leny_camera/Map/UEDPIE_0_MapLény
+[2022.01.20-21.23.15:099][929]LogPlayLevel: PIE: StaticDuplicateObject took: (0.001983s)
+[2022.01.20-21.23.15:100][929]LogAIModule: Creating AISystem for world MapLény
+[2022.01.20-21.23.15:100][929]LogPlayLevel: PIE: World Init took: (0.001110s)
+[2022.01.20-21.23.15:100][929]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Leny_camera/Map/MapLény.MapLény to /Game/Leny_camera/Map/UEDPIE_0_MapLény.MapLény (0.003242s)
+[2022.01.20-21.23.15:170][929]LogUObjectHash: Compacting FUObjectHashTables data took   4.36ms
+[2022.01.20-21.23.15:171][929]LogAudio: Display: Creating Audio Device:                 Id: 28, Scope: Unique, Realtime: True
+[2022.01.20-21.23.15:171][929]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2022.01.20-21.23.15:171][929]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2022.01.20-21.23.15:171][929]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2022.01.20-21.23.15:171][929]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2022.01.20-21.23.15:171][929]LogAudioMixer: Display: 	Number of buffers to queue:			  2
+[2022.01.20-21.23.15:171][929]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2022.01.20-21.23.15:171][929]LogAudioMixer: Display: 	Number of Async Source Workers:		  0
+[2022.01.20-21.23.15:171][929]LogAudio: Display: AudioDevice MaxSources: 32
+[2022.01.20-21.23.15:171][929]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2022.01.20-21.23.15:172][929]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2022.01.20-21.23.15:172][929]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2022.01.20-21.23.15:172][929]LogAudioMixer: Display: Initializing audio mixer.
+[2022.01.20-21.23.15:178][929]LogAudioMixer: Display: 0: FrontLeft
+[2022.01.20-21.23.15:179][929]LogAudioMixer: Display: 1: FrontRight
+[2022.01.20-21.23.15:188][929]LogAudioMixer: Display: Using Audio Device Casque pour téléphone (HyperX 7.1 Audio)
+[2022.01.20-21.23.15:189][929]LogAudioMixer: Display: Initializing Sound Submixes...
+[2022.01.20-21.23.15:189][929]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2022.01.20-21.23.15:189][929]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2022.01.20-21.23.15:189][929]LogAudioMixer: Display: Creating Master Submix 'MasterEQSubmixDefault'
+[2022.01.20-21.23.15:189][929]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called
+[2022.01.20-21.23.15:189][929]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048
+[2022.01.20-21.23.15:191][929]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal()
+[2022.01.20-21.23.15:191][929]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time
+[2022.01.20-21.23.15:191][929]LogInit: FAudioDevice initialized.
+[2022.01.20-21.23.15:191][929]LogAudio: Display: Audio Device (ID: 28) registered with world 'MapLény'.
+[2022.01.20-21.23.15:202][929]LogLoad: Game class is 'BP_GameMode_C'
+[2022.01.20-21.23.15:203][929]LogWorld: Bringing World /Game/Leny_camera/Map/UEDPIE_0_MapLény.MapLény up for play (max tick rate 0) at 2022.01.20-22.23.15
+[2022.01.20-21.23.15:204][929]LogWorld: Bringing up level for play took: 0.000555
+[2022.01.20-21.23.15:204][929]LogOnline: OSS: Creating online subsystem instance for: :Context_34
+[2022.01.20-21.23.15:206][929]PIE: Server logged in
+[2022.01.20-21.23.15:207][929]PIE: Play in editor total start time 0,116 seconds.
+[2022.01.20-21.23.18:975][365]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2022.01.20-21.23.18:975][365]LogWorld: BeginTearingDown for /Game/Leny_camera/Map/UEDPIE_0_MapLény
+[2022.01.20-21.23.18:975][365]LogWorld: UWorld::CleanupWorld for MapLény, bSessionEnded=true, bCleanupResources=true
+[2022.01.20-21.23.18:975][365]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2022.01.20-21.23.18:983][365]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2022.01.20-21.23.19:001][365]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2022.01.20-21.23.19:020][365]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2022.01.20-21.23.19:021][365]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called
+[2022.01.20-21.23.19:022][365]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called
+[2022.01.20-21.23.19:024][365]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2022.01.20-21.23.19:054][365]LogUObjectHash: Compacting FUObjectHashTables data took   3.13ms
+[2022.01.20-21.23.19:090][366]LogPlayLevel: Display: Destroying online subsystem :Context_34
+[2022.01.20-21.23.48:383][ 19]LogUObjectHash: Compacting FUObjectHashTables data took   2.82ms
+[2022.01.20-21.23.48:398][ 19]LogSavePackage: Moving 'C:/Users/robin/Documents/GitHub/P5_UE4/GC_UE4CPP/Saved/MapLény_Auto3899D4AD844F9B720811D6CBD7C24F7FF.tmp' to 'C:/Users/robin/Documents/GitHub/P5_UE4/GC_UE4CPP/Saved/Autosaves/Game/Leny_camera/Map/MapLény_Auto3.umap'
+[2022.01.20-21.23.48:400][ 19]LogFileHelpers: Editor autosave (incl. external actors) for '/Game/Leny_camera/Map/MapLény' took 0.039
+[2022.01.20-21.23.48:400][ 19]LogFileHelpers: Editor autosave (incl. sublevels & external actors) for all levels took 0.039
+[2022.01.20-21.24.58:412][424]LogVSAccessor: Warning: Couldn't access Visual Studio
+[2022.01.20-21.24.58:479][424]Candidate modules for hot reload:
+[2022.01.20-21.24.58:479][424]  GC_UE4CPP
+[2022.01.20-21.24.58:479][424]Launching UnrealBuildTool... [E:/EpicGamesLibrary/UE_4.27/Engine/Binaries/DotNET/UnrealBuildTool.exe  -ModuleWithSuffix=GC_UE4CPP,1431 GC_UE4CPPEditor Win64 Development -Project="C:/Users/robin/Documents/GitHub/P5_UE4/GC_UE4CPP/GC_UE4CPP.uproject" "C:/Users/robin/Documents/GitHub/P5_UE4/GC_UE4CPP/GC_UE4CPP.uproject"  -IgnoreJunk]
+[2022.01.20-21.24.58:487][424]Warning: Starting HotReload took  0.1s.
+[2022.01.20-21.25.02:074][748]CompilerResultsLog: New page: Compilation - 20 janv. 2022 à 23:25:02
+[2022.01.20-21.25.02:074][748]CompilerResultsLog: Using 'git status' to determine working set for adaptive non-unity build (C:\Users\robin\Documents\GitHub\P5_UE4).
+[2022.01.20-21.25.02:074][748]CompilerResultsLog: Building GC_UE4CPPEditor...
+[2022.01.20-21.25.02:074][748]CompilerResultsLog: Using Visual Studio 2019 14.29.30139 toolchain (D:\Visual Studio\VC\Tools\MSVC\14.29.30133) and Windows 10.0.19041.0 SDK (C:\Program Files (x86)\Windows Kits\10).
+[2022.01.20-21.25.02:074][748]CompilerResultsLog: Building 4 actions with 16 processes...
+[2022.01.20-21.25.02:074][748]CompilerResultsLog:   [1/4] PlayerBehaviour.cpp
+[2022.01.20-21.25.02:074][748]CompilerResultsLog:   [2/4] UE4Editor-GC_UE4CPP-1431.lib
+[2022.01.20-21.25.02:074][748]CompilerResultsLog:      Cr?ation de la biblioth?que C:\Users\robin\Documents\GitHub\P5_UE4\GC_UE4CPP\Intermediate\Build\Win64\UE4Editor\Development\GC_UE4CPP\UE4Editor-GC_UE4CPP-1431.lib et de l'objet C:\Users\robin\Documents\GitHub\P5_UE4\GC_UE4CPP\Intermediate\Build\Win64\UE4Editor\Development\GC_UE4CPP\UE4Editor-GC_UE4CPP-1431.exp
+[2022.01.20-21.25.02:074][748]CompilerResultsLog:   [3/4] UE4Editor-GC_UE4CPP-1431.dll
+[2022.01.20-21.25.02:074][748]CompilerResultsLog:      Cr?ation de la biblioth?que C:\Users\robin\Documents\GitHub\P5_UE4\GC_UE4CPP\Intermediate\Build\Win64\UE4Editor\Development\GC_UE4CPP\UE4Editor-GC_UE4CPP-1431.suppressed.lib et de l'objet C:\Users\robin\Documents\GitHub\P5_UE4\GC_UE4CPP\Intermediate\Build\Win64\UE4Editor\Development\GC_UE4CPP\UE4Editor-GC_UE4CPP-1431.suppressed.exp
+[2022.01.20-21.25.02:074][748]CompilerResultsLog:   [4/4] GC_UE4CPPEditor.target
+[2022.01.20-21.25.02:074][748]CompilerResultsLog: Total time in Parallel executor: 2,61 seconds
+[2022.01.20-21.25.02:074][748]CompilerResultsLog: Total execution time: 3,46 seconds
+[2022.01.20-21.25.02:074][748]LogMainFrame: MainFrame: Module compiling took 3.663 seconds
+[2022.01.20-21.25.02:101][748]LogHotReload: Re-instancing PlayerBehaviour after hot-reload.
+[2022.01.20-21.25.02:151][748]LogNativeClassHierarchy: Verbose: Native class hierarchy updated for 'GC_UE4CPP' in 0.0004 seconds. Added 4 classes and 2 folders.
+[2022.01.20-21.25.02:157][748]Display: HotReload successful (0 functions remapped  0 scriptstructs remapped)
+[2022.01.20-21.25.02:230][748]LogNativeClassHierarchy: Verbose: Native class hierarchy populated in 0.0100 seconds. Added 3826 classes and 930 folders.
+[2022.01.20-21.25.02:230][748]Display: HotReload took  3.8s.
+[2022.01.20-21.25.02:892][774]LogTemp: Repeating last play command: Selected Viewport
+[2022.01.20-21.25.02:906][774]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2022.01.20-21.25.02:906][774]PIE: New page: PIE session: MapLény (20 janv. 2022 à 23:25:02)
+[2022.01.20-21.25.02:949][774]LogPlayLevel: Creating play world package: /Game/Leny_camera/Map/UEDPIE_0_MapLény
+[2022.01.20-21.25.02:952][774]LogPlayLevel: PIE: StaticDuplicateObject took: (0.002542s)
+[2022.01.20-21.25.02:953][774]LogAIModule: Creating AISystem for world MapLény
+[2022.01.20-21.25.02:953][774]LogPlayLevel: PIE: World Init took: (0.001346s)
+[2022.01.20-21.25.02:953][774]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Leny_camera/Map/MapLény.MapLény to /Game/Leny_camera/Map/UEDPIE_0_MapLény.MapLény (0.004110s)
+[2022.01.20-21.25.03:024][774]LogUObjectHash: Compacting FUObjectHashTables data took   4.64ms
+[2022.01.20-21.25.03:026][774]LogAudio: Display: Creating Audio Device:                 Id: 29, Scope: Unique, Realtime: True
+[2022.01.20-21.25.03:026][774]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2022.01.20-21.25.03:026][774]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2022.01.20-21.25.03:026][774]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2022.01.20-21.25.03:026][774]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2022.01.20-21.25.03:026][774]LogAudioMixer: Display: 	Number of buffers to queue:			  2
+[2022.01.20-21.25.03:026][774]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2022.01.20-21.25.03:026][774]LogAudioMixer: Display: 	Number of Async Source Workers:		  0
+[2022.01.20-21.25.03:026][774]LogAudio: Display: AudioDevice MaxSources: 32
+[2022.01.20-21.25.03:026][774]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2022.01.20-21.25.03:027][774]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2022.01.20-21.25.03:027][774]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2022.01.20-21.25.03:027][774]LogAudioMixer: Display: Initializing audio mixer.
+[2022.01.20-21.25.03:033][774]LogAudioMixer: Display: 0: FrontLeft
+[2022.01.20-21.25.03:033][774]LogAudioMixer: Display: 1: FrontRight
+[2022.01.20-21.25.03:043][774]LogAudioMixer: Display: Using Audio Device Casque pour téléphone (HyperX 7.1 Audio)
+[2022.01.20-21.25.03:043][774]LogAudioMixer: Display: Initializing Sound Submixes...
+[2022.01.20-21.25.03:044][774]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2022.01.20-21.25.03:044][774]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2022.01.20-21.25.03:045][774]LogAudioMixer: Display: Creating Master Submix 'MasterEQSubmixDefault'
+[2022.01.20-21.25.03:045][774]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called
+[2022.01.20-21.25.03:045][774]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048
+[2022.01.20-21.25.03:046][774]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal()
+[2022.01.20-21.25.03:046][774]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time
+[2022.01.20-21.25.03:046][774]LogInit: FAudioDevice initialized.
+[2022.01.20-21.25.03:046][774]LogAudio: Display: Audio Device (ID: 29) registered with world 'MapLény'.
+[2022.01.20-21.25.03:054][774]LogLoad: Game class is 'BP_GameMode_C'
+[2022.01.20-21.25.03:055][774]LogWorld: Bringing World /Game/Leny_camera/Map/UEDPIE_0_MapLény.MapLény up for play (max tick rate 0) at 2022.01.20-22.25.03
+[2022.01.20-21.25.03:056][774]LogWorld: Bringing up level for play took: 0.000653
+[2022.01.20-21.25.03:056][774]LogOnline: OSS: Creating online subsystem instance for: :Context_35
+[2022.01.20-21.25.03:059][774]PIE: Server logged in
+[2022.01.20-21.25.03:060][774]PIE: Play in editor total start time 0,159 seconds.
+[2022.01.20-21.25.09:515][519]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2022.01.20-21.25.09:515][519]LogWorld: BeginTearingDown for /Game/Leny_camera/Map/UEDPIE_0_MapLény
+[2022.01.20-21.25.09:515][519]LogWorld: UWorld::CleanupWorld for MapLény, bSessionEnded=true, bCleanupResources=true
+[2022.01.20-21.25.09:515][519]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2022.01.20-21.25.09:526][519]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2022.01.20-21.25.09:544][519]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2022.01.20-21.25.09:561][519]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2022.01.20-21.25.09:561][519]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called
+[2022.01.20-21.25.09:562][519]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called
+[2022.01.20-21.25.09:565][519]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2022.01.20-21.25.09:598][519]LogUObjectHash: Compacting FUObjectHashTables data took   2.96ms
+[2022.01.20-21.25.09:635][520]LogPlayLevel: Display: Destroying online subsystem :Context_35
+[2022.01.20-21.25.18:770][860]LogVSAccessor: Warning: Couldn't access Visual Studio
+[2022.01.20-21.25.18:774][860]Candidate modules for hot reload:
+[2022.01.20-21.25.18:774][860]  GC_UE4CPP
+[2022.01.20-21.25.18:774][860]Launching UnrealBuildTool... [E:/EpicGamesLibrary/UE_4.27/Engine/Binaries/DotNET/UnrealBuildTool.exe  -ModuleWithSuffix=GC_UE4CPP,7359 GC_UE4CPPEditor Win64 Development -Project="C:/Users/robin/Documents/GitHub/P5_UE4/GC_UE4CPP/GC_UE4CPP.uproject" "C:/Users/robin/Documents/GitHub/P5_UE4/GC_UE4CPP/GC_UE4CPP.uproject"  -IgnoreJunk]
+[2022.01.20-21.25.18:781][860]Warning: Starting HotReload took  0.0s.
+[2022.01.20-21.25.22:418][894]CompilerResultsLog: New page: Compilation - 20 janv. 2022 à 23:25:22
+[2022.01.20-21.25.22:419][894]CompilerResultsLog: Using 'git status' to determine working set for adaptive non-unity build (C:\Users\robin\Documents\GitHub\P5_UE4).
+[2022.01.20-21.25.22:419][894]CompilerResultsLog: Building GC_UE4CPPEditor...
+[2022.01.20-21.25.22:419][894]CompilerResultsLog: Using Visual Studio 2019 14.29.30139 toolchain (D:\Visual Studio\VC\Tools\MSVC\14.29.30133) and Windows 10.0.19041.0 SDK (C:\Program Files (x86)\Windows Kits\10).
+[2022.01.20-21.25.22:419][894]CompilerResultsLog: Building 4 actions with 16 processes...
+[2022.01.20-21.25.22:419][894]CompilerResultsLog:   [1/4] PlayerBehaviour.cpp
+[2022.01.20-21.25.22:419][894]CompilerResultsLog:   [2/4] UE4Editor-GC_UE4CPP-7359.lib
+[2022.01.20-21.25.22:419][894]CompilerResultsLog:      Cr?ation de la biblioth?que C:\Users\robin\Documents\GitHub\P5_UE4\GC_UE4CPP\Intermediate\Build\Win64\UE4Editor\Development\GC_UE4CPP\UE4Editor-GC_UE4CPP-7359.lib et de l'objet C:\Users\robin\Documents\GitHub\P5_UE4\GC_UE4CPP\Intermediate\Build\Win64\UE4Editor\Development\GC_UE4CPP\UE4Editor-GC_UE4CPP-7359.exp
+[2022.01.20-21.25.22:419][894]CompilerResultsLog:   [3/4] UE4Editor-GC_UE4CPP-7359.dll
+[2022.01.20-21.25.22:419][894]CompilerResultsLog:      Cr?ation de la biblioth?que C:\Users\robin\Documents\GitHub\P5_UE4\GC_UE4CPP\Intermediate\Build\Win64\UE4Editor\Development\GC_UE4CPP\UE4Editor-GC_UE4CPP-7359.suppressed.lib et de l'objet C:\Users\robin\Documents\GitHub\P5_UE4\GC_UE4CPP\Intermediate\Build\Win64\UE4Editor\Development\GC_UE4CPP\UE4Editor-GC_UE4CPP-7359.suppressed.exp
+[2022.01.20-21.25.22:419][894]CompilerResultsLog:   [4/4] GC_UE4CPPEditor.target
+[2022.01.20-21.25.22:419][894]CompilerResultsLog: Total time in Parallel executor: 2,44 seconds
+[2022.01.20-21.25.22:419][894]CompilerResultsLog: Total execution time: 3,31 seconds
+[2022.01.20-21.25.22:419][894]LogMainFrame: MainFrame: Module compiling took 3.649 seconds
+[2022.01.20-21.25.22:442][894]LogHotReload: Re-instancing PlayerBehaviour after hot-reload.
+[2022.01.20-21.25.22:489][894]LogNativeClassHierarchy: Verbose: Native class hierarchy updated for 'GC_UE4CPP' in 0.0003 seconds. Added 4 classes and 2 folders.
+[2022.01.20-21.25.22:495][894]Display: HotReload successful (0 functions remapped  0 scriptstructs remapped)
+[2022.01.20-21.25.22:563][894]LogNativeClassHierarchy: Verbose: Native class hierarchy populated in 0.0106 seconds. Added 3826 classes and 930 folders.
+[2022.01.20-21.25.22:564][894]Display: HotReload took  3.8s.
+[2022.01.20-21.25.45:832][ 79]LogTemp: Repeating last play command: Selected Viewport
+[2022.01.20-21.25.45:846][ 79]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2022.01.20-21.25.45:846][ 79]PIE: New page: PIE session: MapLény (20 janv. 2022 à 23:25:45)
+[2022.01.20-21.25.45:869][ 79]LogPlayLevel: Creating play world package: /Game/Leny_camera/Map/UEDPIE_0_MapLény
+[2022.01.20-21.25.45:871][ 79]LogPlayLevel: PIE: StaticDuplicateObject took: (0.002081s)
+[2022.01.20-21.25.45:872][ 79]LogAIModule: Creating AISystem for world MapLény
+[2022.01.20-21.25.45:873][ 79]LogPlayLevel: PIE: World Init took: (0.001390s)
+[2022.01.20-21.25.45:873][ 79]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Leny_camera/Map/MapLény.MapLény to /Game/Leny_camera/Map/UEDPIE_0_MapLény.MapLény (0.003653s)
+[2022.01.20-21.25.45:942][ 79]LogUObjectHash: Compacting FUObjectHashTables data took   4.61ms
+[2022.01.20-21.25.45:942][ 79]LogAudio: Display: Creating Audio Device:                 Id: 30, Scope: Unique, Realtime: True
+[2022.01.20-21.25.45:942][ 79]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2022.01.20-21.25.45:942][ 79]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2022.01.20-21.25.45:942][ 79]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2022.01.20-21.25.45:942][ 79]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2022.01.20-21.25.45:942][ 79]LogAudioMixer: Display: 	Number of buffers to queue:			  2
+[2022.01.20-21.25.45:942][ 79]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2022.01.20-21.25.45:942][ 79]LogAudioMixer: Display: 	Number of Async Source Workers:		  0
+[2022.01.20-21.25.45:942][ 79]LogAudio: Display: AudioDevice MaxSources: 32
+[2022.01.20-21.25.45:943][ 79]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2022.01.20-21.25.45:943][ 79]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2022.01.20-21.25.45:943][ 79]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2022.01.20-21.25.45:943][ 79]LogAudioMixer: Display: Initializing audio mixer.
+[2022.01.20-21.25.45:949][ 79]LogAudioMixer: Display: 0: FrontLeft
+[2022.01.20-21.25.45:949][ 79]LogAudioMixer: Display: 1: FrontRight
+[2022.01.20-21.25.45:958][ 79]LogAudioMixer: Display: Using Audio Device Casque pour téléphone (HyperX 7.1 Audio)
+[2022.01.20-21.25.45:958][ 79]LogAudioMixer: Display: Initializing Sound Submixes...
+[2022.01.20-21.25.45:958][ 79]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2022.01.20-21.25.45:958][ 79]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2022.01.20-21.25.45:959][ 79]LogAudioMixer: Display: Creating Master Submix 'MasterEQSubmixDefault'
+[2022.01.20-21.25.45:959][ 79]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called
+[2022.01.20-21.25.45:959][ 79]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048
+[2022.01.20-21.25.45:960][ 79]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal()
+[2022.01.20-21.25.45:960][ 79]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time
+[2022.01.20-21.25.45:960][ 79]LogInit: FAudioDevice initialized.
+[2022.01.20-21.25.45:960][ 79]LogAudio: Display: Audio Device (ID: 30) registered with world 'MapLény'.
+[2022.01.20-21.25.45:970][ 79]LogLoad: Game class is 'BP_GameMode_C'
+[2022.01.20-21.25.45:971][ 79]LogWorld: Bringing World /Game/Leny_camera/Map/UEDPIE_0_MapLény.MapLény up for play (max tick rate 0) at 2022.01.20-22.25.45
+[2022.01.20-21.25.45:971][ 79]LogWorld: Bringing up level for play took: 0.000499
+[2022.01.20-21.25.45:972][ 79]LogOnline: OSS: Creating online subsystem instance for: :Context_36
+[2022.01.20-21.25.45:974][ 79]PIE: Server logged in
+[2022.01.20-21.25.45:975][ 79]PIE: Play in editor total start time 0,134 seconds.
+[2022.01.20-21.25.50:254][575]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2022.01.20-21.25.50:254][575]LogWorld: BeginTearingDown for /Game/Leny_camera/Map/UEDPIE_0_MapLény
+[2022.01.20-21.25.50:254][575]LogWorld: UWorld::CleanupWorld for MapLény, bSessionEnded=true, bCleanupResources=true
+[2022.01.20-21.25.50:255][575]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2022.01.20-21.25.50:266][575]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2022.01.20-21.25.50:284][575]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2022.01.20-21.25.50:303][575]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2022.01.20-21.25.50:306][575]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called
+[2022.01.20-21.25.50:307][575]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called
+[2022.01.20-21.25.50:310][575]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2022.01.20-21.25.50:334][575]LogUObjectHash: Compacting FUObjectHashTables data took   3.32ms
+[2022.01.20-21.25.50:372][576]LogPlayLevel: Display: Destroying online subsystem :Context_36
+[2022.01.20-21.26.46:133][334]LogAssetEditorSubsystem: Opening Asset editor for Blueprint /Game/Robin_Control/BP_Player/BP_GameMode.BP_GameMode
+[2022.01.20-21.26.51:672][848]LogTemp: Repeating last play command: Selected Viewport
+[2022.01.20-21.26.51:686][848]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2022.01.20-21.26.51:686][848]PIE: New page: PIE session: MapLény (20 janv. 2022 à 23:26:51)
+[2022.01.20-21.26.51:686][848]LogPlayLevel: Creating play world package: /Game/Leny_camera/Map/UEDPIE_0_MapLény
+[2022.01.20-21.26.51:688][848]LogPlayLevel: PIE: StaticDuplicateObject took: (0.001957s)
+[2022.01.20-21.26.51:689][848]LogAIModule: Creating AISystem for world MapLény
+[2022.01.20-21.26.51:690][848]LogPlayLevel: PIE: World Init took: (0.001291s)
+[2022.01.20-21.26.51:690][848]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Leny_camera/Map/MapLény.MapLény to /Game/Leny_camera/Map/UEDPIE_0_MapLény.MapLény (0.003383s)
+[2022.01.20-21.26.51:716][848]LogUObjectHash: Compacting FUObjectHashTables data took   2.73ms
+[2022.01.20-21.26.51:719][848]LogAudio: Display: Creating Audio Device:                 Id: 31, Scope: Unique, Realtime: True
+[2022.01.20-21.26.51:719][848]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2022.01.20-21.26.51:719][848]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2022.01.20-21.26.51:719][848]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2022.01.20-21.26.51:719][848]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2022.01.20-21.26.51:719][848]LogAudioMixer: Display: 	Number of buffers to queue:			  2
+[2022.01.20-21.26.51:719][848]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2022.01.20-21.26.51:719][848]LogAudioMixer: Display: 	Number of Async Source Workers:		  0
+[2022.01.20-21.26.51:719][848]LogAudio: Display: AudioDevice MaxSources: 32
+[2022.01.20-21.26.51:719][848]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2022.01.20-21.26.51:720][848]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2022.01.20-21.26.51:720][848]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2022.01.20-21.26.51:720][848]LogAudioMixer: Display: Initializing audio mixer.
+[2022.01.20-21.26.51:725][848]LogAudioMixer: Display: 0: FrontLeft
+[2022.01.20-21.26.51:725][848]LogAudioMixer: Display: 1: FrontRight
+[2022.01.20-21.26.51:734][848]LogAudioMixer: Display: Using Audio Device Casque pour téléphone (HyperX 7.1 Audio)
+[2022.01.20-21.26.51:734][848]LogAudioMixer: Display: Initializing Sound Submixes...
+[2022.01.20-21.26.51:734][848]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2022.01.20-21.26.51:734][848]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2022.01.20-21.26.51:735][848]LogAudioMixer: Display: Creating Master Submix 'MasterEQSubmixDefault'
+[2022.01.20-21.26.51:735][848]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called
+[2022.01.20-21.26.51:735][848]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048
+[2022.01.20-21.26.51:736][848]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal()
+[2022.01.20-21.26.51:736][848]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time
+[2022.01.20-21.26.51:736][848]LogInit: FAudioDevice initialized.
+[2022.01.20-21.26.51:736][848]LogAudio: Display: Audio Device (ID: 31) registered with world 'MapLény'.
+[2022.01.20-21.26.51:772][848]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2022.01.20-21.26.51:772][848]LogLoad: Game class is 'BP_GameMode_C'
+[2022.01.20-21.26.51:773][848]LogWorld: Bringing World /Game/Leny_camera/Map/UEDPIE_0_MapLény.MapLény up for play (max tick rate 0) at 2022.01.20-22.26.51
+[2022.01.20-21.26.51:773][848]LogWorld: Bringing up level for play took: 0.000691
+[2022.01.20-21.26.51:774][848]LogOnline: OSS: Creating online subsystem instance for: :Context_38
+[2022.01.20-21.26.51:778][848]PIE: Server logged in
+[2022.01.20-21.26.51:778][848]PIE: Play in editor total start time 0,097 seconds.
+[2022.01.20-21.33.14:412][998]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2022.01.20-21.33.14:412][998]LogWorld: BeginTearingDown for /Game/Leny_camera/Map/UEDPIE_0_MapLény
+[2022.01.20-21.33.14:413][998]LogSlate: Window 'GC_UE4CPP Preview [NetMode: Standalone]  (64-bit/Windows) ' being destroyed
+[2022.01.20-21.33.14:415][998]LogWorld: UWorld::CleanupWorld for MapLény, bSessionEnded=true, bCleanupResources=true
+[2022.01.20-21.33.14:416][998]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2022.01.20-21.33.14:435][998]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2022.01.20-21.33.14:455][998]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2022.01.20-21.33.14:478][998]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called
+[2022.01.20-21.33.14:479][998]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called
+[2022.01.20-21.33.14:487][998]LogUObjectHash: Compacting FUObjectHashTables data took   3.26ms
+[2022.01.20-21.33.14:556][999]LogPlayLevel: Display: Destroying online subsystem :Context_38
+[2022.01.20-21.33.15:459][ 54]LogVSAccessor: Warning: Couldn't access Visual Studio
+[2022.01.20-21.33.15:463][ 54]Candidate modules for hot reload:
+[2022.01.20-21.33.15:463][ 54]  GC_UE4CPP
+[2022.01.20-21.33.15:463][ 54]Launching UnrealBuildTool... [E:/EpicGamesLibrary/UE_4.27/Engine/Binaries/DotNET/UnrealBuildTool.exe  -ModuleWithSuffix=GC_UE4CPP,5849 GC_UE4CPPEditor Win64 Development -Project="C:/Users/robin/Documents/GitHub/P5_UE4/GC_UE4CPP/GC_UE4CPP.uproject" "C:/Users/robin/Documents/GitHub/P5_UE4/GC_UE4CPP/GC_UE4CPP.uproject"  -IgnoreJunk]
+[2022.01.20-21.33.15:471][ 54]Warning: Starting HotReload took  0.0s.
+[2022.01.20-21.33.19:487][446]CompilerResultsLog: New page: Compilation - 20 janv. 2022 à 23:33:19
+[2022.01.20-21.33.19:488][446]CompilerResultsLog: Using 'git status' to determine working set for adaptive non-unity build (C:\Users\robin\Documents\GitHub\P5_UE4).
+[2022.01.20-21.33.19:488][446]CompilerResultsLog: Building GC_UE4CPPEditor...
+[2022.01.20-21.33.19:488][446]CompilerResultsLog: Using Visual Studio 2019 14.29.30139 toolchain (D:\Visual Studio\VC\Tools\MSVC\14.29.30133) and Windows 10.0.19041.0 SDK (C:\Program Files (x86)\Windows Kits\10).
+[2022.01.20-21.33.19:488][446]CompilerResultsLog: Building 4 actions with 16 processes...
+[2022.01.20-21.33.19:488][446]CompilerResultsLog:   [1/4] PlayerBehaviour.cpp
+[2022.01.20-21.33.19:488][446]CompilerResultsLog:   [2/4] UE4Editor-GC_UE4CPP-5849.lib
+[2022.01.20-21.33.19:488][446]CompilerResultsLog:      Cr?ation de la biblioth?que C:\Users\robin\Documents\GitHub\P5_UE4\GC_UE4CPP\Intermediate\Build\Win64\UE4Editor\Development\GC_UE4CPP\UE4Editor-GC_UE4CPP-5849.lib et de l'objet C:\Users\robin\Documents\GitHub\P5_UE4\GC_UE4CPP\Intermediate\Build\Win64\UE4Editor\Development\GC_UE4CPP\UE4Editor-GC_UE4CPP-5849.exp
+[2022.01.20-21.33.19:488][446]CompilerResultsLog:   [3/4] UE4Editor-GC_UE4CPP-5849.dll
+[2022.01.20-21.33.19:488][446]CompilerResultsLog:      Cr?ation de la biblioth?que C:\Users\robin\Documents\GitHub\P5_UE4\GC_UE4CPP\Intermediate\Build\Win64\UE4Editor\Development\GC_UE4CPP\UE4Editor-GC_UE4CPP-5849.suppressed.lib et de l'objet C:\Users\robin\Documents\GitHub\P5_UE4\GC_UE4CPP\Intermediate\Build\Win64\UE4Editor\Development\GC_UE4CPP\UE4Editor-GC_UE4CPP-5849.suppressed.exp
+[2022.01.20-21.33.19:488][446]CompilerResultsLog:   [4/4] GC_UE4CPPEditor.target
+[2022.01.20-21.33.19:488][446]CompilerResultsLog: Total time in Parallel executor: 2,97 seconds
+[2022.01.20-21.33.19:488][446]CompilerResultsLog: Total execution time: 3,87 seconds
+[2022.01.20-21.33.19:488][446]LogMainFrame: MainFrame: Module compiling took 4.028 seconds
+[2022.01.20-21.33.19:514][446]LogNativeClassHierarchy: Verbose: Native class hierarchy updated for 'GC_UE4CPP' in 0.0003 seconds. Added 4 classes and 2 folders.
+[2022.01.20-21.33.19:521][446]Display: HotReload successful (0 functions remapped  0 scriptstructs remapped)
+[2022.01.20-21.33.19:592][446]LogNativeClassHierarchy: Verbose: Native class hierarchy populated in 0.0099 seconds. Added 3826 classes and 930 folders.
+[2022.01.20-21.33.19:592][446]Display: HotReload took  4.1s.
+[2022.01.20-21.33.21:101][587]LogTemp: Repeating last play command: Selected Viewport
+[2022.01.20-21.33.21:115][587]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2022.01.20-21.33.21:115][587]PIE: New page: PIE session: MapLény (20 janv. 2022 à 23:33:21)
+[2022.01.20-21.33.21:115][587]LogPlayLevel: Creating play world package: /Game/Leny_camera/Map/UEDPIE_0_MapLény
+[2022.01.20-21.33.21:117][587]LogPlayLevel: PIE: StaticDuplicateObject took: (0.002078s)
+[2022.01.20-21.33.21:118][587]LogAIModule: Creating AISystem for world MapLény
+[2022.01.20-21.33.21:119][587]LogPlayLevel: PIE: World Init took: (0.001252s)
+[2022.01.20-21.33.21:119][587]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Leny_camera/Map/MapLény.MapLény to /Game/Leny_camera/Map/UEDPIE_0_MapLény.MapLény (0.003452s)
+[2022.01.20-21.33.21:171][587]LogUObjectHash: Compacting FUObjectHashTables data took   4.59ms
+[2022.01.20-21.33.21:171][587]LogAudio: Display: Creating Audio Device:                 Id: 32, Scope: Unique, Realtime: True
+[2022.01.20-21.33.21:171][587]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2022.01.20-21.33.21:171][587]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2022.01.20-21.33.21:171][587]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2022.01.20-21.33.21:171][587]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2022.01.20-21.33.21:171][587]LogAudioMixer: Display: 	Number of buffers to queue:			  2
+[2022.01.20-21.33.21:171][587]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2022.01.20-21.33.21:171][587]LogAudioMixer: Display: 	Number of Async Source Workers:		  0
+[2022.01.20-21.33.21:171][587]LogAudio: Display: AudioDevice MaxSources: 32
+[2022.01.20-21.33.21:172][587]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2022.01.20-21.33.21:172][587]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2022.01.20-21.33.21:172][587]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2022.01.20-21.33.21:172][587]LogAudioMixer: Display: Initializing audio mixer.
+[2022.01.20-21.33.21:178][587]LogAudioMixer: Display: 0: FrontLeft
+[2022.01.20-21.33.21:178][587]LogAudioMixer: Display: 1: FrontRight
+[2022.01.20-21.33.21:188][587]LogAudioMixer: Display: Using Audio Device Casque pour téléphone (HyperX 7.1 Audio)
+[2022.01.20-21.33.21:188][587]LogAudioMixer: Display: Initializing Sound Submixes...
+[2022.01.20-21.33.21:188][587]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2022.01.20-21.33.21:189][587]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2022.01.20-21.33.21:189][587]LogAudioMixer: Display: Creating Master Submix 'MasterEQSubmixDefault'
+[2022.01.20-21.33.21:189][587]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called
+[2022.01.20-21.33.21:189][587]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048
+[2022.01.20-21.33.21:190][587]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal()
+[2022.01.20-21.33.21:190][587]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time
+[2022.01.20-21.33.21:190][587]LogInit: FAudioDevice initialized.
+[2022.01.20-21.33.21:190][587]LogAudio: Display: Audio Device (ID: 32) registered with world 'MapLény'.
+[2022.01.20-21.33.21:196][587]LogLoad: Game class is 'BP_GameMode_C'
+[2022.01.20-21.33.21:197][587]LogWorld: Bringing World /Game/Leny_camera/Map/UEDPIE_0_MapLény.MapLény up for play (max tick rate 0) at 2022.01.20-22.33.21
+[2022.01.20-21.33.21:197][587]LogWorld: Bringing up level for play took: 0.000521
+[2022.01.20-21.33.21:197][587]LogOnline: OSS: Creating online subsystem instance for: :Context_39
+[2022.01.20-21.33.21:200][587]PIE: Server logged in
+[2022.01.20-21.33.21:201][587]PIE: Play in editor total start time 0,091 seconds.
+[2022.01.20-21.33.33:142][985]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2022.01.20-21.33.33:142][985]LogWorld: BeginTearingDown for /Game/Leny_camera/Map/UEDPIE_0_MapLény
+[2022.01.20-21.33.33:142][985]LogWorld: UWorld::CleanupWorld for MapLény, bSessionEnded=true, bCleanupResources=true
+[2022.01.20-21.33.33:142][985]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2022.01.20-21.33.33:151][985]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2022.01.20-21.33.33:177][985]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2022.01.20-21.33.33:203][985]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2022.01.20-21.33.33:203][985]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called
+[2022.01.20-21.33.33:204][985]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called
+[2022.01.20-21.33.33:207][985]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2022.01.20-21.33.33:216][985]LogUObjectHash: Compacting FUObjectHashTables data took   4.08ms
+[2022.01.20-21.33.33:250][986]LogPlayLevel: Display: Destroying online subsystem :Context_39
+[2022.01.20-21.33.35:248][141]LogTemp: Repeating last play command: Selected Viewport
+[2022.01.20-21.33.35:263][141]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2022.01.20-21.33.35:263][141]PIE: New page: PIE session: MapLény (20 janv. 2022 à 23:33:35)
+[2022.01.20-21.33.35:286][141]LogPlayLevel: Creating play world package: /Game/Leny_camera/Map/UEDPIE_0_MapLény
+[2022.01.20-21.33.35:289][141]LogPlayLevel: PIE: StaticDuplicateObject took: (0.002385s)
+[2022.01.20-21.33.35:289][141]LogAIModule: Creating AISystem for world MapLény
+[2022.01.20-21.33.35:290][141]LogPlayLevel: PIE: World Init took: (0.001044s)
+[2022.01.20-21.33.35:290][141]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Leny_camera/Map/MapLény.MapLény to /Game/Leny_camera/Map/UEDPIE_0_MapLény.MapLény (0.003622s)
+[2022.01.20-21.33.35:319][141]LogUObjectHash: Compacting FUObjectHashTables data took   3.28ms
+[2022.01.20-21.33.35:320][141]LogAudio: Display: Creating Audio Device:                 Id: 33, Scope: Unique, Realtime: True
+[2022.01.20-21.33.35:321][141]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2022.01.20-21.33.35:321][141]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2022.01.20-21.33.35:321][141]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2022.01.20-21.33.35:321][141]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2022.01.20-21.33.35:321][141]LogAudioMixer: Display: 	Number of buffers to queue:			  2
+[2022.01.20-21.33.35:321][141]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2022.01.20-21.33.35:321][141]LogAudioMixer: Display: 	Number of Async Source Workers:		  0
+[2022.01.20-21.33.35:321][141]LogAudio: Display: AudioDevice MaxSources: 32
+[2022.01.20-21.33.35:321][141]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2022.01.20-21.33.35:321][141]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2022.01.20-21.33.35:321][141]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2022.01.20-21.33.35:321][141]LogAudioMixer: Display: Initializing audio mixer.
+[2022.01.20-21.33.35:327][141]LogAudioMixer: Display: 0: FrontLeft
+[2022.01.20-21.33.35:327][141]LogAudioMixer: Display: 1: FrontRight
+[2022.01.20-21.33.35:336][141]LogAudioMixer: Display: Using Audio Device Casque pour téléphone (HyperX 7.1 Audio)
+[2022.01.20-21.33.35:336][141]LogAudioMixer: Display: Initializing Sound Submixes...
+[2022.01.20-21.33.35:337][141]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2022.01.20-21.33.35:337][141]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2022.01.20-21.33.35:337][141]LogAudioMixer: Display: Creating Master Submix 'MasterEQSubmixDefault'
+[2022.01.20-21.33.35:337][141]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called
+[2022.01.20-21.33.35:337][141]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048
+[2022.01.20-21.33.35:339][141]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal()
+[2022.01.20-21.33.35:339][141]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time
+[2022.01.20-21.33.35:339][141]LogInit: FAudioDevice initialized.
+[2022.01.20-21.33.35:339][141]LogAudio: Display: Audio Device (ID: 33) registered with world 'MapLény'.
+[2022.01.20-21.33.35:348][141]LogLoad: Game class is 'BP_GameMode_C'
+[2022.01.20-21.33.35:349][141]LogWorld: Bringing World /Game/Leny_camera/Map/UEDPIE_0_MapLény.MapLény up for play (max tick rate 0) at 2022.01.20-22.33.35
+[2022.01.20-21.33.35:349][141]LogWorld: Bringing up level for play took: 0.000502
+[2022.01.20-21.33.35:349][141]LogOnline: OSS: Creating online subsystem instance for: :Context_40
+[2022.01.20-21.33.35:352][141]PIE: Server logged in
+[2022.01.20-21.33.35:353][141]PIE: Play in editor total start time 0,095 seconds.
+[2022.01.20-21.39.52:160][356]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2022.01.20-21.39.52:160][356]LogWorld: BeginTearingDown for /Game/Leny_camera/Map/UEDPIE_0_MapLény
+[2022.01.20-21.39.52:160][356]LogWorld: UWorld::CleanupWorld for MapLény, bSessionEnded=true, bCleanupResources=true
+[2022.01.20-21.39.52:160][356]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2022.01.20-21.39.52:170][356]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2022.01.20-21.39.52:193][356]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2022.01.20-21.39.52:219][356]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2022.01.20-21.39.52:219][356]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called
+[2022.01.20-21.39.52:220][356]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called
+[2022.01.20-21.39.52:229][356]LogUObjectHash: Compacting FUObjectHashTables data took   3.88ms
+[2022.01.20-21.39.52:258][357]LogPlayLevel: Display: Destroying online subsystem :Context_40
+[2022.01.20-21.39.53:051][438]LogVSAccessor: Warning: Couldn't access Visual Studio
+[2022.01.20-21.39.53:055][438]Candidate modules for hot reload:
+[2022.01.20-21.39.53:055][438]  GC_UE4CPP
+[2022.01.20-21.39.53:055][438]Launching UnrealBuildTool... [E:/EpicGamesLibrary/UE_4.27/Engine/Binaries/DotNET/UnrealBuildTool.exe  -ModuleWithSuffix=GC_UE4CPP,2077 GC_UE4CPPEditor Win64 Development -Project="C:/Users/robin/Documents/GitHub/P5_UE4/GC_UE4CPP/GC_UE4CPP.uproject" "C:/Users/robin/Documents/GitHub/P5_UE4/GC_UE4CPP/GC_UE4CPP.uproject"  -IgnoreJunk]
+[2022.01.20-21.39.53:062][438]Warning: Starting HotReload took  0.0s.
+[2022.01.20-21.39.56:601][521]LogEditorViewport: Clicking on Actor (context menu): StaticMeshActor (Floor)
+[2022.01.20-21.39.57:178][559]CompilerResultsLog: New page: Compilation - 20 janv. 2022 à 23:39:57
+[2022.01.20-21.39.57:179][559]CompilerResultsLog: Using 'git status' to determine working set for adaptive non-unity build (C:\Users\robin\Documents\GitHub\P5_UE4).
+[2022.01.20-21.39.57:179][559]CompilerResultsLog: Building GC_UE4CPPEditor...
+[2022.01.20-21.39.57:179][559]CompilerResultsLog: Using Visual Studio 2019 14.29.30139 toolchain (D:\Visual Studio\VC\Tools\MSVC\14.29.30133) and Windows 10.0.19041.0 SDK (C:\Program Files (x86)\Windows Kits\10).
+[2022.01.20-21.39.57:179][559]CompilerResultsLog: Building 4 actions with 16 processes...
+[2022.01.20-21.39.57:179][559]CompilerResultsLog:   [1/4] PlayerBehaviour.cpp
+[2022.01.20-21.39.57:179][559]CompilerResultsLog:   [2/4] UE4Editor-GC_UE4CPP-2077.lib
+[2022.01.20-21.39.57:179][559]CompilerResultsLog:      Cr?ation de la biblioth?que C:\Users\robin\Documents\GitHub\P5_UE4\GC_UE4CPP\Intermediate\Build\Win64\UE4Editor\Development\GC_UE4CPP\UE4Editor-GC_UE4CPP-2077.lib et de l'objet C:\Users\robin\Documents\GitHub\P5_UE4\GC_UE4CPP\Intermediate\Build\Win64\UE4Editor\Development\GC_UE4CPP\UE4Editor-GC_UE4CPP-2077.exp
+[2022.01.20-21.39.57:179][559]CompilerResultsLog:   [3/4] UE4Editor-GC_UE4CPP-2077.dll
+[2022.01.20-21.39.57:179][559]CompilerResultsLog:      Cr?ation de la biblioth?que C:\Users\robin\Documents\GitHub\P5_UE4\GC_UE4CPP\Intermediate\Build\Win64\UE4Editor\Development\GC_UE4CPP\UE4Editor-GC_UE4CPP-2077.suppressed.lib et de l'objet C:\Users\robin\Documents\GitHub\P5_UE4\GC_UE4CPP\Intermediate\Build\Win64\UE4Editor\Development\GC_UE4CPP\UE4Editor-GC_UE4CPP-2077.suppressed.exp
+[2022.01.20-21.39.57:179][559]CompilerResultsLog:   [4/4] GC_UE4CPPEditor.target
+[2022.01.20-21.39.57:179][559]CompilerResultsLog: Total time in Parallel executor: 3,15 seconds
+[2022.01.20-21.39.57:179][559]CompilerResultsLog: Total execution time: 4,01 seconds
+[2022.01.20-21.39.57:179][559]LogMainFrame: MainFrame: Module compiling took 4.127 seconds
+[2022.01.20-21.39.57:213][559]LogNativeClassHierarchy: Verbose: Native class hierarchy updated for 'GC_UE4CPP' in 0.0003 seconds. Added 4 classes and 2 folders.
+[2022.01.20-21.39.57:222][559]Display: HotReload successful (0 functions remapped  0 scriptstructs remapped)
+[2022.01.20-21.39.57:316][559]LogNativeClassHierarchy: Verbose: Native class hierarchy populated in 0.0114 seconds. Added 3826 classes and 930 folders.
+[2022.01.20-21.39.57:316][559]Display: HotReload took  4.3s.
+[2022.01.20-21.39.58:749][627]LogTemp: Repeating last play command: Selected Viewport
+[2022.01.20-21.39.58:762][627]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2022.01.20-21.39.58:762][627]PIE: New page: PIE session: MapLény (20 janv. 2022 à 23:39:58)
+[2022.01.20-21.39.58:762][627]LogPlayLevel: Creating play world package: /Game/Leny_camera/Map/UEDPIE_0_MapLény
+[2022.01.20-21.39.58:765][627]LogPlayLevel: PIE: StaticDuplicateObject took: (0.002293s)
+[2022.01.20-21.39.58:765][627]LogAIModule: Creating AISystem for world MapLény
+[2022.01.20-21.39.58:766][627]LogPlayLevel: PIE: World Init took: (0.001195s)
+[2022.01.20-21.39.58:766][627]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Leny_camera/Map/MapLény.MapLény to /Game/Leny_camera/Map/UEDPIE_0_MapLény.MapLény (0.003636s)
+[2022.01.20-21.39.58:844][627]LogUObjectHash: Compacting FUObjectHashTables data took   5.22ms
+[2022.01.20-21.39.58:846][627]LogAudio: Display: Creating Audio Device:                 Id: 34, Scope: Unique, Realtime: True
+[2022.01.20-21.39.58:846][627]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2022.01.20-21.39.58:846][627]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2022.01.20-21.39.58:847][627]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2022.01.20-21.39.58:847][627]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2022.01.20-21.39.58:847][627]LogAudioMixer: Display: 	Number of buffers to queue:			  2
+[2022.01.20-21.39.58:847][627]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2022.01.20-21.39.58:847][627]LogAudioMixer: Display: 	Number of Async Source Workers:		  0
+[2022.01.20-21.39.58:847][627]LogAudio: Display: AudioDevice MaxSources: 32
+[2022.01.20-21.39.58:847][627]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2022.01.20-21.39.58:847][627]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2022.01.20-21.39.58:847][627]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2022.01.20-21.39.58:847][627]LogAudioMixer: Display: Initializing audio mixer.
+[2022.01.20-21.39.58:853][627]LogAudioMixer: Display: 0: FrontLeft
+[2022.01.20-21.39.58:853][627]LogAudioMixer: Display: 1: FrontRight
+[2022.01.20-21.39.58:862][627]LogAudioMixer: Display: Using Audio Device Casque pour téléphone (HyperX 7.1 Audio)
+[2022.01.20-21.39.58:863][627]LogAudioMixer: Display: Initializing Sound Submixes...
+[2022.01.20-21.39.58:863][627]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2022.01.20-21.39.58:863][627]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2022.01.20-21.39.58:863][627]LogAudioMixer: Display: Creating Master Submix 'MasterEQSubmixDefault'
+[2022.01.20-21.39.58:863][627]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called
+[2022.01.20-21.39.58:863][627]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048
+[2022.01.20-21.39.58:865][627]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal()
+[2022.01.20-21.39.58:865][627]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time
+[2022.01.20-21.39.58:865][627]LogInit: FAudioDevice initialized.
+[2022.01.20-21.39.58:865][627]LogAudio: Display: Audio Device (ID: 34) registered with world 'MapLény'.
+[2022.01.20-21.39.58:878][627]LogLoad: Game class is 'BP_GameMode_C'
+[2022.01.20-21.39.58:879][627]LogWorld: Bringing World /Game/Leny_camera/Map/UEDPIE_0_MapLény.MapLény up for play (max tick rate 0) at 2022.01.20-22.39.58
+[2022.01.20-21.39.58:879][627]LogWorld: Bringing up level for play took: 0.000540
+[2022.01.20-21.39.58:880][627]LogOnline: OSS: Creating online subsystem instance for: :Context_41
+[2022.01.20-21.39.58:882][627]PIE: Server logged in
+[2022.01.20-21.39.58:883][627]PIE: Play in editor total start time 0,126 seconds.
+[2022.01.20-21.40.35:649][995]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2022.01.20-21.40.35:649][995]LogWorld: BeginTearingDown for /Game/Leny_camera/Map/UEDPIE_0_MapLény
+[2022.01.20-21.40.35:649][995]LogWorld: UWorld::CleanupWorld for MapLény, bSessionEnded=true, bCleanupResources=true
+[2022.01.20-21.40.35:649][995]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2022.01.20-21.40.35:654][995]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2022.01.20-21.40.35:676][995]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2022.01.20-21.40.35:702][995]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2022.01.20-21.40.35:703][995]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called
+[2022.01.20-21.40.35:704][995]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called
+[2022.01.20-21.40.35:707][995]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2022.01.20-21.40.35:712][995]LogUObjectHash: Compacting FUObjectHashTables data took   4.84ms
+[2022.01.20-21.40.35:748][996]LogPlayLevel: Display: Destroying online subsystem :Context_41
+[2022.01.20-21.43.58:420][538]LogVSAccessor: Warning: Couldn't access Visual Studio
+[2022.01.20-21.43.58:424][538]Candidate modules for hot reload:
+[2022.01.20-21.43.58:424][538]  GC_UE4CPP
+[2022.01.20-21.43.58:424][538]Launching UnrealBuildTool... [E:/EpicGamesLibrary/UE_4.27/Engine/Binaries/DotNET/UnrealBuildTool.exe  -ModuleWithSuffix=GC_UE4CPP,0072 GC_UE4CPPEditor Win64 Development -Project="C:/Users/robin/Documents/GitHub/P5_UE4/GC_UE4CPP/GC_UE4CPP.uproject" "C:/Users/robin/Documents/GitHub/P5_UE4/GC_UE4CPP/GC_UE4CPP.uproject"  -IgnoreJunk]
+[2022.01.20-21.43.58:434][538]Warning: Starting HotReload took  0.0s.
+[2022.01.20-21.44.02:347][907]CompilerResultsLog: New page: Compilation - 20 janv. 2022 à 23:44:02
+[2022.01.20-21.44.02:347][907]CompilerResultsLog: Using 'git status' to determine working set for adaptive non-unity build (C:\Users\robin\Documents\GitHub\P5_UE4).
+[2022.01.20-21.44.02:347][907]CompilerResultsLog: Building GC_UE4CPPEditor...
+[2022.01.20-21.44.02:347][907]CompilerResultsLog: Using Visual Studio 2019 14.29.30139 toolchain (D:\Visual Studio\VC\Tools\MSVC\14.29.30133) and Windows 10.0.19041.0 SDK (C:\Program Files (x86)\Windows Kits\10).
+[2022.01.20-21.44.02:347][907]CompilerResultsLog: Building 4 actions with 16 processes...
+[2022.01.20-21.44.02:347][907]CompilerResultsLog:   [1/4] PlayerBehaviour.cpp
+[2022.01.20-21.44.02:347][907]CompilerResultsLog:   [2/4] UE4Editor-GC_UE4CPP-0072.lib
+[2022.01.20-21.44.02:347][907]CompilerResultsLog:      Cr?ation de la biblioth?que C:\Users\robin\Documents\GitHub\P5_UE4\GC_UE4CPP\Intermediate\Build\Win64\UE4Editor\Development\GC_UE4CPP\UE4Editor-GC_UE4CPP-0072.lib et de l'objet C:\Users\robin\Documents\GitHub\P5_UE4\GC_UE4CPP\Intermediate\Build\Win64\UE4Editor\Development\GC_UE4CPP\UE4Editor-GC_UE4CPP-0072.exp
+[2022.01.20-21.44.02:347][907]CompilerResultsLog:   [3/4] UE4Editor-GC_UE4CPP-0072.dll
+[2022.01.20-21.44.02:347][907]CompilerResultsLog:      Cr?ation de la biblioth?que C:\Users\robin\Documents\GitHub\P5_UE4\GC_UE4CPP\Intermediate\Build\Win64\UE4Editor\Development\GC_UE4CPP\UE4Editor-GC_UE4CPP-0072.suppressed.lib et de l'objet C:\Users\robin\Documents\GitHub\P5_UE4\GC_UE4CPP\Intermediate\Build\Win64\UE4Editor\Development\GC_UE4CPP\UE4Editor-GC_UE4CPP-0072.suppressed.exp
+[2022.01.20-21.44.02:347][907]CompilerResultsLog:   [4/4] GC_UE4CPPEditor.target
+[2022.01.20-21.44.02:347][907]CompilerResultsLog: Total time in Parallel executor: 2,79 seconds
+[2022.01.20-21.44.02:347][907]CompilerResultsLog: Total execution time: 3,79 seconds
+[2022.01.20-21.44.02:347][907]LogMainFrame: MainFrame: Module compiling took 3.928 seconds
+[2022.01.20-21.44.02:382][907]LogNativeClassHierarchy: Verbose: Native class hierarchy updated for 'GC_UE4CPP' in 0.0003 seconds. Added 4 classes and 2 folders.
+[2022.01.20-21.44.02:391][907]Display: HotReload successful (0 functions remapped  0 scriptstructs remapped)
+[2022.01.20-21.44.02:482][907]LogNativeClassHierarchy: Verbose: Native class hierarchy populated in 0.0106 seconds. Added 3826 classes and 930 folders.
+[2022.01.20-21.44.02:482][907]Display: HotReload took  4.1s.
+[2022.01.20-21.44.05:307][125]LogTemp: Repeating last play command: Selected Viewport
+[2022.01.20-21.44.05:321][125]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2022.01.20-21.44.05:321][125]PIE: New page: PIE session: MapLény (20 janv. 2022 à 23:44:05)
+[2022.01.20-21.44.05:342][125]LogPlayLevel: Creating play world package: /Game/Leny_camera/Map/UEDPIE_0_MapLény
+[2022.01.20-21.44.05:344][125]LogPlayLevel: PIE: StaticDuplicateObject took: (0.002120s)
+[2022.01.20-21.44.05:345][125]LogAIModule: Creating AISystem for world MapLény
+[2022.01.20-21.44.05:346][125]LogPlayLevel: PIE: World Init took: (0.001340s)
+[2022.01.20-21.44.05:346][125]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Leny_camera/Map/MapLény.MapLény to /Game/Leny_camera/Map/UEDPIE_0_MapLény.MapLény (0.003672s)
+[2022.01.20-21.44.05:420][125]LogUObjectHash: Compacting FUObjectHashTables data took   5.34ms
+[2022.01.20-21.44.05:423][125]LogAudio: Display: Creating Audio Device:                 Id: 35, Scope: Unique, Realtime: True
+[2022.01.20-21.44.05:423][125]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2022.01.20-21.44.05:423][125]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2022.01.20-21.44.05:423][125]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2022.01.20-21.44.05:423][125]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2022.01.20-21.44.05:423][125]LogAudioMixer: Display: 	Number of buffers to queue:			  2
+[2022.01.20-21.44.05:423][125]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2022.01.20-21.44.05:423][125]LogAudioMixer: Display: 	Number of Async Source Workers:		  0
+[2022.01.20-21.44.05:423][125]LogAudio: Display: AudioDevice MaxSources: 32
+[2022.01.20-21.44.05:424][125]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2022.01.20-21.44.05:424][125]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2022.01.20-21.44.05:424][125]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2022.01.20-21.44.05:424][125]LogAudioMixer: Display: Initializing audio mixer.
+[2022.01.20-21.44.05:429][125]LogAudioMixer: Display: 0: FrontLeft
+[2022.01.20-21.44.05:429][125]LogAudioMixer: Display: 1: FrontRight
+[2022.01.20-21.44.05:438][125]LogAudioMixer: Display: Using Audio Device Casque pour téléphone (HyperX 7.1 Audio)
+[2022.01.20-21.44.05:439][125]LogAudioMixer: Display: Initializing Sound Submixes...
+[2022.01.20-21.44.05:439][125]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2022.01.20-21.44.05:439][125]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2022.01.20-21.44.05:439][125]LogAudioMixer: Display: Creating Master Submix 'MasterEQSubmixDefault'
+[2022.01.20-21.44.05:439][125]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called
+[2022.01.20-21.44.05:439][125]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048
+[2022.01.20-21.44.05:441][125]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal()
+[2022.01.20-21.44.05:441][125]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time
+[2022.01.20-21.44.05:441][125]LogInit: FAudioDevice initialized.
+[2022.01.20-21.44.05:441][125]LogAudio: Display: Audio Device (ID: 35) registered with world 'MapLény'.
+[2022.01.20-21.44.05:447][125]LogLoad: Game class is 'BP_GameMode_C'
+[2022.01.20-21.44.05:448][125]LogWorld: Bringing World /Game/Leny_camera/Map/UEDPIE_0_MapLény.MapLény up for play (max tick rate 0) at 2022.01.20-22.44.05
+[2022.01.20-21.44.05:448][125]LogWorld: Bringing up level for play took: 0.000511
+[2022.01.20-21.44.05:448][125]LogOnline: OSS: Creating online subsystem instance for: :Context_42
+[2022.01.20-21.44.05:450][125]PIE: Server logged in
+[2022.01.20-21.44.05:451][125]PIE: Play in editor total start time 0,135 seconds.
+[2022.01.20-21.45.18:187][855]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2022.01.20-21.45.18:187][855]LogWorld: BeginTearingDown for /Game/Leny_camera/Map/UEDPIE_0_MapLény
+[2022.01.20-21.45.18:187][855]LogWorld: UWorld::CleanupWorld for MapLény, bSessionEnded=true, bCleanupResources=true
+[2022.01.20-21.45.18:187][855]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2022.01.20-21.45.18:195][855]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2022.01.20-21.45.18:217][855]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2022.01.20-21.45.18:243][855]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2022.01.20-21.45.18:243][855]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called
+[2022.01.20-21.45.18:244][855]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called
+[2022.01.20-21.45.18:247][855]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2022.01.20-21.45.18:253][855]LogUObjectHash: Compacting FUObjectHashTables data took   4.52ms
+[2022.01.20-21.45.18:282][856]LogPlayLevel: Display: Destroying online subsystem :Context_42
+[2022.01.20-21.45.22:605][155]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (Floor)
+[2022.01.20-21.45.23:439][251]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Leny_camera/Map/MapLény" FILE="C:/Users/robin/Documents/GitHub/P5_UE4/GC_UE4CPP/Content/Leny_camera/Map/MapLény.umap" SILENT=true AUTOSAVING=false KEEPDIRTY=false
+[2022.01.20-21.45.23:470][251]LogUObjectHash: Compacting FUObjectHashTables data took   3.25ms
+[2022.01.20-21.45.23:487][251]LogSavePackage: Moving 'C:/Users/robin/Documents/GitHub/P5_UE4/GC_UE4CPP/Saved/MapLény2A838C844F6D437BB5CD5BA999F983C0.tmp' to 'C:/Users/robin/Documents/GitHub/P5_UE4/GC_UE4CPP/Content/Leny_camera/Map/MapLény.umap'
+[2022.01.20-21.45.23:506][251]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Leny_camera/Map/MapLény_BuiltData" FILE="C:/Users/robin/Documents/GitHub/P5_UE4/GC_UE4CPP/Content/Leny_camera/Map/MapLény_BuiltData.uasset" SILENT=true
+[2022.01.20-21.45.23:532][251]LogSavePackage: Moving 'C:/Users/robin/Documents/GitHub/P5_UE4/GC_UE4CPP/Saved/MapLény_BuiltData56760B324C9BC68ED4549AB404384763.tmp' to 'C:/Users/robin/Documents/GitHub/P5_UE4/GC_UE4CPP/Content/Leny_camera/Map/MapLény_BuiltData.uasset'
+[2022.01.20-21.45.23:553][251]AssetCheck: New page: Asset Save: multiple assets
+[2022.01.20-21.45.23:553][251]LogContentValidation: Display: Validating MapBuildDataRegistry /Game/Leny_camera/Map/MapLény_BuiltData.MapLény_BuiltData
+[2022.01.20-21.45.23:553][251]LogContentValidation: Display: Validating World /Game/Leny_camera/Map/MapLény.MapLény
