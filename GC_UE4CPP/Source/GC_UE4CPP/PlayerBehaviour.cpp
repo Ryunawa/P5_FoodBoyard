@@ -14,7 +14,7 @@ APlayerBehaviour::APlayerBehaviour()
 	ZoomValues.Add(400);
 	ZoomValues.Add(700);
 	ZoomValues.Add(1000);
-	ZoomValues.Add(1400);
+	ZoomValues.Add(1401);
 
 	// Set size for collision capsule
 	GetCapsuleComponent()->InitCapsuleSize(42.f, 96.0f);
