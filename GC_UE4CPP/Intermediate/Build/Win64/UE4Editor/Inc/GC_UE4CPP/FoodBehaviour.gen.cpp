@@ -39,10 +39,6 @@ void EmptyLinkFunctionForGeneratedCodeFoodBehaviour() {}
 #endif
 		static const UE4CodeGen_Private::FArrayPropertyParams NewProp_Foods;
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ChosenFood_MetaData[];
-#endif
-		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_ChosenFood;
-#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Food_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_Food;
@@ -69,24 +65,16 @@ void EmptyLinkFunctionForGeneratedCodeFoodBehaviour() {}
 #endif
 	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UClass_AFoodBehaviour_Statics::NewProp_Foods = { "Foods", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AFoodBehaviour, Foods), EArrayPropertyFlags::None, METADATA_PARAMS(Z_Construct_UClass_AFoodBehaviour_Statics::NewProp_Foods_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AFoodBehaviour_Statics::NewProp_Foods_MetaData)) };
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AFoodBehaviour_Statics::NewProp_ChosenFood_MetaData[] = {
-		{ "Category", "FoodBehaviour" },
-		{ "ModuleRelativePath", "FoodBehaviour.h" },
-	};
-#endif
-	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AFoodBehaviour_Statics::NewProp_ChosenFood = { "ChosenFood", nullptr, (EPropertyFlags)0x0010000000020001, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AFoodBehaviour, ChosenFood), Z_Construct_UClass_UStaticMesh_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AFoodBehaviour_Statics::NewProp_ChosenFood_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AFoodBehaviour_Statics::NewProp_ChosenFood_MetaData)) };
-#if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AFoodBehaviour_Statics::NewProp_Food_MetaData[] = {
 		{ "Category", "FoodBehaviour" },
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "FoodBehaviour.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AFoodBehaviour_Statics::NewProp_Food = { "Food", nullptr, (EPropertyFlags)0x0010000000080009, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AFoodBehaviour, Food), Z_Construct_UClass_UStaticMeshComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AFoodBehaviour_Statics::NewProp_Food_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AFoodBehaviour_Statics::NewProp_Food_MetaData)) };
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AFoodBehaviour_Statics::NewProp_Food = { "Food", nullptr, (EPropertyFlags)0x00100000000a0009, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AFoodBehaviour, Food), Z_Construct_UClass_UStaticMeshComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AFoodBehaviour_Statics::NewProp_Food_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AFoodBehaviour_Statics::NewProp_Food_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AFoodBehaviour_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AFoodBehaviour_Statics::NewProp_Foods_Inner,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AFoodBehaviour_Statics::NewProp_Foods,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AFoodBehaviour_Statics::NewProp_ChosenFood,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AFoodBehaviour_Statics::NewProp_Food,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_AFoodBehaviour_Statics::StaticCppClassTypeInfo = {
@@ -116,7 +104,7 @@ void EmptyLinkFunctionForGeneratedCodeFoodBehaviour() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AFoodBehaviour, 1682017658);
+	IMPLEMENT_CLASS(AFoodBehaviour, 4291917054);
 	template<> GC_UE4CPP_API UClass* StaticClass<AFoodBehaviour>()
 	{
 		return AFoodBehaviour::StaticClass();

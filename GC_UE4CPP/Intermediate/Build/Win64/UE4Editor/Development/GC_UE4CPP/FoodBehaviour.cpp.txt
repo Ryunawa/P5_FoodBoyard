@@ -33,14 +33,3 @@ D:\Visual Studio\VC\Tools\MSVC\14.29.30133\INCLUDE\xlocinfo.h
 D:\Visual Studio\VC\Tools\MSVC\14.29.30133\INCLUDE\cctype
 D:\Visual Studio\VC\Tools\MSVC\14.29.30133\INCLUDE\clocale
 C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\ucrt\locale.h
-D:\Visual Studio\VC\Tools\MSVC\14.29.30133\INCLUDE\random
-D:\Visual Studio\VC\Tools\MSVC\14.29.30133\INCLUDE\algorithm
-D:\Visual Studio\VC\Tools\MSVC\14.29.30133\INCLUDE\vector
-D:\Visual Studio\VC\Tools\MSVC\14.29.30133\INCLUDE\xbit_ops.h
-E:\EpicGamesLibrary\UE_4.27\Engine\Source\ThirdParty/openexr/Deploy/OpenEXR-2.3.0/OpenEXR/include/ImathMath.h
-E:\EpicGamesLibrary\UE_4.27\Engine\Source\ThirdParty\openexr\Deploy\OpenEXR-2.3.0\OpenEXR\include\ImathPlatform.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\ucrt\math.h
-E:\EpicGamesLibrary\UE_4.27\Engine\Source\ThirdParty\openexr\Deploy\OpenEXR-2.3.0\OpenEXR\include\ImathLimits.h
-E:\EpicGamesLibrary\UE_4.27\Engine\Source\ThirdParty\openexr\Deploy\OpenEXR-2.3.0\OpenEXR\include\ImathNamespace.h
-E:\EpicGamesLibrary\UE_4.27\Engine\Source\ThirdParty\openexr\Deploy\OpenEXR-2.3.0\OpenEXR\include\IlmBaseConfig.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\ucrt\math.h

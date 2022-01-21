@@ -113,6 +113,7 @@ void APlayerBehaviour::Zoom(float Rate)
 	{
 		ZoomIndex++;
 		UE_LOG(LogTemp, Warning, TEXT("Niveau de zoom: %d"), ZoomIndex);
+		
 		SetCameraDistance(ZoomIndex);
 	}
 

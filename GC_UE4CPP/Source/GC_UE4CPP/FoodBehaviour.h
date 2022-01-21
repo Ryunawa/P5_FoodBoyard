@@ -13,12 +13,9 @@ public:
 	// Sets default values for this actor's properties
 	AFoodBehaviour();
 	
-UPROPERTY(EditAnywhere)
-	TArray<UStaticMesh*> Foods;
-
-	UPROPERTY(VisibleAnywhere)
-		UStaticMesh* ChosenFood;
 	UPROPERTY(EditAnywhere)
+		TArray<UStaticMesh*> Foods;
+	UPROPERTY(VisibleAnywhere)
 		UStaticMeshComponent* Food;
 
 	void PickFood();

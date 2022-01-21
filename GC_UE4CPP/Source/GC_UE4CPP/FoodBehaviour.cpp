@@ -1,8 +1,6 @@
 #include "FoodBehaviour.h"
 #include <iostream>
 #include "Components/StaticMeshComponent.h"
-#include "random"
-#include "ThirdParty/openexr/Deploy/OpenEXR-2.3.0/OpenEXR/include/ImathMath.h"
 
 using namespace std;
 
@@ -12,9 +10,7 @@ AFoodBehaviour::AFoodBehaviour()
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 
-	Food = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("MeshComponent"));
-	
-	
+	Food = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("MeshComponent")); // Create a static mesh component to the BP_Food
 }
 
 // Called when the game starts or when spawned
@@ -33,10 +29,7 @@ void AFoodBehaviour::Tick(float DeltaTime)
 
 void AFoodBehaviour::PickFood()
 {
-	RandIndex = FMath::RandRange(0, 5);
-	cout << RandIndex << endl;
-	ChosenFood = Foods[RandIndex];
-	cout << Foods[RandIndex] << endl;
-	Food->SetStaticMesh(ChosenFood);
+	RandIndex = FMath::RandRange(0, 5); // Choose a random number between 0 and 5
+	Food->SetStaticMesh(Foods[RandIndex]); // Set the static mesh component of the BP_Food
 }
 
