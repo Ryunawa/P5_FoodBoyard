@@ -13,10 +13,10 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define GC_UE4CPP_CameraCharacter_generated_h
 
-#define GC_UE4CPP_Source_GC_UE4CPP_CameraCharacter_h_12_SPARSE_DATA
-#define GC_UE4CPP_Source_GC_UE4CPP_CameraCharacter_h_12_RPC_WRAPPERS
-#define GC_UE4CPP_Source_GC_UE4CPP_CameraCharacter_h_12_RPC_WRAPPERS_NO_PURE_DECLS
-#define GC_UE4CPP_Source_GC_UE4CPP_CameraCharacter_h_12_INCLASS_NO_PURE_DECLS \
+#define GC_UE4CPP_Source_GC_UE4CPP_CameraCharacter_h_13_SPARSE_DATA
+#define GC_UE4CPP_Source_GC_UE4CPP_CameraCharacter_h_13_RPC_WRAPPERS
+#define GC_UE4CPP_Source_GC_UE4CPP_CameraCharacter_h_13_RPC_WRAPPERS_NO_PURE_DECLS
+#define GC_UE4CPP_Source_GC_UE4CPP_CameraCharacter_h_13_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesACameraCharacter(); \
 	friend struct Z_Construct_UClass_ACameraCharacter_Statics; \
@@ -25,7 +25,7 @@ public: \
 	DECLARE_SERIALIZER(ACameraCharacter)
 
 
-#define GC_UE4CPP_Source_GC_UE4CPP_CameraCharacter_h_12_INCLASS \
+#define GC_UE4CPP_Source_GC_UE4CPP_CameraCharacter_h_13_INCLASS \
 private: \
 	static void StaticRegisterNativesACameraCharacter(); \
 	friend struct Z_Construct_UClass_ACameraCharacter_Statics; \
@@ -34,7 +34,7 @@ public: \
 	DECLARE_SERIALIZER(ACameraCharacter)
 
 
-#define GC_UE4CPP_Source_GC_UE4CPP_CameraCharacter_h_12_STANDARD_CONSTRUCTORS \
+#define GC_UE4CPP_Source_GC_UE4CPP_CameraCharacter_h_13_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API ACameraCharacter(const FObjectInitializer& ObjectInitializer); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(ACameraCharacter) \
@@ -47,7 +47,7 @@ private: \
 public:
 
 
-#define GC_UE4CPP_Source_GC_UE4CPP_CameraCharacter_h_12_ENHANCED_CONSTRUCTORS \
+#define GC_UE4CPP_Source_GC_UE4CPP_CameraCharacter_h_13_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API ACameraCharacter(ACameraCharacter&&); \
@@ -58,32 +58,32 @@ public: \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(ACameraCharacter)
 
 
-#define GC_UE4CPP_Source_GC_UE4CPP_CameraCharacter_h_12_PRIVATE_PROPERTY_OFFSET \
+#define GC_UE4CPP_Source_GC_UE4CPP_CameraCharacter_h_13_PRIVATE_PROPERTY_OFFSET \
 	FORCEINLINE static uint32 __PPO__CameraBoom() { return STRUCT_OFFSET(ACameraCharacter, CameraBoom); } \
 	FORCEINLINE static uint32 __PPO__FollowCamera() { return STRUCT_OFFSET(ACameraCharacter, FollowCamera); }
 
 
-#define GC_UE4CPP_Source_GC_UE4CPP_CameraCharacter_h_9_PROLOG
-#define GC_UE4CPP_Source_GC_UE4CPP_CameraCharacter_h_12_GENERATED_BODY_LEGACY \
+#define GC_UE4CPP_Source_GC_UE4CPP_CameraCharacter_h_10_PROLOG
+#define GC_UE4CPP_Source_GC_UE4CPP_CameraCharacter_h_13_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	GC_UE4CPP_Source_GC_UE4CPP_CameraCharacter_h_12_PRIVATE_PROPERTY_OFFSET \
-	GC_UE4CPP_Source_GC_UE4CPP_CameraCharacter_h_12_SPARSE_DATA \
-	GC_UE4CPP_Source_GC_UE4CPP_CameraCharacter_h_12_RPC_WRAPPERS \
-	GC_UE4CPP_Source_GC_UE4CPP_CameraCharacter_h_12_INCLASS \
-	GC_UE4CPP_Source_GC_UE4CPP_CameraCharacter_h_12_STANDARD_CONSTRUCTORS \
+	GC_UE4CPP_Source_GC_UE4CPP_CameraCharacter_h_13_PRIVATE_PROPERTY_OFFSET \
+	GC_UE4CPP_Source_GC_UE4CPP_CameraCharacter_h_13_SPARSE_DATA \
+	GC_UE4CPP_Source_GC_UE4CPP_CameraCharacter_h_13_RPC_WRAPPERS \
+	GC_UE4CPP_Source_GC_UE4CPP_CameraCharacter_h_13_INCLASS \
+	GC_UE4CPP_Source_GC_UE4CPP_CameraCharacter_h_13_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define GC_UE4CPP_Source_GC_UE4CPP_CameraCharacter_h_12_GENERATED_BODY \
+#define GC_UE4CPP_Source_GC_UE4CPP_CameraCharacter_h_13_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	GC_UE4CPP_Source_GC_UE4CPP_CameraCharacter_h_12_PRIVATE_PROPERTY_OFFSET \
-	GC_UE4CPP_Source_GC_UE4CPP_CameraCharacter_h_12_SPARSE_DATA \
-	GC_UE4CPP_Source_GC_UE4CPP_CameraCharacter_h_12_RPC_WRAPPERS_NO_PURE_DECLS \
-	GC_UE4CPP_Source_GC_UE4CPP_CameraCharacter_h_12_INCLASS_NO_PURE_DECLS \
-	GC_UE4CPP_Source_GC_UE4CPP_CameraCharacter_h_12_ENHANCED_CONSTRUCTORS \
+	GC_UE4CPP_Source_GC_UE4CPP_CameraCharacter_h_13_PRIVATE_PROPERTY_OFFSET \
+	GC_UE4CPP_Source_GC_UE4CPP_CameraCharacter_h_13_SPARSE_DATA \
+	GC_UE4CPP_Source_GC_UE4CPP_CameraCharacter_h_13_RPC_WRAPPERS_NO_PURE_DECLS \
+	GC_UE4CPP_Source_GC_UE4CPP_CameraCharacter_h_13_INCLASS_NO_PURE_DECLS \
+	GC_UE4CPP_Source_GC_UE4CPP_CameraCharacter_h_13_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

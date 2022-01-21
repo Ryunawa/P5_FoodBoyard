@@ -79,7 +79,7 @@ void EmptyLinkFunctionForGeneratedCodeCameraCharacter() {}
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ACameraCharacter_Statics::NewProp_FollowCamera_MetaData[] = {
 		{ "AllowPrivateAccess", "true" },
 		{ "Category", "Camera" },
-		{ "Comment", "// Follow camera \n" },
+		{ "Comment", "// Follow camera\n" },
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "CameraCharacter.h" },
 		{ "ToolTip", "Follow camera" },
@@ -133,7 +133,7 @@ void EmptyLinkFunctionForGeneratedCodeCameraCharacter() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ACameraCharacter, 4218170573);
+	IMPLEMENT_CLASS(ACameraCharacter, 550280865);
 	template<> GC_UE4CPP_API UClass* StaticClass<ACameraCharacter>()
 	{
 		return ACameraCharacter::StaticClass();
