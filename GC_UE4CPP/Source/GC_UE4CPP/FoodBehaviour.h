@@ -18,7 +18,7 @@ public:
 	UPROPERTY(VisibleAnywhere)
 		UStaticMeshComponent* Food;
 
-	void PickFood();
+	void RandomFood();
 
 protected:
 	// Called when the game starts or when spawned

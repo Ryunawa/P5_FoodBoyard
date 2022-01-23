@@ -23,11 +23,9 @@ class GC_UE4CPP_API APlayerBehaviour : public ACharacter
 public:
     // Sets default values for this character's properties
     APlayerBehaviour();
-
     
     UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera)
     float TurnRate = 45.0f;
-    
     UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera)
     float LookUpRate = 45.0f;
 

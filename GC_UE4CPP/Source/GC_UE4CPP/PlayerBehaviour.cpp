@@ -23,9 +23,7 @@ APlayerBehaviour::APlayerBehaviour()
 	bUseControllerRotationPitch = false;
 	bUseControllerRotationYaw = false;
 	bUseControllerRotationRoll = false;
-
-
-
+	
 	// Create a camera boom (pulls in towards the player if there is a collision)
 	CameraBoom = CreateDefaultSubobject<USpringArmComponent>(TEXT("CameraBoom"));
 	CameraBoom->SetupAttachment(RootComponent);
@@ -41,25 +39,21 @@ APlayerBehaviour::APlayerBehaviour()
 	GetCharacterMovement()->RotationRate = FRotator(0, 540, 0);
 }
 
-
 void APlayerBehaviour::TurnAtRate(float Rate)
 {
 	AddControllerYawInput(Rate * TurnRate * GetWorld()->GetDeltaSeconds());
 }
-
 
 void APlayerBehaviour::LookUpAtRate(float Rate)
 {
 	AddControllerPitchInput(Rate * LookUpRate * GetWorld()->GetDeltaSeconds());
 }
 
-
 // Called when the game starts or when spawned
 void APlayerBehaviour::BeginPlay()
 {
     Super::BeginPlay();
 }
-
 
 // Called every frame
 void APlayerBehaviour::Tick(float DeltaTime)
@@ -73,7 +67,6 @@ void APlayerBehaviour::Tick(float DeltaTime)
     }
 }
 
-
 // Called to bind functionality to input
 void APlayerBehaviour::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 {
@@ -83,7 +76,6 @@ void APlayerBehaviour::SetupPlayerInputComponent(UInputComponent* PlayerInputCom
     InputComponent->BindAxis("MoveX", this, &APlayerBehaviour::Move_XAxis);
     InputComponent->BindAxis("MoveY", this, &APlayerBehaviour::Move_YAxis);
 
-
 	//camera input
 	check(PlayerInputComponent);
 
@@ -92,7 +84,6 @@ void APlayerBehaviour::SetupPlayerInputComponent(UInputComponent* PlayerInputCom
 	PlayerInputComponent->BindAxis("Turn", this, &APawn::AddControllerYawInput);
 	PlayerInputComponent->BindAxis("Zoom", this, &APlayerBehaviour::Zoom);
 }
-
 
 void APlayerBehaviour::Move_XAxis(float Rate)
 {
@@ -105,7 +96,6 @@ void APlayerBehaviour::Move_YAxis(float Rate)
 	AddMovementInput(GetFollowCamera()->GetRightVector(), Rate * Speed);
 }
 
-
 //Add 1 to the value of ZoomIndex
 void APlayerBehaviour::Zoom(float Rate)
 {
@@ -116,7 +106,6 @@ void APlayerBehaviour::Zoom(float Rate)
 		
 		SetCameraDistance(ZoomIndex);
 	}
-
 	if(ZoomIndex > 0 && Rate > 0)
 	{
 		ZoomIndex--;
@@ -124,7 +113,6 @@ void APlayerBehaviour::Zoom(float Rate)
 		SetCameraDistance(ZoomIndex);
 	}
 }
-
 
 void APlayerBehaviour::SetCameraDistance(int Index)
 {

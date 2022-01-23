@@ -17,7 +17,7 @@ AFoodBehaviour::AFoodBehaviour()
 void AFoodBehaviour::BeginPlay()
 {
 	Super::BeginPlay();
-	PickFood();
+	RandomFood();
 	
 }
 
@@ -27,9 +27,10 @@ void AFoodBehaviour::Tick(float DeltaTime)
 	Super::Tick(DeltaTime);
 }
 
-void AFoodBehaviour::PickFood()
+void AFoodBehaviour::RandomFood()
 {
-	RandIndex = FMath::RandRange(0, 5); // Choose a random number between 0 and 5
+	RandIndex = FMath::RandRange(0,4); // Choose a random number between 0 and 4
 	Food->SetStaticMesh(Foods[RandIndex]); // Set the static mesh component of the BP_Food
 }
+
 
