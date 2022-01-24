@@ -3,6 +3,8 @@
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
 #include <iostream>
+#include "FoodBehaviour.h"
+#include "Components/SphereComponent.h"
 #include "PlayerBehaviour.generated.h"
 
 using namespace std;
@@ -21,7 +23,7 @@ class GC_UE4CPP_API APlayerBehaviour : public ACharacter
         class UCameraComponent* FollowCamera;
 
     UPROPERTY(EditAnywhere)
-        float SphereRange = 200;
+       USphereComponent* SphereDetection;
 
 public:
     // Sets default values for this character's properties
@@ -36,7 +38,6 @@ public:
 protected:
     // Called when the game starts or when spawned
     virtual void BeginPlay() override;
-
     virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
     
     // Input methods
@@ -47,11 +48,17 @@ protected:
     void Zoom(float Rate);
     void InteractFood();
     
-    // Input variables
+    float Speed;
+    float SphereRange = 300;
+    bool Hit;
+    bool IsHandEmpty;
+    
     FVector CurrentVelocity;
-    TArray<int> ZoomValues;
-    float Speed = 400.0f;
-    int ZoomIndex = 1;
+
+    AFoodBehaviour* Result;
+    
+    TArray<AActor*> ActorsToIgnore;
+    TArray<FHitResult> HitArray;
 
 public:
     // Called every frame

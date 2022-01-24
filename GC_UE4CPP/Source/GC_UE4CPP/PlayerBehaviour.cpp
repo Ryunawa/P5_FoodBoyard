@@ -1,21 +1,24 @@
 #include "PlayerBehaviour.h"
+#include "FoodBehaviour.h"
+#include "PhysXInterfaceWrapperCore.h"
 #include "Camera/CameraComponent.h"
 #include "Components/CapsuleComponent.h"
 #include "Components/InputComponent.h"
+#include "Engine/SkeletalMeshSocket.h"
 #include "GameFramework/CharacterMovementComponent.h"
 #include "GameFramework/SpringArmComponent.h"
+#include "Kismet/KismetSystemLibrary.h"
 #include "Math/UnitConversion.h"
 
 
 // Sets default values
 APlayerBehaviour::APlayerBehaviour()
 {
+	Speed = 400.0f;
+	IsHandEmpty = true;
+	
     // Set this character to call Tick() every frame.
     PrimaryActorTick.bCanEverTick = true;
-	ZoomValues.Add(400);
-	ZoomValues.Add(700);
-	ZoomValues.Add(1000);
-	ZoomValues.Add(1400);
 
 	// Set size for collision capsule
 	GetCapsuleComponent()->InitCapsuleSize(42.f, 96.0f);
@@ -28,7 +31,7 @@ APlayerBehaviour::APlayerBehaviour()
 	// Create a camera boom (pulls in towards the player if there is a collision)
 	CameraBoom = CreateDefaultSubobject<USpringArmComponent>(TEXT("CameraBoom"));
 	CameraBoom->SetupAttachment(RootComponent);
-	CameraBoom->TargetArmLength = ZoomValues[ZoomIndex]; // Set the distance between the camera and the character	
+	CameraBoom->TargetArmLength = 700; // Set the distance between the camera and the character	
 	CameraBoom->bUsePawnControlRotation = true;
 
 	// Create a follow camera
@@ -38,16 +41,8 @@ APlayerBehaviour::APlayerBehaviour()
 
 	GetCharacterMovement()->bOrientRotationToMovement = true;
 	GetCharacterMovement()->RotationRate = FRotator(0, 540, 0);
-}
 
-void APlayerBehaviour::TurnAtRate(float Rate)
-{
-	AddControllerYawInput(Rate * TurnRate * GetWorld()->GetDeltaSeconds());
-}
-
-void APlayerBehaviour::LookUpAtRate(float Rate)
-{
-	AddControllerPitchInput(Rate * LookUpRate * GetWorld()->GetDeltaSeconds());
+	SphereDetection = CreateDefaultSubobject<USphereComponent>(TEXT("SphereDetection"));
 }
 
 // Called when the game starts or when spawned
@@ -87,6 +82,16 @@ void APlayerBehaviour::SetupPlayerInputComponent(UInputComponent* PlayerInputCom
 	PlayerInputComponent->BindAction("Interact", IE_Pressed, this, &APlayerBehaviour::InteractFood);
 }
 
+void APlayerBehaviour::TurnAtRate(float Rate)
+{
+	AddControllerYawInput(Rate * TurnRate * GetWorld()->GetDeltaSeconds());
+}
+
+void APlayerBehaviour::LookUpAtRate(float Rate)
+{
+	AddControllerPitchInput(Rate * LookUpRate * GetWorld()->GetDeltaSeconds());
+}
+
 void APlayerBehaviour::Move_XAxis(float Rate)
 {
 	
@@ -101,12 +106,38 @@ void APlayerBehaviour::Move_YAxis(float Rate)
 //Set the distance between the player and the camera
 void APlayerBehaviour::Zoom(float Rate)
 {
-	CameraBoom->TargetArmLength -= (GetWorld()->DeltaTimeSeconds * Rate * 3000);
+	CameraBoom->TargetArmLength -= (GetWorld()->DeltaTimeSeconds * Rate * 6000);
 }
 
 void APlayerBehaviour::InteractFood()
 {
-	
+	const FVector Start = GetActorLocation();
+	const FVector End = GetActorLocation() * 200;
+	ActorsToIgnore.Add(this);
+
+	Hit = UKismetSystemLibrary::SphereTraceMulti(GetWorld(), Start, End, SphereRange,
+		UEngineTypes::ConvertToTraceType(ECC_Camera), true, ActorsToIgnore,
+		EDrawDebugTrace::ForDuration,HitArray, true, FLinearColor::Gray,FLinearColor::Blue, 60.0f);
+
+	if(Hit)
+	{
+		for(const FHitResult HitResult : HitArray)
+		{
+			GEngine->AddOnScreenDebugMessage(-1, 60.0f, FColor::Orange,
+			FString::Printf(TEXT("Hit: %s"), *HitResult.Actor->GetName()));
+			
+			Result = Cast<AFoodBehaviour>(HitResult.Actor); // Check if the the actor hit is a FoodBehaviour actor
+
+			if(Result != nullptr && IsHandEmpty == true)
+			{
+				USkeletalMeshComponent* PlayerMesh = GetMesh(); // Get the SkeletalMesh of the Player
+				HitResult.Actor->AttachToComponent(PlayerMesh, FAttachmentTransformRules::SnapToTargetNotIncludingScale, TEXT("Fist_RSocket")); // Attach the food to the right hand
+				HitResult.Actor->SetActorRelativeScale3D(FVector(0.05f, 0.05f, 0.05f)); // Set a smaller size to the food
+				Speed = 200.0f;
+				IsHandEmpty = false;
+			}
+		}
+	}  
 }
 
 
