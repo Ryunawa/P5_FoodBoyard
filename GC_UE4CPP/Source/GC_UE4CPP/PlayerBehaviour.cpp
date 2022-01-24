@@ -42,6 +42,7 @@ APlayerBehaviour::APlayerBehaviour()
 	GetCharacterMovement()->bOrientRotationToMovement = true;
 	GetCharacterMovement()->RotationRate = FRotator(0, 540, 0);
 
+	// Create a Sphere
 	SphereDetection = CreateDefaultSubobject<USphereComponent>(TEXT("SphereDetection"));
 }
 
@@ -75,6 +76,7 @@ void APlayerBehaviour::SetupPlayerInputComponent(UInputComponent* PlayerInputCom
 	//camera input
 	check(PlayerInputComponent);
 
+	//Bind the key with the methods
 	PlayerInputComponent->BindAxis("TurnRate", this, &APlayerBehaviour::TurnAtRate);
 	PlayerInputComponent->BindAxis("LookUpRate", this, &APlayerBehaviour::LookUpAtRate);
 	PlayerInputComponent->BindAxis("Turn", this, &APlayerBehaviour::AddControllerYawInput);
@@ -94,7 +96,6 @@ void APlayerBehaviour::LookUpAtRate(float Rate)
 
 void APlayerBehaviour::Move_XAxis(float Rate)
 {
-	
 	AddMovementInput(GetFollowCamera()->GetForwardVector(), Rate * Speed);
 }
 
@@ -106,25 +107,28 @@ void APlayerBehaviour::Move_YAxis(float Rate)
 //Set the distance between the player and the camera
 void APlayerBehaviour::Zoom(float Rate)
 {
-	CameraBoom->TargetArmLength -= (GetWorld()->DeltaTimeSeconds * Rate * 6000);
+	CameraBoom->TargetArmLength -= (GetWorld()->DeltaTimeSeconds * Rate * 4000);
 }
 
+//Allow to interact with the food
 void APlayerBehaviour::InteractFood()
 {
 	const FVector Start = GetActorLocation();
 	const FVector End = GetActorLocation() * 200;
 	ActorsToIgnore.Add(this);
 
+	// Create a sphere trace around the player and add inside an array all actors hit by the sphere trace
 	Hit = UKismetSystemLibrary::SphereTraceMulti(GetWorld(), Start, End, SphereRange,
 		UEngineTypes::ConvertToTraceType(ECC_Camera), true, ActorsToIgnore,
-		EDrawDebugTrace::ForDuration,HitArray, true, FLinearColor::Gray,FLinearColor::Blue, 60.0f);
+		EDrawDebugTrace::None,HitArray, true, FLinearColor::Gray,FLinearColor::Blue, 60.0f);
 
 	if(Hit)
 	{
 		for(const FHitResult HitResult : HitArray)
 		{
-			GEngine->AddOnScreenDebugMessage(-1, 60.0f, FColor::Orange,
-			FString::Printf(TEXT("Hit: %s"), *HitResult.Actor->GetName()));
+			//To see the actors hit (debug only)
+			/*GEngine->AddOnScreenDebugMessage(-1, 60.0f, FColor::Orange,
+			FString::Printf(TEXT("Hit: %s"), *HitResult.Actor->GetName()));*/
 			
 			Result = Cast<AFoodBehaviour>(HitResult.Actor); // Check if the the actor hit is a FoodBehaviour actor
 
@@ -132,12 +136,12 @@ void APlayerBehaviour::InteractFood()
 			{
 				USkeletalMeshComponent* PlayerMesh = GetMesh(); // Get the SkeletalMesh of the Player
 				HitResult.Actor->AttachToComponent(PlayerMesh, FAttachmentTransformRules::SnapToTargetNotIncludingScale, TEXT("Fist_RSocket")); // Attach the food to the right hand
-				HitResult.Actor->SetActorRelativeScale3D(FVector(0.05f, 0.05f, 0.05f)); // Set a smaller size to the food
-				Speed = 200.0f;
+				HitResult.Actor->SetActorRelativeScale3D(FVector(0.025f, 0.025f, 0.025f)); // Set a smaller size to the food
+				Speed = Speed / 2.0f;
 				IsHandEmpty = false;
 			}
 		}
-	}  
+	}
 }
 
 

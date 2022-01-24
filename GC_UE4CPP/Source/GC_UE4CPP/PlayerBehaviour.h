@@ -22,7 +22,7 @@ class GC_UE4CPP_API APlayerBehaviour : public ACharacter
     UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera, meta = (AllowPrivateAccess = "true"))
         class UCameraComponent* FollowCamera;
 
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(VisibleAnywhere)
        USphereComponent* SphereDetection;
 
 public:
@@ -47,7 +47,7 @@ protected:
     void LookUpAtRate(float Rate);
     void Zoom(float Rate);
     void InteractFood();
-    
+
     float Speed;
     float SphereRange = 300;
     bool Hit;
