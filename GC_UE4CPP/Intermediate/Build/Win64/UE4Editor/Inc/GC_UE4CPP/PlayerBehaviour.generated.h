@@ -60,7 +60,8 @@ public: \
 
 #define GC_UE4CPP_Source_GC_UE4CPP_PlayerBehaviour_h_13_PRIVATE_PROPERTY_OFFSET \
 	FORCEINLINE static uint32 __PPO__CameraBoom() { return STRUCT_OFFSET(APlayerBehaviour, CameraBoom); } \
-	FORCEINLINE static uint32 __PPO__FollowCamera() { return STRUCT_OFFSET(APlayerBehaviour, FollowCamera); }
+	FORCEINLINE static uint32 __PPO__FollowCamera() { return STRUCT_OFFSET(APlayerBehaviour, FollowCamera); } \
+	FORCEINLINE static uint32 __PPO__SphereRange() { return STRUCT_OFFSET(APlayerBehaviour, SphereRange); }
 
 
 #define GC_UE4CPP_Source_GC_UE4CPP_PlayerBehaviour_h_10_PROLOG

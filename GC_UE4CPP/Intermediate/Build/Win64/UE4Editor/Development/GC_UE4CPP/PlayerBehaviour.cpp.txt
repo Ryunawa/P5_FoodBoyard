@@ -63,3 +63,5 @@ E:\EpicGamesLibrary\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine
 E:\EpicGamesLibrary\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\CharacterMovementComponent.generated.h
 E:\EpicGamesLibrary\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/SpringArmComponent.h
 E:\EpicGamesLibrary\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\SpringArmComponent.generated.h
+E:\EpicGamesLibrary\UE_4.27\Engine\Source\Runtime\Core\Public\Math/UnitConversion.h
+E:\EpicGamesLibrary\UE_4.27\Engine\Source\Runtime\Core\Public\Math/UnitConversion.inl

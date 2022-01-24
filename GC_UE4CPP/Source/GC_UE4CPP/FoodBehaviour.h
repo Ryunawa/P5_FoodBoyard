@@ -19,6 +19,7 @@ public:
 		UStaticMeshComponent* Food;
 
 	void RandomFood();
+	
 
 protected:
 	// Called when the game starts or when spawned

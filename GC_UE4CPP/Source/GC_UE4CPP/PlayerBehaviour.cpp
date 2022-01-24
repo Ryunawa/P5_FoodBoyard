@@ -4,6 +4,7 @@
 #include "Components/InputComponent.h"
 #include "GameFramework/CharacterMovementComponent.h"
 #include "GameFramework/SpringArmComponent.h"
+#include "Math/UnitConversion.h"
 
 
 // Sets default values
@@ -14,7 +15,7 @@ APlayerBehaviour::APlayerBehaviour()
 	ZoomValues.Add(400);
 	ZoomValues.Add(700);
 	ZoomValues.Add(1000);
-	ZoomValues.Add(1401);
+	ZoomValues.Add(1400);
 
 	// Set size for collision capsule
 	GetCapsuleComponent()->InitCapsuleSize(42.f, 96.0f);
@@ -62,7 +63,7 @@ void APlayerBehaviour::Tick(float DeltaTime)
 
     if (!CurrentVelocity.IsZero())
     {
-        FVector NewLocation = GetActorLocation() + (CurrentVelocity * DeltaTime);
+        const FVector NewLocation = GetActorLocation() + (CurrentVelocity * DeltaTime);
         SetActorLocation(NewLocation);
     }
 }
@@ -73,16 +74,17 @@ void APlayerBehaviour::SetupPlayerInputComponent(UInputComponent* PlayerInputCom
     Super::SetupPlayerInputComponent(PlayerInputComponent);
 
     // Respond every frame to the values of our two movement axes, MoveX and MoveY.
-    InputComponent->BindAxis("MoveX", this, &APlayerBehaviour::Move_XAxis);
-    InputComponent->BindAxis("MoveY", this, &APlayerBehaviour::Move_YAxis);
+    PlayerInputComponent->BindAxis("MoveX", this, &APlayerBehaviour::Move_XAxis);
+    PlayerInputComponent->BindAxis("MoveY", this, &APlayerBehaviour::Move_YAxis);
 
 	//camera input
 	check(PlayerInputComponent);
 
 	PlayerInputComponent->BindAxis("TurnRate", this, &APlayerBehaviour::TurnAtRate);
 	PlayerInputComponent->BindAxis("LookUpRate", this, &APlayerBehaviour::LookUpAtRate);
-	PlayerInputComponent->BindAxis("Turn", this, &APawn::AddControllerYawInput);
+	PlayerInputComponent->BindAxis("Turn", this, &APlayerBehaviour::AddControllerYawInput);
 	PlayerInputComponent->BindAxis("Zoom", this, &APlayerBehaviour::Zoom);
+	PlayerInputComponent->BindAction("Interact", IE_Pressed, this, &APlayerBehaviour::InteractFood);
 }
 
 void APlayerBehaviour::Move_XAxis(float Rate)
@@ -96,25 +98,15 @@ void APlayerBehaviour::Move_YAxis(float Rate)
 	AddMovementInput(GetFollowCamera()->GetRightVector(), Rate * Speed);
 }
 
-//Add 1 to the value of ZoomIndex
+//Set the distance between the player and the camera
 void APlayerBehaviour::Zoom(float Rate)
 {
-	if(ZoomIndex < 3 && Rate < 0)
-	{
-		ZoomIndex++;
-		UE_LOG(LogTemp, Warning, TEXT("Niveau de zoom: %d"), ZoomIndex);
-		
-		SetCameraDistance(ZoomIndex);
-	}
-	if(ZoomIndex > 0 && Rate > 0)
-	{
-		ZoomIndex--;
-		UE_LOG(LogTemp, Warning, TEXT("Niveau de zoom: %d"), ZoomIndex);
-		SetCameraDistance(ZoomIndex);
-	}
+	CameraBoom->TargetArmLength -= (GetWorld()->DeltaTimeSeconds * Rate * 3000);
 }
 
-void APlayerBehaviour::SetCameraDistance(int Index)
+void APlayerBehaviour::InteractFood()
 {
-	CameraBoom->TargetArmLength = ZoomValues[Index];
+	
 }
+
+
