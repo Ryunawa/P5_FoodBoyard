@@ -128,4 +128,5 @@ void APlayerBehaviour::Zoom(float Rate)
 void APlayerBehaviour::SetCameraDistance(int Index)
 {
 	CameraBoom->TargetArmLength = ZoomValues[Index];
+
 }

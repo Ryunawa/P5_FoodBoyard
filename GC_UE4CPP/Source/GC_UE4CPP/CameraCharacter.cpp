@@ -80,8 +80,8 @@ void ACameraCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCom
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
 
 	// Respond every frame to the values of our two movement axes, MoveX and MoveY.
-	InputComponent->BindAxis("MoveX", this, &ACameraCharacter::Move_XAxis);
-	InputComponent->BindAxis("MoveY", this, &ACameraCharacter::Move_YAxis);
+	PlayerInputComponent->BindAxis("MoveX", this, &ACameraCharacter::Move_XAxis);
+	PlayerInputComponent->BindAxis("MoveY", this, &ACameraCharacter::Move_YAxis);
 
 
 	//camera input
@@ -89,7 +89,7 @@ void ACameraCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCom
 
 	PlayerInputComponent->BindAxis("TurnRate", this, &ACameraCharacter::TurnAtRate);
 	PlayerInputComponent->BindAxis("LookUpRate", this, &ACameraCharacter::LookUpAtRate);
-	PlayerInputComponent->BindAxis("Turn", this, &APawn::AddControllerYawInput);
+	PlayerInputComponent->BindAxis("Turn", this, &ACameraCharacter::AddControllerYawInput);
 	PlayerInputComponent->BindAxis("Zoom", this, &ACameraCharacter::Zoom);
 }
 
