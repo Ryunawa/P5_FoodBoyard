@@ -19,42 +19,8 @@ void EmptyLinkFunctionForGeneratedCodeMenu() {}
 	UPackage* Z_Construct_UPackage__Script_GC_UE4CPP();
 	UMG_API UClass* Z_Construct_UClass_UButton_NoRegister();
 // End Cross Module References
-	DEFINE_FUNCTION(UMenu::execStartButtonClicked)
-	{
-		P_FINISH;
-		P_NATIVE_BEGIN;
-		P_THIS->StartButtonClicked();
-		P_NATIVE_END;
-	}
 	void UMenu::StaticRegisterNativesUMenu()
 	{
-		UClass* Class = UMenu::StaticClass();
-		static const FNameNativePtrPair Funcs[] = {
-			{ "StartButtonClicked", &UMenu::execStartButtonClicked },
-		};
-		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
-	}
-	struct Z_Construct_UFunction_UMenu_StartButtonClicked_Statics
-	{
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
-#endif
-		static const UE4CodeGen_Private::FFunctionParams FuncParams;
-	};
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UMenu_StartButtonClicked_Statics::Function_MetaDataParams[] = {
-		{ "ModuleRelativePath", "Menu.h" },
-	};
-#endif
-	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UMenu_StartButtonClicked_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UMenu, nullptr, "StartButtonClicked", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00040401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UMenu_StartButtonClicked_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_UMenu_StartButtonClicked_Statics::Function_MetaDataParams)) };
-	UFunction* Z_Construct_UFunction_UMenu_StartButtonClicked()
-	{
-		static UFunction* ReturnFunction = nullptr;
-		if (!ReturnFunction)
-		{
-			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UMenu_StartButtonClicked_Statics::FuncParams);
-		}
-		return ReturnFunction;
 	}
 	UClass* Z_Construct_UClass_UMenu_NoRegister()
 	{
@@ -63,7 +29,6 @@ void EmptyLinkFunctionForGeneratedCodeMenu() {}
 	struct Z_Construct_UClass_UMenu_Statics
 	{
 		static UObject* (*const DependentSingletons[])();
-		static const FClassFunctionLinkInfo FuncInfo[];
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
@@ -78,9 +43,6 @@ void EmptyLinkFunctionForGeneratedCodeMenu() {}
 	UObject* (*const Z_Construct_UClass_UMenu_Statics::DependentSingletons[])() = {
 		(UObject* (*)())Z_Construct_UClass_UUserWidget,
 		(UObject* (*)())Z_Construct_UPackage__Script_GC_UE4CPP,
-	};
-	const FClassFunctionLinkInfo Z_Construct_UClass_UMenu_Statics::FuncInfo[] = {
-		{ &Z_Construct_UFunction_UMenu_StartButtonClicked, "StartButtonClicked" }, // 2029598408
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UMenu_Statics::Class_MetaDataParams[] = {
@@ -108,11 +70,11 @@ void EmptyLinkFunctionForGeneratedCodeMenu() {}
 		nullptr,
 		&StaticCppClassTypeInfo,
 		DependentSingletons,
-		FuncInfo,
+		nullptr,
 		Z_Construct_UClass_UMenu_Statics::PropPointers,
 		nullptr,
 		UE_ARRAY_COUNT(DependentSingletons),
-		UE_ARRAY_COUNT(FuncInfo),
+		0,
 		UE_ARRAY_COUNT(Z_Construct_UClass_UMenu_Statics::PropPointers),
 		0,
 		0x00B010A0u,
@@ -127,7 +89,7 @@ void EmptyLinkFunctionForGeneratedCodeMenu() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UMenu, 328832559);
+	IMPLEMENT_CLASS(UMenu, 3979403171);
 	template<> GC_UE4CPP_API UClass* StaticClass<UMenu>()
 	{
 		return UMenu::StaticClass();

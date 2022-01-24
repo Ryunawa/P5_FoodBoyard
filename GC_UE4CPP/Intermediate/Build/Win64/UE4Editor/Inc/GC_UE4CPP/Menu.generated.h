@@ -14,16 +14,8 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #define GC_UE4CPP_Menu_generated_h
 
 #define GC_UE4CPP_Source_GC_UE4CPP_Menu_h_15_SPARSE_DATA
-#define GC_UE4CPP_Source_GC_UE4CPP_Menu_h_15_RPC_WRAPPERS \
- \
-	DECLARE_FUNCTION(execStartButtonClicked);
-
-
-#define GC_UE4CPP_Source_GC_UE4CPP_Menu_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
- \
-	DECLARE_FUNCTION(execStartButtonClicked);
-
-
+#define GC_UE4CPP_Source_GC_UE4CPP_Menu_h_15_RPC_WRAPPERS
+#define GC_UE4CPP_Source_GC_UE4CPP_Menu_h_15_RPC_WRAPPERS_NO_PURE_DECLS
 #define GC_UE4CPP_Source_GC_UE4CPP_Menu_h_15_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUMenu(); \

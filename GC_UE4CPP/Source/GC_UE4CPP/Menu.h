@@ -14,13 +14,10 @@ class GC_UE4CPP_API UMenu : public UUserWidget
 {
 	GENERATED_BODY()
 
-		virtual bool Initialize();
 
 		UPROPERTY(meta = (BindWidget))
 		class UButton* StartGame;
 
-		UFUNCTION()
-			void StartButtonClicked();
 
 
 };
