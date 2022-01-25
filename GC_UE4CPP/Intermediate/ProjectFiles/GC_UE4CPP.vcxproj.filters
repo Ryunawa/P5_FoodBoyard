@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\GC_UE4CPP.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{085AD1F9-35C9-42F8-8B73-373639475E78}</UniqueIdentifier>
+      <UniqueIdentifier>{33C1B14E-6271-46E1-B107-38DFD951A02C}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\GC_UE4CPP.Target.cs">
       <Filter>Source</Filter>
@@ -12,7 +12,7 @@
       <Filter>Source</Filter>
     </None>
     <Filter Include="Config">
-      <UniqueIdentifier>{7A2CC7DB-115C-41C1-AFE0-7162CAACB098}</UniqueIdentifier>
+      <UniqueIdentifier>{74C8A130-CA57-46B0-9BAA-A6E26D6F03FA}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -27,12 +27,18 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\GC_UE4CPP">
-      <UniqueIdentifier>{702FADD5-3E1D-42F9-ADB1-6F7FFE1F3EAB}</UniqueIdentifier>
+      <UniqueIdentifier>{0F36E533-2A38-47EF-9CE5-F44D9538A4DE}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\GC_UE4CPP\CameraCharacter.cpp">
       <Filter>Source\GC_UE4CPP</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\GC_UE4CPP\CameraCharacter.h">
+      <Filter>Source\GC_UE4CPP</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\GC_UE4CPP\ComboWidget.cpp">
+      <Filter>Source\GC_UE4CPP</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\GC_UE4CPP\ComboWidget.h">
       <Filter>Source\GC_UE4CPP</Filter>
     </ClInclude>
     <None Include="..\..\Source\GC_UE4CPP\GC_UE4CPP.Build.cs">
@@ -48,6 +54,12 @@
       <Filter>Source\GC_UE4CPP</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\GC_UE4CPP\GC_UE4CPPGameModeBase.h">
+      <Filter>Source\GC_UE4CPP</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\GC_UE4CPP\InGameHUD.cpp">
+      <Filter>Source\GC_UE4CPP</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\GC_UE4CPP\InGameHUD.h">
       <Filter>Source\GC_UE4CPP</Filter>
     </ClInclude>
     <ClCompile Include="..\..\Source\GC_UE4CPP\Menu.cpp">
