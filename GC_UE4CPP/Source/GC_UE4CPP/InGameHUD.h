@@ -1,4 +1,3 @@
-// Fill out your copyright notice in the Description page of Project Settings.
 
 #pragma once
 
@@ -11,9 +10,7 @@
 
 #include "InGameHUD.generated.h"
 
-/**
- *
- */
+
 UCLASS()
 class GC_UE4CPP_API AInGameHUD : public AHUD
 {
@@ -29,11 +26,7 @@ public:
 
 	virtual void Tick(float DeltaSeconds) override;
 
-	UFUNCTION()
-		void UpdateComboCount(int32 Value);
-
-	UFUNCTION()
-		void ResetCombo();
+	
 
 	UPROPERTY(EditDefaultsOnly, Category = "Interactive")
 		TSubclassOf<UUserWidget> ComboWidgetClass;

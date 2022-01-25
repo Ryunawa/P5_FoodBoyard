@@ -1,4 +1,3 @@
-// Fill out your copyright notice in the Description page of Project Settings.
 
 #pragma once
 
@@ -9,9 +8,7 @@
 
 #include "ComboWidget.generated.h"
 
-/**
- *
- */
+
 UCLASS()
 class GC_UE4CPP_API UComboWidget : public UUserWidget
 {
@@ -19,22 +16,19 @@ class GC_UE4CPP_API UComboWidget : public UUserWidget
 public:
 	UComboWidget(const FObjectInitializer& ObjectInitializer);
 
-	virtual void NativeConstruct() override;
+	
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (BindWidget))
 		class UTextBlock* TXTCombo;
 
-	void UpdateComboCount(int32 Value);
+	/*
+	UPROPERTY(meta = (BindWidget))
+		class UButton* StartGame;
+	*/
+	
 
-	void ResetCombo();
+	UPROPERTY(meta = (BindWidget))
+		class UProgressBar* BarreDeNourriture;
 
-	void StoreWidgetAnimations();
-
-	UWidgetAnimation* GetAnimationByName(FName AnimationName) const;
-
-private:
-	TMap<FName, UWidgetAnimation*> AnimationsMap;
-
-	UWidgetAnimation* ComboFadeAnimation;
-	UWidgetAnimation* ComboShakeAnimation;
+	
 };

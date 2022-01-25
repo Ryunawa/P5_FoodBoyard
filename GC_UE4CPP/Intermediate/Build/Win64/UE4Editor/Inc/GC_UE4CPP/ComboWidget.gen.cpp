@@ -18,6 +18,7 @@ void EmptyLinkFunctionForGeneratedCodeComboWidget() {}
 	UMG_API UClass* Z_Construct_UClass_UUserWidget();
 	UPackage* Z_Construct_UPackage__Script_GC_UE4CPP();
 	UMG_API UClass* Z_Construct_UClass_UTextBlock_NoRegister();
+	UMG_API UClass* Z_Construct_UClass_UProgressBar_NoRegister();
 // End Cross Module References
 	void UComboWidget::StaticRegisterNativesUComboWidget()
 	{
@@ -36,6 +37,10 @@ void EmptyLinkFunctionForGeneratedCodeComboWidget() {}
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_TXTCombo_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_TXTCombo;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_BarreDeNourriture_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_BarreDeNourriture;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UE4CodeGen_Private::FClassParams ClassParams;
@@ -46,7 +51,6 @@ void EmptyLinkFunctionForGeneratedCodeComboWidget() {}
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UComboWidget_Statics::Class_MetaDataParams[] = {
-		{ "Comment", "/**\n *\n */" },
 		{ "IncludePath", "ComboWidget.h" },
 		{ "ModuleRelativePath", "ComboWidget.h" },
 		{ "ObjectInitializerConstructorDeclared", "" },
@@ -61,8 +65,19 @@ void EmptyLinkFunctionForGeneratedCodeComboWidget() {}
 	};
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UComboWidget_Statics::NewProp_TXTCombo = { "TXTCombo", nullptr, (EPropertyFlags)0x001000000008000d, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UComboWidget, TXTCombo), Z_Construct_UClass_UTextBlock_NoRegister, METADATA_PARAMS(Z_Construct_UClass_UComboWidget_Statics::NewProp_TXTCombo_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UComboWidget_Statics::NewProp_TXTCombo_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UComboWidget_Statics::NewProp_BarreDeNourriture_MetaData[] = {
+		{ "BindWidget", "" },
+		{ "Comment", "/*\n\x09UPROPERTY(meta = (BindWidget))\n\x09\x09""class UButton* StartGame;\n\x09*/" },
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "ComboWidget.h" },
+		{ "ToolTip", "UPROPERTY(meta = (BindWidget))\n        class UButton* StartGame;" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UComboWidget_Statics::NewProp_BarreDeNourriture = { "BarreDeNourriture", nullptr, (EPropertyFlags)0x0010000000080008, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UComboWidget, BarreDeNourriture), Z_Construct_UClass_UProgressBar_NoRegister, METADATA_PARAMS(Z_Construct_UClass_UComboWidget_Statics::NewProp_BarreDeNourriture_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UComboWidget_Statics::NewProp_BarreDeNourriture_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UComboWidget_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UComboWidget_Statics::NewProp_TXTCombo,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UComboWidget_Statics::NewProp_BarreDeNourriture,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_UComboWidget_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<UComboWidget>::IsAbstract,
@@ -91,7 +106,7 @@ void EmptyLinkFunctionForGeneratedCodeComboWidget() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UComboWidget, 1259333486);
+	IMPLEMENT_CLASS(UComboWidget, 592784760);
 	template<> GC_UE4CPP_API UClass* StaticClass<UComboWidget>()
 	{
 		return UComboWidget::StaticClass();

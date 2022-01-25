@@ -1,4 +1,3 @@
-// Fill out your copyright notice in the Description page of Project Settings.
 
 #include "InGameHUD.h"
 
@@ -15,10 +14,10 @@ void AInGameHUD::BeginPlay()
 	{
 		ComboWidget = CreateWidget<UComboWidget>(GetWorld(), ComboWidgetClass);
 
-		/** Make sure widget was created */
+		// Make sure widget was created 
 		if (ComboWidget)
 		{
-			/** Add it to the viewport */
+			// Add it to the viewport 
 			ComboWidget->AddToViewport();
 		}
 	}
@@ -38,18 +37,3 @@ void AInGameHUD::DrawHUD()
 	Super::DrawHUD();
 }
 
-void AInGameHUD::UpdateComboCount(int32 Value)
-{
-	if (ComboWidget)
-	{
-		ComboWidget->UpdateComboCount(Value);
-	}
-}
-
-void AInGameHUD::ResetCombo()
-{
-	if (ComboWidget)
-	{
-		ComboWidget->ResetCombo();
-	}
-}
