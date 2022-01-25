@@ -108,7 +108,7 @@ C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\In
 C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\UMG\WidgetBlueprintGeneratedClass.generated.h
 C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\UMG\UserWidget.generated.h
 C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\UMG\WidgetComponent.generated.h
-C:\Users\LenyN\Documents\GitHub\P5_UE4\GC_UE4CPP\Source\GC_UE4CPP\ComboWidget.h
+C:\Users\LenyN\Documents\GitHub\P5_UE4\GC_UE4CPP\Source\GC_UE4CPP\WidgetUI.h
 C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime/UMG/Public/UMG.h
 C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Core\Public\Misc/MonolithicHeaderBoilerplate.h
 C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Core\Public\Core.h
@@ -1013,5 +1013,5 @@ C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\MovieScene\Public\Movi
 C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\MovieScene\MovieSceneSequenceTickManager.generated.h
 C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\UMG\UMGSequenceTickManager.generated.h
 C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\UMG\UMGSequencePlayer.generated.h
-C:\Users\LenyN\Documents\GitHub\P5_UE4\GC_UE4CPP\Intermediate\Build\Win64\UE4Editor\Inc\GC_UE4CPP\ComboWidget.generated.h
+C:\Users\LenyN\Documents\GitHub\P5_UE4\GC_UE4CPP\Intermediate\Build\Win64\UE4Editor\Inc\GC_UE4CPP\WidgetUI.generated.h
 C:\Users\LenyN\Documents\GitHub\P5_UE4\GC_UE4CPP\Intermediate\Build\Win64\UE4Editor\Inc\GC_UE4CPP\InGameHUD.generated.h

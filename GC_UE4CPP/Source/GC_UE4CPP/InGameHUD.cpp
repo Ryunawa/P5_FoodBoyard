@@ -10,15 +10,15 @@ void AInGameHUD::BeginPlay()
 {
 	Super::BeginPlay();
 
-	if (ComboWidgetClass)
+	if (WidgetUIClass)
 	{
-		ComboWidget = CreateWidget<UComboWidget>(GetWorld(), ComboWidgetClass);
+		WidgetUI = CreateWidget<UWidgetUI>(GetWorld(), WidgetUIClass);
 
 		// Make sure widget was created 
-		if (ComboWidget)
+		if (WidgetUI)
 		{
 			// Add it to the viewport 
-			ComboWidget->AddToViewport();
+			WidgetUI->AddToViewport();
 		}
 	}
 }
@@ -26,7 +26,7 @@ void AInGameHUD::BeginPlay()
 void AInGameHUD::Tick(float DeltaSeconds)
 {
 	Super::Tick(DeltaSeconds);
-	if (ComboWidget)
+	if (WidgetUI)
 	{
 
 	}

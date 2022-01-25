@@ -6,7 +6,7 @@
 
 #include "Components/WidgetComponent.h"
 
-#include "ComboWidget.h"
+#include "WidgetUI.h"
 
 #include "InGameHUD.generated.h"
 
@@ -29,8 +29,8 @@ public:
 	
 
 	UPROPERTY(EditDefaultsOnly, Category = "Interactive")
-		TSubclassOf<UUserWidget> ComboWidgetClass;
+		TSubclassOf<UUserWidget> WidgetUIClass;
 
 private:
-	UComboWidget* ComboWidget;
+	UWidgetUI* WidgetUI;
 };
