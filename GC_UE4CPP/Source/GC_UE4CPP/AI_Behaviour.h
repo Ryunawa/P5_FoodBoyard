@@ -3,28 +3,47 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "GameFramework/Character.h"
+#include "AIController.h"
+#include "Perception/AIPerceptionComponent.h"
+#include "Kismet/GameplayStatics.h"
+#include "FoodSpot.h"
+#include "Enemy.h"
+#include "BehaviorTree/BlackboardComponent.h"
 #include "AI_Behaviour.generated.h"
 
+/**
+ * 
+ */
 UCLASS()
-class GC_UE4CPP_API AAI_Behaviour : public ACharacter
+class GC_UE4CPP_API AAI_Behaviour : public AAIController
 {
 	GENERATED_BODY()
-	
-public:	
-	// Sets default values for this actor's properties
-	AAI_Behaviour();
-
-	UPROPERTY(EditAnywhere)
-		UStaticMeshComponent* FoodMesh;
 
 protected:
-	// Called when the game starts or when spawned
+
 	virtual void BeginPlay() override;
 
+	UBlackboardData* BBAsset;
 
-public:	
-	// Called every frame
-	virtual void Tick(float DeltaTime) override;
+
+	UPROPERTY(VisibleAnywhere)
+		UAIPerceptionComponent* AIPer;
+	
+	UPROPERTY(VisibleAnywhere)
+		UBlackboardComponent* BBComp;
+
+	int SpotId;
+
+	TArray<AActor*> SpotArray;
+
+public:
+
+	AAI_Behaviour();
+
+	void GetNewSpot();
+
+	virtual void OnPossess(APawn* pawn);
+
+	void Tick(float DeltaTime) override;
 
 };

@@ -13,28 +13,28 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define GC_UE4CPP_AI_Behaviour_generated_h
 
-#define GC_UE4CPP_Source_GC_UE4CPP_AI_Behaviour_h_12_SPARSE_DATA
-#define GC_UE4CPP_Source_GC_UE4CPP_AI_Behaviour_h_12_RPC_WRAPPERS
-#define GC_UE4CPP_Source_GC_UE4CPP_AI_Behaviour_h_12_RPC_WRAPPERS_NO_PURE_DECLS
-#define GC_UE4CPP_Source_GC_UE4CPP_AI_Behaviour_h_12_INCLASS_NO_PURE_DECLS \
+#define GC_UE4CPP_Source_GC_UE4CPP_AI_Behaviour_h_20_SPARSE_DATA
+#define GC_UE4CPP_Source_GC_UE4CPP_AI_Behaviour_h_20_RPC_WRAPPERS
+#define GC_UE4CPP_Source_GC_UE4CPP_AI_Behaviour_h_20_RPC_WRAPPERS_NO_PURE_DECLS
+#define GC_UE4CPP_Source_GC_UE4CPP_AI_Behaviour_h_20_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAAI_Behaviour(); \
 	friend struct Z_Construct_UClass_AAI_Behaviour_Statics; \
 public: \
-	DECLARE_CLASS(AAI_Behaviour, ACharacter, COMPILED_IN_FLAGS(0 | CLASS_Config), CASTCLASS_None, TEXT("/Script/GC_UE4CPP"), NO_API) \
+	DECLARE_CLASS(AAI_Behaviour, AAIController, COMPILED_IN_FLAGS(0 | CLASS_Config), CASTCLASS_None, TEXT("/Script/GC_UE4CPP"), NO_API) \
 	DECLARE_SERIALIZER(AAI_Behaviour)
 
 
-#define GC_UE4CPP_Source_GC_UE4CPP_AI_Behaviour_h_12_INCLASS \
+#define GC_UE4CPP_Source_GC_UE4CPP_AI_Behaviour_h_20_INCLASS \
 private: \
 	static void StaticRegisterNativesAAI_Behaviour(); \
 	friend struct Z_Construct_UClass_AAI_Behaviour_Statics; \
 public: \
-	DECLARE_CLASS(AAI_Behaviour, ACharacter, COMPILED_IN_FLAGS(0 | CLASS_Config), CASTCLASS_None, TEXT("/Script/GC_UE4CPP"), NO_API) \
+	DECLARE_CLASS(AAI_Behaviour, AAIController, COMPILED_IN_FLAGS(0 | CLASS_Config), CASTCLASS_None, TEXT("/Script/GC_UE4CPP"), NO_API) \
 	DECLARE_SERIALIZER(AAI_Behaviour)
 
 
-#define GC_UE4CPP_Source_GC_UE4CPP_AI_Behaviour_h_12_STANDARD_CONSTRUCTORS \
+#define GC_UE4CPP_Source_GC_UE4CPP_AI_Behaviour_h_20_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API AAI_Behaviour(const FObjectInitializer& ObjectInitializer); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(AAI_Behaviour) \
@@ -47,7 +47,7 @@ private: \
 public:
 
 
-#define GC_UE4CPP_Source_GC_UE4CPP_AI_Behaviour_h_12_ENHANCED_CONSTRUCTORS \
+#define GC_UE4CPP_Source_GC_UE4CPP_AI_Behaviour_h_20_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API AAI_Behaviour(AAI_Behaviour&&); \
@@ -58,28 +58,32 @@ public: \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(AAI_Behaviour)
 
 
-#define GC_UE4CPP_Source_GC_UE4CPP_AI_Behaviour_h_12_PRIVATE_PROPERTY_OFFSET
-#define GC_UE4CPP_Source_GC_UE4CPP_AI_Behaviour_h_9_PROLOG
-#define GC_UE4CPP_Source_GC_UE4CPP_AI_Behaviour_h_12_GENERATED_BODY_LEGACY \
+#define GC_UE4CPP_Source_GC_UE4CPP_AI_Behaviour_h_20_PRIVATE_PROPERTY_OFFSET \
+	FORCEINLINE static uint32 __PPO__AIPer() { return STRUCT_OFFSET(AAI_Behaviour, AIPer); } \
+	FORCEINLINE static uint32 __PPO__BBComp() { return STRUCT_OFFSET(AAI_Behaviour, BBComp); }
+
+
+#define GC_UE4CPP_Source_GC_UE4CPP_AI_Behaviour_h_17_PROLOG
+#define GC_UE4CPP_Source_GC_UE4CPP_AI_Behaviour_h_20_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	GC_UE4CPP_Source_GC_UE4CPP_AI_Behaviour_h_12_PRIVATE_PROPERTY_OFFSET \
-	GC_UE4CPP_Source_GC_UE4CPP_AI_Behaviour_h_12_SPARSE_DATA \
-	GC_UE4CPP_Source_GC_UE4CPP_AI_Behaviour_h_12_RPC_WRAPPERS \
-	GC_UE4CPP_Source_GC_UE4CPP_AI_Behaviour_h_12_INCLASS \
-	GC_UE4CPP_Source_GC_UE4CPP_AI_Behaviour_h_12_STANDARD_CONSTRUCTORS \
+	GC_UE4CPP_Source_GC_UE4CPP_AI_Behaviour_h_20_PRIVATE_PROPERTY_OFFSET \
+	GC_UE4CPP_Source_GC_UE4CPP_AI_Behaviour_h_20_SPARSE_DATA \
+	GC_UE4CPP_Source_GC_UE4CPP_AI_Behaviour_h_20_RPC_WRAPPERS \
+	GC_UE4CPP_Source_GC_UE4CPP_AI_Behaviour_h_20_INCLASS \
+	GC_UE4CPP_Source_GC_UE4CPP_AI_Behaviour_h_20_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define GC_UE4CPP_Source_GC_UE4CPP_AI_Behaviour_h_12_GENERATED_BODY \
+#define GC_UE4CPP_Source_GC_UE4CPP_AI_Behaviour_h_20_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	GC_UE4CPP_Source_GC_UE4CPP_AI_Behaviour_h_12_PRIVATE_PROPERTY_OFFSET \
-	GC_UE4CPP_Source_GC_UE4CPP_AI_Behaviour_h_12_SPARSE_DATA \
-	GC_UE4CPP_Source_GC_UE4CPP_AI_Behaviour_h_12_RPC_WRAPPERS_NO_PURE_DECLS \
-	GC_UE4CPP_Source_GC_UE4CPP_AI_Behaviour_h_12_INCLASS_NO_PURE_DECLS \
-	GC_UE4CPP_Source_GC_UE4CPP_AI_Behaviour_h_12_ENHANCED_CONSTRUCTORS \
+	GC_UE4CPP_Source_GC_UE4CPP_AI_Behaviour_h_20_PRIVATE_PROPERTY_OFFSET \
+	GC_UE4CPP_Source_GC_UE4CPP_AI_Behaviour_h_20_SPARSE_DATA \
+	GC_UE4CPP_Source_GC_UE4CPP_AI_Behaviour_h_20_RPC_WRAPPERS_NO_PURE_DECLS \
+	GC_UE4CPP_Source_GC_UE4CPP_AI_Behaviour_h_20_INCLASS_NO_PURE_DECLS \
+	GC_UE4CPP_Source_GC_UE4CPP_AI_Behaviour_h_20_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

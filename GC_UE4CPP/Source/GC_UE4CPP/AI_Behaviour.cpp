@@ -1,29 +1,50 @@
-// Fill out your copyright notice in the Description page of Project Settings.
 
 
 #include "AI_Behaviour.h"
 
-// Sets default values
 AAI_Behaviour::AAI_Behaviour()
 {
- 	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
-	PrimaryActorTick.bCanEverTick = true;
-	FoodMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("FoodMesh"));
+	AIPer = CreateDefaultSubobject<UAIPerceptionComponent>(TEXT("PerceptionComponent"));
 
-	FoodMesh->ToggleVisibility(false);
 
 }
 
-// Called when the game starts or when spawned
 void AAI_Behaviour::BeginPlay()
 {
 	Super::BeginPlay();
+	UGameplayStatics::GetAllActorsOfClass(GetWorld(), AFoodSpot::StaticClass(), SpotArray); BBAsset = NewObject<UBlackboardData>();
+	BBAsset = NewObject<UBlackboardData>();
+	
+	SpotId = rand()%SpotArray.Num();
 }
- 
-// Called every frame
+
+void AAI_Behaviour::OnPossess(APawn* InPawn)
+{
+	Super::OnPossess(InPawn);
+	RunBehaviorTree(Cast<AEnemy>(InPawn)->BehaviorTree);
+	if (InPawn) {	
+		BBComp = GetBlackboardComponent();
+		BBComp->SetValueAsBool("SeePlayer", false);
+		BBComp->SetValueAsObject("SelfActor", GetOwner());
+		BBComp->SetValueAsObject("SelectedSpot", SpotArray[SpotId]);
+	}
+}
+
+void AAI_Behaviour::GetNewSpot()
+{
+	int NewSpot;
+	do {
+		NewSpot = rand () % SpotArray.Num();
+	} while (NewSpot == SpotId);
+	SpotId = NewSpot;
+	BBComp->SetValueAsObject("SelectedSpot", SpotArray[SpotId]);
+}
+
+
+
 void AAI_Behaviour::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-
+	//GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Red, AActor::GetActorLocation().ToString());
+	//MoveToLocation(SpotArray[SelectedSpot]->GetActorLocation());
 }
-

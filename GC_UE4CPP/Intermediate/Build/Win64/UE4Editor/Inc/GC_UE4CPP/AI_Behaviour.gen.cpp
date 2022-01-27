@@ -15,9 +15,10 @@ void EmptyLinkFunctionForGeneratedCodeAI_Behaviour() {}
 // Cross Module References
 	GC_UE4CPP_API UClass* Z_Construct_UClass_AAI_Behaviour_NoRegister();
 	GC_UE4CPP_API UClass* Z_Construct_UClass_AAI_Behaviour();
-	ENGINE_API UClass* Z_Construct_UClass_ACharacter();
+	AIMODULE_API UClass* Z_Construct_UClass_AAIController();
 	UPackage* Z_Construct_UPackage__Script_GC_UE4CPP();
-	ENGINE_API UClass* Z_Construct_UClass_UStaticMeshComponent_NoRegister();
+	AIMODULE_API UClass* Z_Construct_UClass_UAIPerceptionComponent_NoRegister();
+	AIMODULE_API UClass* Z_Construct_UClass_UBlackboardComponent_NoRegister();
 // End Cross Module References
 	void AAI_Behaviour::StaticRegisterNativesAAI_Behaviour()
 	{
@@ -33,41 +34,55 @@ void EmptyLinkFunctionForGeneratedCodeAI_Behaviour() {}
 		static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_FoodMesh_MetaData[];
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_AIPer_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_FoodMesh;
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_AIPer;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_BBComp_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_BBComp;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UE4CodeGen_Private::FClassParams ClassParams;
 	};
 	UObject* (*const Z_Construct_UClass_AAI_Behaviour_Statics::DependentSingletons[])() = {
-		(UObject* (*)())Z_Construct_UClass_ACharacter,
+		(UObject* (*)())Z_Construct_UClass_AAIController,
 		(UObject* (*)())Z_Construct_UPackage__Script_GC_UE4CPP,
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AAI_Behaviour_Statics::Class_MetaDataParams[] = {
-		{ "HideCategories", "Navigation" },
+		{ "Comment", "/**\n * \n */" },
+		{ "HideCategories", "Collision Rendering Utilities|Transformation" },
 		{ "IncludePath", "AI_Behaviour.h" },
 		{ "ModuleRelativePath", "AI_Behaviour.h" },
 	};
 #endif
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AAI_Behaviour_Statics::NewProp_FoodMesh_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AAI_Behaviour_Statics::NewProp_AIPer_MetaData[] = {
 		{ "Category", "AI_Behaviour" },
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "AI_Behaviour.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AAI_Behaviour_Statics::NewProp_FoodMesh = { "FoodMesh", nullptr, (EPropertyFlags)0x0010000000080009, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AAI_Behaviour, FoodMesh), Z_Construct_UClass_UStaticMeshComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AAI_Behaviour_Statics::NewProp_FoodMesh_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AAI_Behaviour_Statics::NewProp_FoodMesh_MetaData)) };
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AAI_Behaviour_Statics::NewProp_AIPer = { "AIPer", nullptr, (EPropertyFlags)0x00200800000a0009, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AAI_Behaviour, AIPer), Z_Construct_UClass_UAIPerceptionComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AAI_Behaviour_Statics::NewProp_AIPer_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AAI_Behaviour_Statics::NewProp_AIPer_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AAI_Behaviour_Statics::NewProp_BBComp_MetaData[] = {
+		{ "Category", "AI_Behaviour" },
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "AI_Behaviour.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AAI_Behaviour_Statics::NewProp_BBComp = { "BBComp", nullptr, (EPropertyFlags)0x00200800000a0009, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AAI_Behaviour, BBComp), Z_Construct_UClass_UBlackboardComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AAI_Behaviour_Statics::NewProp_BBComp_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AAI_Behaviour_Statics::NewProp_BBComp_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AAI_Behaviour_Statics::PropPointers[] = {
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AAI_Behaviour_Statics::NewProp_FoodMesh,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AAI_Behaviour_Statics::NewProp_AIPer,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AAI_Behaviour_Statics::NewProp_BBComp,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_AAI_Behaviour_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<AAI_Behaviour>::IsAbstract,
 	};
 	const UE4CodeGen_Private::FClassParams Z_Construct_UClass_AAI_Behaviour_Statics::ClassParams = {
 		&AAI_Behaviour::StaticClass,
-		"Game",
+		"Engine",
 		&StaticCppClassTypeInfo,
 		DependentSingletons,
 		nullptr,
@@ -77,7 +92,7 @@ void EmptyLinkFunctionForGeneratedCodeAI_Behaviour() {}
 		0,
 		UE_ARRAY_COUNT(Z_Construct_UClass_AAI_Behaviour_Statics::PropPointers),
 		0,
-		0x009000A4u,
+		0x009002A4u,
 		METADATA_PARAMS(Z_Construct_UClass_AAI_Behaviour_Statics::Class_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UClass_AAI_Behaviour_Statics::Class_MetaDataParams))
 	};
 	UClass* Z_Construct_UClass_AAI_Behaviour()
@@ -89,7 +104,7 @@ void EmptyLinkFunctionForGeneratedCodeAI_Behaviour() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AAI_Behaviour, 456452577);
+	IMPLEMENT_CLASS(AAI_Behaviour, 970587108);
 	template<> GC_UE4CPP_API UClass* StaticClass<AAI_Behaviour>()
 	{
 		return AAI_Behaviour::StaticClass();
