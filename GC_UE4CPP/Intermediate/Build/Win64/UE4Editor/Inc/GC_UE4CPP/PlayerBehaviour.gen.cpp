@@ -54,6 +54,10 @@ void EmptyLinkFunctionForGeneratedCodePlayerBehaviour() {}
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_LookUpRate_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_LookUpRate;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Speed_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_Speed;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UE4CodeGen_Private::FClassParams ClassParams;
@@ -113,12 +117,20 @@ void EmptyLinkFunctionForGeneratedCodePlayerBehaviour() {}
 	};
 #endif
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_APlayerBehaviour_Statics::NewProp_LookUpRate = { "LookUpRate", nullptr, (EPropertyFlags)0x0010000000020015, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(APlayerBehaviour, LookUpRate), METADATA_PARAMS(Z_Construct_UClass_APlayerBehaviour_Statics::NewProp_LookUpRate_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_APlayerBehaviour_Statics::NewProp_LookUpRate_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_APlayerBehaviour_Statics::NewProp_Speed_MetaData[] = {
+		{ "Category", "PlayerBehaviour" },
+		{ "ModuleRelativePath", "PlayerBehaviour.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_APlayerBehaviour_Statics::NewProp_Speed = { "Speed", nullptr, (EPropertyFlags)0x0020080000020001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(APlayerBehaviour, Speed), METADATA_PARAMS(Z_Construct_UClass_APlayerBehaviour_Statics::NewProp_Speed_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_APlayerBehaviour_Statics::NewProp_Speed_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_APlayerBehaviour_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APlayerBehaviour_Statics::NewProp_CameraBoom,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APlayerBehaviour_Statics::NewProp_FollowCamera,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APlayerBehaviour_Statics::NewProp_SphereDetection,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APlayerBehaviour_Statics::NewProp_TurnRate,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APlayerBehaviour_Statics::NewProp_LookUpRate,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APlayerBehaviour_Statics::NewProp_Speed,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_APlayerBehaviour_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<APlayerBehaviour>::IsAbstract,
@@ -147,7 +159,11 @@ void EmptyLinkFunctionForGeneratedCodePlayerBehaviour() {}
 		}
 		return OuterClass;
 	}
+<<<<<<< HEAD
 	IMPLEMENT_CLASS(APlayerBehaviour, 3194876945);
+=======
+	IMPLEMENT_CLASS(APlayerBehaviour, 2116315136);
+>>>>>>> RobinD
 	template<> GC_UE4CPP_API UClass* StaticClass<APlayerBehaviour>()
 	{
 		return APlayerBehaviour::StaticClass();

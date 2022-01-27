@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 D:\ProjetUnreal\P5_UE4\GC_UE4CPP\Source\GC_UE4CPP\AI_Behaviour.h
 D:\ProjetUnreal\P5_UE4\GC_UE4CPP\Source\GC_UE4CPP\CameraCharacter.h
 D:\ProjetUnreal\P5_UE4\GC_UE4CPP\Source\GC_UE4CPP\Enemy.h
@@ -13,3 +14,10 @@ D:\ProjetUnreal\P5_UE4\GC_UE4CPP\Source\GC_UE4CPP\SeePlayer.h
 D:\ProjetUnreal\P5_UE4\GC_UE4CPP\Source\GC_UE4CPP\UI.h
 D:\ProjetUnreal\P5_UE4\GC_UE4CPP\Source\GC_UE4CPP\WidgetUI.h
 D:\ProjetUnreal\P5_UE4\GC_UE4CPP\Source\GC_UE4CPP\GetNewSpot.h
+=======
+C:\Users\robin\Documents\GitHub\P5_UE4\GC_UE4CPP\Source\GC_UE4CPP\GC_UE4CPPGameModeBase.h
+C:\Users\robin\Documents\GitHub\P5_UE4\GC_UE4CPP\Source\GC_UE4CPP\UI.h
+C:\Users\robin\Documents\GitHub\P5_UE4\GC_UE4CPP\Source\GC_UE4CPP\CameraCharacter.h
+C:\Users\robin\Documents\GitHub\P5_UE4\GC_UE4CPP\Source\GC_UE4CPP\PlayerBehaviour.h
+C:\Users\robin\Documents\GitHub\P5_UE4\GC_UE4CPP\Source\GC_UE4CPP\FoodBehaviour.h
+>>>>>>> RobinD
