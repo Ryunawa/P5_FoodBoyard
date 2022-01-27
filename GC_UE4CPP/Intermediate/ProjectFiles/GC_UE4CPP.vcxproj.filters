@@ -3,7 +3,11 @@
   <ItemGroup>
     <None Include="..\..\GC_UE4CPP.uproject" />
     <Filter Include="Source">
+<<<<<<< HEAD
       <UniqueIdentifier>{ECEE29C4-E2F4-4564-A586-090F5F7CC8C6}</UniqueIdentifier>
+=======
+      <UniqueIdentifier>{F871BB0C-C750-47A2-A1A9-E44D9CFAE1C0}</UniqueIdentifier>
+>>>>>>> RobinD
     </Filter>
     <None Include="..\..\Source\GC_UE4CPP.Target.cs">
       <Filter>Source</Filter>
@@ -12,7 +16,11 @@
       <Filter>Source</Filter>
     </None>
     <Filter Include="Config">
+<<<<<<< HEAD
       <UniqueIdentifier>{D843C09A-FCB1-4E4D-AEB3-198C8B1AB7C5}</UniqueIdentifier>
+=======
+      <UniqueIdentifier>{12EBAEF9-CEF7-49A5-A3A2-933E795054B9}</UniqueIdentifier>
+>>>>>>> RobinD
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -27,12 +35,22 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\GC_UE4CPP">
+<<<<<<< HEAD
       <UniqueIdentifier>{320A94EE-71AB-46AD-BED4-CDBF475AAD57}</UniqueIdentifier>
+=======
+      <UniqueIdentifier>{45710D74-1224-4A6E-88B5-B44476347A04}</UniqueIdentifier>
+>>>>>>> RobinD
     </Filter>
     <ClCompile Include="..\..\Source\GC_UE4CPP\CameraCharacter.cpp">
       <Filter>Source\GC_UE4CPP</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\GC_UE4CPP\CameraCharacter.h">
+      <Filter>Source\GC_UE4CPP</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\GC_UE4CPP\FoodBehaviour.cpp">
+      <Filter>Source\GC_UE4CPP</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\GC_UE4CPP\FoodBehaviour.h">
       <Filter>Source\GC_UE4CPP</Filter>
     </ClInclude>
     <None Include="..\..\Source\GC_UE4CPP\GC_UE4CPP.Build.cs">

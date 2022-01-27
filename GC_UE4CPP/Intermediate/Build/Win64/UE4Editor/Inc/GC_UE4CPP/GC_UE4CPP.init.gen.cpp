@@ -21,8 +21,13 @@ void EmptyLinkFunctionForGeneratedCodeGC_UE4CPP_init() {}
 				nullptr,
 				0,
 				PKG_CompiledIn | 0x00000000,
+<<<<<<< HEAD
 				0x0356E678,
 				0x22B57BAD,
+=======
+				0x198086F6,
+				0x0E4029F9,
+>>>>>>> RobinD
 				METADATA_PARAMS(nullptr, 0)
 			};
 			UE4CodeGen_Private::ConstructUPackage(ReturnPackage, PackageParams);

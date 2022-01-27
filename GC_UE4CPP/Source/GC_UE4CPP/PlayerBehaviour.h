@@ -3,6 +3,8 @@
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
 #include <iostream>
+#include "FoodBehaviour.h"
+#include "Components/SphereComponent.h"
 #include "PlayerBehaviour.generated.h"
 
 using namespace std;
@@ -14,42 +16,49 @@ class GC_UE4CPP_API APlayerBehaviour : public ACharacter
 
     // Camera boom positioning the camera behind the character 
     UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera, meta = (AllowPrivateAccess = "true"))
-    class USpringArmComponent* CameraBoom;
+        class USpringArmComponent* CameraBoom;
 
     // Follow camera
     UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera, meta = (AllowPrivateAccess = "true"))
-    class UCameraComponent* FollowCamera;
+        class UCameraComponent* FollowCamera;
+
+    UPROPERTY(VisibleAnywhere)
+       USphereComponent* SphereDetection;
 
 public:
     // Sets default values for this character's properties
     APlayerBehaviour();
-
     
     UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera)
     float TurnRate = 45.0f;
-    
     UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera)
     float LookUpRate = 45.0f;
+
 
 protected:
     // Called when the game starts or when spawned
     virtual void BeginPlay() override;
-
     virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
-
+    
     // Input methods
     void Move_XAxis(float Rate);
     void Move_YAxis(float Rate);
     void TurnAtRate(float Rate);
     void LookUpAtRate(float Rate);
     void Zoom(float Rate);
-    void SetCameraDistance(int Index);
+    void InteractFood();
+
+    float Speed;
+    float SphereRange = 300;
+    bool Hit;
+    bool IsHandEmpty;
     
-    // Input variables
     FVector CurrentVelocity;
-    TArray<int> ZoomValues;
-    float Speed = 400.0f;
-    int ZoomIndex = 1;
+
+    AFoodBehaviour* Result;
+    
+    TArray<AActor*> ActorsToIgnore;
+    TArray<FHitResult> HitArray;
 
 public:
     // Called every frame
