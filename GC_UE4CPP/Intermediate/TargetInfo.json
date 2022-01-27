@@ -2,12 +2,12 @@
 	"Targets": [
 		{
 			"Name": "GC_UE4CPP",
-			"Path": "D:\\ProjetUnreal\\P5_UE4\\GC_UE4CPP\\Source\\GC_UE4CPP.Target.cs",
+			"Path": "C:\\Users\\robin\\Documents\\GitHub\\P5_UE4\\GC_UE4CPP\\Source\\GC_UE4CPP.Target.cs",
 			"Type": "Game"
 		},
 		{
 			"Name": "GC_UE4CPPEditor",
-			"Path": "D:\\ProjetUnreal\\P5_UE4\\GC_UE4CPP\\Source\\GC_UE4CPPEditor.Target.cs",
+			"Path": "C:\\Users\\robin\\Documents\\GitHub\\P5_UE4\\GC_UE4CPP\\Source\\GC_UE4CPPEditor.Target.cs",
 			"Type": "Editor"
 		}
 	]

@@ -159,11 +159,7 @@ void EmptyLinkFunctionForGeneratedCodePlayerBehaviour() {}
 		}
 		return OuterClass;
 	}
-<<<<<<< HEAD
-	IMPLEMENT_CLASS(APlayerBehaviour, 3194876945);
-=======
 	IMPLEMENT_CLASS(APlayerBehaviour, 2116315136);
->>>>>>> RobinD
 	template<> GC_UE4CPP_API UClass* StaticClass<APlayerBehaviour>()
 	{
 		return APlayerBehaviour::StaticClass();

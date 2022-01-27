@@ -69,17 +69,12 @@ void APlayerBehaviour::SetupPlayerInputComponent(UInputComponent* PlayerInputCom
 {
     Super::SetupPlayerInputComponent(PlayerInputComponent);
 
-    // Respond every frame to the values of our two movement axes, MoveX and MoveY.
-
-
-    PlayerInputComponent->BindAxis("MoveX", this, &APlayerBehaviour::Move_XAxis);
-    PlayerInputComponent->BindAxis("MoveY", this, &APlayerBehaviour::Move_YAxis);
-
-
 	//camera input
 	check(PlayerInputComponent);
 
 	//Bind the key with the methods
+	PlayerInputComponent->BindAxis("MoveX", this, &APlayerBehaviour::Move_XAxis);
+	PlayerInputComponent->BindAxis("MoveY", this, &APlayerBehaviour::Move_YAxis);
 	PlayerInputComponent->BindAxis("TurnRate", this, &APlayerBehaviour::TurnAtRate);
 	PlayerInputComponent->BindAxis("LookUpRate", this, &APlayerBehaviour::LookUpAtRate);
 	PlayerInputComponent->BindAxis("Turn", this, &APlayerBehaviour::AddControllerYawInput);
