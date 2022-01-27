@@ -70,14 +70,11 @@ void APlayerBehaviour::SetupPlayerInputComponent(UInputComponent* PlayerInputCom
     Super::SetupPlayerInputComponent(PlayerInputComponent);
 
     // Respond every frame to the values of our two movement axes, MoveX and MoveY.
-<<<<<<< HEAD
-	PlayerInputComponent->BindAxis("MoveX", this, &APlayerBehaviour::Move_XAxis);
-	PlayerInputComponent->BindAxis("MoveY", this, &APlayerBehaviour::Move_YAxis);
 
-=======
+
     PlayerInputComponent->BindAxis("MoveX", this, &APlayerBehaviour::Move_XAxis);
     PlayerInputComponent->BindAxis("MoveY", this, &APlayerBehaviour::Move_YAxis);
->>>>>>> RobinD
+
 
 	//camera input
 	check(PlayerInputComponent);
@@ -150,12 +147,3 @@ void APlayerBehaviour::InteractFood()
 	}
 }
 
-
-<<<<<<< HEAD
-void APlayerBehaviour::SetCameraDistance(int Index)
-{
-	CameraBoom->TargetArmLength = ZoomValues[Index];
-
-}
-=======
->>>>>>> RobinD

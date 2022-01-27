@@ -2,10 +2,6 @@
 	"BuildId": "17155196",
 	"Modules": 
 	{
-<<<<<<< HEAD
-		"GC_UE4CPP": "UE4Editor-GC_UE4CPP-9816.dll"
-=======
-		"GC_UE4CPP": "UE4Editor-GC_UE4CPP-0453.dll"
->>>>>>> RobinD
+		"GC_UE4CPP": "UE4Editor-GC_UE4CPP-3040.dll"
 	}
 }
