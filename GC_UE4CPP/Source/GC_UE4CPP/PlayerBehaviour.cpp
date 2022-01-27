@@ -15,7 +15,6 @@
 APlayerBehaviour::APlayerBehaviour()
 {
 	Speed = 400.0f;
-	IsHandEmpty = true;
 	
     // Set this character to call Tick() every frame.
     PrimaryActorTick.bCanEverTick = true;
@@ -50,6 +49,7 @@ APlayerBehaviour::APlayerBehaviour()
 void APlayerBehaviour::BeginPlay()
 {
     Super::BeginPlay();
+	Result = nullptr;
 }
 
 // Called every frame
@@ -120,25 +120,33 @@ void APlayerBehaviour::InteractFood()
 	// Create a sphere trace around the player and add inside an array all actors hit by the sphere trace
 	Hit = UKismetSystemLibrary::SphereTraceMulti(GetWorld(), Start, End, SphereRange,
 		UEngineTypes::ConvertToTraceType(ECC_Camera), true, ActorsToIgnore,
-		EDrawDebugTrace::None,HitArray, true, FLinearColor::Gray,FLinearColor::Blue, 60.0f);
+		EDrawDebugTrace::ForDuration,HitArray, true, FLinearColor::Gray,FLinearColor::Blue, 60.0f);
 
-	if(Hit)
+	if(Result != nullptr)
+	{
+		Result->DetachFromActor(FDetachmentTransformRules::KeepWorldTransform);
+		Speed = Speed * 2;
+		Result = nullptr;
+		GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Red, TEXT("Food Dropped"));
+
+	}
+	else if(Hit)
 	{
 		for(const FHitResult HitResult : HitArray)
-		{
-			//To see the actors hit (debug only)
-			/*GEngine->AddOnScreenDebugMessage(-1, 60.0f, FColor::Orange,
-			FString::Printf(TEXT("Hit: %s"), *HitResult.Actor->GetName()));*/
-			
-			Result = Cast<AFoodBehaviour>(HitResult.Actor); // Check if the the actor hit is a FoodBehaviour actor
-
-			if(Result != nullptr && IsHandEmpty == true)
+		{	
+			if(Result == nullptr)
 			{
-				USkeletalMeshComponent* PlayerMesh = GetMesh(); // Get the SkeletalMesh of the Player
-				HitResult.Actor->AttachToComponent(PlayerMesh, FAttachmentTransformRules::SnapToTargetNotIncludingScale, TEXT("Fist_RSocket")); // Attach the food to the right hand
-				HitResult.Actor->SetActorRelativeScale3D(FVector(0.025f, 0.025f, 0.025f)); // Set a smaller size to the food
-				Speed = Speed / 2.0f;
-				IsHandEmpty = false;
+				Result = Cast<AFoodBehaviour>(HitResult.Actor); // Check if the the actor hit is a FoodBehaviour actor
+				
+				if(Result != nullptr)
+				{
+					USkeletalMeshComponent* PlayerMesh = GetMesh(); // Get the SkeletalMesh of the Player
+					HitResult.Actor->AttachToComponent(PlayerMesh, FAttachmentTransformRules::SnapToTargetNotIncludingScale, TEXT("Fist_RSocket")); // Attach the food to the right hand
+					HitResult.Actor->SetActorRelativeScale3D(FVector(0.025f, 0.025f, 0.025f)); // Set a smaller size to the food
+					Speed = Speed / 2.0f;
+					GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Red, Result->GetName()); // debug
+					GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Red, TEXT("Food Picked")); // debug
+				}
 			}
 		}
 	}

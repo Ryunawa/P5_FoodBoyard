@@ -48,10 +48,12 @@ protected:
     void Zoom(float Rate);
     void InteractFood();
 
-    float Speed;
+    UPROPERTY(VisibleAnywhere)
+        float Speed;
+    
     float SphereRange = 300;
     bool Hit;
-    bool IsHandEmpty;
+    
     
     FVector CurrentVelocity;
 
