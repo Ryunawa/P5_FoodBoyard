@@ -141,7 +141,7 @@ void APlayerBehaviour::InteractFood()
 					Result->TogglePhysics();
 					USkeletalMeshComponent* PlayerMesh = GetMesh(); // Get the SkeletalMesh of the Player
 					HitResult.Actor->AttachToComponent(PlayerMesh, FAttachmentTransformRules::SnapToTargetNotIncludingScale, TEXT("Fist_RSocket")); // Attach the food to the right hand
-					HitResult.Actor->SetActorRelativeScale3D(FVector(0.025f, 0.025f, 0.025f)); // Set a smaller size to the food
+					HitResult.Actor->SetActorRelativeScale3D(FVector(0.03f, 0.03f, 0.03f)); // Set a smaller size to the food
 					Speed = Speed / 8.0f;
 					GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Red, Result->GetName()); // debug
 					GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Red, TEXT("Food Picked")); // debug
