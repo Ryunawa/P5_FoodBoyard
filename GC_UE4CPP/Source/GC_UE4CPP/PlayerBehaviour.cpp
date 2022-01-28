@@ -117,7 +117,7 @@ void APlayerBehaviour::InteractFood()
 	// Create a sphere trace around the player and add inside an array all actors hit by the sphere trace
 	Hit = UKismetSystemLibrary::SphereTraceMulti(GetWorld(), Start, End, SphereRange,
 		UEngineTypes::ConvertToTraceType(ECC_Camera), true, ActorsToIgnore,
-		EDrawDebugTrace::ForDuration,HitArray, true, FLinearColor::Gray,FLinearColor::Blue, 60.0f);
+		EDrawDebugTrace::None,HitArray, true, FLinearColor::Gray,FLinearColor::Blue, 60.0f);
 
 	if(Result != nullptr)
 	{
