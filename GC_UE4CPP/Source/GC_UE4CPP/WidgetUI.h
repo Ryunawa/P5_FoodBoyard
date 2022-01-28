@@ -13,6 +13,8 @@ UCLASS()
 class GC_UE4CPP_API UWidgetUI : public UUserWidget
 {
 	GENERATED_BODY()
+
+		
 public:
 	UWidgetUI(const FObjectInitializer& ObjectInitializer);
 
@@ -24,10 +26,18 @@ public:
 	UPROPERTY(EditAnywhere, meta = (BindWidget))
 		class UProgressBar* FoodBar;
 
+	float Min = 1;
+	float Max = 5;
+
+	virtual void NativeTick(const FGeometry& MyGeometry, float InDeltaTime) override;
+
 	/*
 	UPROPERTY(meta = (BindWidget))
 		class UButton* StartGame;
 	*/
 
+protected:
+
+	
 	
 };
