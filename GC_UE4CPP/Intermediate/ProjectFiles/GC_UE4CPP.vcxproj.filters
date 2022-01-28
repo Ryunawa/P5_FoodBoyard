@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\GC_UE4CPP.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{84380275-5263-4E87-9755-4AD2886196D3}</UniqueIdentifier>
+      <UniqueIdentifier>{8EC68ADB-C599-4083-9B9D-1E7DEEDFCF76}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\GC_UE4CPP.Target.cs">
       <Filter>Source</Filter>
@@ -11,8 +11,9 @@
     <None Include="..\..\Source\GC_UE4CPPEditor.Target.cs">
       <Filter>Source</Filter>
     </None>
+    <None Include="..\..\GC_UE4CPP.log" />
     <Filter Include="Config">
-      <UniqueIdentifier>{39E78BF2-EDD9-4AFA-B082-45229110D225}</UniqueIdentifier>
+      <UniqueIdentifier>{A5862E0D-85DA-4DF1-BC1D-412870C05C61}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -27,7 +28,7 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\GC_UE4CPP">
-      <UniqueIdentifier>{54D5ED6C-345E-46DB-AA70-E7A7C38A6534}</UniqueIdentifier>
+      <UniqueIdentifier>{A8DA2490-A991-4C15-8D52-358966239344}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\GC_UE4CPP\AI_Behaviour.cpp">
       <Filter>Source\GC_UE4CPP</Filter>
