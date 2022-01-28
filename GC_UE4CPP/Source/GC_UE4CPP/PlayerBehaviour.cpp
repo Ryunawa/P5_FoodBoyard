@@ -14,7 +14,7 @@
 // Sets default values
 APlayerBehaviour::APlayerBehaviour()
 {
-	Speed = 400.0f;
+	Speed = 1500.0f;
 	
     // Set this character to call Tick() every frame.
     PrimaryActorTick.bCanEverTick = true;
@@ -77,7 +77,6 @@ void APlayerBehaviour::SetupPlayerInputComponent(UInputComponent* PlayerInputCom
 	PlayerInputComponent->BindAxis("MoveY", this, &APlayerBehaviour::Move_YAxis);
 	PlayerInputComponent->BindAxis("TurnRate", this, &APlayerBehaviour::TurnAtRate);
 	PlayerInputComponent->BindAxis("LookUpRate", this, &APlayerBehaviour::LookUpAtRate);
-	PlayerInputComponent->BindAxis("Turn", this, &APlayerBehaviour::AddControllerYawInput);
 	PlayerInputComponent->BindAxis("Zoom", this, &APlayerBehaviour::Zoom);
 	PlayerInputComponent->BindAction("Interact", IE_Pressed, this, &APlayerBehaviour::InteractFood);
 }
@@ -123,7 +122,8 @@ void APlayerBehaviour::InteractFood()
 	if(Result != nullptr)
 	{
 		Result->DetachFromActor(FDetachmentTransformRules::KeepWorldTransform);
-		Speed = Speed * 2;
+		Result->TogglePhysics();
+		Speed = Speed * 8;
 		Result = nullptr;
 		GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Red, TEXT("Food Dropped"));
 
@@ -138,10 +138,11 @@ void APlayerBehaviour::InteractFood()
 				
 				if(Result != nullptr)
 				{
+					Result->TogglePhysics();
 					USkeletalMeshComponent* PlayerMesh = GetMesh(); // Get the SkeletalMesh of the Player
 					HitResult.Actor->AttachToComponent(PlayerMesh, FAttachmentTransformRules::SnapToTargetNotIncludingScale, TEXT("Fist_RSocket")); // Attach the food to the right hand
 					HitResult.Actor->SetActorRelativeScale3D(FVector(0.025f, 0.025f, 0.025f)); // Set a smaller size to the food
-					Speed = Speed / 2.0f;
+					Speed = Speed / 8.0f;
 					GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Red, Result->GetName()); // debug
 					GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Red, TEXT("Food Picked")); // debug
 				}

@@ -52,8 +52,7 @@ protected:
         float Speed;
     
     float SphereRange = 300;
-    bool Hit;
-    
+    bool Hit;    
     
     FVector CurrentVelocity;
 

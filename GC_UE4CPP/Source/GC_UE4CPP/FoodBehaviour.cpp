@@ -17,8 +17,9 @@ AFoodBehaviour::AFoodBehaviour()
 void AFoodBehaviour::BeginPlay()
 {
 	Super::BeginPlay();
+	Toggle = false;
 	RandomFood();
-	
+	TogglePhysics();
 }
 
 // Called every frame
@@ -32,5 +33,25 @@ void AFoodBehaviour::RandomFood()
 	RandIndex = FMath::RandRange(0, 12); // Choose a random number between 0 and 12
 	Food->SetStaticMesh(Foods[RandIndex]); // Set the static mesh component of the BP_Food
 }
+
+void AFoodBehaviour::TogglePhysics()
+{
+	Toggle = !Toggle;
+	
+	if(Toggle == false)
+	{
+		Food->SetCollisionEnabled(ECollisionEnabled::QueryOnly);
+		Food->SetSimulatePhysics(false);
+		GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Orange, TEXT("Physic simulated disable")); // debug
+	}
+	else
+	{
+		Food->SetCollisionEnabled(ECollisionEnabled::QueryAndPhysics);
+		Food->SetSimulatePhysics(true);
+		GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Orange, TEXT("Physic simulated enable")); // debug
+	}
+}
+
+
 
 

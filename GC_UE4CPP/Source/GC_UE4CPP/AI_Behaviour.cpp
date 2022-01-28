@@ -29,7 +29,7 @@ void AAI_Behaviour::OnPossess(APawn* InPawn)
 		BBComp->SetValueAsBool("SeePlayer", false);
 		BBComp->SetValueAsObject("SelfActor", GetOwner());
 		BBComp->SetValueAsObject("SelectedSpot", SpotArray[SpotId]);
-		GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Red, TEXT("pute"));
+		GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Red, TEXT("debug show"));
 	}
 }
 
