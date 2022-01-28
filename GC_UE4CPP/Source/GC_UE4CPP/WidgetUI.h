@@ -21,14 +21,13 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (BindWidget))
 		class UTextBlock* Text;
 
+	UPROPERTY(EditAnywhere, meta = (BindWidget))
+		class UProgressBar* FoodBar;
+
 	/*
 	UPROPERTY(meta = (BindWidget))
 		class UButton* StartGame;
 	*/
-	
-
-	UPROPERTY(meta = (BindWidget))
-		class UProgressBar* BarreDeNourriture;
 
 	
 };

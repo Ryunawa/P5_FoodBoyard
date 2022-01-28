@@ -38,9 +38,9 @@ void EmptyLinkFunctionForGeneratedCodeWidgetUI() {}
 #endif
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_Text;
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_BarreDeNourriture_MetaData[];
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_FoodBar_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_BarreDeNourriture;
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_FoodBar;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UE4CodeGen_Private::FClassParams ClassParams;
@@ -66,18 +66,17 @@ void EmptyLinkFunctionForGeneratedCodeWidgetUI() {}
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UWidgetUI_Statics::NewProp_Text = { "Text", nullptr, (EPropertyFlags)0x001000000008000d, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UWidgetUI, Text), Z_Construct_UClass_UTextBlock_NoRegister, METADATA_PARAMS(Z_Construct_UClass_UWidgetUI_Statics::NewProp_Text_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UWidgetUI_Statics::NewProp_Text_MetaData)) };
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UWidgetUI_Statics::NewProp_BarreDeNourriture_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UWidgetUI_Statics::NewProp_FoodBar_MetaData[] = {
 		{ "BindWidget", "" },
-		{ "Comment", "/*\n\x09UPROPERTY(meta = (BindWidget))\n\x09\x09""class UButton* StartGame;\n\x09*/" },
+		{ "Category", "WidgetUI" },
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "WidgetUI.h" },
-		{ "ToolTip", "UPROPERTY(meta = (BindWidget))\n        class UButton* StartGame;" },
 	};
 #endif
-	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UWidgetUI_Statics::NewProp_BarreDeNourriture = { "BarreDeNourriture", nullptr, (EPropertyFlags)0x0010000000080008, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UWidgetUI, BarreDeNourriture), Z_Construct_UClass_UProgressBar_NoRegister, METADATA_PARAMS(Z_Construct_UClass_UWidgetUI_Statics::NewProp_BarreDeNourriture_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UWidgetUI_Statics::NewProp_BarreDeNourriture_MetaData)) };
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UWidgetUI_Statics::NewProp_FoodBar = { "FoodBar", nullptr, (EPropertyFlags)0x0010000000080009, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UWidgetUI, FoodBar), Z_Construct_UClass_UProgressBar_NoRegister, METADATA_PARAMS(Z_Construct_UClass_UWidgetUI_Statics::NewProp_FoodBar_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UWidgetUI_Statics::NewProp_FoodBar_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UWidgetUI_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UWidgetUI_Statics::NewProp_Text,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UWidgetUI_Statics::NewProp_BarreDeNourriture,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UWidgetUI_Statics::NewProp_FoodBar,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_UWidgetUI_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<UWidgetUI>::IsAbstract,
@@ -106,7 +105,7 @@ void EmptyLinkFunctionForGeneratedCodeWidgetUI() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UWidgetUI, 2623770627);
+	IMPLEMENT_CLASS(UWidgetUI, 535067838);
 	template<> GC_UE4CPP_API UClass* StaticClass<UWidgetUI>()
 	{
 		return UWidgetUI::StaticClass();
