@@ -11,7 +11,7 @@ class GC_UE4CPP_API AChest : public AActor
 {
 	GENERATED_BODY()
 
-	
+
 	
 public:	
 	// Sets default values for this actor's properties
@@ -31,6 +31,8 @@ public:
 	
 	UFUNCTION()
 		void OnOverlapEnd(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex);
+
+	float compteur = 0;
 
 
 protected:

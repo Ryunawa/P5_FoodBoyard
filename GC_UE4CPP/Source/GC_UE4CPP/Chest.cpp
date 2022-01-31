@@ -5,6 +5,7 @@
 #include "Components/BoxComponent.h"
 #include "Engine/Engine.h"
 
+
 // Sets default values
 AChest::AChest()
 {
@@ -27,11 +28,15 @@ AChest::AChest()
 void AChest::OnOverlapBegin(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
 {
 	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green, TEXT("La fonction Overlap Begin a ete apele"));
+	compteur += 1;
+	UE_LOG(LogTemp, Warning, TEXT("Output: %f"), compteur);
 }
 
 void AChest::OnOverlapEnd(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex)
 {
 	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Blue, TEXT("La fonction Overlap End a ete apele"));
+	compteur -= 1;
+	UE_LOG(LogTemp, Warning, TEXT("Output: %f"), compteur);
 }
 
 // Called when the game starts or when spawned

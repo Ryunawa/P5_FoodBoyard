@@ -26,6 +26,7 @@ public:
 	UPROPERTY(EditAnywhere, meta = (BindWidget))
 		class UProgressBar* FoodBar;
 
+	
 	float Min = 1;
 	float Max = 5;
 
