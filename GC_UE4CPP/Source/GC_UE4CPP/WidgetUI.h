@@ -27,8 +27,8 @@ public:
 		class UProgressBar* FoodBar;
 
 	
-	float Min = 1;
-	float Max = 5;
+	int Min = 1;
+	int Max = 5;
 
 	virtual void NativeTick(const FGeometry& MyGeometry, float InDeltaTime) override;
 
