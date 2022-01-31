@@ -29,14 +29,14 @@ void AChest::OnOverlapBegin(UPrimitiveComponent* OverlappedComponent, AActor* Ot
 {
 	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green, TEXT("La fonction Overlap Begin a ete apele"));
 	compteur += 1;
-	UE_LOG(LogTemp, Warning, TEXT("Food Output: %d"), compteur);
+	UE_LOG(LogTemp, Warning, TEXT("Food Output: %f"), compteur);
 }
 
 void AChest::OnOverlapEnd(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex)
 {
 	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Blue, TEXT("La fonction Overlap End a ete apele"));
 	compteur -= 1;
-	UE_LOG(LogTemp, Warning, TEXT("Food Output: %d"), compteur);
+	UE_LOG(LogTemp, Warning, TEXT("Food Output: %f"), compteur);
 }
 
 // Called when the game starts or when spawned
