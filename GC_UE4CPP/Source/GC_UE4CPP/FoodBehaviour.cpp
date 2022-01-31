@@ -40,13 +40,11 @@ void AFoodBehaviour::TogglePhysics()
 	
 	if(Toggle == false)
 	{
-		Food->SetCollisionEnabled(ECollisionEnabled::QueryOnly);
 		Food->SetSimulatePhysics(false);
 		GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Orange, TEXT("Physic simulated disable")); // debug
 	}
 	else
 	{
-		Food->SetCollisionEnabled(ECollisionEnabled::QueryAndPhysics);
 		Food->SetSimulatePhysics(true);
 		GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Orange, TEXT("Physic simulated enable")); // debug
 	}

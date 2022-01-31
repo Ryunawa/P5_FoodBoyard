@@ -30,16 +30,15 @@ public:
     APlayerBehaviour();
     
     UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera)
-    float TurnRate = 45.0f;
+        float TurnRate = 45.0f;
     UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera)
-    float LookUpRate = 45.0f;
+        float LookUpRate = 45.0f;
+    UPROPERTY(EditAnywhere)
+        float Speed;
+    UPROPERTY(EditAnywhere)
+        bool bIsPickingDroppingFood;
 
 
-protected:
-    // Called when the game starts or when spawned
-    virtual void BeginPlay() override;
-    virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
-    
     // Input methods
     void Move_XAxis(float Rate);
     void Move_YAxis(float Rate);
@@ -47,12 +46,14 @@ protected:
     void LookUpAtRate(float Rate);
     void Zoom(float Rate);
     void InteractFood();
-
-    UPROPERTY(VisibleAnywhere)
-        float Speed;
+    
+protected:
+    // Called when the game starts or when spawned
+    virtual void BeginPlay() override;
+    virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
     
     float SphereRange = 300;
-    bool Hit;    
+    bool bHit;
     
     FVector CurrentVelocity;
 

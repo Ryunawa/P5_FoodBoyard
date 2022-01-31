@@ -14,7 +14,7 @@
 // Sets default values
 APlayerBehaviour::APlayerBehaviour()
 {
-	Speed = 1500.0f;
+	Speed = 1.0f;
 	
     // Set this character to call Tick() every frame.
     PrimaryActorTick.bCanEverTick = true;
@@ -93,7 +93,7 @@ void APlayerBehaviour::LookUpAtRate(float Rate)
 
 void APlayerBehaviour::Move_XAxis(float Rate)
 {
-	AddMovementInput(GetFollowCamera()->GetForwardVector(), Rate * Speed);
+	AddMovementInput(GetFollowCamera()->GetForwardVector(),Rate * Speed);
 }
 
 void APlayerBehaviour::Move_YAxis(float Rate)
@@ -104,7 +104,7 @@ void APlayerBehaviour::Move_YAxis(float Rate)
 //Set the distance between the player and the camera
 void APlayerBehaviour::Zoom(float Rate)
 {
-	CameraBoom->TargetArmLength -= (GetWorld()->DeltaTimeSeconds * Rate * 4000);
+	CameraBoom->TargetArmLength -= (GetWorld()->DeltaTimeSeconds * Rate * Speed);
 }
 
 //Allow to interact with the food
@@ -114,21 +114,26 @@ void APlayerBehaviour::InteractFood()
 	const FVector End = GetActorLocation() * 200;
 	ActorsToIgnore.Add(this);
 
+	GetCharacterMovement()->SetMovementMode(EMovementMode::MOVE_None);
+	
 	// Create a sphere trace around the player and add inside an array all actors hit by the sphere trace
-	Hit = UKismetSystemLibrary::SphereTraceMulti(GetWorld(), Start, End, SphereRange,
+	bHit = UKismetSystemLibrary::SphereTraceMulti(GetWorld(), Start, End, SphereRange,
 		UEngineTypes::ConvertToTraceType(ECC_Camera), true, ActorsToIgnore,
 		EDrawDebugTrace::None,HitArray, true, FLinearColor::Gray,FLinearColor::Blue, 60.0f);
+	
+	bIsPickingDroppingFood = true;
 
 	if(Result != nullptr)
 	{
+		bIsPickingDroppingFood = true;
 		Result->DetachFromActor(FDetachmentTransformRules::KeepWorldTransform);
 		Result->TogglePhysics();
-		Speed = Speed * 8;
+		Speed *= 2;
 		Result = nullptr;
 		GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Red, TEXT("Food Dropped"));
-
+		
 	}
-	else if(Hit)
+	else if(bHit)
 	{
 		for(const FHitResult HitResult : HitArray)
 		{	
@@ -142,8 +147,7 @@ void APlayerBehaviour::InteractFood()
 					USkeletalMeshComponent* PlayerMesh = GetMesh(); // Get the SkeletalMesh of the Player
 					HitResult.Actor->AttachToComponent(PlayerMesh, FAttachmentTransformRules::SnapToTargetNotIncludingScale, TEXT("Fist_RSocket")); // Attach the food to the right hand
 					HitResult.Actor->SetActorRelativeScale3D(FVector(0.03f, 0.03f, 0.03f)); // Set a smaller size to the food
-					Speed = Speed / 8.0f;
-					GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Red, Result->GetName()); // debug
+					Speed /= 2.0f;
 					GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Red, TEXT("Food Picked")); // debug
 				}
 			}

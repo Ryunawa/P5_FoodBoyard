@@ -58,6 +58,11 @@ void EmptyLinkFunctionForGeneratedCodePlayerBehaviour() {}
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Speed_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_Speed;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_bIsPickingDroppingFood_MetaData[];
+#endif
+		static void NewProp_bIsPickingDroppingFood_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_bIsPickingDroppingFood;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UE4CodeGen_Private::FClassParams ClassParams;
@@ -123,7 +128,18 @@ void EmptyLinkFunctionForGeneratedCodePlayerBehaviour() {}
 		{ "ModuleRelativePath", "PlayerBehaviour.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_APlayerBehaviour_Statics::NewProp_Speed = { "Speed", nullptr, (EPropertyFlags)0x0020080000020001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(APlayerBehaviour, Speed), METADATA_PARAMS(Z_Construct_UClass_APlayerBehaviour_Statics::NewProp_Speed_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_APlayerBehaviour_Statics::NewProp_Speed_MetaData)) };
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_APlayerBehaviour_Statics::NewProp_Speed = { "Speed", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(APlayerBehaviour, Speed), METADATA_PARAMS(Z_Construct_UClass_APlayerBehaviour_Statics::NewProp_Speed_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_APlayerBehaviour_Statics::NewProp_Speed_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_APlayerBehaviour_Statics::NewProp_bIsPickingDroppingFood_MetaData[] = {
+		{ "Category", "PlayerBehaviour" },
+		{ "ModuleRelativePath", "PlayerBehaviour.h" },
+	};
+#endif
+	void Z_Construct_UClass_APlayerBehaviour_Statics::NewProp_bIsPickingDroppingFood_SetBit(void* Obj)
+	{
+		((APlayerBehaviour*)Obj)->bIsPickingDroppingFood = 1;
+	}
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UClass_APlayerBehaviour_Statics::NewProp_bIsPickingDroppingFood = { "bIsPickingDroppingFood", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(APlayerBehaviour), &Z_Construct_UClass_APlayerBehaviour_Statics::NewProp_bIsPickingDroppingFood_SetBit, METADATA_PARAMS(Z_Construct_UClass_APlayerBehaviour_Statics::NewProp_bIsPickingDroppingFood_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_APlayerBehaviour_Statics::NewProp_bIsPickingDroppingFood_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_APlayerBehaviour_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APlayerBehaviour_Statics::NewProp_CameraBoom,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APlayerBehaviour_Statics::NewProp_FollowCamera,
@@ -131,6 +147,7 @@ void EmptyLinkFunctionForGeneratedCodePlayerBehaviour() {}
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APlayerBehaviour_Statics::NewProp_TurnRate,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APlayerBehaviour_Statics::NewProp_LookUpRate,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APlayerBehaviour_Statics::NewProp_Speed,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APlayerBehaviour_Statics::NewProp_bIsPickingDroppingFood,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_APlayerBehaviour_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<APlayerBehaviour>::IsAbstract,
@@ -159,7 +176,7 @@ void EmptyLinkFunctionForGeneratedCodePlayerBehaviour() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(APlayerBehaviour, 2116315136);
+	IMPLEMENT_CLASS(APlayerBehaviour, 1167172814);
 	template<> GC_UE4CPP_API UClass* StaticClass<APlayerBehaviour>()
 	{
 		return APlayerBehaviour::StaticClass();
