@@ -33,7 +33,11 @@ public:
 		void OnOverlapEnd(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex);
 
 	// variable for food counting
+	//UPROPERTY(VisibleAnywhere)
+
 	float food_counter = 0;
+	//float* WidgetPtr = &food_counter;
+
 
 
 protected:

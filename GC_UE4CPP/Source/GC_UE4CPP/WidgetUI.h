@@ -19,6 +19,7 @@ public:
 	UWidgetUI(const FObjectInitializer& ObjectInitializer);
 
 	
+	
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (BindWidget))
 		class UTextBlock* Text;
@@ -26,9 +27,12 @@ public:
 	UPROPERTY(EditAnywhere, meta = (BindWidget))
 		class UProgressBar* FoodBar;
 
+		
+	float food = 1;
+	float Max_food = 5;
+
 	
-	float Min = 1;
-	float Max = 5;
+	
 
 	virtual void NativeTick(const FGeometry& MyGeometry, float InDeltaTime) override;
 
@@ -38,6 +42,7 @@ public:
 	*/
 
 protected:
+	
 
 	
 	
