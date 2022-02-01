@@ -6,7 +6,9 @@
 #include "Components/InputComponent.h"
 #include "Engine/SkeletalMeshSocket.h"
 #include "GameFramework/CharacterMovementComponent.h"
+#include "GameFramework/GameModeBase.h"
 #include "GameFramework/SpringArmComponent.h"
+#include "Kismet/GameplayStatics.h"
 #include "Kismet/KismetSystemLibrary.h"
 #include "Math/UnitConversion.h"
 
@@ -158,5 +160,7 @@ void APlayerBehaviour::InteractFood()
 			}
 		}
 	}
+	//UGameplayStatics::GetGameMode(this);
+	//AGameModeBase* GameMode;
 }
 
