@@ -14,17 +14,12 @@ class GC_UE4CPP_API APlayerBehaviour : public ACharacter
 {
     GENERATED_BODY()
 
-    // Camera boom positioning the camera behind the character 
     UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera, meta = (AllowPrivateAccess = "true"))
         class USpringArmComponent* CameraBoom;
-
-    // Follow camera
     UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera, meta = (AllowPrivateAccess = "true"))
         class UCameraComponent* FollowCamera;
-
     UPROPERTY(VisibleAnywhere)
-       USphereComponent* SphereDetection;
-
+        USphereComponent* SphereDetection;
 public:
     // Sets default values for this character's properties
     APlayerBehaviour();
@@ -34,7 +29,9 @@ public:
     UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera)
         float LookUpRate = 45.0f;
     UPROPERTY(EditAnywhere)
-        float Speed;
+        float MovementSpeed;
+    UPROPERTY(EditAnywhere)
+        int ZoomSpeed;
     UPROPERTY(EditAnywhere)
         bool bIsPickingDroppingFood;
 

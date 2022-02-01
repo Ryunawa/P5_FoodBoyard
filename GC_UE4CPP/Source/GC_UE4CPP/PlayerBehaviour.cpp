@@ -14,7 +14,8 @@
 // Sets default values
 APlayerBehaviour::APlayerBehaviour()
 {
-	Speed = 1.0f;
+	MovementSpeed = 1.0f;
+	ZoomSpeed = 8000;
 	
     // Set this character to call Tick() every frame.
     PrimaryActorTick.bCanEverTick = true;
@@ -93,18 +94,22 @@ void APlayerBehaviour::LookUpAtRate(float Rate)
 
 void APlayerBehaviour::Move_XAxis(float Rate)
 {
-	AddMovementInput(GetFollowCamera()->GetForwardVector(),Rate * Speed);
+	AddMovementInput(GetFollowCamera()->GetForwardVector(),Rate * MovementSpeed);
 }
 
 void APlayerBehaviour::Move_YAxis(float Rate)
 {
-	AddMovementInput(GetFollowCamera()->GetRightVector(), Rate * Speed);
+	AddMovementInput(GetFollowCamera()->GetRightVector(), Rate * MovementSpeed);
 }
 
 //Set the distance between the player and the camera
 void APlayerBehaviour::Zoom(float Rate)
 {
-	CameraBoom->TargetArmLength -= (GetWorld()->DeltaTimeSeconds * Rate * Speed);
+	
+	if ((CameraBoom->TargetArmLength >= 450 && Rate > 0) || (CameraBoom->TargetArmLength <= 1450 && Rate < 0))
+	{
+		CameraBoom->TargetArmLength -= GetWorld()->DeltaTimeSeconds * Rate * ZoomSpeed;
+	}
 }
 
 //Allow to interact with the food
@@ -128,7 +133,7 @@ void APlayerBehaviour::InteractFood()
 		bIsPickingDroppingFood = true;
 		Result->DetachFromActor(FDetachmentTransformRules::KeepWorldTransform);
 		Result->TogglePhysics();
-		Speed *= 2;
+		MovementSpeed *= 2;
 		Result = nullptr;
 		GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Red, TEXT("Food Dropped"));
 		
@@ -147,7 +152,7 @@ void APlayerBehaviour::InteractFood()
 					USkeletalMeshComponent* PlayerMesh = GetMesh(); // Get the SkeletalMesh of the Player
 					HitResult.Actor->AttachToComponent(PlayerMesh, FAttachmentTransformRules::SnapToTargetNotIncludingScale, TEXT("Fist_RSocket")); // Attach the food to the right hand
 					HitResult.Actor->SetActorRelativeScale3D(FVector(0.03f, 0.03f, 0.03f)); // Set a smaller size to the food
-					Speed /= 2.0f;
+					MovementSpeed /= 2.0f;
 					GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Red, TEXT("Food Picked")); // debug
 				}
 			}
