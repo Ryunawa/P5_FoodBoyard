@@ -32,7 +32,8 @@ public:
 	UFUNCTION()
 		void OnOverlapEnd(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex);
 
-	float compteur = 0;
+	// variable for food counting
+	float food_counter = 0;
 
 
 protected:

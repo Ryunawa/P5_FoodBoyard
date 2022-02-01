@@ -9,7 +9,7 @@
 // Sets default values
 AChest::AChest()
 {
- 	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
+ 	// Set this actor to call Tick() every frame.
 	PrimaryActorTick.bCanEverTick = true;
 
 	chest = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("MeshComponent"));
@@ -24,19 +24,20 @@ AChest::AChest()
 }
 
 
-
+	// Called when the food enters the box
 void AChest::OnOverlapBegin(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
 {
-	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green, TEXT("La fonction Overlap Begin a ete apele"));
-	compteur += 1;
-	UE_LOG(LogTemp, Warning, TEXT("Food Output: %f"), compteur);
+	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green, TEXT("the food is IN the box"));
+	food_counter += 1;
+	UE_LOG(LogTemp, Warning, TEXT("Food Output: %f"), food_counter);
 }
 
+	// Called when the food leaves the box
 void AChest::OnOverlapEnd(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex)
 {
-	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Blue, TEXT("La fonction Overlap End a ete apele"));
-	compteur -= 1;
-	UE_LOG(LogTemp, Warning, TEXT("Food Output: %f"), compteur);
+	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Purple, TEXT("the food is OUTSIDE the box"));
+	food_counter -= 1;
+	UE_LOG(LogTemp, Warning, TEXT("Food Output: %f"), food_counter);
 }
 
 // Called when the game starts or when spawned
