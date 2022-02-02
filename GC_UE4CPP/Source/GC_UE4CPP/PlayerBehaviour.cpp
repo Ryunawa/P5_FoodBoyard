@@ -140,7 +140,7 @@ void APlayerBehaviour::InteractFood()
 		Result->TogglePhysics();
 		MovementSpeed *= 2;
 		Result = nullptr;
-		bIsCarryingFood = true;
+		bIsCarryingFood = false;
 		GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Red, TEXT("Food Dropped"));
 		
 	}
