@@ -53,7 +53,7 @@ protected:
     virtual void BeginPlay() override;
     virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
     
-    float SphereRange = 300;
+    float SphereRange = 250;
     bool bHit;
     
     FVector CurrentVelocity;
