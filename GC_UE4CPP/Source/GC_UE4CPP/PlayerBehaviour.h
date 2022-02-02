@@ -34,7 +34,11 @@ public:
         int ZoomSpeed;
     UPROPERTY(EditAnywhere)
         bool bIsPickingDroppingFood;
+    UPROPERTY(EditAnywhere)
+        bool bIsCarryingFood;
 
+    UPROPERTY(EditAnywhere)
+        AFoodBehaviour* Result;
 
     // Input methods
     void Move_XAxis(float Rate);
@@ -53,8 +57,6 @@ protected:
     bool bHit;
     
     FVector CurrentVelocity;
-
-    AFoodBehaviour* Result;
     
     TArray<AActor*> ActorsToIgnore;
     TArray<FHitResult> HitArray;

@@ -27,6 +27,7 @@ void UPlayerAnim::NativeUpdateAnimation(float DeltaSeconds)
 		Speed = PlayerCharacter->GetVelocity().Size();
 		bIsMoving = PlayerCharacter->GetVelocity().Size() > 0 ? true : false;
 		bIsPickingDropping = PlayerCharacter->bIsPickingDroppingFood;
+		bIsCarrying = PlayerCharacter->bIsCarryingFood;
 	}	
 }
 

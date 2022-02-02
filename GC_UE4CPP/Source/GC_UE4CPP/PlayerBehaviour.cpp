@@ -8,7 +8,6 @@
 #include "GameFramework/CharacterMovementComponent.h"
 #include "GameFramework/GameModeBase.h"
 #include "GameFramework/SpringArmComponent.h"
-#include "Kismet/GameplayStatics.h"
 #include "Kismet/KismetSystemLibrary.h"
 #include "Math/UnitConversion.h"
 
@@ -137,6 +136,7 @@ void APlayerBehaviour::InteractFood()
 		Result->TogglePhysics();
 		MovementSpeed *= 2;
 		Result = nullptr;
+		bIsCarryingFood = true;
 		GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Red, TEXT("Food Dropped"));
 		
 	}
@@ -155,6 +155,7 @@ void APlayerBehaviour::InteractFood()
 					HitResult.Actor->AttachToComponent(PlayerMesh, FAttachmentTransformRules::SnapToTargetNotIncludingScale, TEXT("Fist_RSocket")); // Attach the food to the right hand
 					HitResult.Actor->SetActorRelativeScale3D(FVector(0.03f, 0.03f, 0.03f)); // Set a smaller size to the food
 					MovementSpeed /= 2.0f;
+					bIsCarryingFood = true;
 					GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Red, TEXT("Food Picked")); // debug
 				}
 			}
