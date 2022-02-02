@@ -1,7 +1,4 @@
 #include "PlayerAnim.h"
-
-#include <concrt.h>
-
 #include "PlayerBehaviour.h"
 #include "Microsoft/AllowMicrosoftPlatformTypes.h"
 
