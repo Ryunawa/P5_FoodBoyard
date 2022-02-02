@@ -8,7 +8,6 @@
 #include "GameFramework/CharacterMovementComponent.h"
 #include "GameFramework/GameModeBase.h"
 #include "GameFramework/SpringArmComponent.h"
-//#include "Kismet/GameplayStatics.h"
 #include "Kismet/KismetSystemLibrary.h"
 #include "Math/UnitConversion.h"
 
@@ -18,9 +17,6 @@ APlayerBehaviour::APlayerBehaviour()
 {
 	MovementSpeed = 1.0f;
 	ZoomSpeed = 8000;
-
-	//UGameplayStatics::GetGameMode(this);
-	//AGameModeBase* GameMode;
 	
     // Set this character to call Tick() every frame.
     PrimaryActorTick.bCanEverTick = true;
@@ -165,5 +161,7 @@ void APlayerBehaviour::InteractFood()
 			}
 		}
 	}
+	//UGameplayStatics::GetGameMode(this);
+	//AGameModeBase* GameMode;
 }
 
