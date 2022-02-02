@@ -47,6 +47,10 @@ E:\EpicGamesLibrary\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine
 E:\EpicGamesLibrary\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\SphereComponent.generated.h
 C:\Users\robin\Documents\GitHub\P5_UE4\GC_UE4CPP\Intermediate\Build\Win64\UE4Editor\Inc\GC_UE4CPP\PlayerBehaviour.generated.h
 C:\Users\robin\Documents\GitHub\P5_UE4\GC_UE4CPP\Intermediate\Build\Win64\UE4Editor\Inc\GC_UE4CPP\PlayerAnim.generated.h
+D:\Visual Studio\VC\Tools\MSVC\14.29.30133\INCLUDE\concrt.h
+D:\Visual Studio\VC\Tools\MSVC\14.29.30133\INCLUDE\crtdefs.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\shared\guiddef.h
+D:\Visual Studio\VC\Tools\MSVC\14.29.30133\INCLUDE\pplinterface.h
 E:\EpicGamesLibrary\UE_4.27\Engine\Source\Runtime\Core\Public\Microsoft/AllowMicrosoftPlatformTypes.h
 E:\EpicGamesLibrary\UE_4.27\Engine\Source\Runtime\Core\Public\Windows/AllowWindowsPlatformTypes.h
 E:\EpicGamesLibrary\UE_4.27\Engine\Source\Runtime\Core\Public\Windows/WindowsHWrapper.h
