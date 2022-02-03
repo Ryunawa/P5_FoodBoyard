@@ -28,16 +28,16 @@ AChest::AChest()
 void AChest::OnOverlapBegin(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
 {
 	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green, TEXT("the food is IN the box"));
-	food_counter += 1;
-	UE_LOG(LogTemp, Warning, TEXT("Food Output: %f"), food_counter);
+	Counter += 1;
+	UE_LOG(LogTemp, Warning, TEXT("Chest Food message: %f"), Counter);
 }
 
 	// Called when the food leaves the box
 void AChest::OnOverlapEnd(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex)
 {
 	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Purple, TEXT("the food is OUTSIDE the box"));
-	food_counter -= 1;
-	UE_LOG(LogTemp, Warning, TEXT("Food Output: %f"), food_counter);
+	Counter -= 1;
+	UE_LOG(LogTemp, Warning, TEXT("Chest Food message: %f"), Counter);
 }
 
 // Called when the game starts or when spawned

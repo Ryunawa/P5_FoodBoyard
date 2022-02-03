@@ -1010,8 +1010,6 @@ C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\In
 C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\UMG\UMGSequenceTickManager.generated.h
 C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\UMG\UMGSequencePlayer.generated.h
 C:\Users\LenyN\Documents\GitHub\P5_UE4\GC_UE4CPP\Intermediate\Build\Win64\UE4Editor\Inc\GC_UE4CPP\WidgetUI.generated.h
-C:\Users\LenyN\Documents\GitHub\P5_UE4\GC_UE4CPP\Source\GC_UE4CPP\Chest.h
-C:\Users\LenyN\Documents\GitHub\P5_UE4\GC_UE4CPP\Intermediate\Build\Win64\UE4Editor\Inc\GC_UE4CPP\Chest.generated.h
 C:\Users\LenyN\Documents\GitHub\P5_UE4\GC_UE4CPP\Source\GC_UE4CPP\PlayerBehaviour.h
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\INCLUDE\iostream
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\INCLUDE\istream
@@ -1043,3 +1041,5 @@ C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\ucrt\locale.h
 C:\Users\LenyN\Documents\GitHub\P5_UE4\GC_UE4CPP\Source\GC_UE4CPP\FoodBehaviour.h
 C:\Users\LenyN\Documents\GitHub\P5_UE4\GC_UE4CPP\Intermediate\Build\Win64\UE4Editor\Inc\GC_UE4CPP\FoodBehaviour.generated.h
 C:\Users\LenyN\Documents\GitHub\P5_UE4\GC_UE4CPP\Intermediate\Build\Win64\UE4Editor\Inc\GC_UE4CPP\PlayerBehaviour.generated.h
+C:\Users\LenyN\Documents\GitHub\P5_UE4\GC_UE4CPP\Source\GC_UE4CPP\GC_UE4CPPGameModeBase.h
+C:\Users\LenyN\Documents\GitHub\P5_UE4\GC_UE4CPP\Intermediate\Build\Win64\UE4Editor\Inc\GC_UE4CPP\GC_UE4CPPGameModeBase.generated.h

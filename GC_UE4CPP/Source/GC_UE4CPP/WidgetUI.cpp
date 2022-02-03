@@ -1,9 +1,11 @@
 
 #include "WidgetUI.h"
-#include "Chest.h"
 #include "Components/ProgressBar.h"
 #include "Engine.h"
 #include "PlayerBehaviour.h"
+#include "GC_UE4CPPGameModeBase.h"
+#include "Engine/Engine.h"
+#include "Kismet/GameplayStatics.h"
 
 
 UWidgetUI::UWidgetUI(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer)
@@ -16,11 +18,17 @@ void UWidgetUI::NativeTick(const FGeometry& MyGeometry, float InDeltaTime)
 	Super::NativeTick(MyGeometry, InDeltaTime);
 
 	/*
-	AChest* Min_food = Cast<AChest>();
-	Min_food->food_counter;
+	AChest* MinFood = Cast<AChest>();
+	MinFood->Counter;
 	*/
 
-	FoodBar->SetPercent(food / Max_food);
+	UGameplayStatics::GetGameMode(this);
+	AGC_UE4CPPGameModeBase* GameMode = 0;
+
+		AGC_UE4CPPGameModeBase* MinFood = Cast<AGC_UE4CPPGameModeBase>(GameMode);
+
+	//FoodBar->SetPercent(MinFood->FoodCounter / MaxFood);
+	//UE_LOG(LogTemp, Warning, TEXT("Widget UI Food Output: %f"), MinFood->FoodCounter);
 	
 }
 

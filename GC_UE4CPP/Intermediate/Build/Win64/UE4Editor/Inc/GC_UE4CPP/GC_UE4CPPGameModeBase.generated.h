@@ -8,14 +8,27 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+class UPrimitiveComponent;
+class AActor;
+struct FHitResult;
 #ifdef GC_UE4CPP_GC_UE4CPPGameModeBase_generated_h
 #error "GC_UE4CPPGameModeBase.generated.h already included, missing '#pragma once' in GC_UE4CPPGameModeBase.h"
 #endif
 #define GC_UE4CPP_GC_UE4CPPGameModeBase_generated_h
 
 #define GC_UE4CPP_Source_GC_UE4CPP_GC_UE4CPPGameModeBase_h_10_SPARSE_DATA
-#define GC_UE4CPP_Source_GC_UE4CPP_GC_UE4CPPGameModeBase_h_10_RPC_WRAPPERS
-#define GC_UE4CPP_Source_GC_UE4CPP_GC_UE4CPPGameModeBase_h_10_RPC_WRAPPERS_NO_PURE_DECLS
+#define GC_UE4CPP_Source_GC_UE4CPP_GC_UE4CPPGameModeBase_h_10_RPC_WRAPPERS \
+ \
+	DECLARE_FUNCTION(execOnOverlapEnd); \
+	DECLARE_FUNCTION(execOnOverlapBegin);
+
+
+#define GC_UE4CPP_Source_GC_UE4CPP_GC_UE4CPPGameModeBase_h_10_RPC_WRAPPERS_NO_PURE_DECLS \
+ \
+	DECLARE_FUNCTION(execOnOverlapEnd); \
+	DECLARE_FUNCTION(execOnOverlapBegin);
+
+
 #define GC_UE4CPP_Source_GC_UE4CPP_GC_UE4CPPGameModeBase_h_10_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAGC_UE4CPPGameModeBase(); \
@@ -36,7 +49,7 @@ public: \
 
 #define GC_UE4CPP_Source_GC_UE4CPP_GC_UE4CPPGameModeBase_h_10_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
-	NO_API AGC_UE4CPPGameModeBase(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
+	NO_API AGC_UE4CPPGameModeBase(const FObjectInitializer& ObjectInitializer); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(AGC_UE4CPPGameModeBase) \
 	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, AGC_UE4CPPGameModeBase); \
 	DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(AGC_UE4CPPGameModeBase); \
@@ -48,8 +61,6 @@ public:
 
 
 #define GC_UE4CPP_Source_GC_UE4CPP_GC_UE4CPPGameModeBase_h_10_ENHANCED_CONSTRUCTORS \
-	/** Standard constructor, called after all reflected properties have been initialized */ \
-	NO_API AGC_UE4CPPGameModeBase(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()) : Super(ObjectInitializer) { }; \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API AGC_UE4CPPGameModeBase(AGC_UE4CPPGameModeBase&&); \
@@ -57,7 +68,7 @@ private: \
 public: \
 	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, AGC_UE4CPPGameModeBase); \
 	DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(AGC_UE4CPPGameModeBase); \
-	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(AGC_UE4CPPGameModeBase)
+	DEFINE_DEFAULT_CONSTRUCTOR_CALL(AGC_UE4CPPGameModeBase)
 
 
 #define GC_UE4CPP_Source_GC_UE4CPP_GC_UE4CPPGameModeBase_h_10_PRIVATE_PROPERTY_OFFSET
