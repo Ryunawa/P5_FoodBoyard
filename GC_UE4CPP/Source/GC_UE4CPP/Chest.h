@@ -33,9 +33,9 @@ public:
 		void OnOverlapEnd(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex);
 
 	// variable for food counting
-	float Counter = 1;
+	float FoodCounter = 1;
 
-	//float* WidgetPtr = &Counter;
+	//float* WidgetPtr = &FoodCounter;
 
 
 

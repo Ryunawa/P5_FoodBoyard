@@ -28,7 +28,7 @@ public:
 		class UProgressBar* FoodBar;
 
 		
-	float Food = 1;
+	float Food = 2;
 	float MaxFood = 5;
 
 	

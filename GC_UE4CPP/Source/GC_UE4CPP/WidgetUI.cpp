@@ -25,9 +25,10 @@ void UWidgetUI::NativeTick(const FGeometry& MyGeometry, float InDeltaTime)
 	UGameplayStatics::GetGameMode(this);
 	AGC_UE4CPPGameModeBase* GameMode = 0;
 
-		AGC_UE4CPPGameModeBase* MinFood = Cast<AGC_UE4CPPGameModeBase>(GameMode);
-
+	AGC_UE4CPPGameModeBase* MinFood = Cast<AGC_UE4CPPGameModeBase>(GameMode);
 	//FoodBar->SetPercent(MinFood->FoodCounter / MaxFood);
+
+	//FoodBar->SetPercent(Food / MaxFood);
 	//UE_LOG(LogTemp, Warning, TEXT("Widget UI Food Output: %f"), MinFood->FoodCounter);
 	
 }
