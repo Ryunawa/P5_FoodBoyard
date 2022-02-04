@@ -17,11 +17,12 @@ public:
 	// Sets default values for this actor's properties
 	AChest();
 
-	UPROPERTY(EditAnywhere)
-		TArray<UStaticMesh*> chests;
 
 	UPROPERTY(VisibleAnywhere)
 		UStaticMeshComponent* chest;
+
+	UPROPERTY(VisibleAnywhere)
+		UStaticMeshComponent* chestTop;
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadWrite)
 		class UBoxComponent* CollisionBox;

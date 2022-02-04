@@ -12,18 +12,24 @@ AChest::AChest()
  	// Set this actor to call Tick() every frame.
 	PrimaryActorTick.bCanEverTick = true;
 
-	chest = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("MeshComponent"));
+	
 
 	CollisionBox = CreateDefaultSubobject<UBoxComponent>(TEXT("BoxComponent"));
-	//CollisionBox->SetBoxExtent(FVector(50.f, 50.f, 50.f));
+	RootComponent = CollisionBox;
+	CollisionBox->SetBoxExtent(FVector(50.f, 50.f, 50.f));
 	CollisionBox->SetCollisionProfileName("Trigger");
 	
+	chest = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("MeshComponent"));
+	chest->SetupAttachment(RootComponent);
+
+	chestTop = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("MeshTopComponent"));
+	chestTop->SetupAttachment(RootComponent);
 
 	CollisionBox->OnComponentBeginOverlap.AddDynamic(this, &AChest::OnOverlapBegin);
 	CollisionBox->OnComponentEndOverlap.AddDynamic(this, &AChest::OnOverlapEnd);
 }
 
-
+//Call when a food overlaps the box and add +1 to the FoodCounter variable
 void AChest::OnOverlapBegin(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
 {
 	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green, TEXT("the food is IN the box"));
