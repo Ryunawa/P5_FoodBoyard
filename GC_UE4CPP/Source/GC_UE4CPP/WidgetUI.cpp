@@ -18,17 +18,10 @@ void UWidgetUI::NativeTick(const FGeometry& MyGeometry, float InDeltaTime)
 {
 	Super::NativeTick(MyGeometry, InDeltaTime);
 
-	/*
-	AChest* MinFood = Cast<AChest>();
-	MinFood->Counter;
-	*/
 
-	UGameplayStatics::GetGameMode(this);
-	AGameModeBase* GameMode = UGameplayStatics::GetGameMode(this);
-
-	//AGameModeBase* UE4CPPGameMode = Cast<AGameModeBase>(GameMode);
-
-	AGC_UE4CPPGameModeBase* MinFood = Cast<AGC_UE4CPPGameModeBase>(GameMode);
+	//Cast to get the FoodCounter variable
+	AActor* Actor = UGameplayStatics::GetActorOfClass(GetWorld(), AChest::StaticClass());
+	AChest* MinFood = Cast<AChest>(Actor);
 
 	if (MinFood == nullptr)
 	{
@@ -40,10 +33,6 @@ void UWidgetUI::NativeTick(const FGeometry& MyGeometry, float InDeltaTime)
 		FoodBar->SetPercent(MinFood->FoodCounter / MaxFood);
 	}
 
-	//FoodBar->SetPercent(MinFood->FoodCounter / MaxFood);
-
-	//FoodBar->SetPercent(Food / MaxFood);
-	//UE_LOG(LogTemp, Warning, TEXT("Widget UI Food Output: %f"), MinFood->FoodCounter);
 	
 }
 
