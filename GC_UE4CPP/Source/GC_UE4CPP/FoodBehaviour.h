@@ -19,7 +19,7 @@ public:
 		UStaticMeshComponent* Food;
 
 	void RandomFood();
-	void TogglePhysics();
+	void TogglePhysics(bool PhysicEnable);
 	
 
 protected:
@@ -27,7 +27,6 @@ protected:
 	virtual void BeginPlay() override;
 
 	int RandIndex;
-	bool Toggle;
 
 public:	
 	// Called every frame

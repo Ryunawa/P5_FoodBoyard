@@ -10,7 +10,7 @@ void UEndAnimationsAnimNotify::Notify(USkeletalMeshComponent* MeshComp, UAnimSeq
 		APlayerBehaviour* Player = Cast<APlayerBehaviour>(MeshComp->GetOwner());
 		if(Player)
 		{
-			Player->bIsPickingDroppingFood = false;
+			Player->bInteracting = false;
 			Player->GetCharacterMovement()->SetMovementMode((EMovementMode::MOVE_Walking));
 		}
 	}
