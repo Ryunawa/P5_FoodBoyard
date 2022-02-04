@@ -23,9 +23,22 @@ void UWidgetUI::NativeTick(const FGeometry& MyGeometry, float InDeltaTime)
 	*/
 
 	UGameplayStatics::GetGameMode(this);
-	AGC_UE4CPPGameModeBase* GameMode = 0;
+	AGameModeBase* GameMode = UGameplayStatics::GetGameMode(this);
 
-	AGC_UE4CPPGameModeBase* MinFood = Cast<AGC_UE4CPPGameModeBase>(GameMode);
+	AGameModeBase* UE4CPPGameMode = Cast<AGameModeBase>(GameMode);
+
+	AGC_UE4CPPGameModeBase* MinFood = Cast<AGC_UE4CPPGameModeBase>(UE4CPPGameMode);
+
+	if (MinFood == nullptr)
+	{
+		UE_LOG(LogTemp, Warning, TEXT("MinFood == nullptr"));
+	}
+	else
+	{
+		UE_LOG(LogTemp, Warning, TEXT("MinFood != nullptr"));
+		FoodBar->SetPercent(MinFood->FoodCounter / MaxFood);
+	}
+
 	//FoodBar->SetPercent(MinFood->FoodCounter / MaxFood);
 
 	//FoodBar->SetPercent(Food / MaxFood);

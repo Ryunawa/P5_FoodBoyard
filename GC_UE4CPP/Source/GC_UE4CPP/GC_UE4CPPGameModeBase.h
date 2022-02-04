@@ -16,7 +16,7 @@ public:
 
 
 	// variable for food counting
-	float FoodCounter = 4;
+	float FoodCounter = 2;
 
 
 
