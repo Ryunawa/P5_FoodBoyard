@@ -4,11 +4,8 @@
 
 #include "CoreMinimal.h"
 #include "AIController.h"
-#include "Perception/AIPerceptionComponent.h"
-#include "Kismet/GameplayStatics.h"
-#include "FoodSpot.h"
-#include "Enemy.h"
-#include "BehaviorTree/BlackboardComponent.h"
+#include "Perception/AISenseConfig_Sight.h"
+#include "FoodBehaviour.h"
 #include "AI_Behaviour.generated.h"
 
 /**
@@ -23,24 +20,35 @@ protected:
 
 	virtual void BeginPlay() override;
 
-	UBlackboardData* BBAsset;
-
-
-	UPROPERTY(VisibleAnywhere)
-		UAIPerceptionComponent* AIPer;
-
-	UPROPERTY(VisibleAnywhere)
-		UBlackboardComponent* BBComp;
-
-	int SpotId;
+	int SpotId = -1;
 
 	TArray<AActor*> SpotArray;
 
+	UPROPERTY(EditAnywhere)
+		UBehaviorTree* BehaviorTree;
+
+	UPROPERTY(VisibleAnywhere)
+		UAISenseConfig_Sight* SightConfig;
+
+	FTimerHandle TimerHandle;
+
+	UPROPERTY(EditAnywhere)
+		TSubclassOf<AActor> FoodToSpawn;
+
+
 public:
+
+		AFoodBehaviour* FoodToStore;
 
 	AAI_Behaviour();
 
 	void GetNewSpot();
+	
+	UFUNCTION()
+		void ForgetPlayer();
+
+	UFUNCTION()
+		void SeePlayer(const TArray<AActor*>& UpdatedActors);
 
 	virtual void OnPossess(APawn* pawn);
 

@@ -3,8 +3,10 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "BehaviorTree/BehaviorTree.h"
 #include "GameFramework/Character.h"
+#include "Perception/AIPerceptionComponent.h"
+#include "Perception/AIPerceptionSystem.h"
+#include "Perception/AISenseConfig_Sight.h"
 #include "Enemy.generated.h"
 
 UCLASS()
@@ -16,11 +18,6 @@ public:
 	// Sets default values for this character's properties
 	AEnemy();
 
-	UPROPERTY(EditAnywhere)
-		UBehaviorTree* BehaviorTree;
-
-	UPROPERTY(EditAnywhere)
-		UStaticMeshComponent* FoodMesh;
 
 protected:
 	// Called when the game starts or when spawned
@@ -32,5 +29,4 @@ public:
 
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
-
 };

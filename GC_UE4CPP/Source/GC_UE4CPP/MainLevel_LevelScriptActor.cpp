@@ -7,14 +7,11 @@
 void AMainLevel_LevelScriptActor::BeginPlay()
 {
 	Super::BeginPlay();
-	//UGameplayStatics::GetAllActorsOfClass(GetWorld(), AFoodSpot::StaticClass(), SpotArray);
 	SpawnEnemy();
 }
 void AMainLevel_LevelScriptActor::SpawnEnemy()
 {
-	AEnemy* EnemySpawned;
 	FActorSpawnParameters SpawnParams;
+	AEnemy* EnemySpawned;
 	EnemySpawned = GetWorld()->SpawnActor<AEnemy>(Enemy, EnemySpawn->GetActorTransform(), SpawnParams);
-	//GetWorld()->SpawnActor<AEnemy>(Enemy, EnemySpawn->GetActorTransform(), SpawnParams);
-
 }
