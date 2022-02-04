@@ -35,7 +35,7 @@ public:
 	// variable for food counting
 	float FoodCounter = 1;
 
-	//float* WidgetPtr = &FoodCounter;
+	
 
 
 

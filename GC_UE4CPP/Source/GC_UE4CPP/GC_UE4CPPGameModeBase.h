@@ -15,14 +15,17 @@ public:
 	AGC_UE4CPPGameModeBase();
 
 
+
+
 	// variable for food counting
-	float FoodCounter = 2;
+	float FoodCounter = 1;
 
 
 
 
 
 protected:
+	
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 

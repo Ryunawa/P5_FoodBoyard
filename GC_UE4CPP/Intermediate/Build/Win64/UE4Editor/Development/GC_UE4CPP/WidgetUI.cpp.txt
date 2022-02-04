@@ -1043,3 +1043,5 @@ C:\Users\LenyN\Documents\GitHub\P5_UE4\GC_UE4CPP\Intermediate\Build\Win64\UE4Edi
 C:\Users\LenyN\Documents\GitHub\P5_UE4\GC_UE4CPP\Intermediate\Build\Win64\UE4Editor\Inc\GC_UE4CPP\PlayerBehaviour.generated.h
 C:\Users\LenyN\Documents\GitHub\P5_UE4\GC_UE4CPP\Source\GC_UE4CPP\GC_UE4CPPGameModeBase.h
 C:\Users\LenyN\Documents\GitHub\P5_UE4\GC_UE4CPP\Intermediate\Build\Win64\UE4Editor\Inc\GC_UE4CPP\GC_UE4CPPGameModeBase.generated.h
+C:\Users\LenyN\Documents\GitHub\P5_UE4\GC_UE4CPP\Source\GC_UE4CPP/Chest.h
+C:\Users\LenyN\Documents\GitHub\P5_UE4\GC_UE4CPP\Intermediate\Build\Win64\UE4Editor\Inc\GC_UE4CPP\Chest.generated.h

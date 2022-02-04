@@ -6,6 +6,7 @@
 #include "GC_UE4CPPGameModeBase.h"
 #include "Engine/Engine.h"
 #include "Kismet/GameplayStatics.h"
+#include <GC_UE4CPP/Chest.h>
 
 
 UWidgetUI::UWidgetUI(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer)
@@ -25,9 +26,9 @@ void UWidgetUI::NativeTick(const FGeometry& MyGeometry, float InDeltaTime)
 	UGameplayStatics::GetGameMode(this);
 	AGameModeBase* GameMode = UGameplayStatics::GetGameMode(this);
 
-	AGameModeBase* UE4CPPGameMode = Cast<AGameModeBase>(GameMode);
+	//AGameModeBase* UE4CPPGameMode = Cast<AGameModeBase>(GameMode);
 
-	AGC_UE4CPPGameModeBase* MinFood = Cast<AGC_UE4CPPGameModeBase>(UE4CPPGameMode);
+	AGC_UE4CPPGameModeBase* MinFood = Cast<AGC_UE4CPPGameModeBase>(GameMode);
 
 	if (MinFood == nullptr)
 	{
