@@ -36,6 +36,9 @@ void AGC_UE4CPPGameModeBase::BeginPlay()
 {
 	Super::BeginPlay();
 
+	
+	GetWorldTimerManager().SetTimer(Timer, this, &AGC_UE4CPPGameModeBase::BeginPlay, 2.0f, false);
+	FoodCounter += 1;
 
 }
 

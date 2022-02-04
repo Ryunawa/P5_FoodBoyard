@@ -18,7 +18,7 @@ public:
 
 
 	// variable for food counting
-	float FoodCounter = 1;
+	float FoodCounter = 0;
 
 
 
@@ -28,6 +28,8 @@ protected:
 	
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
+
+	FTimerHandle Timer;
 
 public:
 	// Called every frame
