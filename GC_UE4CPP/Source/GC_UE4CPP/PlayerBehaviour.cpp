@@ -119,15 +119,18 @@ void APlayerBehaviour::Zoom(float Rate)
 //Allow to interact with the food
 void APlayerBehaviour::InteractFood()
 {
+	if(bInteracting)
+	{
+		return;
+	}
+	
 	const FVector Start = GetActorLocation();
-	const FVector End = GetActorLocation() * 200;
-
 	ActorsToIgnore.Add(this);
 	
 	GetCharacterMovement()->SetMovementMode(EMovementMode::MOVE_None);
 	
 	// Create a sphere trace around the player and add inside an array all actors hit by the sphere trace
-	bHit = UKismetSystemLibrary::SphereTraceMulti(GetWorld(), Start, End, SphereRange,
+	bHit = UKismetSystemLibrary::SphereTraceMulti(GetWorld(), Start, Start, SphereRange,
 		UEngineTypes::ConvertToTraceType(ECC_Camera), true, ActorsToIgnore,
 		EDrawDebugTrace::None,HitArray, true, FLinearColor::Gray,FLinearColor::Blue, 60.0f);
 	
@@ -149,6 +152,9 @@ void APlayerBehaviour::InteractFood()
 			{
 				Food = Cast<AFoodBehaviour>(HitResult.Actor); // Check if the the actor hit is a FoodBehaviour actor
 			}
+
+			GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Blue, HitResult.Actor->GetName()); // debug
+
 		}
 
 		// Check if the player has a food in his hand

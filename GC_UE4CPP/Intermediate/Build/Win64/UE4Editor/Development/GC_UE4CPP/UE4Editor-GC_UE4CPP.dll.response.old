@@ -1,5 +1,5 @@
 /MANIFEST:EMBED
-/MANIFESTINPUT:E:\EpicGamesLibrary\UE_4.27\Engine\Build\Windows\Resources\Default-Win64.manifest
+/MANIFESTINPUT:"D:\Epic Games\UE_4.27\Engine\Build\Windows\Resources\Default-Win64.manifest"
 /NOLOGO
 /DEBUG
 /errorReport:prompt
@@ -18,10 +18,10 @@
 /ignore:4099
 /DELAYLOAD:"d3d12.dll"
 /DELAYLOAD:"DBGHELP.DLL"
-/LIBPATH:"D:\Visual Studio\VC\Tools\MSVC\14.29.30133\lib\x64"
+/LIBPATH:"D:\Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\lib\x64"
 /LIBPATH:"C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\lib\um\x64"
-/LIBPATH:"C:\Program Files (x86)\Windows Kits\10\lib\10.0.19041.0\ucrt\x64"
-/LIBPATH:"C:\Program Files (x86)\Windows Kits\10\lib\10.0.19041.0\um\x64"
+/LIBPATH:"C:\Program Files (x86)\Windows Kits\10\lib\10.0.17763.0\ucrt\x64"
+/LIBPATH:"C:\Program Files (x86)\Windows Kits\10\lib\10.0.17763.0\um\x64"
 /NODEFAULTLIB:"LIBCMT"
 /NODEFAULTLIB:"LIBCPMT"
 /NODEFAULTLIB:"LIBCMTD"
@@ -36,7 +36,6 @@
 <<<<<<< HEAD
 "C:\Users\robin\Documents\GitHub\P5_UE4\GC_UE4CPP\Intermediate\Build\Win64\GC_UE4CPPEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h.obj"
 "C:\Users\robin\Documents\GitHub\P5_UE4\GC_UE4CPP\Intermediate\Build\Win64\UE4Editor\Development\GC_UE4CPP\AI_Behaviour.cpp.obj"
-"C:\Users\robin\Documents\GitHub\P5_UE4\GC_UE4CPP\Intermediate\Build\Win64\UE4Editor\Development\GC_UE4CPP\CameraCharacter.cpp.obj"
 "C:\Users\robin\Documents\GitHub\P5_UE4\GC_UE4CPP\Intermediate\Build\Win64\UE4Editor\Development\GC_UE4CPP\EndAnimationsAnimNotify.cpp.obj"
 "C:\Users\robin\Documents\GitHub\P5_UE4\GC_UE4CPP\Intermediate\Build\Win64\UE4Editor\Development\GC_UE4CPP\Enemy.cpp.obj"
 "C:\Users\robin\Documents\GitHub\P5_UE4\GC_UE4CPP\Intermediate\Build\Win64\UE4Editor\Development\GC_UE4CPP\FoodBehaviour.cpp.obj"
@@ -54,7 +53,6 @@
 "C:\Users\robin\Documents\GitHub\P5_UE4\GC_UE4CPP\Intermediate\Build\Win64\UE4Editor\Development\GC_UE4CPP\UI.cpp.obj"
 "C:\Users\robin\Documents\GitHub\P5_UE4\GC_UE4CPP\Intermediate\Build\Win64\UE4Editor\Development\GC_UE4CPP\WidgetUI.cpp.obj"
 "C:\Users\robin\Documents\GitHub\P5_UE4\GC_UE4CPP\Intermediate\Build\Win64\UE4Editor\Development\GC_UE4CPP\AI_Behaviour.gen.cpp.obj"
-"C:\Users\robin\Documents\GitHub\P5_UE4\GC_UE4CPP\Intermediate\Build\Win64\UE4Editor\Development\GC_UE4CPP\CameraCharacter.gen.cpp.obj"
 "C:\Users\robin\Documents\GitHub\P5_UE4\GC_UE4CPP\Intermediate\Build\Win64\UE4Editor\Development\GC_UE4CPP\EndAnimationsAnimNotify.gen.cpp.obj"
 "C:\Users\robin\Documents\GitHub\P5_UE4\GC_UE4CPP\Intermediate\Build\Win64\UE4Editor\Development\GC_UE4CPP\Enemy.gen.cpp.obj"
 "C:\Users\robin\Documents\GitHub\P5_UE4\GC_UE4CPP\Intermediate\Build\Win64\UE4Editor\Development\GC_UE4CPP\FoodBehaviour.gen.cpp.obj"
@@ -82,6 +80,7 @@
 =======
 "D:\ProjetUnreal\P5_UE4\GC_UE4CPP\Intermediate\Build\Win64\GC_UE4CPPEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h.obj"
 "D:\ProjetUnreal\P5_UE4\GC_UE4CPP\Intermediate\Build\Win64\UE4Editor\Development\GC_UE4CPP\AI_Behaviour.cpp.obj"
+"D:\ProjetUnreal\P5_UE4\GC_UE4CPP\Intermediate\Build\Win64\UE4Editor\Development\GC_UE4CPP\BTTask_DestroySelf.cpp.obj"
 "D:\ProjetUnreal\P5_UE4\GC_UE4CPP\Intermediate\Build\Win64\UE4Editor\Development\GC_UE4CPP\BTTask_DropFood.cpp.obj"
 "D:\ProjetUnreal\P5_UE4\GC_UE4CPP\Intermediate\Build\Win64\UE4Editor\Development\GC_UE4CPP\BTTask_GrabFood.cpp.obj"
 "D:\ProjetUnreal\P5_UE4\GC_UE4CPP\Intermediate\Build\Win64\UE4Editor\Development\GC_UE4CPP\CameraCharacter.cpp.obj"
@@ -100,6 +99,7 @@
 "D:\ProjetUnreal\P5_UE4\GC_UE4CPP\Intermediate\Build\Win64\UE4Editor\Development\GC_UE4CPP\UI.cpp.obj"
 "D:\ProjetUnreal\P5_UE4\GC_UE4CPP\Intermediate\Build\Win64\UE4Editor\Development\GC_UE4CPP\WidgetUI.cpp.obj"
 "D:\ProjetUnreal\P5_UE4\GC_UE4CPP\Intermediate\Build\Win64\UE4Editor\Development\GC_UE4CPP\AI_Behaviour.gen.cpp.obj"
+"D:\ProjetUnreal\P5_UE4\GC_UE4CPP\Intermediate\Build\Win64\UE4Editor\Development\GC_UE4CPP\BTTask_DestroySelf.gen.cpp.obj"
 "D:\ProjetUnreal\P5_UE4\GC_UE4CPP\Intermediate\Build\Win64\UE4Editor\Development\GC_UE4CPP\BTTask_DropFood.gen.cpp.obj"
 "D:\ProjetUnreal\P5_UE4\GC_UE4CPP\Intermediate\Build\Win64\UE4Editor\Development\GC_UE4CPP\BTTask_GrabFood.gen.cpp.obj"
 "D:\ProjetUnreal\P5_UE4\GC_UE4CPP\Intermediate\Build\Win64\UE4Editor\Development\GC_UE4CPP\CameraCharacter.gen.cpp.obj"
@@ -150,7 +150,7 @@
 "setupapi.lib"
 "dwmapi.lib"
 "imm32.lib"
-/OUT:"C:\Users\robin\Documents\GitHub\P5_UE4\GC_UE4CPP\Binaries\Win64\UE4Editor-GC_UE4CPP.dll"
-/IMPLIB:"C:\Users\robin\Documents\GitHub\P5_UE4\GC_UE4CPP\Intermediate\Build\Win64\UE4Editor\Development\GC_UE4CPP\UE4Editor-GC_UE4CPP.suppressed.lib"
-/PDB:"C:\Users\robin\Documents\GitHub\P5_UE4\GC_UE4CPP\Binaries\Win64\UE4Editor-GC_UE4CPP.pdb"
+/OUT:"D:\ProjetUnreal\P5_UE4\GC_UE4CPP\Binaries\Win64\UE4Editor-GC_UE4CPP.dll"
+/IMPLIB:"D:\ProjetUnreal\P5_UE4\GC_UE4CPP\Intermediate\Build\Win64\UE4Editor\Development\GC_UE4CPP\UE4Editor-GC_UE4CPP.suppressed.lib"
+/PDB:"D:\ProjetUnreal\P5_UE4\GC_UE4CPP\Binaries\Win64\UE4Editor-GC_UE4CPP.pdb"
 /ignore:4078

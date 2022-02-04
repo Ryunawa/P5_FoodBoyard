@@ -21,7 +21,6 @@ void EmptyLinkFunctionForGeneratedCodeAI_Behaviour() {}
 	AIMODULE_API UClass* Z_Construct_UClass_UBehaviorTree_NoRegister();
 	AIMODULE_API UClass* Z_Construct_UClass_UAISenseConfig_Sight_NoRegister();
 	COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
-	GC_UE4CPP_API UClass* Z_Construct_UClass_AFoodBehaviour_NoRegister();
 // End Cross Module References
 	DEFINE_FUNCTION(AAI_Behaviour::execSeePlayer)
 	{
@@ -135,10 +134,6 @@ void EmptyLinkFunctionForGeneratedCodeAI_Behaviour() {}
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_FoodToSpawn_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FClassPropertyParams NewProp_FoodToSpawn;
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_FoodToStore_MetaData[];
-#endif
-		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_FoodToStore;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UE4CodeGen_Private::FClassParams ClassParams;
@@ -180,18 +175,10 @@ void EmptyLinkFunctionForGeneratedCodeAI_Behaviour() {}
 	};
 #endif
 	const UE4CodeGen_Private::FClassPropertyParams Z_Construct_UClass_AAI_Behaviour_Statics::NewProp_FoodToSpawn = { "FoodToSpawn", nullptr, (EPropertyFlags)0x0024080000000001, UE4CodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AAI_Behaviour, FoodToSpawn), Z_Construct_UClass_AActor_NoRegister, Z_Construct_UClass_UClass, METADATA_PARAMS(Z_Construct_UClass_AAI_Behaviour_Statics::NewProp_FoodToSpawn_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AAI_Behaviour_Statics::NewProp_FoodToSpawn_MetaData)) };
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AAI_Behaviour_Statics::NewProp_FoodToStore_MetaData[] = {
-		{ "Category", "AI_Behaviour" },
-		{ "ModuleRelativePath", "AI_Behaviour.h" },
-	};
-#endif
-	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AAI_Behaviour_Statics::NewProp_FoodToStore = { "FoodToStore", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AAI_Behaviour, FoodToStore), Z_Construct_UClass_AFoodBehaviour_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AAI_Behaviour_Statics::NewProp_FoodToStore_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AAI_Behaviour_Statics::NewProp_FoodToStore_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AAI_Behaviour_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AAI_Behaviour_Statics::NewProp_BehaviorTree,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AAI_Behaviour_Statics::NewProp_SightConfig,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AAI_Behaviour_Statics::NewProp_FoodToSpawn,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AAI_Behaviour_Statics::NewProp_FoodToStore,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_AAI_Behaviour_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<AAI_Behaviour>::IsAbstract,
@@ -220,7 +207,7 @@ void EmptyLinkFunctionForGeneratedCodeAI_Behaviour() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AAI_Behaviour, 4000745533);
+	IMPLEMENT_CLASS(AAI_Behaviour, 1288978232);
 	template<> GC_UE4CPP_API UClass* StaticClass<AAI_Behaviour>()
 	{
 		return AAI_Behaviour::StaticClass();
