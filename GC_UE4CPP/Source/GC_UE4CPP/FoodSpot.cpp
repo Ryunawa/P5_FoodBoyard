@@ -1,7 +1,5 @@
-// Fill out your copyright notice in the Description page of Project Settings.
-
-
 #include "FoodSpot.h"
+#include "Components/StaticMeshComponent.h"
 
 // Sets default values
 AFoodSpot::AFoodSpot()
@@ -10,6 +8,8 @@ AFoodSpot::AFoodSpot()
 	PrimaryActorTick.bCanEverTick = true;
 	StaticMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("PlateMesh"));
 	RootComponent = StaticMesh;
+
+	FoodSnapLocation = FVector(0.f, 0.f, 50.f);
 }
 
 // Called when the game starts or when spawned
@@ -25,4 +25,21 @@ void AFoodSpot::Tick(float DeltaTime)
 	Super::Tick(DeltaTime);
 
 }
+
+// Snap the FoodChoose to the plate and set his position
+void AFoodSpot::SnapOnPlate(AFoodBehaviour* FoodChoose)
+{
+	FoodChoose->AttachToActor(this, FAttachmentTransformRules::SnapToTargetIncludingScale);
+	FoodChoose->SetActorRelativeLocation(FoodSnapLocation);
+	FoodSnapped = FoodChoose;
+	GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Red, TEXT("Snapped")); // debug
+}
+
+//Unsnap the FoodChoose from the plate
+void AFoodSpot::DetachFromPlate()
+{
+	FoodSnapped->DetachFromActor(FDetachmentTransformRules::KeepWorldTransform);
+}
+
+
 

@@ -2,7 +2,6 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
-#include <iostream>
 #include "FoodBehaviour.h"
 #include "Components/SphereComponent.h"
 #include "Perception/AIPerceptionSystem.h"
@@ -40,12 +39,9 @@ public:
     UPROPERTY(EditAnywhere)
         int ZoomSpeed;
     UPROPERTY(EditAnywhere)
-        bool bIsPickingDroppingFood;
+        bool bInteracting;
     UPROPERTY(EditAnywhere)
         bool bIsCarryingFood;
-
-    UPROPERTY(EditAnywhere)
-        AFoodBehaviour* Result;
 
     // Input methods
     void Move_XAxis(float Rate);
@@ -60,9 +56,10 @@ protected:
     virtual void BeginPlay() override;
     virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
     
-    float SphereRange = 250;
+    float SphereRange = 200;
     bool bHit;
-    
+
+    AFoodBehaviour* CarriedFood;
     FVector CurrentVelocity;
     
     TArray<AActor*> ActorsToIgnore;

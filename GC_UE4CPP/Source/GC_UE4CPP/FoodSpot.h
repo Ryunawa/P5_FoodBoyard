@@ -1,9 +1,8 @@
-// Fill out your copyright notice in the Description page of Project Settings.
-
 #pragma once
 
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
+#include "FoodBehaviour.h"
 #include "FoodSpot.generated.h"
 
 UCLASS()
@@ -17,11 +16,21 @@ public:
 
 	UPROPERTY(EditAnywhere)
 		UStaticMeshComponent* StaticMesh;
+	UPROPERTY(EditAnywhere)
+		AFoodBehaviour* FoodSnapped;
+	
+	void SnapOnPlate(AFoodBehaviour* FoodChoose);
+	void DetachFromPlate();
 
+
+
+	
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
+	FVector FoodSnapLocation;
+	
 public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;

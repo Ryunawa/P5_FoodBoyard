@@ -1,5 +1,4 @@
 #include "FoodBehaviour.h"
-#include <iostream>
 #include "Components/StaticMeshComponent.h"
 
 using namespace std;
@@ -17,9 +16,8 @@ AFoodBehaviour::AFoodBehaviour()
 void AFoodBehaviour::BeginPlay()
 {
 	Super::BeginPlay();
-	Toggle = false;
 	RandomFood();
-	TogglePhysics();
+	TogglePhysics(true);
 }
 
 // Called every frame
@@ -34,20 +32,10 @@ void AFoodBehaviour::RandomFood()
 	Food->SetStaticMesh(Foods[RandIndex]); // Set the static mesh component of the BP_Food
 }
 
-void AFoodBehaviour::TogglePhysics()
-{
-	Toggle = !Toggle;
-	
-	if(Toggle == false)
-	{
-		Food->SetSimulatePhysics(false);
-		GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Orange, TEXT("Physic simulated disable")); // debug
-	}
-	else
-	{
-		Food->SetSimulatePhysics(true);
-		GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Orange, TEXT("Physic simulated enable")); // debug
-	}
+void AFoodBehaviour::TogglePhysics(bool PhysicEnable)
+{	
+	Food->SetSimulatePhysics(PhysicEnable);
+	GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Orange, TEXT("Physic simulated disable")); // debug
 }
 
 
