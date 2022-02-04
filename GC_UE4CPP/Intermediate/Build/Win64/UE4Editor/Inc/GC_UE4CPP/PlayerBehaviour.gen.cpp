@@ -20,7 +20,11 @@ void EmptyLinkFunctionForGeneratedCodePlayerBehaviour() {}
 	ENGINE_API UClass* Z_Construct_UClass_USpringArmComponent_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_UCameraComponent_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_USphereComponent_NoRegister();
+<<<<<<< HEAD
 	GC_UE4CPP_API UClass* Z_Construct_UClass_AFoodBehaviour_NoRegister();
+=======
+	AIMODULE_API UClass* Z_Construct_UClass_UAIPerceptionStimuliSourceComponent_NoRegister();
+>>>>>>> AIv2
 // End Cross Module References
 	void APlayerBehaviour::StaticRegisterNativesAPlayerBehaviour()
 	{
@@ -47,6 +51,10 @@ void EmptyLinkFunctionForGeneratedCodePlayerBehaviour() {}
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_SphereDetection_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_SphereDetection;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_PerSource_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_PerSource;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_TurnRate_MetaData[];
 #endif
@@ -119,6 +127,14 @@ void EmptyLinkFunctionForGeneratedCodePlayerBehaviour() {}
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_APlayerBehaviour_Statics::NewProp_SphereDetection = { "SphereDetection", nullptr, (EPropertyFlags)0x00400000000a0009, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(APlayerBehaviour, SphereDetection), Z_Construct_UClass_USphereComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_APlayerBehaviour_Statics::NewProp_SphereDetection_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_APlayerBehaviour_Statics::NewProp_SphereDetection_MetaData)) };
 #if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_APlayerBehaviour_Statics::NewProp_PerSource_MetaData[] = {
+		{ "Category", "PlayerBehaviour" },
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "PlayerBehaviour.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_APlayerBehaviour_Statics::NewProp_PerSource = { "PerSource", nullptr, (EPropertyFlags)0x00400000000a0009, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(APlayerBehaviour, PerSource), Z_Construct_UClass_UAIPerceptionStimuliSourceComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_APlayerBehaviour_Statics::NewProp_PerSource_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_APlayerBehaviour_Statics::NewProp_PerSource_MetaData)) };
+#if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_APlayerBehaviour_Statics::NewProp_TurnRate_MetaData[] = {
 		{ "Category", "Camera" },
 		{ "ModuleRelativePath", "PlayerBehaviour.h" },
@@ -179,6 +195,7 @@ void EmptyLinkFunctionForGeneratedCodePlayerBehaviour() {}
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APlayerBehaviour_Statics::NewProp_CameraBoom,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APlayerBehaviour_Statics::NewProp_FollowCamera,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APlayerBehaviour_Statics::NewProp_SphereDetection,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APlayerBehaviour_Statics::NewProp_PerSource,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APlayerBehaviour_Statics::NewProp_TurnRate,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APlayerBehaviour_Statics::NewProp_LookUpRate,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APlayerBehaviour_Statics::NewProp_MovementSpeed,
@@ -214,7 +231,11 @@ void EmptyLinkFunctionForGeneratedCodePlayerBehaviour() {}
 		}
 		return OuterClass;
 	}
+<<<<<<< HEAD
 	IMPLEMENT_CLASS(APlayerBehaviour, 2119642746);
+=======
+	IMPLEMENT_CLASS(APlayerBehaviour, 4231898118);
+>>>>>>> AIv2
 	template<> GC_UE4CPP_API UClass* StaticClass<APlayerBehaviour>()
 	{
 		return APlayerBehaviour::StaticClass();

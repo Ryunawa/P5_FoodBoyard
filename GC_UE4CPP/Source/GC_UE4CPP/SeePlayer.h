@@ -14,9 +14,12 @@ UCLASS()
 class GC_UE4CPP_API USeePlayer : public UBTDecorator
 {
 	GENERATED_BODY()
-	
-public:
-	virtual EBTNodeResult::Type OnNodeActivation(FBehaviorTreeSearchData& SearchDat...);
 
+	USeePlayer();	
+
+public:
+	virtual void TickNode(UBehaviorTreeComponent& OwnerComp, uint8* NodeMemory, float DeltaSeconds) override;
+
+	//EBTNodeResult::Type 
 
 };

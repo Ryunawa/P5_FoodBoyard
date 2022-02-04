@@ -5,6 +5,9 @@
 #include <iostream>
 #include "FoodBehaviour.h"
 #include "Components/SphereComponent.h"
+#include "Perception/AIPerceptionSystem.h"
+#include "Perception/AIPerceptionStimuliSourceComponent.h"
+#include "Perception/AISense_Sight.h"
 #include "PlayerBehaviour.generated.h"
 
 using namespace std;
@@ -19,7 +22,11 @@ class GC_UE4CPP_API APlayerBehaviour : public ACharacter
     UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera, meta = (AllowPrivateAccess = "true"))
         class UCameraComponent* FollowCamera;
     UPROPERTY(VisibleAnywhere)
-        USphereComponent* SphereDetection;
+       USphereComponent* SphereDetection;
+
+    UPROPERTY(VisibleAnywhere)
+        UAIPerceptionStimuliSourceComponent* PerSource;
+
 public:
     // Sets default values for this character's properties
     APlayerBehaviour();

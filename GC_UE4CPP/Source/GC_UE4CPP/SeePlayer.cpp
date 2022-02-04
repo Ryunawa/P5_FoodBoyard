@@ -3,11 +3,20 @@
 
 #include "SeePlayer.h"
 
-EBTNodeResult::Type USeePlayer::OnNodeActivation(FBehaviorTreeSearchData& SearchDat...)
+USeePlayer::USeePlayer()
 {
-    UBlackboardComponent* Blackboard = SearchDat.OwnerComp.GetBlackboardComponent();
-    if (Blackboard->GetValueAsBool(FName("SeePlayer"))) {
-        return EBTNodeResult::Succeeded;
+    bCreateNodeInstance = true;
+}
+
+void USeePlayer::TickNode(UBehaviorTreeComponent& OwnerComp, uint8* NodeMemory, float DeltaSeconds)
+{
+    UBlackboardComponent* Blackboard = OwnerComp.GetBlackboardComponent();
+    bool res = Blackboard->GetValueAsBool(FName("SeePlayer"));
+    if (res) {
+        GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Red, "vois");
+        //return EBTNodeResult::Failed;
+
     }
-    return EBTNodeResult::Failed;
+    else GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Red, "vois pas");
+    //return EBTNodeResult::Succeeded;
 }

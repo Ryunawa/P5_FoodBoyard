@@ -45,6 +45,11 @@ APlayerBehaviour::APlayerBehaviour()
 
 	// Create a Sphere
 	SphereDetection = CreateDefaultSubobject<USphereComponent>(TEXT("SphereDetection"));
+
+	// to be detected by enemies
+	PerSource = CreateDefaultSubobject<UAIPerceptionStimuliSourceComponent>(TEXT("PerceptionStimuliSource"));
+	PerSource->bAutoRegister = true;
+	PerSource->RegisterForSense(UAISense_Sight::StaticClass());
 }
 
 // Called when the game starts or when spawned
