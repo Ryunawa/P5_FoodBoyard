@@ -12,18 +12,6 @@ void AInGameHUD::BeginPlay()
 {
 	Super::BeginPlay();
 
-	AGameModeBase* GameMode = UGameplayStatics::GetGameMode(this);
-	AGC_UE4CPPGameModeBase* MinFood = Cast<AGC_UE4CPPGameModeBase>(GameMode);
-
-	if (MinFood != nullptr)
-	{
-		UE_LOG(LogTemp, Warning, TEXT("MinFood != nullptr"));
-		//FoodBar->SetPercent(MinFood->FoodCounter / MaxFood);
-	}
-	else
-	{
-		UE_LOG(LogTemp, Warning, TEXT("MinFood == nullptr"));
-	}
 
 
 	// Widget
@@ -38,20 +26,9 @@ void AInGameHUD::BeginPlay()
 			WidgetUI->AddToViewport();
 		}
 
-		//if (MinFood->FoodCounter == 5)
-		//{
-			WidgetVictoryScreen = CreateWidget<UWidgetVictoryScreen>(GetWorld(), WidgetUIClass);
-
-			// Make sure widget was created 
-			if (WidgetVictoryScreen)
-			{
-				// Add it to the viewport 
-				WidgetVictoryScreen->AddToViewport();
-			}
-		//}
-
-
 	}
+
+	
 }
 
 void AInGameHUD::Tick(float DeltaSeconds)
@@ -61,6 +38,29 @@ void AInGameHUD::Tick(float DeltaSeconds)
 	{
 
 	}
+
+	AGameModeBase* GameMode = UGameplayStatics::GetGameMode(this);
+	AGC_UE4CPPGameModeBase* MinFood = Cast<AGC_UE4CPPGameModeBase>(GameMode);
+
+
+	if (WidgetVictoryScreenClass)
+	{
+		
+		if (MinFood->FoodCounter == 5)
+		{
+			
+			WidgetVictoryScreen = CreateWidget<UWidgetVictoryScreen>(GetWorld(), WidgetVictoryScreenClass);
+
+			// Make sure widget was created 
+			if (WidgetVictoryScreen)
+			{
+				// Add it to the viewport 
+				WidgetVictoryScreen->AddToViewport();
+
+			}
+		}
+	}
+
 }
 
 void AInGameHUD::DrawHUD()

@@ -19,10 +19,17 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (BindWidget))
 		class UTextBlock* Text;
 
-	/*
+	
 	UPROPERTY(meta = (BindWidget))
-		class UButton* Restart;
-	*/
+		class UButton* RestartButton;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (BindWidget))
+		class UTextBlock* TextRestart;
+
+	UPROPERTY(meta = (BindWidget))
+		class UButton* QuitButton;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (BindWidget))
+		class UTextBlock* TextQuit;
+	
 
 	virtual void NativeTick(const FGeometry& MyGeometry, float InDeltaTime) override;
 

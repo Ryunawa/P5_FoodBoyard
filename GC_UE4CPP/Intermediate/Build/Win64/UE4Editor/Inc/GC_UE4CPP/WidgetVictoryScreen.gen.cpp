@@ -18,6 +18,7 @@ void EmptyLinkFunctionForGeneratedCodeWidgetVictoryScreen() {}
 	UMG_API UClass* Z_Construct_UClass_UUserWidget();
 	UPackage* Z_Construct_UPackage__Script_GC_UE4CPP();
 	UMG_API UClass* Z_Construct_UClass_UTextBlock_NoRegister();
+	UMG_API UClass* Z_Construct_UClass_UButton_NoRegister();
 // End Cross Module References
 	void UWidgetVictoryScreen::StaticRegisterNativesUWidgetVictoryScreen()
 	{
@@ -36,6 +37,22 @@ void EmptyLinkFunctionForGeneratedCodeWidgetVictoryScreen() {}
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Text_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_Text;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_RestartButton_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_RestartButton;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_TextRestart_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_TextRestart;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_QuitButton_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_QuitButton;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_TextQuit_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_TextQuit;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UE4CodeGen_Private::FClassParams ClassParams;
@@ -60,8 +77,46 @@ void EmptyLinkFunctionForGeneratedCodeWidgetVictoryScreen() {}
 	};
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UWidgetVictoryScreen_Statics::NewProp_Text = { "Text", nullptr, (EPropertyFlags)0x001000000008000d, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UWidgetVictoryScreen, Text), Z_Construct_UClass_UTextBlock_NoRegister, METADATA_PARAMS(Z_Construct_UClass_UWidgetVictoryScreen_Statics::NewProp_Text_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UWidgetVictoryScreen_Statics::NewProp_Text_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UWidgetVictoryScreen_Statics::NewProp_RestartButton_MetaData[] = {
+		{ "BindWidget", "" },
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "WidgetVictoryScreen.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UWidgetVictoryScreen_Statics::NewProp_RestartButton = { "RestartButton", nullptr, (EPropertyFlags)0x0010000000080008, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UWidgetVictoryScreen, RestartButton), Z_Construct_UClass_UButton_NoRegister, METADATA_PARAMS(Z_Construct_UClass_UWidgetVictoryScreen_Statics::NewProp_RestartButton_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UWidgetVictoryScreen_Statics::NewProp_RestartButton_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UWidgetVictoryScreen_Statics::NewProp_TextRestart_MetaData[] = {
+		{ "BindWidget", "" },
+		{ "Category", "WidgetVictoryScreen" },
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "WidgetVictoryScreen.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UWidgetVictoryScreen_Statics::NewProp_TextRestart = { "TextRestart", nullptr, (EPropertyFlags)0x001000000008000d, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UWidgetVictoryScreen, TextRestart), Z_Construct_UClass_UTextBlock_NoRegister, METADATA_PARAMS(Z_Construct_UClass_UWidgetVictoryScreen_Statics::NewProp_TextRestart_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UWidgetVictoryScreen_Statics::NewProp_TextRestart_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UWidgetVictoryScreen_Statics::NewProp_QuitButton_MetaData[] = {
+		{ "BindWidget", "" },
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "WidgetVictoryScreen.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UWidgetVictoryScreen_Statics::NewProp_QuitButton = { "QuitButton", nullptr, (EPropertyFlags)0x0010000000080008, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UWidgetVictoryScreen, QuitButton), Z_Construct_UClass_UButton_NoRegister, METADATA_PARAMS(Z_Construct_UClass_UWidgetVictoryScreen_Statics::NewProp_QuitButton_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UWidgetVictoryScreen_Statics::NewProp_QuitButton_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UWidgetVictoryScreen_Statics::NewProp_TextQuit_MetaData[] = {
+		{ "BindWidget", "" },
+		{ "Category", "WidgetVictoryScreen" },
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "WidgetVictoryScreen.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UWidgetVictoryScreen_Statics::NewProp_TextQuit = { "TextQuit", nullptr, (EPropertyFlags)0x001000000008000d, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UWidgetVictoryScreen, TextQuit), Z_Construct_UClass_UTextBlock_NoRegister, METADATA_PARAMS(Z_Construct_UClass_UWidgetVictoryScreen_Statics::NewProp_TextQuit_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UWidgetVictoryScreen_Statics::NewProp_TextQuit_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UWidgetVictoryScreen_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UWidgetVictoryScreen_Statics::NewProp_Text,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UWidgetVictoryScreen_Statics::NewProp_RestartButton,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UWidgetVictoryScreen_Statics::NewProp_TextRestart,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UWidgetVictoryScreen_Statics::NewProp_QuitButton,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UWidgetVictoryScreen_Statics::NewProp_TextQuit,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_UWidgetVictoryScreen_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<UWidgetVictoryScreen>::IsAbstract,
@@ -90,7 +145,7 @@ void EmptyLinkFunctionForGeneratedCodeWidgetVictoryScreen() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UWidgetVictoryScreen, 2230843191);
+	IMPLEMENT_CLASS(UWidgetVictoryScreen, 3248201862);
 	template<> GC_UE4CPP_API UClass* StaticClass<UWidgetVictoryScreen>()
 	{
 		return UWidgetVictoryScreen::StaticClass();

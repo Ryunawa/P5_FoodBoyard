@@ -30,6 +30,9 @@ public:
 	UPROPERTY(EditDefaultsOnly, Category = "Interactive")
 		TSubclassOf<UUserWidget> WidgetUIClass;
 
+	UPROPERTY(EditDefaultsOnly, Category = "Interactive")
+		TSubclassOf<UUserWidget> WidgetVictoryScreenClass;
+
 private:
 	UWidgetUI* WidgetUI;
 	UWidgetVictoryScreen* WidgetVictoryScreen;
