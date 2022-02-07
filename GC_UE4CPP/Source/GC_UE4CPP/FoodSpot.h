@@ -2,8 +2,9 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
-#include "FoodBehaviour.h"
 #include "FoodSpot.generated.h"
+
+class AFoodBehaviour;
 
 UCLASS()
 class GC_UE4CPP_API AFoodSpot : public AActor
@@ -14,15 +15,13 @@ public:
 	// Sets default values for this actor's properties
 	AFoodSpot();
 
-	UPROPERTY(EditAnywhere)
+	UPROPERTY(VisibleAnywhere)
 		UStaticMeshComponent* StaticMesh;
-	UPROPERTY(EditAnywhere)
-		AFoodBehaviour* FoodSnapped;
+	
+	AFoodBehaviour* FoodSnapped;
 	
 	void SnapOnPlate(AFoodBehaviour* FoodChoose);
 	void DetachFromPlate();
-
-
 
 	
 protected:
