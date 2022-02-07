@@ -23,14 +23,14 @@ void UWidgetUI::NativeTick(const FGeometry& MyGeometry, float InDeltaTime)
 	AActor* Actor = UGameplayStatics::GetActorOfClass(GetWorld(), AChest::StaticClass());
 	AChest* MinFood = Cast<AChest>(Actor);
 
-	if (MinFood == nullptr)
-	{
-		UE_LOG(LogTemp, Warning, TEXT("MinFood == nullptr"));
-	}
-	else
+	if (MinFood != nullptr)
 	{
 		UE_LOG(LogTemp, Warning, TEXT("MinFood != nullptr"));
 		FoodBar->SetPercent(MinFood->FoodCounter / MaxFood);
+	}
+	else
+	{
+		UE_LOG(LogTemp, Warning, TEXT("MinFood == nullptr"));
 	}
 
 	

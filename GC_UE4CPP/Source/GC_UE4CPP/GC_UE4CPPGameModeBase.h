@@ -15,6 +15,8 @@ public:
 	AGC_UE4CPPGameModeBase();
 
 
+	float FoodCounter = 0;
+
 
 protected:
 	

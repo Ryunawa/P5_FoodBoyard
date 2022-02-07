@@ -4,6 +4,8 @@
 #include "Chest.h"
 #include "Components/BoxComponent.h"
 #include "Engine/Engine.h"
+#include "Kismet/GameplayStatics.h"
+#include "GC_UE4CPPGameModeBase.h"
 
 
 // Sets default values
@@ -27,11 +29,27 @@ AChest::AChest()
 
 	CollisionBox->OnComponentBeginOverlap.AddDynamic(this, &AChest::OnOverlapBegin);
 	CollisionBox->OnComponentEndOverlap.AddDynamic(this, &AChest::OnOverlapEnd);
+
 }
 
 //Call when a food overlaps the box and add +1 to the FoodCounter variable
 void AChest::OnOverlapBegin(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
 {
+	/*
+	AGameModeBase* GameMode = UGameplayStatics::GetGameMode(this);
+	AGC_UE4CPPGameModeBase* Counter = Cast<AGC_UE4CPPGameModeBase>(GameMode);
+
+	if (Counter != nullptr)
+	{
+		UE_LOG(LogTemp, Warning, TEXT("Counter != nullptr"));
+		//FoodBar->SetPercent(Counter->FoodCounter / MaxFood);
+	}
+	else
+	{
+		UE_LOG(LogTemp, Warning, TEXT("Counter == nullptr"));
+	}
+	*/
+
 	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green, TEXT("the food is IN the box"));
 	FoodCounter += 1;
 	UE_LOG(LogTemp, Warning, TEXT("Chest Food message: %f"), FoodCounter);
@@ -39,6 +57,7 @@ void AChest::OnOverlapBegin(UPrimitiveComponent* OverlappedComponent, AActor* Ot
 
 void AChest::OnOverlapEnd(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex)
 {
+
 	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Purple, TEXT("the food is OUTSIDE the box"));
 	FoodCounter -= 1;
 	UE_LOG(LogTemp, Warning, TEXT("Chest Food message: %f"), FoodCounter);
@@ -48,6 +67,8 @@ void AChest::OnOverlapEnd(UPrimitiveComponent* OverlappedComponent, AActor* Othe
 void AChest::BeginPlay()
 {
 	Super::BeginPlay();
+
+
 	
 }
 
@@ -58,3 +79,9 @@ void AChest::Tick(float DeltaTime)
 
 }
 
+
+void AChest::Cast()
+{
+	
+
+}
