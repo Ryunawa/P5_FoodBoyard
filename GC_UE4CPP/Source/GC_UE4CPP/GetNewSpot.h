@@ -5,7 +5,7 @@
 #include "CoreMinimal.h"
 #include "BehaviorTree/BlackboardComponent.h"
 #include "BehaviorTree/BTTaskNode.h"
-#include "AI_Behaviour.h"
+#include "Goblin_Controller.h"
 #include "GetNewSpot.generated.h"
 
 

@@ -61,13 +61,8 @@ public: \
 #define GC_UE4CPP_Source_GC_UE4CPP_PlayerBehaviour_h_18_PRIVATE_PROPERTY_OFFSET \
 	FORCEINLINE static uint32 __PPO__CameraBoom() { return STRUCT_OFFSET(APlayerBehaviour, CameraBoom); } \
 	FORCEINLINE static uint32 __PPO__FollowCamera() { return STRUCT_OFFSET(APlayerBehaviour, FollowCamera); } \
-<<<<<<< HEAD
-	FORCEINLINE static uint32 __PPO__SphereDetection() { return STRUCT_OFFSET(APlayerBehaviour, SphereDetection); }
-=======
 	FORCEINLINE static uint32 __PPO__SphereDetection() { return STRUCT_OFFSET(APlayerBehaviour, SphereDetection); } \
-	FORCEINLINE static uint32 __PPO__PerSource() { return STRUCT_OFFSET(APlayerBehaviour, PerSource); } \
-	FORCEINLINE static uint32 __PPO__Speed() { return STRUCT_OFFSET(APlayerBehaviour, Speed); }
->>>>>>> AIv2
+	FORCEINLINE static uint32 __PPO__PerSource() { return STRUCT_OFFSET(APlayerBehaviour, PerSource); }
 
 
 #define GC_UE4CPP_Source_GC_UE4CPP_PlayerBehaviour_h_15_PROLOG

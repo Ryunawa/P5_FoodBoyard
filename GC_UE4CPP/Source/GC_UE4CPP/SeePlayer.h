@@ -19,7 +19,4 @@ class GC_UE4CPP_API USeePlayer : public UBTDecorator
 
 public:
 	virtual void TickNode(UBehaviorTreeComponent& OwnerComp, uint8* NodeMemory, float DeltaSeconds) override;
-
-	//EBTNodeResult::Type 
-
 };

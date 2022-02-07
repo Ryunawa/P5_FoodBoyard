@@ -20,6 +20,13 @@ void EmptyLinkFunctionForGeneratedCodeMainLevel_LevelScriptActor() {}
 	ENGINE_API UClass* Z_Construct_UClass_AActor_NoRegister();
 	COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
 // End Cross Module References
+	DEFINE_FUNCTION(AMainLevel_LevelScriptActor::execGetSpawnPoint)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(AActor**)Z_Param__Result=P_THIS->GetSpawnPoint();
+		P_NATIVE_END;
+	}
 	DEFINE_FUNCTION(AMainLevel_LevelScriptActor::execSpawnEnemy)
 	{
 		P_FINISH;
@@ -31,9 +38,42 @@ void EmptyLinkFunctionForGeneratedCodeMainLevel_LevelScriptActor() {}
 	{
 		UClass* Class = AMainLevel_LevelScriptActor::StaticClass();
 		static const FNameNativePtrPair Funcs[] = {
+			{ "GetSpawnPoint", &AMainLevel_LevelScriptActor::execGetSpawnPoint },
 			{ "SpawnEnemy", &AMainLevel_LevelScriptActor::execSpawnEnemy },
 		};
 		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
+	}
+	struct Z_Construct_UFunction_AMainLevel_LevelScriptActor_GetSpawnPoint_Statics
+	{
+		struct MainLevel_LevelScriptActor_eventGetSpawnPoint_Parms
+		{
+			AActor* ReturnValue;
+		};
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_ReturnValue;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_AMainLevel_LevelScriptActor_GetSpawnPoint_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(MainLevel_LevelScriptActor_eventGetSpawnPoint_Parms, ReturnValue), Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_AMainLevel_LevelScriptActor_GetSpawnPoint_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AMainLevel_LevelScriptActor_GetSpawnPoint_Statics::NewProp_ReturnValue,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AMainLevel_LevelScriptActor_GetSpawnPoint_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "MainLevel_LevelScriptActor.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AMainLevel_LevelScriptActor_GetSpawnPoint_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AMainLevel_LevelScriptActor, nullptr, "GetSpawnPoint", nullptr, nullptr, sizeof(MainLevel_LevelScriptActor_eventGetSpawnPoint_Parms), Z_Construct_UFunction_AMainLevel_LevelScriptActor_GetSpawnPoint_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_AMainLevel_LevelScriptActor_GetSpawnPoint_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AMainLevel_LevelScriptActor_GetSpawnPoint_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_AMainLevel_LevelScriptActor_GetSpawnPoint_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_AMainLevel_LevelScriptActor_GetSpawnPoint()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AMainLevel_LevelScriptActor_GetSpawnPoint_Statics::FuncParams);
+		}
+		return ReturnFunction;
 	}
 	struct Z_Construct_UFunction_AMainLevel_LevelScriptActor_SpawnEnemy_Statics
 	{
@@ -69,13 +109,13 @@ void EmptyLinkFunctionForGeneratedCodeMainLevel_LevelScriptActor() {}
 		static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_EnemySpawn_MetaData[];
-#endif
-		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_EnemySpawn;
-#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Enemy_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FClassPropertyParams NewProp_Enemy;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_EnemySpawn_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_EnemySpawn;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UE4CodeGen_Private::FClassParams ClassParams;
@@ -85,6 +125,7 @@ void EmptyLinkFunctionForGeneratedCodeMainLevel_LevelScriptActor() {}
 		(UObject* (*)())Z_Construct_UPackage__Script_GC_UE4CPP,
 	};
 	const FClassFunctionLinkInfo Z_Construct_UClass_AMainLevel_LevelScriptActor_Statics::FuncInfo[] = {
+		{ &Z_Construct_UFunction_AMainLevel_LevelScriptActor_GetSpawnPoint, "GetSpawnPoint" }, // 1002646794
 		{ &Z_Construct_UFunction_AMainLevel_LevelScriptActor_SpawnEnemy, "SpawnEnemy" }, // 1988258818
 	};
 #if WITH_METADATA
@@ -96,22 +137,22 @@ void EmptyLinkFunctionForGeneratedCodeMainLevel_LevelScriptActor() {}
 	};
 #endif
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AMainLevel_LevelScriptActor_Statics::NewProp_EnemySpawn_MetaData[] = {
-		{ "Category", "MainLevel_LevelScriptActor" },
-		{ "ModuleRelativePath", "MainLevel_LevelScriptActor.h" },
-	};
-#endif
-	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AMainLevel_LevelScriptActor_Statics::NewProp_EnemySpawn = { "EnemySpawn", nullptr, (EPropertyFlags)0x0020080000000001, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AMainLevel_LevelScriptActor, EnemySpawn), Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AMainLevel_LevelScriptActor_Statics::NewProp_EnemySpawn_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AMainLevel_LevelScriptActor_Statics::NewProp_EnemySpawn_MetaData)) };
-#if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AMainLevel_LevelScriptActor_Statics::NewProp_Enemy_MetaData[] = {
 		{ "Category", "MainLevel_LevelScriptActor" },
 		{ "ModuleRelativePath", "MainLevel_LevelScriptActor.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FClassPropertyParams Z_Construct_UClass_AMainLevel_LevelScriptActor_Statics::NewProp_Enemy = { "Enemy", nullptr, (EPropertyFlags)0x0024080000000001, UE4CodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AMainLevel_LevelScriptActor, Enemy), Z_Construct_UClass_AActor_NoRegister, Z_Construct_UClass_UClass, METADATA_PARAMS(Z_Construct_UClass_AMainLevel_LevelScriptActor_Statics::NewProp_Enemy_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AMainLevel_LevelScriptActor_Statics::NewProp_Enemy_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AMainLevel_LevelScriptActor_Statics::NewProp_EnemySpawn_MetaData[] = {
+		{ "Category", "MainLevel_LevelScriptActor" },
+		{ "ModuleRelativePath", "MainLevel_LevelScriptActor.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AMainLevel_LevelScriptActor_Statics::NewProp_EnemySpawn = { "EnemySpawn", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AMainLevel_LevelScriptActor, EnemySpawn), Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AMainLevel_LevelScriptActor_Statics::NewProp_EnemySpawn_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AMainLevel_LevelScriptActor_Statics::NewProp_EnemySpawn_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AMainLevel_LevelScriptActor_Statics::PropPointers[] = {
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMainLevel_LevelScriptActor_Statics::NewProp_EnemySpawn,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMainLevel_LevelScriptActor_Statics::NewProp_Enemy,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMainLevel_LevelScriptActor_Statics::NewProp_EnemySpawn,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_AMainLevel_LevelScriptActor_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<AMainLevel_LevelScriptActor>::IsAbstract,
@@ -140,7 +181,7 @@ void EmptyLinkFunctionForGeneratedCodeMainLevel_LevelScriptActor() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AMainLevel_LevelScriptActor, 837837088);
+	IMPLEMENT_CLASS(AMainLevel_LevelScriptActor, 2243278496);
 	template<> GC_UE4CPP_API UClass* StaticClass<AMainLevel_LevelScriptActor>()
 	{
 		return AMainLevel_LevelScriptActor::StaticClass();

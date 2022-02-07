@@ -2,6 +2,7 @@
 
 
 #include "MainLevel_LevelScriptActor.h"
+#include "Goblin_Controller.h"
 
 
 void AMainLevel_LevelScriptActor::BeginPlay()
@@ -14,4 +15,11 @@ void AMainLevel_LevelScriptActor::SpawnEnemy()
 	FActorSpawnParameters SpawnParams;
 	AEnemy* EnemySpawned;
 	EnemySpawned = GetWorld()->SpawnActor<AEnemy>(Enemy, EnemySpawn->GetActorTransform(), SpawnParams);
+
 }
+
+AActor* AMainLevel_LevelScriptActor::GetSpawnPoint()
+{
+	return EnemySpawn;
+}
+

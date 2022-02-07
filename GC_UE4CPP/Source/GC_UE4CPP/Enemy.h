@@ -4,9 +4,6 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
-#include "Perception/AIPerceptionComponent.h"
-#include "Perception/AIPerceptionSystem.h"
-#include "Perception/AISenseConfig_Sight.h"
 #include "Enemy.generated.h"
 
 UCLASS()

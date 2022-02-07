@@ -20,11 +20,8 @@ void EmptyLinkFunctionForGeneratedCodePlayerBehaviour() {}
 	ENGINE_API UClass* Z_Construct_UClass_USpringArmComponent_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_UCameraComponent_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_USphereComponent_NoRegister();
-<<<<<<< HEAD
-	GC_UE4CPP_API UClass* Z_Construct_UClass_AFoodBehaviour_NoRegister();
-=======
 	AIMODULE_API UClass* Z_Construct_UClass_UAIPerceptionStimuliSourceComponent_NoRegister();
->>>>>>> AIv2
+	GC_UE4CPP_API UClass* Z_Construct_UClass_AFoodBehaviour_NoRegister();
 // End Cross Module References
 	void APlayerBehaviour::StaticRegisterNativesAPlayerBehaviour()
 	{
@@ -231,11 +228,7 @@ void EmptyLinkFunctionForGeneratedCodePlayerBehaviour() {}
 		}
 		return OuterClass;
 	}
-<<<<<<< HEAD
-	IMPLEMENT_CLASS(APlayerBehaviour, 2119642746);
-=======
-	IMPLEMENT_CLASS(APlayerBehaviour, 4231898118);
->>>>>>> AIv2
+	IMPLEMENT_CLASS(APlayerBehaviour, 1127543532);
 	template<> GC_UE4CPP_API UClass* StaticClass<APlayerBehaviour>()
 	{
 		return APlayerBehaviour::StaticClass();

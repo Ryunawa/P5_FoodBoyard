@@ -20,16 +20,17 @@ protected:
 	virtual void BeginPlay() override;
 
 	UPROPERTY(EditAnywhere)
-		AActor* EnemySpawn;
-
-	UPROPERTY(EditAnywhere)
 		TSubclassOf<AActor> Enemy;
 
 public:
 
+	UPROPERTY(EditAnywhere)
+		AActor* EnemySpawn;
+
 	UFUNCTION()
 		void SpawnEnemy();
 
-
+	UFUNCTION()
+		AActor* GetSpawnPoint();
 
 };

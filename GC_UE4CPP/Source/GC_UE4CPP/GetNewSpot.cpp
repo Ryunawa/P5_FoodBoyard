@@ -5,6 +5,6 @@
 
 EBTNodeResult::Type UGetNewSpot::ExecuteTask(UBehaviorTreeComponent& OwnerComp, uint8* NodeMemory)
 {
-    Cast<AAI_Behaviour>(OwnerComp.GetAIOwner())->GetNewSpot();
+    Cast<AGoblin_Controller>(OwnerComp.GetAIOwner())->GetNewSpot();
     return EBTNodeResult::Succeeded;
 }

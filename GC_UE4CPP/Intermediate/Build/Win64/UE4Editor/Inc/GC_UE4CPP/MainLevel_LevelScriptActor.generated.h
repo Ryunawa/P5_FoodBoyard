@@ -8,6 +8,7 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+class AActor;
 #ifdef GC_UE4CPP_MainLevel_LevelScriptActor_generated_h
 #error "MainLevel_LevelScriptActor.generated.h already included, missing '#pragma once' in MainLevel_LevelScriptActor.h"
 #endif
@@ -16,11 +17,13 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #define GC_UE4CPP_Source_GC_UE4CPP_MainLevel_LevelScriptActor_h_16_SPARSE_DATA
 #define GC_UE4CPP_Source_GC_UE4CPP_MainLevel_LevelScriptActor_h_16_RPC_WRAPPERS \
  \
+	DECLARE_FUNCTION(execGetSpawnPoint); \
 	DECLARE_FUNCTION(execSpawnEnemy);
 
 
 #define GC_UE4CPP_Source_GC_UE4CPP_MainLevel_LevelScriptActor_h_16_RPC_WRAPPERS_NO_PURE_DECLS \
  \
+	DECLARE_FUNCTION(execGetSpawnPoint); \
 	DECLARE_FUNCTION(execSpawnEnemy);
 
 
@@ -69,7 +72,6 @@ public: \
 
 
 #define GC_UE4CPP_Source_GC_UE4CPP_MainLevel_LevelScriptActor_h_16_PRIVATE_PROPERTY_OFFSET \
-	FORCEINLINE static uint32 __PPO__EnemySpawn() { return STRUCT_OFFSET(AMainLevel_LevelScriptActor, EnemySpawn); } \
 	FORCEINLINE static uint32 __PPO__Enemy() { return STRUCT_OFFSET(AMainLevel_LevelScriptActor, Enemy); }
 
 

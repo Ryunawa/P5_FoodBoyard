@@ -47,7 +47,7 @@ D:\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\GameplayTask
 D:\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\AIModule\AITask.generated.h
 D:\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\AIModule\BTNode.generated.h
 D:\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\AIModule\BTTaskNode.generated.h
-D:\ProjetUnreal\P5_UE4\GC_UE4CPP\Source\GC_UE4CPP\AI_Behaviour.h
+D:\ProjetUnreal\P5_UE4\GC_UE4CPP\Source\GC_UE4CPP\Goblin_Controller.h
 D:\Epic Games\UE_4.27\Engine\Source\Runtime\AIModule\Classes\AIController.h
 D:\Epic Games\UE_4.27\Engine\Source\Runtime\AIModule\Classes\Navigation/PathFollowingComponent.h
 D:\Epic Games\UE_4.27\Engine\Source\Runtime\NavigationSystem\Public\NavigationData.h
@@ -80,5 +80,5 @@ D:\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\AIModule\AIS
 D:\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\AIModule\AISenseConfig_Sight.generated.h
 D:\ProjetUnreal\P5_UE4\GC_UE4CPP\Source\GC_UE4CPP\FoodBehaviour.h
 D:\ProjetUnreal\P5_UE4\GC_UE4CPP\Intermediate\Build\Win64\UE4Editor\Inc\GC_UE4CPP\FoodBehaviour.generated.h
-D:\ProjetUnreal\P5_UE4\GC_UE4CPP\Intermediate\Build\Win64\UE4Editor\Inc\GC_UE4CPP\AI_Behaviour.generated.h
+D:\ProjetUnreal\P5_UE4\GC_UE4CPP\Intermediate\Build\Win64\UE4Editor\Inc\GC_UE4CPP\Goblin_Controller.generated.h
 D:\ProjetUnreal\P5_UE4\GC_UE4CPP\Intermediate\Build\Win64\UE4Editor\Inc\GC_UE4CPP\GetNewSpot.generated.h
