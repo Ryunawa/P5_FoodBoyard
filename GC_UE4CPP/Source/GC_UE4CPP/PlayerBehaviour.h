@@ -2,12 +2,11 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
-#include "FoodBehaviour.h"
 #include "Components/SphereComponent.h"
-#include "Perception/AIPerceptionSystem.h"
 #include "Perception/AIPerceptionStimuliSourceComponent.h"
-#include "Perception/AISense_Sight.h"
 #include "PlayerBehaviour.generated.h"
+
+class AFoodBehaviour;
 
 using namespace std;
 
@@ -22,7 +21,6 @@ class GC_UE4CPP_API APlayerBehaviour : public ACharacter
         class UCameraComponent* FollowCamera;
     UPROPERTY(VisibleAnywhere)
        USphereComponent* SphereDetection;
-
     UPROPERTY(VisibleAnywhere)
         UAIPerceptionStimuliSourceComponent* PerSource;
 
@@ -34,14 +32,6 @@ public:
         float TurnRate = 45.0f;
     UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera)
         float LookUpRate = 45.0f;
-    UPROPERTY(EditAnywhere)
-        float MovementSpeed;
-    UPROPERTY(EditAnywhere)
-        int ZoomSpeed;
-    UPROPERTY(EditAnywhere)
-        bool bInteracting;
-    UPROPERTY(EditAnywhere)
-        bool bIsCarryingFood;
 
     // Input methods
     void Move_XAxis(float Rate);
@@ -50,18 +40,22 @@ public:
     void LookUpAtRate(float Rate);
     void Zoom(float Rate);
     void InteractFood();
+
+    bool bInteracting;
+    bool bIsCarryingFood;
     
 protected:
     // Called when the game starts or when spawned
     virtual void BeginPlay() override;
     virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
     
+    int ZoomSpeed;
+    float MovementSpeed;
     float SphereRange = 200;
     bool bHit;
-
+    
     AFoodBehaviour* CarriedFood;
     FVector CurrentVelocity;
-    
     TArray<AActor*> ActorsToIgnore;
     TArray<FHitResult> HitArray;
 

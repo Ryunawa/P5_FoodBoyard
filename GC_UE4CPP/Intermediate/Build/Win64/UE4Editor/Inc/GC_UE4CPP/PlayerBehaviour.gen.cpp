@@ -59,24 +59,6 @@ void EmptyLinkFunctionForGeneratedCodePlayerBehaviour() {}
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_LookUpRate_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_LookUpRate;
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_MovementSpeed_MetaData[];
-#endif
-		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_MovementSpeed;
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ZoomSpeed_MetaData[];
-#endif
-		static const UE4CodeGen_Private::FUnsizedIntPropertyParams NewProp_ZoomSpeed;
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_bInteracting_MetaData[];
-#endif
-		static void NewProp_bInteracting_SetBit(void* Obj);
-		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_bInteracting;
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_bIsCarryingFood_MetaData[];
-#endif
-		static void NewProp_bIsCarryingFood_SetBit(void* Obj);
-		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_bIsCarryingFood;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UE4CodeGen_Private::FClassParams ClassParams;
@@ -140,42 +122,6 @@ void EmptyLinkFunctionForGeneratedCodePlayerBehaviour() {}
 	};
 #endif
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_APlayerBehaviour_Statics::NewProp_LookUpRate = { "LookUpRate", nullptr, (EPropertyFlags)0x0010000000020015, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(APlayerBehaviour, LookUpRate), METADATA_PARAMS(Z_Construct_UClass_APlayerBehaviour_Statics::NewProp_LookUpRate_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_APlayerBehaviour_Statics::NewProp_LookUpRate_MetaData)) };
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_APlayerBehaviour_Statics::NewProp_MovementSpeed_MetaData[] = {
-		{ "Category", "PlayerBehaviour" },
-		{ "ModuleRelativePath", "PlayerBehaviour.h" },
-	};
-#endif
-	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_APlayerBehaviour_Statics::NewProp_MovementSpeed = { "MovementSpeed", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(APlayerBehaviour, MovementSpeed), METADATA_PARAMS(Z_Construct_UClass_APlayerBehaviour_Statics::NewProp_MovementSpeed_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_APlayerBehaviour_Statics::NewProp_MovementSpeed_MetaData)) };
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_APlayerBehaviour_Statics::NewProp_ZoomSpeed_MetaData[] = {
-		{ "Category", "PlayerBehaviour" },
-		{ "ModuleRelativePath", "PlayerBehaviour.h" },
-	};
-#endif
-	const UE4CodeGen_Private::FUnsizedIntPropertyParams Z_Construct_UClass_APlayerBehaviour_Statics::NewProp_ZoomSpeed = { "ZoomSpeed", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(APlayerBehaviour, ZoomSpeed), METADATA_PARAMS(Z_Construct_UClass_APlayerBehaviour_Statics::NewProp_ZoomSpeed_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_APlayerBehaviour_Statics::NewProp_ZoomSpeed_MetaData)) };
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_APlayerBehaviour_Statics::NewProp_bInteracting_MetaData[] = {
-		{ "Category", "PlayerBehaviour" },
-		{ "ModuleRelativePath", "PlayerBehaviour.h" },
-	};
-#endif
-	void Z_Construct_UClass_APlayerBehaviour_Statics::NewProp_bInteracting_SetBit(void* Obj)
-	{
-		((APlayerBehaviour*)Obj)->bInteracting = 1;
-	}
-	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UClass_APlayerBehaviour_Statics::NewProp_bInteracting = { "bInteracting", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(APlayerBehaviour), &Z_Construct_UClass_APlayerBehaviour_Statics::NewProp_bInteracting_SetBit, METADATA_PARAMS(Z_Construct_UClass_APlayerBehaviour_Statics::NewProp_bInteracting_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_APlayerBehaviour_Statics::NewProp_bInteracting_MetaData)) };
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_APlayerBehaviour_Statics::NewProp_bIsCarryingFood_MetaData[] = {
-		{ "Category", "PlayerBehaviour" },
-		{ "ModuleRelativePath", "PlayerBehaviour.h" },
-	};
-#endif
-	void Z_Construct_UClass_APlayerBehaviour_Statics::NewProp_bIsCarryingFood_SetBit(void* Obj)
-	{
-		((APlayerBehaviour*)Obj)->bIsCarryingFood = 1;
-	}
-	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UClass_APlayerBehaviour_Statics::NewProp_bIsCarryingFood = { "bIsCarryingFood", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(APlayerBehaviour), &Z_Construct_UClass_APlayerBehaviour_Statics::NewProp_bIsCarryingFood_SetBit, METADATA_PARAMS(Z_Construct_UClass_APlayerBehaviour_Statics::NewProp_bIsCarryingFood_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_APlayerBehaviour_Statics::NewProp_bIsCarryingFood_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_APlayerBehaviour_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APlayerBehaviour_Statics::NewProp_CameraBoom,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APlayerBehaviour_Statics::NewProp_FollowCamera,
@@ -183,10 +129,6 @@ void EmptyLinkFunctionForGeneratedCodePlayerBehaviour() {}
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APlayerBehaviour_Statics::NewProp_PerSource,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APlayerBehaviour_Statics::NewProp_TurnRate,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APlayerBehaviour_Statics::NewProp_LookUpRate,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APlayerBehaviour_Statics::NewProp_MovementSpeed,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APlayerBehaviour_Statics::NewProp_ZoomSpeed,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APlayerBehaviour_Statics::NewProp_bInteracting,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APlayerBehaviour_Statics::NewProp_bIsCarryingFood,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_APlayerBehaviour_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<APlayerBehaviour>::IsAbstract,
@@ -215,7 +157,7 @@ void EmptyLinkFunctionForGeneratedCodePlayerBehaviour() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(APlayerBehaviour, 3003681041);
+	IMPLEMENT_CLASS(APlayerBehaviour, 4183411241);
 	template<> GC_UE4CPP_API UClass* StaticClass<APlayerBehaviour>()
 	{
 		return APlayerBehaviour::StaticClass();

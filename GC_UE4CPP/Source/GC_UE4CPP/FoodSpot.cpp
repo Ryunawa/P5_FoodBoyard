@@ -1,4 +1,5 @@
 #include "FoodSpot.h"
+#include "FoodBehaviour.h"
 #include "Components/StaticMeshComponent.h"
 
 // Sets default values

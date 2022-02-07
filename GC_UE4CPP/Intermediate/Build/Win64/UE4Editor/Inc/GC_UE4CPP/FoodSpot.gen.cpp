@@ -18,7 +18,6 @@ void EmptyLinkFunctionForGeneratedCodeFoodSpot() {}
 	ENGINE_API UClass* Z_Construct_UClass_AActor();
 	UPackage* Z_Construct_UPackage__Script_GC_UE4CPP();
 	ENGINE_API UClass* Z_Construct_UClass_UStaticMeshComponent_NoRegister();
-	GC_UE4CPP_API UClass* Z_Construct_UClass_AFoodBehaviour_NoRegister();
 // End Cross Module References
 	void AFoodSpot::StaticRegisterNativesAFoodSpot()
 	{
@@ -37,10 +36,6 @@ void EmptyLinkFunctionForGeneratedCodeFoodSpot() {}
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_StaticMesh_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_StaticMesh;
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_FoodSnapped_MetaData[];
-#endif
-		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_FoodSnapped;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UE4CodeGen_Private::FClassParams ClassParams;
@@ -62,17 +57,9 @@ void EmptyLinkFunctionForGeneratedCodeFoodSpot() {}
 		{ "ModuleRelativePath", "FoodSpot.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AFoodSpot_Statics::NewProp_StaticMesh = { "StaticMesh", nullptr, (EPropertyFlags)0x0010000000080009, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AFoodSpot, StaticMesh), Z_Construct_UClass_UStaticMeshComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AFoodSpot_Statics::NewProp_StaticMesh_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AFoodSpot_Statics::NewProp_StaticMesh_MetaData)) };
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AFoodSpot_Statics::NewProp_FoodSnapped_MetaData[] = {
-		{ "Category", "FoodSpot" },
-		{ "ModuleRelativePath", "FoodSpot.h" },
-	};
-#endif
-	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AFoodSpot_Statics::NewProp_FoodSnapped = { "FoodSnapped", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AFoodSpot, FoodSnapped), Z_Construct_UClass_AFoodBehaviour_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AFoodSpot_Statics::NewProp_FoodSnapped_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AFoodSpot_Statics::NewProp_FoodSnapped_MetaData)) };
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AFoodSpot_Statics::NewProp_StaticMesh = { "StaticMesh", nullptr, (EPropertyFlags)0x00100000000a0009, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AFoodSpot, StaticMesh), Z_Construct_UClass_UStaticMeshComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AFoodSpot_Statics::NewProp_StaticMesh_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AFoodSpot_Statics::NewProp_StaticMesh_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AFoodSpot_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AFoodSpot_Statics::NewProp_StaticMesh,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AFoodSpot_Statics::NewProp_FoodSnapped,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_AFoodSpot_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<AFoodSpot>::IsAbstract,
@@ -101,7 +88,7 @@ void EmptyLinkFunctionForGeneratedCodeFoodSpot() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AFoodSpot, 3232711837);
+	IMPLEMENT_CLASS(AFoodSpot, 3102469739);
 	template<> GC_UE4CPP_API UClass* StaticClass<AFoodSpot>()
 	{
 		return AFoodSpot::StaticClass();

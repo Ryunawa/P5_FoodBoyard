@@ -8,27 +8,14 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
-class UPrimitiveComponent;
-class AActor;
-struct FHitResult;
 #ifdef GC_UE4CPP_Chest_generated_h
 #error "Chest.generated.h already included, missing '#pragma once' in Chest.h"
 #endif
 #define GC_UE4CPP_Chest_generated_h
 
 #define GC_UE4CPP_Source_GC_UE4CPP_Chest_h_12_SPARSE_DATA
-#define GC_UE4CPP_Source_GC_UE4CPP_Chest_h_12_RPC_WRAPPERS \
- \
-	DECLARE_FUNCTION(execOnOverlapEnd); \
-	DECLARE_FUNCTION(execOnOverlapBegin);
-
-
-#define GC_UE4CPP_Source_GC_UE4CPP_Chest_h_12_RPC_WRAPPERS_NO_PURE_DECLS \
- \
-	DECLARE_FUNCTION(execOnOverlapEnd); \
-	DECLARE_FUNCTION(execOnOverlapBegin);
-
-
+#define GC_UE4CPP_Source_GC_UE4CPP_Chest_h_12_RPC_WRAPPERS
+#define GC_UE4CPP_Source_GC_UE4CPP_Chest_h_12_RPC_WRAPPERS_NO_PURE_DECLS
 #define GC_UE4CPP_Source_GC_UE4CPP_Chest_h_12_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAChest(); \
