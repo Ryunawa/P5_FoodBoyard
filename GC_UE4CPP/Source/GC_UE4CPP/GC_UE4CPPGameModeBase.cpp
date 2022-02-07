@@ -22,6 +22,8 @@ void AGC_UE4CPPGameModeBase::BeginPlay()
 {
 	Super::BeginPlay();
 
+
+
 }
 
 void AGC_UE4CPPGameModeBase::Tick(float DeltaTime)

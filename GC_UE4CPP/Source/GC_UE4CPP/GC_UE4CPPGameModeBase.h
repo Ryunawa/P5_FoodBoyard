@@ -14,7 +14,7 @@ public:
 	// Sets default values for this actor's properties
 	AGC_UE4CPPGameModeBase();
 
-
+	// variable for food counting (use in Chest.cpp and Widget.cpp)
 	float FoodCounter = 0;
 
 

@@ -33,8 +33,6 @@ public:
 	UFUNCTION()
 		void OnOverlapEnd(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex);
 
-	// variable for food counting
-	float FoodCounter = 0;
 
 	
 
@@ -43,7 +41,7 @@ public:
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
-	virtual void Cast();
+	
 
 public:	
 	// Called every frame

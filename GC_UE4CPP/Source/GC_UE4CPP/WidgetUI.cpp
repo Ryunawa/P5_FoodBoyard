@@ -19,9 +19,13 @@ void UWidgetUI::NativeTick(const FGeometry& MyGeometry, float InDeltaTime)
 	Super::NativeTick(MyGeometry, InDeltaTime);
 
 
-	//Cast to get the FoodCounter variable
-	AActor* Actor = UGameplayStatics::GetActorOfClass(GetWorld(), AChest::StaticClass());
-	AChest* MinFood = Cast<AChest>(Actor);
+
+
+	
+	AGameModeBase* GameMode = UGameplayStatics::GetGameMode(this);
+
+
+	AGC_UE4CPPGameModeBase* MinFood = Cast<AGC_UE4CPPGameModeBase>(GameMode);
 
 	if (MinFood != nullptr)
 	{
@@ -32,7 +36,6 @@ void UWidgetUI::NativeTick(const FGeometry& MyGeometry, float InDeltaTime)
 	{
 		UE_LOG(LogTemp, Warning, TEXT("MinFood == nullptr"));
 	}
-
 	
 }
 
