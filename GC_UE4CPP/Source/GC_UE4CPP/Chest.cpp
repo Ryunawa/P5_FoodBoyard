@@ -77,7 +77,7 @@ void AChest::OnOverlapEnd(UPrimitiveComponent* OverlappedComponent, AActor* Othe
 	}
 
 	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Purple, TEXT("the food is OUTSIDE the box"));
-	MinFood->FoodCounter -= 1;
+	//MinFood->FoodCounter -= 1;
 	UE_LOG(LogTemp, Warning, TEXT("Chest Food message: %f"), MinFood->FoodCounter);
 }
 
