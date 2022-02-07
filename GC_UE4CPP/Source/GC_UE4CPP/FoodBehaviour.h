@@ -13,13 +13,15 @@ public:
 	// Sets default values for this actor's properties
 	AFoodBehaviour();
 	
+	
 	UPROPERTY(EditAnywhere)
 		TArray<UStaticMesh*> Foods;
 	UPROPERTY(VisibleAnywhere)
 		UStaticMeshComponent* Food;
+	
 
 	void RandomFood();
-	void TogglePhysics();
+	void TogglePhysics(bool PhysicEnable);
 	
 
 protected:
@@ -27,7 +29,6 @@ protected:
 	virtual void BeginPlay() override;
 
 	int RandIndex;
-	bool Toggle;
 
 public:	
 	// Called every frame

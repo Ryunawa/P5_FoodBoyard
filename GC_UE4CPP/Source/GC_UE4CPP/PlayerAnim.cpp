@@ -1,7 +1,4 @@
 #include "PlayerAnim.h"
-
-#include <concrt.h>
-
 #include "PlayerBehaviour.h"
 #include "Microsoft/AllowMicrosoftPlatformTypes.h"
 
@@ -26,7 +23,7 @@ void UPlayerAnim::NativeUpdateAnimation(float DeltaSeconds)
 	{
 		Speed = PlayerCharacter->GetVelocity().Size();
 		bIsMoving = PlayerCharacter->GetVelocity().Size() > 0 ? true : false;
-		bIsPickingDropping = PlayerCharacter->bIsPickingDroppingFood;
+		bIsPickingDropping = PlayerCharacter->bInteracting;
 		bIsCarrying = PlayerCharacter->bIsCarryingFood;
 	}	
 }

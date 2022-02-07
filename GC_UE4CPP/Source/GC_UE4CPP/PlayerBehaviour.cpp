@@ -1,6 +1,6 @@
 #include "PlayerBehaviour.h"
 #include "FoodBehaviour.h"
-#include "PhysXInterfaceWrapperCore.h"
+#include "FoodSpot.h"
 #include "Camera/CameraComponent.h"
 #include "Components/CapsuleComponent.h"
 #include "Components/InputComponent.h"
@@ -10,7 +10,6 @@
 #include "GameFramework/SpringArmComponent.h"
 #include "Kismet/KismetSystemLibrary.h"
 #include "Math/UnitConversion.h"
-
 
 // Sets default values
 APlayerBehaviour::APlayerBehaviour()
@@ -56,7 +55,6 @@ APlayerBehaviour::APlayerBehaviour()
 void APlayerBehaviour::BeginPlay()
 {
     Super::BeginPlay();
-	Result = nullptr;
 }
 
 // Called every frame
@@ -68,7 +66,7 @@ void APlayerBehaviour::Tick(float DeltaTime)
     {
         const FVector NewLocation = GetActorLocation() + (CurrentVelocity * DeltaTime);
         SetActorLocation(NewLocation);
-    }
+    }	
 }
 
 // Called to bind functionality to input
@@ -121,52 +119,92 @@ void APlayerBehaviour::Zoom(float Rate)
 //Allow to interact with the food
 void APlayerBehaviour::InteractFood()
 {
+	if(bInteracting)
+	{
+		return;
+	}
+	
 	const FVector Start = GetActorLocation();
-	const FVector End = GetActorLocation() * 200;
 	ActorsToIgnore.Add(this);
-
+	
 	GetCharacterMovement()->SetMovementMode(EMovementMode::MOVE_None);
 	
 	// Create a sphere trace around the player and add inside an array all actors hit by the sphere trace
-	bHit = UKismetSystemLibrary::SphereTraceMulti(GetWorld(), Start, End, SphereRange,
+	bHit = UKismetSystemLibrary::SphereTraceMulti(GetWorld(), Start, Start, SphereRange,
 		UEngineTypes::ConvertToTraceType(ECC_Camera), true, ActorsToIgnore,
 		EDrawDebugTrace::None,HitArray, true, FLinearColor::Gray,FLinearColor::Blue, 60.0f);
 	
-	bIsPickingDroppingFood = true;
-
-	if(Result != nullptr)
-	{
-		bIsPickingDroppingFood = true;
-		Result->DetachFromActor(FDetachmentTransformRules::KeepWorldTransform);
-		Result->TogglePhysics();
-		MovementSpeed *= 2;
-		Result = nullptr;
-		bIsCarryingFood = false;
-		GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Red, TEXT("Food Dropped"));
-		
-	}
-	else if(bHit)
-	{
+	bInteracting = true;
+	AFoodSpot* Plate = nullptr;
+	AFoodBehaviour* Food = nullptr;
+	USkeletalMeshComponent* PlayerMesh = GetMesh(); // Get the SkeletalMesh of the Player
+	
+	if(bHit)
+	{		
 		for(const FHitResult HitResult : HitArray)
-		{	
-			if(Result == nullptr)
+		{
+			if(Plate == nullptr)
 			{
-				Result = Cast<AFoodBehaviour>(HitResult.Actor); // Check if the the actor hit is a FoodBehaviour actor
-				
-				if(Result != nullptr)
-				{
-					Result->TogglePhysics();
-					USkeletalMeshComponent* PlayerMesh = GetMesh(); // Get the SkeletalMesh of the Player
-					HitResult.Actor->AttachToComponent(PlayerMesh, FAttachmentTransformRules::SnapToTargetNotIncludingScale, TEXT("Fist_RSocket")); // Attach the food to the right hand
-					HitResult.Actor->SetActorRelativeScale3D(FVector(0.03f, 0.03f, 0.03f)); // Set a smaller size to the food
-					MovementSpeed /= 2.0f;
-					bIsCarryingFood = true;
-					GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Red, TEXT("Food Picked")); // debug
-				}
+				Plate = Cast<AFoodSpot>(HitResult.Actor); // Check if the actor is a FoodSpot actor
 			}
+			
+			if(Food == nullptr)
+			{
+				Food = Cast<AFoodBehaviour>(HitResult.Actor); // Check if the the actor hit is a FoodBehaviour actor
+			}
+
+			GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Blue, HitResult.Actor->GetName()); // debug
+
+		}
+
+		// Check if the player has a food in his hand
+		if(CarriedFood != nullptr)
+		{
+			// If there is a FoodSpot near the player
+			if(Plate == nullptr)
+			{
+				CarriedFood->DetachFromActor(FDetachmentTransformRules::KeepWorldTransform); // Call the method to unsnap from the player hand
+				CarriedFood->TogglePhysics(true);
+				GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Green, TEXT("Food dropped")); // debug
+			}
+			// If there isn't Food Spot near the player
+			else
+			{
+				CarriedFood->DetachFromActor(FDetachmentTransformRules::KeepWorldTransform); // Call the method to unsnap from the player hand
+				CarriedFood->TogglePhysics(false);
+				Plate->SnapOnPlate(CarriedFood);
+				GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Green, TEXT("Food dropped on plate")); // debug
+			}
+			MovementSpeed *= 2.0f;
+			bIsCarryingFood = false;
+			CarriedFood = nullptr;
+		}
+
+		// Check if the player doesn't have any food in his hand and if there is any food near him
+		else if(Food != nullptr && CarriedFood == nullptr)
+		{
+			// If there is a FoodSpot near the player
+			if(Plate == nullptr)
+			{
+				Food->TogglePhysics(false);
+				Food->AttachToComponent(PlayerMesh, FAttachmentTransformRules::SnapToTargetNotIncludingScale, TEXT("Fist_RSocket")); // Attach the food to the right hand
+				Food->SetActorRelativeScale3D(FVector(0.03f, 0.03f, 0.03f)); // Set a smaller size to the food
+				GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Green, TEXT("Food picked")); // debug
+			}
+			
+			// If there isn't Food Spot near the player
+			else
+			{
+				Plate->DetachFromPlate(); // Call the method to unsnap from the FoodSpot
+				Food->TogglePhysics(false);
+				Food->AttachToComponent(PlayerMesh, FAttachmentTransformRules::SnapToTargetNotIncludingScale, TEXT("Fist_RSocket")); // Attach the food to the right hand
+				Food->SetActorRelativeScale3D(FVector(0.03f, 0.03f, 0.03f)); // Set a smaller size to the food
+				GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Green, TEXT("Food picked from plate")); // debug
+			}
+			CarriedFood = Food;
+			bIsCarryingFood = true;
+			MovementSpeed /= 2.0f;
 		}
 	}
-	//UGameplayStatics::GetGameMode(this);
-	//AGameModeBase* GameMode;
 }
 
