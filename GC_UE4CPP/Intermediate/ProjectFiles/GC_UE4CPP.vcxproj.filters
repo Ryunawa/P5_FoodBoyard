@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\GC_UE4CPP.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{C6F230A4-B727-4E3E-950C-20FD54B93E93}</UniqueIdentifier>
+      <UniqueIdentifier>{44FDEE9C-6FC3-441F-B61B-DE909BCF7676}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\GC_UE4CPP.Target.cs">
       <Filter>Source</Filter>
@@ -13,7 +13,7 @@
     </None>
     <None Include="..\..\GC_UE4CPP.log" />
     <Filter Include="Config">
-      <UniqueIdentifier>{6CB7D806-CC3A-42BB-B0F5-C5C0942D6EC2}</UniqueIdentifier>
+      <UniqueIdentifier>{22623FD3-79ED-4EB1-9CE3-E269864C1F81}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -28,7 +28,7 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\GC_UE4CPP">
-      <UniqueIdentifier>{04FAF3A8-771B-4458-83F9-A565CA43F729}</UniqueIdentifier>
+      <UniqueIdentifier>{2518D18C-BA7D-4EF5-946C-AAAF2278A0AC}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\GC_UE4CPP\AI_Behaviour.cpp">
       <Filter>Source\GC_UE4CPP</Filter>
@@ -157,6 +157,12 @@
       <Filter>Source\GC_UE4CPP</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\GC_UE4CPP\WidgetUI.h">
+      <Filter>Source\GC_UE4CPP</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\GC_UE4CPP\WidgetVictoryScreen.cpp">
+      <Filter>Source\GC_UE4CPP</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\GC_UE4CPP\WidgetVictoryScreen.h">
       <Filter>Source\GC_UE4CPP</Filter>
     </ClInclude>
   </ItemGroup>

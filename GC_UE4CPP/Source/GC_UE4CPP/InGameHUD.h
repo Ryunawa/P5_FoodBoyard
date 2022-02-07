@@ -3,12 +3,11 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/HUD.h"
-
 #include "Components/WidgetComponent.h"
-
 #include "WidgetUI.h"
-
+#include "WidgetVictoryScreen.h"
 #include "InGameHUD.generated.h"
+
 
 
 UCLASS()
@@ -26,11 +25,12 @@ public:
 
 	virtual void Tick(float DeltaSeconds) override;
 
-	
+
 
 	UPROPERTY(EditDefaultsOnly, Category = "Interactive")
 		TSubclassOf<UUserWidget> WidgetUIClass;
 
 private:
 	UWidgetUI* WidgetUI;
+	UWidgetVictoryScreen* WidgetVictoryScreen;
 };
