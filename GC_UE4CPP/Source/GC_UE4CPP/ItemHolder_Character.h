@@ -28,8 +28,12 @@ public:
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
-	void EquipItem(AActor* a);
+	void Interact();
 
-	void UnequipItem();
+	void PickupItem(AActor* FoodToEquip);
+
+	void StoreItem(AActor* Plate);
+
+	void DropItem();
 
 };
