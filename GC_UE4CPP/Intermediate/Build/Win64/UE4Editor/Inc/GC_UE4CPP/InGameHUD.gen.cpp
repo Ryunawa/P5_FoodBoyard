@@ -41,6 +41,10 @@ void EmptyLinkFunctionForGeneratedCodeInGameHUD() {}
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_WidgetVictoryScreenClass_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FClassPropertyParams NewProp_WidgetVictoryScreenClass;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_WidgetGameOverScreenClass_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FClassPropertyParams NewProp_WidgetGameOverScreenClass;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UE4CodeGen_Private::FClassParams ClassParams;
@@ -71,9 +75,17 @@ void EmptyLinkFunctionForGeneratedCodeInGameHUD() {}
 	};
 #endif
 	const UE4CodeGen_Private::FClassPropertyParams Z_Construct_UClass_AInGameHUD_Statics::NewProp_WidgetVictoryScreenClass = { "WidgetVictoryScreenClass", nullptr, (EPropertyFlags)0x0014000000010001, UE4CodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AInGameHUD, WidgetVictoryScreenClass), Z_Construct_UClass_UUserWidget_NoRegister, Z_Construct_UClass_UClass, METADATA_PARAMS(Z_Construct_UClass_AInGameHUD_Statics::NewProp_WidgetVictoryScreenClass_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AInGameHUD_Statics::NewProp_WidgetVictoryScreenClass_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AInGameHUD_Statics::NewProp_WidgetGameOverScreenClass_MetaData[] = {
+		{ "Category", "Interactive" },
+		{ "ModuleRelativePath", "InGameHUD.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FClassPropertyParams Z_Construct_UClass_AInGameHUD_Statics::NewProp_WidgetGameOverScreenClass = { "WidgetGameOverScreenClass", nullptr, (EPropertyFlags)0x0014000000010001, UE4CodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AInGameHUD, WidgetGameOverScreenClass), Z_Construct_UClass_UUserWidget_NoRegister, Z_Construct_UClass_UClass, METADATA_PARAMS(Z_Construct_UClass_AInGameHUD_Statics::NewProp_WidgetGameOverScreenClass_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AInGameHUD_Statics::NewProp_WidgetGameOverScreenClass_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AInGameHUD_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AInGameHUD_Statics::NewProp_WidgetUIClass,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AInGameHUD_Statics::NewProp_WidgetVictoryScreenClass,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AInGameHUD_Statics::NewProp_WidgetGameOverScreenClass,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_AInGameHUD_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<AInGameHUD>::IsAbstract,
@@ -102,7 +114,7 @@ void EmptyLinkFunctionForGeneratedCodeInGameHUD() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AInGameHUD, 3339399071);
+	IMPLEMENT_CLASS(AInGameHUD, 1368016402);
 	template<> GC_UE4CPP_API UClass* StaticClass<AInGameHUD>()
 	{
 		return AInGameHUD::StaticClass();

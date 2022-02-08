@@ -6,6 +6,7 @@
 #include "Components/WidgetComponent.h"
 #include "WidgetUI.h"
 #include "WidgetVictoryScreen.h"
+#include "WidgetGameOverScreen.h"
 #include "InGameHUD.generated.h"
 
 
@@ -33,7 +34,13 @@ public:
 	UPROPERTY(EditDefaultsOnly, Category = "Interactive")
 		TSubclassOf<UUserWidget> WidgetVictoryScreenClass;
 
+	UPROPERTY(EditDefaultsOnly, Category = "Interactive")
+		TSubclassOf<UUserWidget> WidgetGameOverScreenClass;
+
+	
+
 private:
 	UWidgetUI* WidgetUI;
 	UWidgetVictoryScreen* WidgetVictoryScreen;
+	UWidgetGameOverScreen* WidgetGameOverScreen;
 };

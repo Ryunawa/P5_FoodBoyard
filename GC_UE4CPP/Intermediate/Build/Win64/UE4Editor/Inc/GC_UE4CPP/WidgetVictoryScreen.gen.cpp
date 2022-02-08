@@ -138,7 +138,6 @@ void EmptyLinkFunctionForGeneratedCodeWidgetVictoryScreen() {}
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UWidgetVictoryScreen_Statics::Class_MetaDataParams[] = {
 		{ "IncludePath", "WidgetVictoryScreen.h" },
 		{ "ModuleRelativePath", "WidgetVictoryScreen.h" },
-		{ "ObjectInitializerConstructorDeclared", "" },
 	};
 #endif
 #if WITH_METADATA
@@ -226,7 +225,7 @@ void EmptyLinkFunctionForGeneratedCodeWidgetVictoryScreen() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UWidgetVictoryScreen, 3432900413);
+	IMPLEMENT_CLASS(UWidgetVictoryScreen, 4185148741);
 	template<> GC_UE4CPP_API UClass* StaticClass<UWidgetVictoryScreen>()
 	{
 		return UWidgetVictoryScreen::StaticClass();

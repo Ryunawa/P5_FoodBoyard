@@ -13,7 +13,7 @@ class GC_UE4CPP_API UWidgetVictoryScreen : public UUserWidget
 	GENERATED_BODY()
 
 public:
-	UWidgetVictoryScreen(const FObjectInitializer& ObjectInitializer);
+
 
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (BindWidget))

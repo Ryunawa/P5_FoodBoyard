@@ -1,4 +1,3 @@
-// Fill out your copyright notice in the Description page of Project Settings.
 
 
 #include "WidgetVictoryScreen.h"
@@ -7,10 +6,6 @@
 
 
 
-UWidgetVictoryScreen::UWidgetVictoryScreen(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer)
-{
-
-}
 
 bool UWidgetVictoryScreen::Initialize()
 {
@@ -26,6 +21,7 @@ bool UWidgetVictoryScreen::Initialize()
 	return true;
 }
 
+//click restart button
 void UWidgetVictoryScreen::LoadButton()
 {
 
@@ -37,6 +33,7 @@ void UWidgetVictoryScreen::LoadButton()
 	}
 }
 
+//click quit button
 void UWidgetVictoryScreen::ExitPressed()
 {
 	UWorld* World = GetWorld();
@@ -47,7 +44,7 @@ void UWidgetVictoryScreen::ExitPressed()
 	PlayerController->ConsoleCommand("quit");
 }
 
-
+//enable mousse and disable player behavior
 void UWidgetVictoryScreen::NativeTick(const FGeometry& MyGeometry, float InDeltaTime)
 {
 

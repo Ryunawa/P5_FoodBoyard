@@ -42,7 +42,7 @@ void AInGameHUD::Tick(float DeltaSeconds)
 	AGameModeBase* GameMode = UGameplayStatics::GetGameMode(this);
 	AGC_UE4CPPGameModeBase* MinFood = Cast<AGC_UE4CPPGameModeBase>(GameMode);
 
-
+	//victory condition
 	if (MinFood->FoodCounter == 5)
 	{
 		
@@ -60,6 +60,27 @@ void AInGameHUD::Tick(float DeltaSeconds)
 			}
 		}
 	}
+
+	/*
+	//defeat condition
+	if (//varible defeat//)
+	{
+
+		if (WidgetGameOverScreenClass)
+		{
+
+			WidgetGameOverScreen = CreateWidget<UWidgetGameOverScreen>(GetWorld(), WidgetGameOverScreenClass);
+
+			// Make sure widget was created 
+			if (WidgetGameOverScreen)
+			{
+				// Add it to the viewport 
+				WidgetGameOverScreen->AddToViewport();
+
+			}
+		}
+	}
+	*/
 
 }
 
