@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\GC_UE4CPP.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{6B5CFE45-CCC8-4990-A009-B1E4CE2C629A}</UniqueIdentifier>
+      <UniqueIdentifier>{60DB0EF3-F4FC-4C5E-B359-572DB4811E71}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\GC_UE4CPP.Target.cs">
       <Filter>Source</Filter>
@@ -12,7 +12,7 @@
       <Filter>Source</Filter>
     </None>
     <Filter Include="Config">
-      <UniqueIdentifier>{6D086EE7-6366-419F-867D-832846DB4674}</UniqueIdentifier>
+      <UniqueIdentifier>{7CEFEF41-44EB-41A0-886C-2BDE7B29996D}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -27,7 +27,7 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\GC_UE4CPP">
-      <UniqueIdentifier>{95DE5402-0EF0-4104-9E6C-4DEFBDC4DEBB}</UniqueIdentifier>
+      <UniqueIdentifier>{ECEEAAAC-6A71-4676-AF21-88DCDA8C767C}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\GC_UE4CPP\BTTask_DestroySelf.cpp">
       <Filter>Source\GC_UE4CPP</Filter>
@@ -152,16 +152,46 @@
     <ClInclude Include="..\..\Source\GC_UE4CPP\SeePlayer.h">
       <Filter>Source\GC_UE4CPP</Filter>
     </ClInclude>
+    <ClCompile Include="..\..\Source\GC_UE4CPP\TitleGameMode.cpp">
+      <Filter>Source\GC_UE4CPP</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\GC_UE4CPP\TitleGameMode.h">
+      <Filter>Source\GC_UE4CPP</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\GC_UE4CPP\TitleHUD.cpp">
+      <Filter>Source\GC_UE4CPP</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\GC_UE4CPP\TitleHUD.h">
+      <Filter>Source\GC_UE4CPP</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\GC_UE4CPP\UI.cpp">
       <Filter>Source\GC_UE4CPP</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\GC_UE4CPP\UI.h">
       <Filter>Source\GC_UE4CPP</Filter>
     </ClInclude>
+    <ClCompile Include="..\..\Source\GC_UE4CPP\WidgetGameOverScreen.cpp">
+      <Filter>Source\GC_UE4CPP</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\GC_UE4CPP\WidgetGameOverScreen.h">
+      <Filter>Source\GC_UE4CPP</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\GC_UE4CPP\WidgetTitle.cpp">
+      <Filter>Source\GC_UE4CPP</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\GC_UE4CPP\WidgetTitle.h">
+      <Filter>Source\GC_UE4CPP</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\GC_UE4CPP\WidgetUI.cpp">
       <Filter>Source\GC_UE4CPP</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\GC_UE4CPP\WidgetUI.h">
+      <Filter>Source\GC_UE4CPP</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\GC_UE4CPP\WidgetVictoryScreen.cpp">
+      <Filter>Source\GC_UE4CPP</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\GC_UE4CPP\WidgetVictoryScreen.h">
       <Filter>Source\GC_UE4CPP</Filter>
     </ClInclude>
   </ItemGroup>

@@ -25,6 +25,8 @@ public:
 	void DropItem();
 
 	bool bIsCarryingFood;
+
+	float MovementSpeed;
 	
 protected:
 	// Called when the game starts or when spawned
@@ -32,7 +34,7 @@ protected:
 
 	AFoodBehaviour* EquippedItem;
 
-	float MovementSpeed;
+	
 
 
 public:
