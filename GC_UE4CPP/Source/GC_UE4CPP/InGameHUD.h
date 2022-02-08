@@ -37,7 +37,7 @@ public:
 	UPROPERTY(EditDefaultsOnly, Category = "Interactive")
 		TSubclassOf<UUserWidget> WidgetGameOverScreenClass;
 
-
+	int i = 0;
 
 private:
 	UWidgetUI* WidgetUI;

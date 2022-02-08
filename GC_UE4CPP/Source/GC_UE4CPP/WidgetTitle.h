@@ -13,7 +13,7 @@ class GC_UE4CPP_API UWidgetTitle : public UUserWidget
 	GENERATED_BODY()
 
 public:
-	UWidgetTitle(const FObjectInitializer& ObjectInitializer);
+	
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (BindWidget))
 		class UTextBlock* Title;
@@ -47,7 +47,7 @@ public:
 	virtual void NativeTick(const FGeometry& MyGeometry, float InDeltaTime) override;
 
 protected:
-	virtual bool Initialize();
+	virtual void NativeConstruct() override;
 
 
 

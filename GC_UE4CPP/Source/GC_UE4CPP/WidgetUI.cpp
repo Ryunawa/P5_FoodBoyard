@@ -5,10 +5,6 @@
 #include "Kismet/GameplayStatics.h"
 
 
-UWidgetUI::UWidgetUI(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer)
-{
-
-}
 
 void UWidgetUI::NativeTick(const FGeometry& MyGeometry, float InDeltaTime)
 {

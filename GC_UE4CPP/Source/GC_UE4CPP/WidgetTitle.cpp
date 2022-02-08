@@ -8,24 +8,16 @@
 
 
 
-UWidgetTitle::UWidgetTitle(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer)
+void UWidgetTitle::NativeConstruct()
 {
+	Super::NativeConstruct();
 
-}
-
-bool UWidgetTitle::Initialize()
-{
-	if (!Super::Initialize()) return false;
-
-	if (!ensure(StartButton != nullptr)) return false;
 	StartButton->OnClicked.AddDynamic(this, &UWidgetTitle::LoadButton);
 
-	if (!ensure(QuitButton != nullptr)) return false;
 	QuitButton->OnClicked.AddDynamic(this, &UWidgetTitle::ExitPressed);
-
-
-	return true;
 }
+
+
 
 void UWidgetTitle::LoadButton()
 {

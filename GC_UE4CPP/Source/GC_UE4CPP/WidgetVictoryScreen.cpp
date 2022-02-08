@@ -5,21 +5,16 @@
 #include <GC_UE4CPP/PlayerBehaviour.h>
 
 
-
-
-bool UWidgetVictoryScreen::Initialize()
+void UWidgetVictoryScreen::NativeConstruct()
 {
-	if (!Super::Initialize()) return false;
-
-	if (!ensure(RestartButton != nullptr)) return false;
+	Super::NativeConstruct();
+	
 	RestartButton->OnClicked.AddDynamic(this, &UWidgetVictoryScreen::LoadButton);
-
-	if (!ensure(QuitButton != nullptr)) return false;
+		
 	QuitButton->OnClicked.AddDynamic(this, &UWidgetVictoryScreen::ExitPressed);
-
-
-	return true;
 }
+
+
 
 //click restart button
 void UWidgetVictoryScreen::LoadButton()

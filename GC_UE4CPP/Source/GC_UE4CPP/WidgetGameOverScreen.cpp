@@ -7,21 +7,16 @@
 
 
 
-
-
-bool UWidgetGameOverScreen::Initialize()
+void UWidgetGameOverScreen::NativeConstruct()
 {
-	if (!Super::Initialize()) return false;
+	Super::NativeConstruct();
 
-	if (!ensure(RetryButton != nullptr)) return false;
 	RetryButton->OnClicked.AddDynamic(this, &UWidgetGameOverScreen::LoadPressed);
 
-	if (!ensure(QuitGameButton != nullptr)) return false;
 	QuitGameButton->OnClicked.AddDynamic(this, &UWidgetGameOverScreen::QuitPressed);
-
-
-	return true;
 }
+
+
 
 //click retry button
 void UWidgetGameOverScreen::LoadPressed()

@@ -48,6 +48,8 @@ public:
 
 
 #define GC_UE4CPP_Source_GC_UE4CPP_WidgetUI_h_12_ENHANCED_CONSTRUCTORS \
+	/** Standard constructor, called after all reflected properties have been initialized */ \
+	NO_API UWidgetUI(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()) : Super(ObjectInitializer) { }; \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API UWidgetUI(UWidgetUI&&); \

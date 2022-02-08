@@ -13,9 +13,6 @@ class GC_UE4CPP_API UWidgetUI : public UUserWidget
 
 		
 public:
-	UWidgetUI(const FObjectInitializer& ObjectInitializer);
-
-	
 	
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (BindWidget))
@@ -33,10 +30,6 @@ public:
 
 	virtual void NativeTick(const FGeometry& MyGeometry, float InDeltaTime) override;
 
-	/*
-	UPROPERTY(meta = (BindWidget))
-		class UButton* StartGame;
-	*/
 
 protected:
 	

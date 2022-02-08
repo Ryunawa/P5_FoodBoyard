@@ -29,6 +29,7 @@ void AInGameHUD::BeginPlay()
 	}
 
 
+
 }
 
 void AInGameHUD::Tick(float DeltaSeconds)
@@ -43,9 +44,8 @@ void AInGameHUD::Tick(float DeltaSeconds)
 	AGC_UE4CPPGameModeBase* MinFood = Cast<AGC_UE4CPPGameModeBase>(GameMode);
 
 	//victory condition
-	if (MinFood->FoodCounter == 5)
+	if (MinFood->FoodCounter == 5 && i < 1)
 	{
-
 		if (WidgetVictoryScreenClass)
 		{
 
@@ -56,14 +56,18 @@ void AInGameHUD::Tick(float DeltaSeconds)
 			{
 				// Add it to the viewport 
 				WidgetVictoryScreen->AddToViewport();
-
+			
 			}
 		}
+
+	i++;
+
 	}
+
 
 	/*
 	//defeat condition
-	if (//varible defeat//)
+	if (//Defeat Variable// && i < 1)
 	{
 
 		if (WidgetGameOverScreenClass)
@@ -79,13 +83,20 @@ void AInGameHUD::Tick(float DeltaSeconds)
 
 			}
 		}
+
+	i++;
+
 	}
 	*/
+	
 
 }
 
 void AInGameHUD::DrawHUD()
 {
 	Super::DrawHUD();
+
+
+
 }
 

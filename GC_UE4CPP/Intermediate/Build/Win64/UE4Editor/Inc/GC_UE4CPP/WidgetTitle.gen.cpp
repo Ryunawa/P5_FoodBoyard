@@ -142,7 +142,6 @@ void EmptyLinkFunctionForGeneratedCodeWidgetTitle() {}
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UWidgetTitle_Statics::Class_MetaDataParams[] = {
 		{ "IncludePath", "WidgetTitle.h" },
 		{ "ModuleRelativePath", "WidgetTitle.h" },
-		{ "ObjectInitializerConstructorDeclared", "" },
 	};
 #endif
 #if WITH_METADATA
@@ -240,7 +239,7 @@ void EmptyLinkFunctionForGeneratedCodeWidgetTitle() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UWidgetTitle, 4089953);
+	IMPLEMENT_CLASS(UWidgetTitle, 405474749);
 	template<> GC_UE4CPP_API UClass* StaticClass<UWidgetTitle>()
 	{
 		return UWidgetTitle::StaticClass();
