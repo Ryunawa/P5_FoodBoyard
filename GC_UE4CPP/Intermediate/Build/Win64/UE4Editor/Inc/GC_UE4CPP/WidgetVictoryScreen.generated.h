@@ -14,8 +14,16 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #define GC_UE4CPP_WidgetVictoryScreen_generated_h
 
 #define GC_UE4CPP_Source_GC_UE4CPP_WidgetVictoryScreen_h_13_SPARSE_DATA
-#define GC_UE4CPP_Source_GC_UE4CPP_WidgetVictoryScreen_h_13_RPC_WRAPPERS
-#define GC_UE4CPP_Source_GC_UE4CPP_WidgetVictoryScreen_h_13_RPC_WRAPPERS_NO_PURE_DECLS
+#define GC_UE4CPP_Source_GC_UE4CPP_WidgetVictoryScreen_h_13_RPC_WRAPPERS \
+ \
+	DECLARE_FUNCTION(execExitPressed);
+
+
+#define GC_UE4CPP_Source_GC_UE4CPP_WidgetVictoryScreen_h_13_RPC_WRAPPERS_NO_PURE_DECLS \
+ \
+	DECLARE_FUNCTION(execExitPressed);
+
+
 #define GC_UE4CPP_Source_GC_UE4CPP_WidgetVictoryScreen_h_13_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUWidgetVictoryScreen(); \

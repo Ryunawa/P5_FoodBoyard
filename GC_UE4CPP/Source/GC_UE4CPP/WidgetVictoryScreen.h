@@ -30,11 +30,12 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (BindWidget))
 		class UTextBlock* TextQuit;
 	
+	UFUNCTION()
+	void ExitPressed();
 
 	virtual void NativeTick(const FGeometry& MyGeometry, float InDeltaTime) override;
 
 protected:
-
-
+	virtual bool Initialize();
 
 };
