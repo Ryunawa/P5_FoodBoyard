@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\GC_UE4CPP.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{44FDEE9C-6FC3-441F-B61B-DE909BCF7676}</UniqueIdentifier>
+      <UniqueIdentifier>{38551019-C095-41D7-AC3D-D27627F9C138}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\GC_UE4CPP.Target.cs">
       <Filter>Source</Filter>
@@ -13,7 +13,7 @@
     </None>
     <None Include="..\..\GC_UE4CPP.log" />
     <Filter Include="Config">
-      <UniqueIdentifier>{22623FD3-79ED-4EB1-9CE3-E269864C1F81}</UniqueIdentifier>
+      <UniqueIdentifier>{585EDEE6-636E-4B0E-AB45-97AAD62C00A7}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -28,7 +28,7 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\GC_UE4CPP">
-      <UniqueIdentifier>{2518D18C-BA7D-4EF5-946C-AAAF2278A0AC}</UniqueIdentifier>
+      <UniqueIdentifier>{F3C3CE64-BB09-4325-A715-EAC3B3D406B5}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\GC_UE4CPP\AI_Behaviour.cpp">
       <Filter>Source\GC_UE4CPP</Filter>
@@ -147,10 +147,28 @@
     <ClInclude Include="..\..\Source\GC_UE4CPP\SeePlayer.h">
       <Filter>Source\GC_UE4CPP</Filter>
     </ClInclude>
+    <ClCompile Include="..\..\Source\GC_UE4CPP\TitleGameMode.cpp">
+      <Filter>Source\GC_UE4CPP</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\GC_UE4CPP\TitleGameMode.h">
+      <Filter>Source\GC_UE4CPP</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\GC_UE4CPP\TitleHUD.cpp">
+      <Filter>Source\GC_UE4CPP</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\GC_UE4CPP\TitleHUD.h">
+      <Filter>Source\GC_UE4CPP</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\GC_UE4CPP\UI.cpp">
       <Filter>Source\GC_UE4CPP</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\GC_UE4CPP\UI.h">
+      <Filter>Source\GC_UE4CPP</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\GC_UE4CPP\WidgetTitle.cpp">
+      <Filter>Source\GC_UE4CPP</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\GC_UE4CPP\WidgetTitle.h">
       <Filter>Source\GC_UE4CPP</Filter>
     </ClInclude>
     <ClCompile Include="..\..\Source\GC_UE4CPP\WidgetUI.cpp">

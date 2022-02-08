@@ -43,10 +43,10 @@ void AInGameHUD::Tick(float DeltaSeconds)
 	AGC_UE4CPPGameModeBase* MinFood = Cast<AGC_UE4CPPGameModeBase>(GameMode);
 
 
-	if (WidgetVictoryScreenClass)
+	if (MinFood->FoodCounter == 5)
 	{
 		
-		if (MinFood->FoodCounter == 5)
+		if (WidgetVictoryScreenClass)
 		{
 			
 			WidgetVictoryScreen = CreateWidget<UWidgetVictoryScreen>(GetWorld(), WidgetVictoryScreenClass);
