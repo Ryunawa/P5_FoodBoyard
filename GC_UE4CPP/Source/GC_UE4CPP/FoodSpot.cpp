@@ -40,6 +40,7 @@ void AFoodSpot::SnapOnPlate(AFoodBehaviour* FoodChoose)
 void AFoodSpot::DetachFromPlate()
 {
 	FoodSnapped->DetachFromActor(FDetachmentTransformRules::KeepWorldTransform);
+	FoodSnapped = nullptr;
 }
 
 

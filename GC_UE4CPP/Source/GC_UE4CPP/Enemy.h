@@ -4,10 +4,11 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
+#include "ItemHolder_Character.h"
 #include "Enemy.generated.h"
 
 UCLASS()
-class GC_UE4CPP_API AEnemy : public ACharacter
+class GC_UE4CPP_API AEnemy : public AItemHolder_Character
 {
 	GENERATED_BODY()
 

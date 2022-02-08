@@ -4,14 +4,16 @@
 #include "GameFramework/Character.h"
 #include "Components/SphereComponent.h"
 #include "Perception/AIPerceptionStimuliSourceComponent.h"
+#include "ItemHolder_Character.h"
 #include "PlayerBehaviour.generated.h"
+
 
 class AFoodBehaviour;
 
 using namespace std;
 
 UCLASS()
-class GC_UE4CPP_API APlayerBehaviour : public ACharacter
+class GC_UE4CPP_API APlayerBehaviour : public AItemHolder_Character
 {
     GENERATED_BODY()
 
@@ -42,7 +44,6 @@ public:
     void InteractFood();
 
     bool bInteracting;
-    bool bIsCarryingFood;
     
 protected:
     // Called when the game starts or when spawned
@@ -50,11 +51,9 @@ protected:
     virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
     
     int ZoomSpeed;
-    float MovementSpeed;
     float SphereRange = 200;
     bool bHit;
     
-    AFoodBehaviour* CarriedFood;
     FVector CurrentVelocity;
     TArray<AActor*> ActorsToIgnore;
     TArray<FHitResult> HitArray;

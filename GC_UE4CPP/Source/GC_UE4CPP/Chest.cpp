@@ -42,9 +42,7 @@ void AChest::Tick(float DeltaTime)
 // Snap the FoodChoose inside the chest
 void AChest::SnapInChest(AFoodBehaviour* FoodChoose)
 {
-	FoodChoose->AttachToActor(this, FAttachmentTransformRules::SnapToTargetIncludingScale);
-	FoodChoose->SetActorRelativeScale3D(FVector(0.2f, 0.2f, 0.2f)); // Set a smaller size to the food
-	FoodChoose->SetActorRelativeLocation(FoodSnapLocation);
+	FoodChoose->Destroy();
 	GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Red, TEXT("Snapped")); // debug
 	FoodCounter();
 }

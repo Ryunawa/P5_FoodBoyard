@@ -6,6 +6,10 @@
 #include "GameFramework/Character.h"
 #include "ItemHolder_Character.generated.h"
 
+class AFoodBehaviour;
+class AFoodSpot;
+class AChest;
+
 UCLASS()
 class GC_UE4CPP_API AItemHolder_Character : public ACharacter
 {
@@ -19,20 +23,26 @@ protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
-	AActor* EquippedItem;
+	AFoodBehaviour* EquippedItem;
 
-public:	
+	float MovementSpeed;
+
+
+public:
+
+	bool bIsCarryingFood;
+	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
-	void Interact();
+	void PickupItem(AFoodBehaviour* FoodToEquip);
 
-	void PickupItem(AActor* FoodToEquip);
+	void StorePlate(AFoodSpot* Plate);
 
-	void StoreItem(AActor* Plate);
+	void StoreChest(AChest* Chest);
 
 	void DropItem();
 

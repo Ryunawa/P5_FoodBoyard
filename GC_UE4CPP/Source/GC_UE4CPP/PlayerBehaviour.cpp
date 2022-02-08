@@ -161,59 +161,39 @@ void APlayerBehaviour::InteractFood()
 		}
 
 		// Check if the player has a food in his hand
-		if(CarriedFood != nullptr)
+		if(EquippedItem != nullptr)
 		{
 			// If there isn't a FoodSpot or a chest near the player
 			if (Plate == nullptr && Chest == nullptr)
 			{
-				CarriedFood->DetachFromActor(FDetachmentTransformRules::KeepWorldTransform); // Call the method to unsnap from the player hand
-				CarriedFood->TogglePhysics(true);
-				GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Green, TEXT("Food dropped")); // debug
+				DropItem();
 			}
 			// If there is Food Spot near the player
 			else if (Plate != nullptr)
 			{
-				CarriedFood->DetachFromActor(FDetachmentTransformRules::KeepWorldTransform); // Call the method to unsnap from the player hand
-				CarriedFood->TogglePhysics(false);
-				Plate->SnapOnPlate(CarriedFood);
-				GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Green, TEXT("Food dropped on plate")); // debug
+				StorePlate(Plate);
 			}
 			else if (Chest !=nullptr)
 			{
-				CarriedFood->DetachFromActor(FDetachmentTransformRules::KeepWorldTransform); // Call the method to unsnap from the player hand
-				CarriedFood->TogglePhysics(false);
-				Chest->SnapInChest(CarriedFood);
-				GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Green, TEXT("Food dropped inside the chest")); // debug
+				StoreChest(Chest);
 			}
-			MovementSpeed *= 2.0f;
-			bIsCarryingFood = false;
-			CarriedFood = nullptr;
 		}
 
 		// Check if the player doesn't have any food in his hand and if there is food near him
-		else if(Food != nullptr && CarriedFood == nullptr)
+		else if(Food != nullptr && EquippedItem == nullptr)
 		{
 			// If there isn't a FoodSpot near the player
 			if(Plate == nullptr)
 			{
-				Food->TogglePhysics(false);
-				Food->AttachToComponent(PlayerMesh, FAttachmentTransformRules::SnapToTargetNotIncludingScale, TEXT("Fist_RSocket")); // Attach the food to the right hand
-				Food->SetActorRelativeScale3D(FVector(0.03f, 0.03f, 0.03f)); // Set a smaller size to the food
-				GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Green, TEXT("Food picked")); // debug
+				PickupItem(Food);
 			}
 			
 			// If there is Food Spot near the player
 			else
 			{
 				Plate->DetachFromPlate(); // Call the method to unsnap from the FoodSpot
-				Food->TogglePhysics(false);
-				Food->AttachToComponent(PlayerMesh, FAttachmentTransformRules::SnapToTargetNotIncludingScale, TEXT("Fist_RSocket")); // Attach the food to the right hand
-				Food->SetActorRelativeScale3D(FVector(0.03f, 0.03f, 0.03f)); // Set a smaller size to the food
-				GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Green, TEXT("Food picked from plate")); // debug
+				PickupItem(Food);
 			}
-			CarriedFood = Food;
-			bIsCarryingFood = true;
-			MovementSpeed /= 2.0f;
 		}
 	}
 }
