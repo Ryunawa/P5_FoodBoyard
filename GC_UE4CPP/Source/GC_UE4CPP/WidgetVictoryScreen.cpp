@@ -16,10 +16,25 @@ bool UWidgetVictoryScreen::Initialize()
 {
 	if (!Super::Initialize()) return false;
 
+	if (!ensure(RestartButton != nullptr)) return false;
+	RestartButton->OnClicked.AddDynamic(this, &UWidgetVictoryScreen::LoadButton);
+
 	if (!ensure(QuitButton != nullptr)) return false;
 	QuitButton->OnClicked.AddDynamic(this, &UWidgetVictoryScreen::ExitPressed);
 
+
 	return true;
+}
+
+void UWidgetVictoryScreen::LoadButton()
+{
+
+	UGameplayStatics::OpenLevel(this, FName(*GetWorld()->GetName()), false);
+
+	if (LevelToOpen != "")
+	{
+		UGameplayStatics::OpenLevel(this, LevelToOpen, false);
+	}
 }
 
 void UWidgetVictoryScreen::ExitPressed()

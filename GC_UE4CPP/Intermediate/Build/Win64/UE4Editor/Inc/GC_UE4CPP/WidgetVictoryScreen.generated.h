@@ -16,11 +16,13 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #define GC_UE4CPP_Source_GC_UE4CPP_WidgetVictoryScreen_h_13_SPARSE_DATA
 #define GC_UE4CPP_Source_GC_UE4CPP_WidgetVictoryScreen_h_13_RPC_WRAPPERS \
  \
+	DECLARE_FUNCTION(execLoadButton); \
 	DECLARE_FUNCTION(execExitPressed);
 
 
 #define GC_UE4CPP_Source_GC_UE4CPP_WidgetVictoryScreen_h_13_RPC_WRAPPERS_NO_PURE_DECLS \
  \
+	DECLARE_FUNCTION(execLoadButton); \
 	DECLARE_FUNCTION(execExitPressed);
 
 

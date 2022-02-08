@@ -25,17 +25,28 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (BindWidget))
 		class UTextBlock* TextRestart;
 
+	UPROPERTY(EditAnywhere)
+		FName LevelToOpen;
+
+
 	UPROPERTY(meta = (BindWidget))
 		class UButton* QuitButton;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (BindWidget))
 		class UTextBlock* TextQuit;
+
+
 	
 	UFUNCTION()
 	void ExitPressed();
+
+	UFUNCTION()
+	void LoadButton();
 
 	virtual void NativeTick(const FGeometry& MyGeometry, float InDeltaTime) override;
 
 protected:
 	virtual bool Initialize();
+
+	
 
 };
