@@ -20,7 +20,7 @@ public:
 	
 	AFoodBehaviour* FoodSnapped;
 	
-	void SnapOnPlate(AFoodBehaviour* FoodChoose);
+	void SnapOnPlate(AFoodBehaviour* FoodChosen);
 	void DetachFromPlate();
 
 	

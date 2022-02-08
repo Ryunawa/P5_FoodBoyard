@@ -19,6 +19,13 @@ public:
 	// Sets default values for this character's properties
 	AItemHolder_Character();
 
+	void PickupItem(AFoodBehaviour* FoodToEquip);
+	void StorePlate(AFoodSpot* Plate);
+	void StoreChest(AChest* Chest);
+	void DropItem();
+
+	bool bIsCarryingFood;
+	
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
@@ -29,21 +36,9 @@ protected:
 
 
 public:
-
-	bool bIsCarryingFood;
-	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
-
-	void PickupItem(AFoodBehaviour* FoodToEquip);
-
-	void StorePlate(AFoodSpot* Plate);
-
-	void StoreChest(AChest* Chest);
-
-	void DropItem();
-
 };

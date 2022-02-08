@@ -33,6 +33,7 @@ void AItemHolder_Character::SetupPlayerInputComponent(UInputComponent* PlayerInp
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
 }
 
+// To pick up food
 void AItemHolder_Character::PickupItem(AFoodBehaviour* FoodToEquip)
 {
 	FoodToEquip->TogglePhysics(false);
@@ -44,6 +45,7 @@ void AItemHolder_Character::PickupItem(AFoodBehaviour* FoodToEquip)
 	MovementSpeed /= 2.0f;
 }
 
+// To drop the food in a plate
 void AItemHolder_Character::StorePlate(AFoodSpot* Plate)
 {
 	if (Plate->FoodSnapped)return;
@@ -56,6 +58,7 @@ void AItemHolder_Character::StorePlate(AFoodSpot* Plate)
 	MovementSpeed *= 2.0f;
 }
 
+// To drop the food in the chest
 void AItemHolder_Character::StoreChest(AChest* Chest)
 {
 	EquippedItem->DetachFromActor(FDetachmentTransformRules::KeepWorldTransform); // Call the method to unsnap from the player hand
@@ -67,6 +70,7 @@ void AItemHolder_Character::StoreChest(AChest* Chest)
 	MovementSpeed *= 2.0f;
 }
 
+//To drop the food on the floor 
 void AItemHolder_Character::DropItem()
 {
 	EquippedItem->DetachFromActor(FDetachmentTransformRules::KeepWorldTransform); // Call the method to unsnap from the player hand

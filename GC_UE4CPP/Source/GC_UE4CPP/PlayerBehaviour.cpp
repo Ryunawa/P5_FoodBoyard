@@ -136,7 +136,6 @@ void APlayerBehaviour::InteractFood()
 	AFoodSpot* Plate = nullptr;
 	AFoodBehaviour* Food = nullptr;
 	AChest* Chest = nullptr;
-	USkeletalMeshComponent* PlayerMesh = GetMesh(); // Get the SkeletalMesh of the Player
 	
 	if(bHit)
 	{		
@@ -163,7 +162,7 @@ void APlayerBehaviour::InteractFood()
 		// Check if the player has a food in his hand
 		if(EquippedItem != nullptr)
 		{
-			// If there isn't a FoodSpot or a chest near the player
+			// If there isn't a Food Spot or a chest near the player
 			if (Plate == nullptr && Chest == nullptr)
 			{
 				DropItem();
@@ -173,6 +172,7 @@ void APlayerBehaviour::InteractFood()
 			{
 				StorePlate(Plate);
 			}
+			// If the chest is near the player
 			else if (Chest !=nullptr)
 			{
 				StoreChest(Chest);
@@ -187,7 +187,6 @@ void APlayerBehaviour::InteractFood()
 			{
 				PickupItem(Food);
 			}
-			
 			// If there is Food Spot near the player
 			else
 			{
