@@ -1,6 +1,7 @@
 #include "PlayerBehaviour.h"
-#include "FoodBehaviour.h"
+#include "Chest.h"
 #include "FoodSpot.h"
+#include "FoodBehaviour.h"
 #include "Camera/CameraComponent.h"
 #include "Components/CapsuleComponent.h"
 #include "Components/InputComponent.h"
@@ -10,6 +11,7 @@
 #include "GameFramework/SpringArmComponent.h"
 #include "Kismet/KismetSystemLibrary.h"
 #include "Math/UnitConversion.h"
+#include "Perception/AISense_Sight.h"
 
 // Sets default values
 APlayerBehaviour::APlayerBehaviour()
@@ -45,7 +47,7 @@ APlayerBehaviour::APlayerBehaviour()
 	// Create a Sphere
 	SphereDetection = CreateDefaultSubobject<USphereComponent>(TEXT("SphereDetection"));
 
-	// to be detected by enemies
+	// To be detected by enemies
 	PerSource = CreateDefaultSubobject<UAIPerceptionStimuliSourceComponent>(TEXT("PerceptionStimuliSource"));
 	PerSource->bAutoRegister = true;
 	PerSource->RegisterForSense(UAISense_Sight::StaticClass());
@@ -73,9 +75,6 @@ void APlayerBehaviour::Tick(float DeltaTime)
 void APlayerBehaviour::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 {
     Super::SetupPlayerInputComponent(PlayerInputComponent);
-
-	//camera input
-	check(PlayerInputComponent);
 
 	//Bind the key with the methods
 	PlayerInputComponent->BindAxis("MoveX", this, &APlayerBehaviour::Move_XAxis);
@@ -106,17 +105,16 @@ void APlayerBehaviour::Move_YAxis(float Rate)
 	AddMovementInput(GetFollowCamera()->GetRightVector(), Rate * MovementSpeed);
 }
 
-//Set the distance between the player and the camera
+// Set the distance between the player and the camera
 void APlayerBehaviour::Zoom(float Rate)
 {
-	
 	if ((CameraBoom->TargetArmLength >= 450 && Rate > 0) || (CameraBoom->TargetArmLength <= 1450 && Rate < 0))
 	{
 		CameraBoom->TargetArmLength -= GetWorld()->DeltaTimeSeconds * Rate * ZoomSpeed;
 	}
 }
 
-//Allow to interact with the food
+// Allow to interact with the food
 void APlayerBehaviour::InteractFood()
 {
 	if(bInteracting)
@@ -137,6 +135,7 @@ void APlayerBehaviour::InteractFood()
 	bInteracting = true;
 	AFoodSpot* Plate = nullptr;
 	AFoodBehaviour* Food = nullptr;
+	AChest* Chest = nullptr;
 	USkeletalMeshComponent* PlayerMesh = GetMesh(); // Get the SkeletalMesh of the Player
 	
 	if(bHit)
@@ -153,37 +152,48 @@ void APlayerBehaviour::InteractFood()
 				Food = Cast<AFoodBehaviour>(HitResult.Actor); // Check if the the actor hit is a FoodBehaviour actor
 			}
 
-			GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Blue, HitResult.Actor->GetName()); // debug
-
+			if(Chest == nullptr)
+			{
+				Chest = Cast<AChest>(HitResult.Actor); // Check is the actor hit is a Chest actor
+			}
+			
+			//GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Blue, HitResult.Actor->GetName()); // debug
 		}
 
 		// Check if the player has a food in his hand
 		if(CarriedFood != nullptr)
 		{
-			// If there is a FoodSpot near the player
-			if(Plate == nullptr)
+			// If there isn't a FoodSpot or a chest near the player
+			if (Plate == nullptr && Chest == nullptr)
 			{
 				CarriedFood->DetachFromActor(FDetachmentTransformRules::KeepWorldTransform); // Call the method to unsnap from the player hand
 				CarriedFood->TogglePhysics(true);
 				GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Green, TEXT("Food dropped")); // debug
 			}
-			// If there isn't Food Spot near the player
-			else
+			// If there is Food Spot near the player
+			else if (Plate != nullptr)
 			{
 				CarriedFood->DetachFromActor(FDetachmentTransformRules::KeepWorldTransform); // Call the method to unsnap from the player hand
 				CarriedFood->TogglePhysics(false);
 				Plate->SnapOnPlate(CarriedFood);
 				GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Green, TEXT("Food dropped on plate")); // debug
 			}
+			else if (Chest !=nullptr)
+			{
+				CarriedFood->DetachFromActor(FDetachmentTransformRules::KeepWorldTransform); // Call the method to unsnap from the player hand
+				CarriedFood->TogglePhysics(false);
+				Chest->SnapInChest(CarriedFood);
+				GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Green, TEXT("Food dropped inside the chest")); // debug
+			}
 			MovementSpeed *= 2.0f;
 			bIsCarryingFood = false;
 			CarriedFood = nullptr;
 		}
 
-		// Check if the player doesn't have any food in his hand and if there is any food near him
+		// Check if the player doesn't have any food in his hand and if there is food near him
 		else if(Food != nullptr && CarriedFood == nullptr)
 		{
-			// If there is a FoodSpot near the player
+			// If there isn't a FoodSpot near the player
 			if(Plate == nullptr)
 			{
 				Food->TogglePhysics(false);
@@ -192,7 +202,7 @@ void APlayerBehaviour::InteractFood()
 				GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Green, TEXT("Food picked")); // debug
 			}
 			
-			// If there isn't Food Spot near the player
+			// If there is Food Spot near the player
 			else
 			{
 				Plate->DetachFromPlate(); // Call the method to unsnap from the FoodSpot
