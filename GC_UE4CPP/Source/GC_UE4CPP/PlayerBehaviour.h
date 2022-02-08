@@ -44,13 +44,15 @@ public:
     void InteractFood();
 
     bool bInteracting;
+
+    int ZoomSpeed;
     
 protected:
     // Called when the game starts or when spawned
     virtual void BeginPlay() override;
     virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
     
-    int ZoomSpeed;
+    
     float SphereRange = 200;
     bool bHit;
     
