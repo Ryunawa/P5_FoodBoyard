@@ -1,7 +1,6 @@
 #include "WidgetGameOverScreen.h"
 #include "Components/Button.h"
 
-
 void UWidgetGameOverScreen::NativeConstruct()
 {
 	Super::NativeConstruct();

@@ -1,4 +1,3 @@
-
 #pragma once
 
 #include "CoreMinimal.h"
@@ -33,7 +32,6 @@ public:
 	UFUNCTION()
 		void Quit();
 protected:
-	
 	virtual void NativeConstruct() override;
 
 public:

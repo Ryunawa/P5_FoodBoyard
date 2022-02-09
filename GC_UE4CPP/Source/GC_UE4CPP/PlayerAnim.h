@@ -7,14 +7,12 @@
 class AGC_UE4CPPGameModeBase;
 class APlayerBehaviour;
 
-
 UCLASS()
 class GC_UE4CPP_API UPlayerAnim : public UAnimInstance
 {
 	GENERATED_BODY()
 
 public:
-	
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category= "Animation")
 		float Speed;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Animation")
@@ -31,7 +29,6 @@ public:
 	APlayerBehaviour* PlayerCharacter;
 	AGameModeBase* GameMode;
 	AGC_UE4CPPGameModeBase* Gm;
-
 
 protected:
 	

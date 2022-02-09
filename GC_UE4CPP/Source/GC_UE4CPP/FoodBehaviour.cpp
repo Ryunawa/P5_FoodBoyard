@@ -1,8 +1,6 @@
 #include "FoodBehaviour.h"
 #include "Components/StaticMeshComponent.h"
 
-using namespace std;
-
 // Sets default values
 AFoodBehaviour::AFoodBehaviour()
 {
