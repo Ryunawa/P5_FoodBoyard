@@ -3,13 +3,14 @@
 
 #include "BTTask_DropFood.h"
 #include "AIController.h"
-#include "Goblin_Controller.h"
+#include "Enemy.h"
 #include "BehaviorTree/BlackboardComponent.h"
+
 
 EBTNodeResult::Type UBTTask_DropFood::ExecuteTask(UBehaviorTreeComponent& OwnerComp, uint8* NodeMemory)
 {
-	AActor* tmpPtr = Cast<AGoblin_Controller>(OwnerComp.GetAIOwner())->FoodToStore;
-	tmpPtr->DetachFromActor(FDetachmentTransformRules::KeepWorldTransform);
-	OwnerComp.GetAIOwner()->GetBlackboardComponent()->SetValueAsObject("DroppedFood", tmpPtr);
+	AEnemy* NPC = Cast<AEnemy>(OwnerComp.GetAIOwner()->GetPawn());
+	OwnerComp.GetAIOwner()->GetBlackboardComponent()->SetValueAsObject("DroppedFood", Cast<UObject>(NPC->GetItem()));
+	NPC->DropItem();
 	return EBTNodeResult::Succeeded;
 }

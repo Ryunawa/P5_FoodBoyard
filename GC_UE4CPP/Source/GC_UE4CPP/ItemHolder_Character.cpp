@@ -27,6 +27,11 @@ void AItemHolder_Character::Tick(float DeltaTime)
 	Super::Tick(DeltaTime);
 }
 
+AFoodBehaviour* AItemHolder_Character::GetItem()
+{
+	return EquippedItem;
+}
+
 // Called to bind functionality to input
 void AItemHolder_Character::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 {

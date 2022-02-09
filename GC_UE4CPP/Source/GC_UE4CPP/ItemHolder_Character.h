@@ -3,10 +3,10 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "FoodBehaviour.h"
 #include "GameFramework/Character.h"
 #include "ItemHolder_Character.generated.h"
 
-class AFoodBehaviour;
 class AFoodSpot;
 class AChest;
 
@@ -46,4 +46,5 @@ public:
 
 	void DropItem();
 
+	AFoodBehaviour* GetItem();
 };
