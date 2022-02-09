@@ -28,11 +28,11 @@ void AFoodSpot::Tick(float DeltaTime)
 }
 
 // Snap the FoodChoose to the plate and set his position
-void AFoodSpot::SnapOnPlate(AFoodBehaviour* FoodChoose)
+void AFoodSpot::SnapOnPlate(AFoodBehaviour* FoodChosen)
 {
-	FoodChoose->AttachToActor(this, FAttachmentTransformRules::SnapToTargetIncludingScale);
-	FoodChoose->SetActorRelativeLocation(FoodSnapLocation);
-	FoodSnapped = FoodChoose;
+	FoodChosen->AttachToActor(this, FAttachmentTransformRules::SnapToTargetIncludingScale);
+	FoodChosen->SetActorRelativeLocation(FoodSnapLocation);
+	FoodSnapped = FoodChosen;
 	GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Red, TEXT("Snapped")); // debug
 }
 

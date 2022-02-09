@@ -62,7 +62,6 @@ void AChest::FoodCounter()
 		UE_LOG(LogTemp, Warning, TEXT("Counter == nullptr"));
 	}
 
-	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green, TEXT("the food is in the box"));
 	MinFood->FoodCounter += 1;
 	UE_LOG(LogTemp, Warning, TEXT("Chest Food message: %f"), MinFood->FoodCounter);
 }
