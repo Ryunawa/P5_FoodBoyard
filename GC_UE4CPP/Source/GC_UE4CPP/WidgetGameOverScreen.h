@@ -6,7 +6,6 @@
 #include "Runtime/UMG/Public/UMG.h"
 #include "WidgetGameOverScreen.generated.h"
 
-
 UCLASS()
 class GC_UE4CPP_API UWidgetGameOverScreen : public UButtonInteraction
 {

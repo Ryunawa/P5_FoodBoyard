@@ -1,6 +1,3 @@
-// Fill out your copyright notice in the Description page of Project Settings.
-
-
 #include "TitleHUD.h"
 
 
@@ -12,9 +9,7 @@ ATitleHUD::ATitleHUD()
 void ATitleHUD::BeginPlay()
 {
 	Super::BeginPlay();
-
-
-
+	
 	// Widget
 	if (WidgetTitleClass)
 	{
@@ -26,10 +21,7 @@ void ATitleHUD::BeginPlay()
 			// Add it to the viewport 
 			WidgetTitle->AddToViewport();
 		}
-
 	}
-
-
 }
 
 void ATitleHUD::Tick(float DeltaSeconds)
@@ -39,8 +31,6 @@ void ATitleHUD::Tick(float DeltaSeconds)
 	{
 
 	}
-
-
 }
 
 void ATitleHUD::DrawHUD()

@@ -1,7 +1,6 @@
 #include "WidgetTitle.h"
 #include "Components/Button.h"
 
-
 void UWidgetTitle::NativeConstruct()
 {
 	Super::NativeConstruct();

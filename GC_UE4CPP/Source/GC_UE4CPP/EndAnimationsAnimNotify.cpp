@@ -1,5 +1,4 @@
 #include "EndAnimationsAnimNotify.h"
-
 #include "PlayerBehaviour.h"
 #include "GameFramework/CharacterMovementComponent.h"
 
