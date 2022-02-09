@@ -34,23 +34,12 @@ protected:
 
 	AFoodBehaviour* EquippedItem;
 
-	
-
-
 public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
-
-	void PickupItem(AFoodBehaviour* FoodToEquip);
-
-	void StorePlate(AFoodSpot* Plate);
-
-	void StoreChest(AChest* Chest);
-
-	void DropItem();
 
 	AFoodBehaviour* GetItem();
 };
