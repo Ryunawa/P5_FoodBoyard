@@ -1,67 +1,28 @@
-
-
 #include "WidgetVictoryScreen.h"
 #include "Components/Button.h"
-#include <GC_UE4CPP/PlayerBehaviour.h>
 
 
 void UWidgetVictoryScreen::NativeConstruct()
 {
 	Super::NativeConstruct();
 	
-	RestartButton->OnClicked.AddDynamic(this, &UWidgetVictoryScreen::LoadButton);
-		
-	QuitButton->OnClicked.AddDynamic(this, &UWidgetVictoryScreen::ExitPressed);
+	RestartButton->OnClicked.AddDynamic(this, &UWidgetVictoryScreen::Restart);
+	QuitButton->OnClicked.AddDynamic(this, &UWidgetVictoryScreen::Quit);
+	ShowMouseCursor();
 }
 
-
-
-//click restart button
-void UWidgetVictoryScreen::LoadButton()
-{
-
-	UGameplayStatics::OpenLevel(this, FName(*GetWorld()->GetName()), false);
-
-	if (LevelToOpen != "")
-	{
-		UGameplayStatics::OpenLevel(this, LevelToOpen, false);
-	}
-}
-
-//click quit button
-void UWidgetVictoryScreen::ExitPressed()
-{
-	UWorld* World = GetWorld();
-	if (!ensure(World != nullptr)) return;
-	APlayerController* PlayerController = World->GetFirstPlayerController();
-
-	if (!ensure(PlayerController != nullptr)) return;
-	PlayerController->ConsoleCommand("quit");
-}
-
-//enable mousse and disable player behavior
 void UWidgetVictoryScreen::NativeTick(const FGeometry& MyGeometry, float InDeltaTime)
 {
-
-	AActor* ControllerOfPlayerController = UGameplayStatics::GetActorOfClass(GetWorld(), APlayerController::StaticClass());
-	APlayerController* PC = Cast<APlayerController>(ControllerOfPlayerController);
-
-	if (PC)
-	{
-		PC->bShowMouseCursor = true;
-		PC->bEnableClickEvents = true;
-		PC->bEnableMouseOverEvents = true;
-	}
-
-	AActor* ControllerOfPlayerBehaviour = UGameplayStatics::GetActorOfClass(GetWorld(), APlayerBehaviour::StaticClass());
-	APlayerBehaviour* PB = Cast<APlayerBehaviour>(ControllerOfPlayerBehaviour);
-
-	if (PB)
-	{
-		PB->MovementSpeed = 0;
-		PB->ZoomSpeed = 0;
-		PB->TurnRate = 0;
-		PB->LookUpRate = 0;
-	}
-
+	
 }
+
+void UWidgetVictoryScreen::Restart()
+{
+	LoadButton();
+}
+
+void UWidgetVictoryScreen::Quit()
+{
+	ExitButton();
+}
+

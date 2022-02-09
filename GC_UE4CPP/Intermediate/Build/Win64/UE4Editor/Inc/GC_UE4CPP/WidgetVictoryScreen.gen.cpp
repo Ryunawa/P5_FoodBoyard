@@ -15,35 +15,35 @@ void EmptyLinkFunctionForGeneratedCodeWidgetVictoryScreen() {}
 // Cross Module References
 	GC_UE4CPP_API UClass* Z_Construct_UClass_UWidgetVictoryScreen_NoRegister();
 	GC_UE4CPP_API UClass* Z_Construct_UClass_UWidgetVictoryScreen();
-	UMG_API UClass* Z_Construct_UClass_UUserWidget();
+	GC_UE4CPP_API UClass* Z_Construct_UClass_UButtonInteraction();
 	UPackage* Z_Construct_UPackage__Script_GC_UE4CPP();
 	UMG_API UClass* Z_Construct_UClass_UTextBlock_NoRegister();
 	UMG_API UClass* Z_Construct_UClass_UButton_NoRegister();
 // End Cross Module References
-	DEFINE_FUNCTION(UWidgetVictoryScreen::execLoadButton)
+	DEFINE_FUNCTION(UWidgetVictoryScreen::execQuit)
 	{
 		P_FINISH;
 		P_NATIVE_BEGIN;
-		P_THIS->LoadButton();
+		P_THIS->Quit();
 		P_NATIVE_END;
 	}
-	DEFINE_FUNCTION(UWidgetVictoryScreen::execExitPressed)
+	DEFINE_FUNCTION(UWidgetVictoryScreen::execRestart)
 	{
 		P_FINISH;
 		P_NATIVE_BEGIN;
-		P_THIS->ExitPressed();
+		P_THIS->Restart();
 		P_NATIVE_END;
 	}
 	void UWidgetVictoryScreen::StaticRegisterNativesUWidgetVictoryScreen()
 	{
 		UClass* Class = UWidgetVictoryScreen::StaticClass();
 		static const FNameNativePtrPair Funcs[] = {
-			{ "ExitPressed", &UWidgetVictoryScreen::execExitPressed },
-			{ "LoadButton", &UWidgetVictoryScreen::execLoadButton },
+			{ "Quit", &UWidgetVictoryScreen::execQuit },
+			{ "Restart", &UWidgetVictoryScreen::execRestart },
 		};
 		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 	}
-	struct Z_Construct_UFunction_UWidgetVictoryScreen_ExitPressed_Statics
+	struct Z_Construct_UFunction_UWidgetVictoryScreen_Quit_Statics
 	{
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
@@ -51,21 +51,21 @@ void EmptyLinkFunctionForGeneratedCodeWidgetVictoryScreen() {}
 		static const UE4CodeGen_Private::FFunctionParams FuncParams;
 	};
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UWidgetVictoryScreen_ExitPressed_Statics::Function_MetaDataParams[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UWidgetVictoryScreen_Quit_Statics::Function_MetaDataParams[] = {
 		{ "ModuleRelativePath", "WidgetVictoryScreen.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UWidgetVictoryScreen_ExitPressed_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UWidgetVictoryScreen, nullptr, "ExitPressed", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UWidgetVictoryScreen_ExitPressed_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_UWidgetVictoryScreen_ExitPressed_Statics::Function_MetaDataParams)) };
-	UFunction* Z_Construct_UFunction_UWidgetVictoryScreen_ExitPressed()
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UWidgetVictoryScreen_Quit_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UWidgetVictoryScreen, nullptr, "Quit", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UWidgetVictoryScreen_Quit_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_UWidgetVictoryScreen_Quit_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_UWidgetVictoryScreen_Quit()
 	{
 		static UFunction* ReturnFunction = nullptr;
 		if (!ReturnFunction)
 		{
-			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UWidgetVictoryScreen_ExitPressed_Statics::FuncParams);
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UWidgetVictoryScreen_Quit_Statics::FuncParams);
 		}
 		return ReturnFunction;
 	}
-	struct Z_Construct_UFunction_UWidgetVictoryScreen_LoadButton_Statics
+	struct Z_Construct_UFunction_UWidgetVictoryScreen_Restart_Statics
 	{
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
@@ -73,17 +73,17 @@ void EmptyLinkFunctionForGeneratedCodeWidgetVictoryScreen() {}
 		static const UE4CodeGen_Private::FFunctionParams FuncParams;
 	};
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UWidgetVictoryScreen_LoadButton_Statics::Function_MetaDataParams[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UWidgetVictoryScreen_Restart_Statics::Function_MetaDataParams[] = {
 		{ "ModuleRelativePath", "WidgetVictoryScreen.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UWidgetVictoryScreen_LoadButton_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UWidgetVictoryScreen, nullptr, "LoadButton", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UWidgetVictoryScreen_LoadButton_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_UWidgetVictoryScreen_LoadButton_Statics::Function_MetaDataParams)) };
-	UFunction* Z_Construct_UFunction_UWidgetVictoryScreen_LoadButton()
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UWidgetVictoryScreen_Restart_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UWidgetVictoryScreen, nullptr, "Restart", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UWidgetVictoryScreen_Restart_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_UWidgetVictoryScreen_Restart_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_UWidgetVictoryScreen_Restart()
 	{
 		static UFunction* ReturnFunction = nullptr;
 		if (!ReturnFunction)
 		{
-			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UWidgetVictoryScreen_LoadButton_Statics::FuncParams);
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UWidgetVictoryScreen_Restart_Statics::FuncParams);
 		}
 		return ReturnFunction;
 	}
@@ -111,10 +111,6 @@ void EmptyLinkFunctionForGeneratedCodeWidgetVictoryScreen() {}
 #endif
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_TextRestart;
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_LevelToOpen_MetaData[];
-#endif
-		static const UE4CodeGen_Private::FNamePropertyParams NewProp_LevelToOpen;
-#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_QuitButton_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_QuitButton;
@@ -127,12 +123,12 @@ void EmptyLinkFunctionForGeneratedCodeWidgetVictoryScreen() {}
 		static const UE4CodeGen_Private::FClassParams ClassParams;
 	};
 	UObject* (*const Z_Construct_UClass_UWidgetVictoryScreen_Statics::DependentSingletons[])() = {
-		(UObject* (*)())Z_Construct_UClass_UUserWidget,
+		(UObject* (*)())Z_Construct_UClass_UButtonInteraction,
 		(UObject* (*)())Z_Construct_UPackage__Script_GC_UE4CPP,
 	};
 	const FClassFunctionLinkInfo Z_Construct_UClass_UWidgetVictoryScreen_Statics::FuncInfo[] = {
-		{ &Z_Construct_UFunction_UWidgetVictoryScreen_ExitPressed, "ExitPressed" }, // 1625796319
-		{ &Z_Construct_UFunction_UWidgetVictoryScreen_LoadButton, "LoadButton" }, // 2791505035
+		{ &Z_Construct_UFunction_UWidgetVictoryScreen_Quit, "Quit" }, // 272947079
+		{ &Z_Construct_UFunction_UWidgetVictoryScreen_Restart, "Restart" }, // 902199582
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UWidgetVictoryScreen_Statics::Class_MetaDataParams[] = {
@@ -167,13 +163,6 @@ void EmptyLinkFunctionForGeneratedCodeWidgetVictoryScreen() {}
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UWidgetVictoryScreen_Statics::NewProp_TextRestart = { "TextRestart", nullptr, (EPropertyFlags)0x001000000008000d, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UWidgetVictoryScreen, TextRestart), Z_Construct_UClass_UTextBlock_NoRegister, METADATA_PARAMS(Z_Construct_UClass_UWidgetVictoryScreen_Statics::NewProp_TextRestart_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UWidgetVictoryScreen_Statics::NewProp_TextRestart_MetaData)) };
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UWidgetVictoryScreen_Statics::NewProp_LevelToOpen_MetaData[] = {
-		{ "Category", "WidgetVictoryScreen" },
-		{ "ModuleRelativePath", "WidgetVictoryScreen.h" },
-	};
-#endif
-	const UE4CodeGen_Private::FNamePropertyParams Z_Construct_UClass_UWidgetVictoryScreen_Statics::NewProp_LevelToOpen = { "LevelToOpen", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UWidgetVictoryScreen, LevelToOpen), METADATA_PARAMS(Z_Construct_UClass_UWidgetVictoryScreen_Statics::NewProp_LevelToOpen_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UWidgetVictoryScreen_Statics::NewProp_LevelToOpen_MetaData)) };
-#if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UWidgetVictoryScreen_Statics::NewProp_QuitButton_MetaData[] = {
 		{ "BindWidget", "" },
 		{ "EditInline", "true" },
@@ -194,7 +183,6 @@ void EmptyLinkFunctionForGeneratedCodeWidgetVictoryScreen() {}
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UWidgetVictoryScreen_Statics::NewProp_Text,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UWidgetVictoryScreen_Statics::NewProp_RestartButton,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UWidgetVictoryScreen_Statics::NewProp_TextRestart,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UWidgetVictoryScreen_Statics::NewProp_LevelToOpen,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UWidgetVictoryScreen_Statics::NewProp_QuitButton,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UWidgetVictoryScreen_Statics::NewProp_TextQuit,
 	};
@@ -225,7 +213,7 @@ void EmptyLinkFunctionForGeneratedCodeWidgetVictoryScreen() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UWidgetVictoryScreen, 4185148741);
+	IMPLEMENT_CLASS(UWidgetVictoryScreen, 1074364604);
 	template<> GC_UE4CPP_API UClass* StaticClass<UWidgetVictoryScreen>()
 	{
 		return UWidgetVictoryScreen::StaticClass();

@@ -64,7 +64,7 @@ void AItemHolder_Character::StoreChest(AChest* Chest)
 	EquippedItem->DetachFromActor(FDetachmentTransformRules::KeepWorldTransform); // Call the method to unsnap from the player hand
 	EquippedItem->TogglePhysics(false);
 	Chest->SnapInChest(EquippedItem);
-	GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Green, TEXT("Food dropped inside the chest")); // debug
+	//GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Green, TEXT("Food dropped inside the chest")); // debug
 	EquippedItem = nullptr;
 	bIsCarryingFood = false;
 	MovementSpeed *= 2.0f;

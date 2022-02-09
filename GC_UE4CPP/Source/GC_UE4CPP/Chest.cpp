@@ -44,11 +44,11 @@ void AChest::SnapInChest(AFoodBehaviour* FoodChoose)
 {
 	FoodChoose->Destroy();
 	GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Red, TEXT("Snapped")); // debug
-	FoodCounter();
+	FoodIncrement();
 }
 
 // Update the UI bar food
-void AChest::FoodCounter()
+void AChest::FoodIncrement()
 {
 	AGameModeBase* GameMode = UGameplayStatics::GetGameMode(this);
 	AGC_UE4CPPGameModeBase* MinFood = Cast<AGC_UE4CPPGameModeBase>(GameMode);
@@ -63,5 +63,5 @@ void AChest::FoodCounter()
 	}
 
 	MinFood->FoodCounter += 1;
-	UE_LOG(LogTemp, Warning, TEXT("Chest Food message: %f"), MinFood->FoodCounter);
+	MinFood->WinLoseCondition();
 }

@@ -15,35 +15,35 @@ void EmptyLinkFunctionForGeneratedCodeWidgetGameOverScreen() {}
 // Cross Module References
 	GC_UE4CPP_API UClass* Z_Construct_UClass_UWidgetGameOverScreen_NoRegister();
 	GC_UE4CPP_API UClass* Z_Construct_UClass_UWidgetGameOverScreen();
-	UMG_API UClass* Z_Construct_UClass_UUserWidget();
+	GC_UE4CPP_API UClass* Z_Construct_UClass_UButtonInteraction();
 	UPackage* Z_Construct_UPackage__Script_GC_UE4CPP();
 	UMG_API UClass* Z_Construct_UClass_UTextBlock_NoRegister();
 	UMG_API UClass* Z_Construct_UClass_UButton_NoRegister();
 // End Cross Module References
-	DEFINE_FUNCTION(UWidgetGameOverScreen::execLoadPressed)
+	DEFINE_FUNCTION(UWidgetGameOverScreen::execQuit)
 	{
 		P_FINISH;
 		P_NATIVE_BEGIN;
-		P_THIS->LoadPressed();
+		P_THIS->Quit();
 		P_NATIVE_END;
 	}
-	DEFINE_FUNCTION(UWidgetGameOverScreen::execQuitPressed)
+	DEFINE_FUNCTION(UWidgetGameOverScreen::execRestart)
 	{
 		P_FINISH;
 		P_NATIVE_BEGIN;
-		P_THIS->QuitPressed();
+		P_THIS->Restart();
 		P_NATIVE_END;
 	}
 	void UWidgetGameOverScreen::StaticRegisterNativesUWidgetGameOverScreen()
 	{
 		UClass* Class = UWidgetGameOverScreen::StaticClass();
 		static const FNameNativePtrPair Funcs[] = {
-			{ "LoadPressed", &UWidgetGameOverScreen::execLoadPressed },
-			{ "QuitPressed", &UWidgetGameOverScreen::execQuitPressed },
+			{ "Quit", &UWidgetGameOverScreen::execQuit },
+			{ "Restart", &UWidgetGameOverScreen::execRestart },
 		};
 		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 	}
-	struct Z_Construct_UFunction_UWidgetGameOverScreen_LoadPressed_Statics
+	struct Z_Construct_UFunction_UWidgetGameOverScreen_Quit_Statics
 	{
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
@@ -51,21 +51,21 @@ void EmptyLinkFunctionForGeneratedCodeWidgetGameOverScreen() {}
 		static const UE4CodeGen_Private::FFunctionParams FuncParams;
 	};
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UWidgetGameOverScreen_LoadPressed_Statics::Function_MetaDataParams[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UWidgetGameOverScreen_Quit_Statics::Function_MetaDataParams[] = {
 		{ "ModuleRelativePath", "WidgetGameOverScreen.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UWidgetGameOverScreen_LoadPressed_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UWidgetGameOverScreen, nullptr, "LoadPressed", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UWidgetGameOverScreen_LoadPressed_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_UWidgetGameOverScreen_LoadPressed_Statics::Function_MetaDataParams)) };
-	UFunction* Z_Construct_UFunction_UWidgetGameOverScreen_LoadPressed()
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UWidgetGameOverScreen_Quit_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UWidgetGameOverScreen, nullptr, "Quit", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UWidgetGameOverScreen_Quit_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_UWidgetGameOverScreen_Quit_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_UWidgetGameOverScreen_Quit()
 	{
 		static UFunction* ReturnFunction = nullptr;
 		if (!ReturnFunction)
 		{
-			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UWidgetGameOverScreen_LoadPressed_Statics::FuncParams);
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UWidgetGameOverScreen_Quit_Statics::FuncParams);
 		}
 		return ReturnFunction;
 	}
-	struct Z_Construct_UFunction_UWidgetGameOverScreen_QuitPressed_Statics
+	struct Z_Construct_UFunction_UWidgetGameOverScreen_Restart_Statics
 	{
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
@@ -73,17 +73,17 @@ void EmptyLinkFunctionForGeneratedCodeWidgetGameOverScreen() {}
 		static const UE4CodeGen_Private::FFunctionParams FuncParams;
 	};
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UWidgetGameOverScreen_QuitPressed_Statics::Function_MetaDataParams[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UWidgetGameOverScreen_Restart_Statics::Function_MetaDataParams[] = {
 		{ "ModuleRelativePath", "WidgetGameOverScreen.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UWidgetGameOverScreen_QuitPressed_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UWidgetGameOverScreen, nullptr, "QuitPressed", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UWidgetGameOverScreen_QuitPressed_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_UWidgetGameOverScreen_QuitPressed_Statics::Function_MetaDataParams)) };
-	UFunction* Z_Construct_UFunction_UWidgetGameOverScreen_QuitPressed()
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UWidgetGameOverScreen_Restart_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UWidgetGameOverScreen, nullptr, "Restart", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UWidgetGameOverScreen_Restart_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_UWidgetGameOverScreen_Restart_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_UWidgetGameOverScreen_Restart()
 	{
 		static UFunction* ReturnFunction = nullptr;
 		if (!ReturnFunction)
 		{
-			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UWidgetGameOverScreen_QuitPressed_Statics::FuncParams);
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UWidgetGameOverScreen_Restart_Statics::FuncParams);
 		}
 		return ReturnFunction;
 	}
@@ -111,10 +111,6 @@ void EmptyLinkFunctionForGeneratedCodeWidgetGameOverScreen() {}
 #endif
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_TextRetry;
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_LevelToOpen_MetaData[];
-#endif
-		static const UE4CodeGen_Private::FNamePropertyParams NewProp_LevelToOpen;
-#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_QuitGameButton_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_QuitGameButton;
@@ -127,12 +123,12 @@ void EmptyLinkFunctionForGeneratedCodeWidgetGameOverScreen() {}
 		static const UE4CodeGen_Private::FClassParams ClassParams;
 	};
 	UObject* (*const Z_Construct_UClass_UWidgetGameOverScreen_Statics::DependentSingletons[])() = {
-		(UObject* (*)())Z_Construct_UClass_UUserWidget,
+		(UObject* (*)())Z_Construct_UClass_UButtonInteraction,
 		(UObject* (*)())Z_Construct_UPackage__Script_GC_UE4CPP,
 	};
 	const FClassFunctionLinkInfo Z_Construct_UClass_UWidgetGameOverScreen_Statics::FuncInfo[] = {
-		{ &Z_Construct_UFunction_UWidgetGameOverScreen_LoadPressed, "LoadPressed" }, // 1608479538
-		{ &Z_Construct_UFunction_UWidgetGameOverScreen_QuitPressed, "QuitPressed" }, // 2486501852
+		{ &Z_Construct_UFunction_UWidgetGameOverScreen_Quit, "Quit" }, // 448795909
+		{ &Z_Construct_UFunction_UWidgetGameOverScreen_Restart, "Restart" }, // 2519355771
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UWidgetGameOverScreen_Statics::Class_MetaDataParams[] = {
@@ -167,13 +163,6 @@ void EmptyLinkFunctionForGeneratedCodeWidgetGameOverScreen() {}
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UWidgetGameOverScreen_Statics::NewProp_TextRetry = { "TextRetry", nullptr, (EPropertyFlags)0x001000000008000d, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UWidgetGameOverScreen, TextRetry), Z_Construct_UClass_UTextBlock_NoRegister, METADATA_PARAMS(Z_Construct_UClass_UWidgetGameOverScreen_Statics::NewProp_TextRetry_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UWidgetGameOverScreen_Statics::NewProp_TextRetry_MetaData)) };
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UWidgetGameOverScreen_Statics::NewProp_LevelToOpen_MetaData[] = {
-		{ "Category", "WidgetGameOverScreen" },
-		{ "ModuleRelativePath", "WidgetGameOverScreen.h" },
-	};
-#endif
-	const UE4CodeGen_Private::FNamePropertyParams Z_Construct_UClass_UWidgetGameOverScreen_Statics::NewProp_LevelToOpen = { "LevelToOpen", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UWidgetGameOverScreen, LevelToOpen), METADATA_PARAMS(Z_Construct_UClass_UWidgetGameOverScreen_Statics::NewProp_LevelToOpen_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UWidgetGameOverScreen_Statics::NewProp_LevelToOpen_MetaData)) };
-#if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UWidgetGameOverScreen_Statics::NewProp_QuitGameButton_MetaData[] = {
 		{ "BindWidget", "" },
 		{ "EditInline", "true" },
@@ -194,7 +183,6 @@ void EmptyLinkFunctionForGeneratedCodeWidgetGameOverScreen() {}
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UWidgetGameOverScreen_Statics::NewProp_Text,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UWidgetGameOverScreen_Statics::NewProp_RetryButton,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UWidgetGameOverScreen_Statics::NewProp_TextRetry,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UWidgetGameOverScreen_Statics::NewProp_LevelToOpen,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UWidgetGameOverScreen_Statics::NewProp_QuitGameButton,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UWidgetGameOverScreen_Statics::NewProp_TextQuitGame,
 	};
@@ -225,7 +213,7 @@ void EmptyLinkFunctionForGeneratedCodeWidgetGameOverScreen() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UWidgetGameOverScreen, 2885899484);
+	IMPLEMENT_CLASS(UWidgetGameOverScreen, 330008615);
 	template<> GC_UE4CPP_API UClass* StaticClass<UWidgetGameOverScreen>()
 	{
 		return UWidgetGameOverScreen::StaticClass();

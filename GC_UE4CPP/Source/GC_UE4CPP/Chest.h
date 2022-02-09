@@ -25,7 +25,7 @@ public:
 		UStaticMeshComponent* StaticMesh;
 		
 	void SnapInChest(AFoodBehaviour* FoodChoose);
-	void FoodCounter();
+	void FoodIncrement();
 	
 protected:
 	// Called when the game starts or when spawned

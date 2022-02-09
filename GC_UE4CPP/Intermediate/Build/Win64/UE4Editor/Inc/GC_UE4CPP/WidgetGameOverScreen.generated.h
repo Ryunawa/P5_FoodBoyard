@@ -16,14 +16,14 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #define GC_UE4CPP_Source_GC_UE4CPP_WidgetGameOverScreen_h_13_SPARSE_DATA
 #define GC_UE4CPP_Source_GC_UE4CPP_WidgetGameOverScreen_h_13_RPC_WRAPPERS \
  \
-	DECLARE_FUNCTION(execLoadPressed); \
-	DECLARE_FUNCTION(execQuitPressed);
+	DECLARE_FUNCTION(execQuit); \
+	DECLARE_FUNCTION(execRestart);
 
 
 #define GC_UE4CPP_Source_GC_UE4CPP_WidgetGameOverScreen_h_13_RPC_WRAPPERS_NO_PURE_DECLS \
  \
-	DECLARE_FUNCTION(execLoadPressed); \
-	DECLARE_FUNCTION(execQuitPressed);
+	DECLARE_FUNCTION(execQuit); \
+	DECLARE_FUNCTION(execRestart);
 
 
 #define GC_UE4CPP_Source_GC_UE4CPP_WidgetGameOverScreen_h_13_INCLASS_NO_PURE_DECLS \
@@ -31,7 +31,7 @@ private: \
 	static void StaticRegisterNativesUWidgetGameOverScreen(); \
 	friend struct Z_Construct_UClass_UWidgetGameOverScreen_Statics; \
 public: \
-	DECLARE_CLASS(UWidgetGameOverScreen, UUserWidget, COMPILED_IN_FLAGS(0), CASTCLASS_None, TEXT("/Script/GC_UE4CPP"), NO_API) \
+	DECLARE_CLASS(UWidgetGameOverScreen, UButtonInteraction, COMPILED_IN_FLAGS(0), CASTCLASS_None, TEXT("/Script/GC_UE4CPP"), NO_API) \
 	DECLARE_SERIALIZER(UWidgetGameOverScreen)
 
 
@@ -40,7 +40,7 @@ private: \
 	static void StaticRegisterNativesUWidgetGameOverScreen(); \
 	friend struct Z_Construct_UClass_UWidgetGameOverScreen_Statics; \
 public: \
-	DECLARE_CLASS(UWidgetGameOverScreen, UUserWidget, COMPILED_IN_FLAGS(0), CASTCLASS_None, TEXT("/Script/GC_UE4CPP"), NO_API) \
+	DECLARE_CLASS(UWidgetGameOverScreen, UButtonInteraction, COMPILED_IN_FLAGS(0), CASTCLASS_None, TEXT("/Script/GC_UE4CPP"), NO_API) \
 	DECLARE_SERIALIZER(UWidgetGameOverScreen)
 
 
