@@ -16,14 +16,14 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #define GC_UE4CPP_Source_GC_UE4CPP_WidgetTitle_h_13_SPARSE_DATA
 #define GC_UE4CPP_Source_GC_UE4CPP_WidgetTitle_h_13_RPC_WRAPPERS \
  \
-	DECLARE_FUNCTION(execLoadButton); \
-	DECLARE_FUNCTION(execExitPressed);
+	DECLARE_FUNCTION(execQuit); \
+	DECLARE_FUNCTION(execRestart);
 
 
 #define GC_UE4CPP_Source_GC_UE4CPP_WidgetTitle_h_13_RPC_WRAPPERS_NO_PURE_DECLS \
  \
-	DECLARE_FUNCTION(execLoadButton); \
-	DECLARE_FUNCTION(execExitPressed);
+	DECLARE_FUNCTION(execQuit); \
+	DECLARE_FUNCTION(execRestart);
 
 
 #define GC_UE4CPP_Source_GC_UE4CPP_WidgetTitle_h_13_INCLASS_NO_PURE_DECLS \
@@ -31,7 +31,7 @@ private: \
 	static void StaticRegisterNativesUWidgetTitle(); \
 	friend struct Z_Construct_UClass_UWidgetTitle_Statics; \
 public: \
-	DECLARE_CLASS(UWidgetTitle, UUserWidget, COMPILED_IN_FLAGS(0), CASTCLASS_None, TEXT("/Script/GC_UE4CPP"), NO_API) \
+	DECLARE_CLASS(UWidgetTitle, UButtonInteraction, COMPILED_IN_FLAGS(0), CASTCLASS_None, TEXT("/Script/GC_UE4CPP"), NO_API) \
 	DECLARE_SERIALIZER(UWidgetTitle)
 
 
@@ -40,7 +40,7 @@ private: \
 	static void StaticRegisterNativesUWidgetTitle(); \
 	friend struct Z_Construct_UClass_UWidgetTitle_Statics; \
 public: \
-	DECLARE_CLASS(UWidgetTitle, UUserWidget, COMPILED_IN_FLAGS(0), CASTCLASS_None, TEXT("/Script/GC_UE4CPP"), NO_API) \
+	DECLARE_CLASS(UWidgetTitle, UButtonInteraction, COMPILED_IN_FLAGS(0), CASTCLASS_None, TEXT("/Script/GC_UE4CPP"), NO_API) \
 	DECLARE_SERIALIZER(UWidgetTitle)
 
 

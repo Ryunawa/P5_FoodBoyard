@@ -4,6 +4,8 @@
 #include "GameFramework/GameModeBase.h"
 #include "GC_UE4CPPGameModeBase.generated.h"
 
+class AInGameHUD;
+
 UCLASS()
 class GC_UE4CPP_API AGC_UE4CPPGameModeBase : public AGameModeBase
 {
@@ -14,9 +16,12 @@ public:
 	// Sets default values for this actor's properties
 	AGC_UE4CPPGameModeBase();
 
+	void WinLoseCondition();
+	
 	// variable for food counting (use in Chest.cpp and Widget.cpp)
 	float FoodCounter = 0;
-
+	bool bIsGameFinished = false;
+	bool bIsTouched = false;
 
 protected:
 	

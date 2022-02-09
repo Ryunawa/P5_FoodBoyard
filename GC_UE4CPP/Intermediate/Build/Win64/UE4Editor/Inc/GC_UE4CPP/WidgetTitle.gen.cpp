@@ -15,35 +15,35 @@ void EmptyLinkFunctionForGeneratedCodeWidgetTitle() {}
 // Cross Module References
 	GC_UE4CPP_API UClass* Z_Construct_UClass_UWidgetTitle_NoRegister();
 	GC_UE4CPP_API UClass* Z_Construct_UClass_UWidgetTitle();
-	UMG_API UClass* Z_Construct_UClass_UUserWidget();
+	GC_UE4CPP_API UClass* Z_Construct_UClass_UButtonInteraction();
 	UPackage* Z_Construct_UPackage__Script_GC_UE4CPP();
 	UMG_API UClass* Z_Construct_UClass_UTextBlock_NoRegister();
 	UMG_API UClass* Z_Construct_UClass_UButton_NoRegister();
 // End Cross Module References
-	DEFINE_FUNCTION(UWidgetTitle::execLoadButton)
+	DEFINE_FUNCTION(UWidgetTitle::execQuit)
 	{
 		P_FINISH;
 		P_NATIVE_BEGIN;
-		P_THIS->LoadButton();
+		P_THIS->Quit();
 		P_NATIVE_END;
 	}
-	DEFINE_FUNCTION(UWidgetTitle::execExitPressed)
+	DEFINE_FUNCTION(UWidgetTitle::execRestart)
 	{
 		P_FINISH;
 		P_NATIVE_BEGIN;
-		P_THIS->ExitPressed();
+		P_THIS->Restart();
 		P_NATIVE_END;
 	}
 	void UWidgetTitle::StaticRegisterNativesUWidgetTitle()
 	{
 		UClass* Class = UWidgetTitle::StaticClass();
 		static const FNameNativePtrPair Funcs[] = {
-			{ "ExitPressed", &UWidgetTitle::execExitPressed },
-			{ "LoadButton", &UWidgetTitle::execLoadButton },
+			{ "Quit", &UWidgetTitle::execQuit },
+			{ "Restart", &UWidgetTitle::execRestart },
 		};
 		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 	}
-	struct Z_Construct_UFunction_UWidgetTitle_ExitPressed_Statics
+	struct Z_Construct_UFunction_UWidgetTitle_Quit_Statics
 	{
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
@@ -51,21 +51,21 @@ void EmptyLinkFunctionForGeneratedCodeWidgetTitle() {}
 		static const UE4CodeGen_Private::FFunctionParams FuncParams;
 	};
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UWidgetTitle_ExitPressed_Statics::Function_MetaDataParams[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UWidgetTitle_Quit_Statics::Function_MetaDataParams[] = {
 		{ "ModuleRelativePath", "WidgetTitle.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UWidgetTitle_ExitPressed_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UWidgetTitle, nullptr, "ExitPressed", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UWidgetTitle_ExitPressed_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_UWidgetTitle_ExitPressed_Statics::Function_MetaDataParams)) };
-	UFunction* Z_Construct_UFunction_UWidgetTitle_ExitPressed()
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UWidgetTitle_Quit_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UWidgetTitle, nullptr, "Quit", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UWidgetTitle_Quit_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_UWidgetTitle_Quit_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_UWidgetTitle_Quit()
 	{
 		static UFunction* ReturnFunction = nullptr;
 		if (!ReturnFunction)
 		{
-			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UWidgetTitle_ExitPressed_Statics::FuncParams);
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UWidgetTitle_Quit_Statics::FuncParams);
 		}
 		return ReturnFunction;
 	}
-	struct Z_Construct_UFunction_UWidgetTitle_LoadButton_Statics
+	struct Z_Construct_UFunction_UWidgetTitle_Restart_Statics
 	{
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
@@ -73,17 +73,17 @@ void EmptyLinkFunctionForGeneratedCodeWidgetTitle() {}
 		static const UE4CodeGen_Private::FFunctionParams FuncParams;
 	};
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UWidgetTitle_LoadButton_Statics::Function_MetaDataParams[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UWidgetTitle_Restart_Statics::Function_MetaDataParams[] = {
 		{ "ModuleRelativePath", "WidgetTitle.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UWidgetTitle_LoadButton_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UWidgetTitle, nullptr, "LoadButton", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UWidgetTitle_LoadButton_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_UWidgetTitle_LoadButton_Statics::Function_MetaDataParams)) };
-	UFunction* Z_Construct_UFunction_UWidgetTitle_LoadButton()
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UWidgetTitle_Restart_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UWidgetTitle, nullptr, "Restart", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UWidgetTitle_Restart_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_UWidgetTitle_Restart_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_UWidgetTitle_Restart()
 	{
 		static UFunction* ReturnFunction = nullptr;
 		if (!ReturnFunction)
 		{
-			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UWidgetTitle_LoadButton_Statics::FuncParams);
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UWidgetTitle_Restart_Statics::FuncParams);
 		}
 		return ReturnFunction;
 	}
@@ -115,10 +115,6 @@ void EmptyLinkFunctionForGeneratedCodeWidgetTitle() {}
 #endif
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_TextStart;
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_LevelToOpen_MetaData[];
-#endif
-		static const UE4CodeGen_Private::FNamePropertyParams NewProp_LevelToOpen;
-#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_QuitButton_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_QuitButton;
@@ -131,12 +127,12 @@ void EmptyLinkFunctionForGeneratedCodeWidgetTitle() {}
 		static const UE4CodeGen_Private::FClassParams ClassParams;
 	};
 	UObject* (*const Z_Construct_UClass_UWidgetTitle_Statics::DependentSingletons[])() = {
-		(UObject* (*)())Z_Construct_UClass_UUserWidget,
+		(UObject* (*)())Z_Construct_UClass_UButtonInteraction,
 		(UObject* (*)())Z_Construct_UPackage__Script_GC_UE4CPP,
 	};
 	const FClassFunctionLinkInfo Z_Construct_UClass_UWidgetTitle_Statics::FuncInfo[] = {
-		{ &Z_Construct_UFunction_UWidgetTitle_ExitPressed, "ExitPressed" }, // 1349800613
-		{ &Z_Construct_UFunction_UWidgetTitle_LoadButton, "LoadButton" }, // 96185483
+		{ &Z_Construct_UFunction_UWidgetTitle_Quit, "Quit" }, // 1549930335
+		{ &Z_Construct_UFunction_UWidgetTitle_Restart, "Restart" }, // 1205898581
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UWidgetTitle_Statics::Class_MetaDataParams[] = {
@@ -180,13 +176,6 @@ void EmptyLinkFunctionForGeneratedCodeWidgetTitle() {}
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UWidgetTitle_Statics::NewProp_TextStart = { "TextStart", nullptr, (EPropertyFlags)0x001000000008000d, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UWidgetTitle, TextStart), Z_Construct_UClass_UTextBlock_NoRegister, METADATA_PARAMS(Z_Construct_UClass_UWidgetTitle_Statics::NewProp_TextStart_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UWidgetTitle_Statics::NewProp_TextStart_MetaData)) };
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UWidgetTitle_Statics::NewProp_LevelToOpen_MetaData[] = {
-		{ "Category", "WidgetTitle" },
-		{ "ModuleRelativePath", "WidgetTitle.h" },
-	};
-#endif
-	const UE4CodeGen_Private::FNamePropertyParams Z_Construct_UClass_UWidgetTitle_Statics::NewProp_LevelToOpen = { "LevelToOpen", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UWidgetTitle, LevelToOpen), METADATA_PARAMS(Z_Construct_UClass_UWidgetTitle_Statics::NewProp_LevelToOpen_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UWidgetTitle_Statics::NewProp_LevelToOpen_MetaData)) };
-#if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UWidgetTitle_Statics::NewProp_QuitButton_MetaData[] = {
 		{ "BindWidget", "" },
 		{ "EditInline", "true" },
@@ -208,7 +197,6 @@ void EmptyLinkFunctionForGeneratedCodeWidgetTitle() {}
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UWidgetTitle_Statics::NewProp_Text,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UWidgetTitle_Statics::NewProp_StartButton,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UWidgetTitle_Statics::NewProp_TextStart,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UWidgetTitle_Statics::NewProp_LevelToOpen,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UWidgetTitle_Statics::NewProp_QuitButton,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UWidgetTitle_Statics::NewProp_TextQuit,
 	};
@@ -239,7 +227,7 @@ void EmptyLinkFunctionForGeneratedCodeWidgetTitle() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UWidgetTitle, 405474749);
+	IMPLEMENT_CLASS(UWidgetTitle, 3386172146);
 	template<> GC_UE4CPP_API UClass* StaticClass<UWidgetTitle>()
 	{
 		return UWidgetTitle::StaticClass();
