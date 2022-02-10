@@ -34,6 +34,9 @@ public:
     UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera)
         float LookUpRate = 45.0f;
 
+    UPROPERTY(EditAnywhere)
+        FName LevelToOpen;
+
     // Input methods
     void Move_XAxis(float Rate);
     void Move_YAxis(float Rate);
@@ -41,6 +44,8 @@ public:
     void LookUpAtRate(float Rate);
     void Zoom(float Rate);
     void InteractFood();
+
+    void PressReset();
     
     bool bInteracting;
     int ZoomSpeed;

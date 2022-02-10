@@ -13,6 +13,7 @@
 #include "Math/UnitConversion.h"
 #include "Microsoft/AllowMicrosoftPlatformTypes.h"
 #include "Perception/AISense_Sight.h"
+#include <Runtime/Engine/Classes/Kismet/GameplayStatics.h>
 
 // Sets default values
 APlayerBehaviour::APlayerBehaviour()
@@ -84,6 +85,7 @@ void APlayerBehaviour::SetupPlayerInputComponent(UInputComponent* PlayerInputCom
 	PlayerInputComponent->BindAxis("LookUpRate", this, &APlayerBehaviour::LookUpAtRate);
 	PlayerInputComponent->BindAxis("Zoom", this, &APlayerBehaviour::Zoom);
 	PlayerInputComponent->BindAction("Interact", IE_Pressed, this, &APlayerBehaviour::InteractFood);
+	PlayerInputComponent->BindAction("reset", IE_Pressed, this, &APlayerBehaviour::PressReset);
 }
 
 void APlayerBehaviour::TurnAtRate(float Rate)
@@ -202,3 +204,14 @@ void APlayerBehaviour::InteractFood()
 	}
 }
 
+void APlayerBehaviour::PressReset()
+{
+	UGameplayStatics::OpenLevel(this, FName(*GetWorld()->GetName()), false);
+
+	if (LevelToOpen != "")
+	{
+		UGameplayStatics::OpenLevel(this, LevelToOpen, false);
+	}
+
+	GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Red, TEXT("Reload")); // debug
+}
