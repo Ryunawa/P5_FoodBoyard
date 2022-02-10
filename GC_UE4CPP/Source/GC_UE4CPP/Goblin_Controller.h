@@ -42,8 +42,8 @@ protected:
 public:
 
 	AFoodBehaviour* FoodToStore;
-
-	AGoblin_Controller();
+	
+	AGoblin_Controller() ;
 
 	void GetNewSpot();
 	

@@ -1,14 +1,16 @@
 
 
 #include "Goblin_Controller.h"
+#include "FoodSpot.h"
 #include "Enemy.h"
 #include "Perception/AIPerceptionComponent.h"
 #include "Perception/AIPerceptionSystem.h"
-#include "FoodSpot.h"
 #include "Kismet/GameplayStatics.h"
 #include "MainLevel_LevelScriptActor.h"
 #include "Engine/World.h"
 #include "BehaviorTree/BlackboardComponent.h"
+
+
 
 AGoblin_Controller::AGoblin_Controller()
 {
@@ -33,16 +35,10 @@ void AGoblin_Controller::OnPossess(APawn* InPawn)
 {	
 	Super::OnPossess(InPawn);
 	FActorSpawnParameters SpawnParams;
-	SpawnParams.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AdjustIfPossibleButAlwaysSpawn;
+	SpawnParams.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AdjustIfPossibleButAlwaysSpawn;		
+	int FoodCount;
 	if (InPawn) {
-		
-		//starts the bt and configs the aiperceptioncomponent
-		RunBehaviorTree(DefaultBehaviorTree);
-		Blackboard->SetValueAsObject("SelfActor", GetOwner());
-		Blackboard->SetValueAsObject("DroppedFood", nullptr);
-		Blackboard->SetValueAsVector("SpawnPoint", InPawn->GetActorLocation());
-		GetNewSpot();
-		
+
 		SightConfig->SightRadius = 1000;
 		SightConfig->LoseSightRadius = 1050;
 		SightConfig->PeripheralVisionAngleDegrees = 65.0f;
@@ -52,10 +48,32 @@ void AGoblin_Controller::OnPossess(APawn* InPawn)
 		PerceptionComponent->ConfigureSense(*SightConfig);
 		PerceptionComponent->SetDominantSense(SightConfig->GetSenseImplementation());
 		PerceptionComponent->OnPerceptionUpdated.AddDynamic(this, &AGoblin_Controller::SeePlayer);
-		
-		FoodToStore = GetWorld()->SpawnActor<AFoodBehaviour>(FoodToSpawn, InPawn->GetActorTransform(), SpawnParams);
-		Cast<AEnemy>(InPawn)->PickupItem(FoodToStore);
 
+		for (int i ; i<SpotArray.Num();i++)
+		{
+			if (Cast<AFoodSpot>(SpotArray[i])->FoodSnapped) FoodCount++;
+		}
+
+		if (FoodCount == SpotArray.Num())
+		{
+			GetNewSpot();
+
+			//starts the bt and configs the aiperceptioncomponent
+			RunBehaviorTree(DefaultBehaviorTree);
+			Blackboard->SetValueAsObject("SelfActor", GetOwner());
+			Blackboard->SetValueAsObject("DroppedFood", nullptr);
+			Blackboard->SetValueAsVector("SpawnPoint", InPawn->GetActorLocation());
+
+			FoodToStore = GetWorld()->SpawnActor<AFoodBehaviour>(FoodToSpawn, InPawn->GetActorTransform(), SpawnParams);
+			Cast<AEnemy>(InPawn)->PickupItem(FoodToStore);
+		}
+		else 
+		{
+			RunBehaviorTree(PatrolBehaviorTree);
+			Blackboard->SetValueAsObject("SelfActor", GetOwner());
+			Blackboard->SetValueAsVector("SpawnPoint", InPawn->GetActorLocation());
+
+		}
 	}
 }
 
