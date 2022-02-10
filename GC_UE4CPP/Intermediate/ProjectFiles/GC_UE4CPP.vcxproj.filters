@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\GC_UE4CPP.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{60DB0EF3-F4FC-4C5E-B359-572DB4811E71}</UniqueIdentifier>
+      <UniqueIdentifier>{0FF9F84E-6BF7-42C8-AA80-3EBF926DCBF1}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\GC_UE4CPP.Target.cs">
       <Filter>Source</Filter>
@@ -12,7 +12,7 @@
       <Filter>Source</Filter>
     </None>
     <Filter Include="Config">
-      <UniqueIdentifier>{7CEFEF41-44EB-41A0-886C-2BDE7B29996D}</UniqueIdentifier>
+      <UniqueIdentifier>{1FF6F6B8-5C78-4956-ACD5-85299B6B4E18}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -27,7 +27,7 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\GC_UE4CPP">
-      <UniqueIdentifier>{ECEEAAAC-6A71-4676-AF21-88DCDA8C767C}</UniqueIdentifier>
+      <UniqueIdentifier>{126336DE-470C-4B14-BDE0-8501CE8ADC8D}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\GC_UE4CPP\BTTask_DestroySelf.cpp">
       <Filter>Source\GC_UE4CPP</Filter>
@@ -45,6 +45,18 @@
       <Filter>Source\GC_UE4CPP</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\GC_UE4CPP\BTTask_GrabFood.h">
+      <Filter>Source\GC_UE4CPP</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\GC_UE4CPP\BTTask_StoreFood.cpp">
+      <Filter>Source\GC_UE4CPP</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\GC_UE4CPP\BTTask_StoreFood.h">
+      <Filter>Source\GC_UE4CPP</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\GC_UE4CPP\ButtonInteraction.cpp">
+      <Filter>Source\GC_UE4CPP</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\GC_UE4CPP\ButtonInteraction.h">
       <Filter>Source\GC_UE4CPP</Filter>
     </ClInclude>
     <ClCompile Include="..\..\Source\GC_UE4CPP\Chest.cpp">
@@ -120,12 +132,6 @@
       <Filter>Source\GC_UE4CPP</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\GC_UE4CPP\MainLevel_LevelScriptActor.h">
-      <Filter>Source\GC_UE4CPP</Filter>
-    </ClInclude>
-    <ClCompile Include="..\..\Source\GC_UE4CPP\Menu.cpp">
-      <Filter>Source\GC_UE4CPP</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\GC_UE4CPP\Menu.h">
       <Filter>Source\GC_UE4CPP</Filter>
     </ClInclude>
     <ClCompile Include="..\..\Source\GC_UE4CPP\MyPlayerController.cpp">

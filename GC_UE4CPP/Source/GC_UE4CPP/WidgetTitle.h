@@ -13,6 +13,7 @@ class GC_UE4CPP_API UWidgetTitle : public UButtonInteraction
 	GENERATED_BODY()
 
 public:
+
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (BindWidget))
 		class UTextBlock* Title;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (BindWidget))
