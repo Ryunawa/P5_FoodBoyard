@@ -1,0 +1,204 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <None Include="..\..\GC_UE4CPP.uproject" />
+    <Filter Include="Source">
+      <UniqueIdentifier>{3318B94E-04A1-42E0-B0E3-023FDB6EC4E9}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\GC_UE4CPP.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\Source\GC_UE4CPPEditor.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <Filter Include="Config">
+      <UniqueIdentifier>{A099013A-CCB7-4F42-843D-E536ABC686D9}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\DefaultEditor.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEngine.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultGame.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultInput.ini">
+      <Filter>Config</Filter>
+    </None>
+    <Filter Include="Source\GC_UE4CPP">
+      <UniqueIdentifier>{B6BCBCDE-DB6D-4EC0-9C9E-58A06B8BAD7A}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\GC_UE4CPP\BTTask_DestroySelf.cpp">
+      <Filter>Source\GC_UE4CPP</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\GC_UE4CPP\BTTask_DestroySelf.h">
+      <Filter>Source\GC_UE4CPP</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\GC_UE4CPP\BTTask_DropFood.cpp">
+      <Filter>Source\GC_UE4CPP</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\GC_UE4CPP\BTTask_DropFood.h">
+      <Filter>Source\GC_UE4CPP</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\GC_UE4CPP\BTTask_GetRandomPosition.cpp">
+      <Filter>Source\GC_UE4CPP</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\GC_UE4CPP\BTTask_GetRandomPosition.h">
+      <Filter>Source\GC_UE4CPP</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\GC_UE4CPP\BTTask_GrabFood.cpp">
+      <Filter>Source\GC_UE4CPP</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\GC_UE4CPP\BTTask_GrabFood.h">
+      <Filter>Source\GC_UE4CPP</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\GC_UE4CPP\BTTask_PlayerHit.cpp">
+      <Filter>Source\GC_UE4CPP</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\GC_UE4CPP\BTTask_PlayerHit.h">
+      <Filter>Source\GC_UE4CPP</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\GC_UE4CPP\BTTask_StoreFood.cpp">
+      <Filter>Source\GC_UE4CPP</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\GC_UE4CPP\BTTask_StoreFood.h">
+      <Filter>Source\GC_UE4CPP</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\GC_UE4CPP\ButtonInteraction.cpp">
+      <Filter>Source\GC_UE4CPP</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\GC_UE4CPP\ButtonInteraction.h">
+      <Filter>Source\GC_UE4CPP</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\GC_UE4CPP\Chest.cpp">
+      <Filter>Source\GC_UE4CPP</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\GC_UE4CPP\Chest.h">
+      <Filter>Source\GC_UE4CPP</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\GC_UE4CPP\EndAnimationsAnimNotify.cpp">
+      <Filter>Source\GC_UE4CPP</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\GC_UE4CPP\EndAnimationsAnimNotify.h">
+      <Filter>Source\GC_UE4CPP</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\GC_UE4CPP\Enemy.cpp">
+      <Filter>Source\GC_UE4CPP</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\GC_UE4CPP\Enemy.h">
+      <Filter>Source\GC_UE4CPP</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\GC_UE4CPP\FoodBehaviour.cpp">
+      <Filter>Source\GC_UE4CPP</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\GC_UE4CPP\FoodBehaviour.h">
+      <Filter>Source\GC_UE4CPP</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\GC_UE4CPP\FoodSpot.cpp">
+      <Filter>Source\GC_UE4CPP</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\GC_UE4CPP\FoodSpot.h">
+      <Filter>Source\GC_UE4CPP</Filter>
+    </ClInclude>
+    <None Include="..\..\Source\GC_UE4CPP\GC_UE4CPP.Build.cs">
+      <Filter>Source\GC_UE4CPP</Filter>
+    </None>
+    <ClCompile Include="..\..\Source\GC_UE4CPP\GC_UE4CPP.cpp">
+      <Filter>Source\GC_UE4CPP</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\GC_UE4CPP\GC_UE4CPP.h">
+      <Filter>Source\GC_UE4CPP</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\GC_UE4CPP\GC_UE4CPPGameModeBase.cpp">
+      <Filter>Source\GC_UE4CPP</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\GC_UE4CPP\GC_UE4CPPGameModeBase.h">
+      <Filter>Source\GC_UE4CPP</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\GC_UE4CPP\GetNewSpot.cpp">
+      <Filter>Source\GC_UE4CPP</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\GC_UE4CPP\GetNewSpot.h">
+      <Filter>Source\GC_UE4CPP</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\GC_UE4CPP\Goblin_Controller.cpp">
+      <Filter>Source\GC_UE4CPP</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\GC_UE4CPP\Goblin_Controller.h">
+      <Filter>Source\GC_UE4CPP</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\GC_UE4CPP\InGameHUD.cpp">
+      <Filter>Source\GC_UE4CPP</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\GC_UE4CPP\InGameHUD.h">
+      <Filter>Source\GC_UE4CPP</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\GC_UE4CPP\ItemHolder_Character.cpp">
+      <Filter>Source\GC_UE4CPP</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\GC_UE4CPP\ItemHolder_Character.h">
+      <Filter>Source\GC_UE4CPP</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\GC_UE4CPP\MyPlayerController.cpp">
+      <Filter>Source\GC_UE4CPP</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\GC_UE4CPP\MyPlayerController.h">
+      <Filter>Source\GC_UE4CPP</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\GC_UE4CPP\PlayerAnim.cpp">
+      <Filter>Source\GC_UE4CPP</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\GC_UE4CPP\PlayerAnim.h">
+      <Filter>Source\GC_UE4CPP</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\GC_UE4CPP\PlayerBehaviour.cpp">
+      <Filter>Source\GC_UE4CPP</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\GC_UE4CPP\PlayerBehaviour.h">
+      <Filter>Source\GC_UE4CPP</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\GC_UE4CPP\TitleGameMode.cpp">
+      <Filter>Source\GC_UE4CPP</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\GC_UE4CPP\TitleGameMode.h">
+      <Filter>Source\GC_UE4CPP</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\GC_UE4CPP\TitleHUD.cpp">
+      <Filter>Source\GC_UE4CPP</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\GC_UE4CPP\TitleHUD.h">
+      <Filter>Source\GC_UE4CPP</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\GC_UE4CPP\UI.cpp">
+      <Filter>Source\GC_UE4CPP</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\GC_UE4CPP\UI.h">
+      <Filter>Source\GC_UE4CPP</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\GC_UE4CPP\WidgetGameOverScreen.cpp">
+      <Filter>Source\GC_UE4CPP</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\GC_UE4CPP\WidgetGameOverScreen.h">
+      <Filter>Source\GC_UE4CPP</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\GC_UE4CPP\WidgetTitle.cpp">
+      <Filter>Source\GC_UE4CPP</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\GC_UE4CPP\WidgetTitle.h">
+      <Filter>Source\GC_UE4CPP</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\GC_UE4CPP\WidgetUI.cpp">
+      <Filter>Source\GC_UE4CPP</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\GC_UE4CPP\WidgetUI.h">
+      <Filter>Source\GC_UE4CPP</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\GC_UE4CPP\WidgetVictoryScreen.cpp">
+      <Filter>Source\GC_UE4CPP</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\GC_UE4CPP\WidgetVictoryScreen.h">
+      <Filter>Source\GC_UE4CPP</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

@@ -213,5 +213,4 @@ void APlayerBehaviour::PressReset()
 		UGameplayStatics::OpenLevel(this, LevelToOpen, false);
 	}
 
-	GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Red, TEXT("Reload")); // debug
 }
