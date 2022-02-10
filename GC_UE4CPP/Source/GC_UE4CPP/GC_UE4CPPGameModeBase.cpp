@@ -3,7 +3,9 @@
 #include "InGameHUD.h"
 #include "Enemy.h"
 #include "FoodSpot.h"
+#include "Goblin_Controller.h"
 #include "Kismet/GameplayStatics.h"
+#include "BehaviorTree/BlackboardComponent.h"
 
 // Sets default values
 AGC_UE4CPPGameModeBase::AGC_UE4CPPGameModeBase()
@@ -25,7 +27,6 @@ void AGC_UE4CPPGameModeBase::BeginPlay()
 	UGameplayStatics::GetAllActorsOfClass(GetWorld(), AFoodSpot::StaticClass(), SpotArray);
 	AFoodBehaviour* Food = GetWorld()->SpawnActor<AFoodBehaviour>(FoodToSpawn, EnemySpawn->GetTransform(), SpawnParams);
 	Cast<AFoodSpot>(SpotArray[FMath::RandRange(0, SpotArray.Num() - 1)])->SnapOnPlate(Food);
-	
 }
 
 void AGC_UE4CPPGameModeBase::Tick(float DeltaTime)
@@ -41,21 +42,20 @@ void AGC_UE4CPPGameModeBase::WinLoseCondition()
 	if(FoodCounter == 5)
 	{
 		bIsGameFinished = true;
+		Cast<AEnemy>(UGameplayStatics::GetActorOfClass(this, AEnemy::StaticClass()))->GetController<AGoblin_Controller>()->GetBlackboardComponent()->SetValueAsBool("bKnightWon",true);
 		if(HUD)
 		{
 			HUD->WinScreen();
 		}
-		GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Blue, TEXT("Aled ?")); // debug
 	}
 	// Lose condition
-	else if(bIsTouched && i < 1)
+	else if(bIsTouched && !bIsGameFinished)
 	{
 		if(HUD)
 		{
 			HUD->LoseScreen();
 		}
 		bIsGameFinished = true;	
-		i++;
 	}
 }
 
@@ -66,7 +66,6 @@ void AGC_UE4CPPGameModeBase::SpawnNPC()
 	SpawnParams.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AdjustIfPossibleButAlwaysSpawn;
 	AEnemy* EnemySpawned;
 	EnemySpawned = GetWorld()->SpawnActor<AEnemy>(Enemy, EnemySpawn->GetActorTransform(), SpawnParams);
-	GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Red, TEXT("Spawned from gm")); // debug
 }
 
 void AGC_UE4CPPGameModeBase::DelayedSpawn() 

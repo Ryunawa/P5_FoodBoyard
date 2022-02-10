@@ -33,7 +33,6 @@ void AFoodBehaviour::RandomFood()
 void AFoodBehaviour::TogglePhysics(bool PhysicEnable)
 {	
 	Food->SetSimulatePhysics(PhysicEnable);
-	GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Orange, TEXT("Physic simulated disable")); // debug
 }
 
 

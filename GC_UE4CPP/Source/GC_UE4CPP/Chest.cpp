@@ -43,7 +43,7 @@ void AChest::Tick(float DeltaTime)
 void AChest::SnapInChest(AFoodBehaviour* FoodChoose)
 {
 	FoodChoose->Destroy();
-	GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Red, TEXT("Snapped")); // debug
+	//GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Red, TEXT("Snapped")); // debug
 	FoodIncrement();
 }
 

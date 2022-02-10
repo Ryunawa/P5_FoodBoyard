@@ -33,7 +33,6 @@ void AFoodSpot::SnapOnPlate(AFoodBehaviour* FoodChosen)
 	FoodChosen->AttachToActor(this, FAttachmentTransformRules::SnapToTargetIncludingScale);
 	FoodChosen->SetActorRelativeLocation(FoodSnapLocation);
 	FoodSnapped = FoodChosen;
-	GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Red, TEXT("Snapped")); // debug
 }
 
 //Unsnap the FoodChoose from the plate

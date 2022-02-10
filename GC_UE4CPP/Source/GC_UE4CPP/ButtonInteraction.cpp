@@ -11,7 +11,7 @@ void UButtonInteraction::LoadButton()
 		UGameplayStatics::OpenLevel(this, LevelToOpen, false);
 	}
 	
-	GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Red, TEXT("Reload")); // debug
+	//GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Red, TEXT("Reload")); // debug
 }
 
 void UButtonInteraction::ExitButton()
@@ -20,7 +20,7 @@ void UButtonInteraction::ExitButton()
 	APlayerController* PlayerController = World->GetFirstPlayerController();
 	
 	PlayerController->ConsoleCommand("quit");
-	GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Red, TEXT("Quit")); // debug
+	//GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Red, TEXT("Quit")); // debug
 }
 
 void UButtonInteraction::ShowMouseCursor()
