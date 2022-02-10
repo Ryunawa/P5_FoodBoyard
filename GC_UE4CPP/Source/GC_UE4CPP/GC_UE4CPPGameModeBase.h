@@ -4,6 +4,7 @@
 #include "GameFramework/GameModeBase.h"
 #include "GC_UE4CPPGameModeBase.generated.h"
 
+class AEnemy;
 class AInGameHUD;
 
 UCLASS()
@@ -23,14 +24,27 @@ public:
 	bool bIsGameFinished = false;
 	bool bIsTouched = false;
 
+	int NPCCount;
+
+	UPROPERTY(EditAnywhere)
+		TSubclassOf<AActor> Enemy;
+
+	AActor* EnemySpawn;
+
 protected:
 	
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
+	FTimerHandle TimerHandle;
+
 
 public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
+
+	void SpawnNPC();
+
+	void DelayedSpawn();
 
 };

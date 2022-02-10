@@ -6,7 +6,6 @@
 #include "Perception/AIPerceptionComponent.h"
 #include "Perception/AIPerceptionSystem.h"
 #include "Kismet/GameplayStatics.h"
-#include "MainLevel_LevelScriptActor.h"
 #include "Engine/World.h"
 #include "BehaviorTree/BlackboardComponent.h"
 
@@ -36,9 +35,9 @@ void AGoblin_Controller::OnPossess(APawn* InPawn)
 	Super::OnPossess(InPawn);
 	FActorSpawnParameters SpawnParams;
 	SpawnParams.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AdjustIfPossibleButAlwaysSpawn;		
-	int FoodCount;
+	int FoodCount=0;
 	if (InPawn) {
-
+		//configs the aiperceptioncomponent
 		SightConfig->SightRadius = 1000;
 		SightConfig->LoseSightRadius = 1050;
 		SightConfig->PeripheralVisionAngleDegrees = 65.0f;
@@ -49,23 +48,24 @@ void AGoblin_Controller::OnPossess(APawn* InPawn)
 		PerceptionComponent->SetDominantSense(SightConfig->GetSenseImplementation());
 		PerceptionComponent->OnPerceptionUpdated.AddDynamic(this, &AGoblin_Controller::SeePlayer);
 
-		for (int i ; i<SpotArray.Num();i++)
+		for (int i=0; i<SpotArray.Num();i++)
 		{
 			if (Cast<AFoodSpot>(SpotArray[i])->FoodSnapped) FoodCount++;
 		}
 
-		if (FoodCount == SpotArray.Num())
+		if (FoodCount < SpotArray.Num())
 		{
-			GetNewSpot();
 
-			//starts the bt and configs the aiperceptioncomponent
 			RunBehaviorTree(DefaultBehaviorTree);
+
+			//starts the bt
 			Blackboard->SetValueAsObject("SelfActor", GetOwner());
 			Blackboard->SetValueAsObject("DroppedFood", nullptr);
 			Blackboard->SetValueAsVector("SpawnPoint", InPawn->GetActorLocation());
 
 			FoodToStore = GetWorld()->SpawnActor<AFoodBehaviour>(FoodToSpawn, InPawn->GetActorTransform(), SpawnParams);
 			Cast<AEnemy>(InPawn)->PickupItem(FoodToStore);
+			GetNewSpot();
 		}
 		else 
 		{

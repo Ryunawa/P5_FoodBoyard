@@ -3,9 +3,13 @@
 
 #include "BTTask_DestroySelf.h"
 #include "AIController.h"
+#include "GC_UE4CPPGameModeBase.h"
+#include "Kismet/GameplayStatics.h"
 
 EBTNodeResult::Type UBTTask_DestroySelf::ExecuteTask(UBehaviorTreeComponent& OwnerComp, uint8* NodeMemory)
 {
+	AGC_UE4CPPGameModeBase* GM = Cast<AGC_UE4CPPGameModeBase>(UGameplayStatics::GetGameMode(this));
+	GM->DelayedSpawn();	
 	OwnerComp.GetAIOwner()->GetPawn()->Destroy();
 	return EBTNodeResult::Succeeded;
 }

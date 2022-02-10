@@ -17,6 +17,6 @@ EBTNodeResult::Type UBTTask_GetRandomPosition::ExecuteTask(UBehaviorTreeComponen
 	FVector res;
 	if(!NavArea->K2_GetRandomLocationInNavigableRadius(GetWorld(), NPC->GetActorLocation(), res, 9999.0f)) return EBTNodeResult::Failed;
 	BB->SetValueAsInt("SpotReached", BB->GetValueAsInt("SpotReached") + 1);
-	BB->SetValueAsVector("SpotReached", res);
+	BB->SetValueAsVector("SelectedPosition", res);
 	return EBTNodeResult::Succeeded;
 }
