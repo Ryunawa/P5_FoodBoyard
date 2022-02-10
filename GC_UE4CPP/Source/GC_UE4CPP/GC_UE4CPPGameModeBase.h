@@ -25,6 +25,7 @@ public:
 	bool bIsTouched = false;
 
 	int NPCCount;
+	int i = 0;
 
 	UPROPERTY(EditAnywhere)
 		TSubclassOf<AActor> Enemy;

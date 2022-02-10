@@ -40,13 +40,14 @@ void AGC_UE4CPPGameModeBase::WinLoseCondition()
 		GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Blue, TEXT("Aled ?")); // debug
 	}
 	// Lose condition
-	else if(bIsTouched)
+	else if(bIsTouched && i < 1)
 	{
 		if(HUD)
 		{
 			HUD->LoseScreen();
 		}
-		bIsGameFinished = true;		
+		bIsGameFinished = true;	
+		i++;
 	}
 }
 
