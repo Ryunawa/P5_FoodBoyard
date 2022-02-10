@@ -1,2 +1,0 @@
-C:\Users\rdouet\Documents\GitHub\P5_UE4\GC_UE4CPP\Intermediate\Build\Win64\UE4Editor\Development\GC_UE4CPP\Definitions.GC_UE4CPP.h
-C:\Users\rdouet\Documents\GitHub\P5_UE4\GC_UE4CPP\Source\GC_UE4CPP\GC_UE4CPP.h
