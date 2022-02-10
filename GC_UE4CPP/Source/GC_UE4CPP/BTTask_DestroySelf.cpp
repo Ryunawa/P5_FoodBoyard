@@ -10,6 +10,7 @@ EBTNodeResult::Type UBTTask_DestroySelf::ExecuteTask(UBehaviorTreeComponent& Own
 {
 	AGC_UE4CPPGameModeBase* GM = Cast<AGC_UE4CPPGameModeBase>(UGameplayStatics::GetGameMode(this));
 	GM->DelayedSpawn();	
+	GM->NPCCount--;
 	OwnerComp.GetAIOwner()->GetPawn()->Destroy();
 	return EBTNodeResult::Succeeded;
 }

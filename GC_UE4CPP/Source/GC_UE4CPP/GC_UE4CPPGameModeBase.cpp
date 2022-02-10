@@ -2,6 +2,7 @@
 #include "Chest.h"
 #include "InGameHUD.h"
 #include "Enemy.h"
+#include "FoodSpot.h"
 #include "Kismet/GameplayStatics.h"
 
 // Sets default values
@@ -15,9 +16,16 @@ AGC_UE4CPPGameModeBase::AGC_UE4CPPGameModeBase()
 void AGC_UE4CPPGameModeBase::BeginPlay()
 {
 	Super::BeginPlay();
+	FActorSpawnParameters SpawnParams;
+	SpawnParams.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AdjustIfPossibleButAlwaysSpawn;
 	SpawnNPC();
 	SpawnNPC();
 	GetWorldTimerManager().SetTimer(*new FTimerHandle(), this, &AGC_UE4CPPGameModeBase::SpawnNPC, 60, false);
+	TArray<AActor*> SpotArray;
+	UGameplayStatics::GetAllActorsOfClass(GetWorld(), AFoodSpot::StaticClass(), SpotArray);
+	AFoodBehaviour* Food = GetWorld()->SpawnActor<AFoodBehaviour>(FoodToSpawn, EnemySpawn->GetTransform(), SpawnParams);
+	Cast<AFoodSpot>(SpotArray[FMath::RandRange(0, SpotArray.Num() - 1)])->SnapOnPlate(Food);
+	
 }
 
 void AGC_UE4CPPGameModeBase::Tick(float DeltaTime)
@@ -55,9 +63,10 @@ void AGC_UE4CPPGameModeBase::SpawnNPC()
 {
 	NPCCount++;
 	FActorSpawnParameters SpawnParams;
+	SpawnParams.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AdjustIfPossibleButAlwaysSpawn;
 	AEnemy* EnemySpawned;
-	if(EnemySpawn)EnemySpawned = GetWorld()->SpawnActor<AEnemy>(Enemy, EnemySpawn->GetActorTransform(), SpawnParams);
-	else GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Blue, TEXT("spawnpoint not set"));
+	EnemySpawned = GetWorld()->SpawnActor<AEnemy>(Enemy, EnemySpawn->GetActorTransform(), SpawnParams);
+	GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Red, TEXT("Spawned from gm")); // debug
 }
 
 void AGC_UE4CPPGameModeBase::DelayedSpawn() 

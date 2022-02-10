@@ -75,9 +75,12 @@ void AItemHolder_Character::StoreChest(AChest* Chest)
 //To drop the food on the floor 
 void AItemHolder_Character::DropItem()
 {
-	EquippedItem->DetachFromActor(FDetachmentTransformRules::KeepWorldTransform); // Call the method to unsnap from the player hand
-	EquippedItem->TogglePhysics(true);
-	GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Green, TEXT("Food dropped")); // debug
+	if (EquippedItem) 
+	{
+		EquippedItem->DetachFromActor(FDetachmentTransformRules::KeepWorldTransform); // Call the method to unsnap from the player hand
+		EquippedItem->TogglePhysics(true);
+		GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Green, TEXT("Food dropped")); // debug
+	}
 	EquippedItem = nullptr;
 	bIsCarryingFood = false;
 	MovementSpeed *= 2.0f;

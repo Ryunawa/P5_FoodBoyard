@@ -30,6 +30,9 @@ public:
 	UPROPERTY(EditAnywhere)
 		TSubclassOf<AActor> Enemy;
 
+	UPROPERTY(EditAnywhere)
+		TSubclassOf<AActor> FoodToSpawn;
+
 	AActor* EnemySpawn;
 
 protected:

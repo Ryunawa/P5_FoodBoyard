@@ -15,7 +15,9 @@ EBTNodeResult::Type UBTTask_StoreFood::ExecuteTask(UBehaviorTreeComponent& Owner
 	UBlackboardComponent* BB = OwnerComp.GetAIOwner()->GetBlackboardComponent();
 	AFoodSpot* Spot = Cast<AFoodSpot>(BB->GetValueAsObject("SelectedSpot"));	
 	if(Spot->FoodSnapped) return EBTNodeResult::Failed;
-	NPC->StorePlate(Spot);
 	BB->SetValueAsObject("SelectedSpot", nullptr);
+	if(!NPC->bIsCarryingFood) return EBTNodeResult::Succeeded;
+	NPC->StorePlate(Spot);
+	BB->SetValueAsBool("bIsFoodStored",true);
 	return EBTNodeResult::Succeeded;
 }

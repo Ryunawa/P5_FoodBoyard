@@ -83,7 +83,7 @@ void AGoblin_Controller::GetNewSpot()
 {
 	int NewSpot;
 	do {
-		NewSpot = rand() % SpotArray.Num();
+		NewSpot = FMath::RandRange(0,SpotArray.Num()-1);
 	} while (NewSpot == SpotId);
 	SpotId = NewSpot;
 	Blackboard->SetValueAsObject("SelectedSpot", SpotArray[SpotId]);
