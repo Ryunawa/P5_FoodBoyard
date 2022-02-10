@@ -41,7 +41,7 @@ public:
     void LookUpAtRate(float Rate);
     void Zoom(float Rate);
     void InteractFood();
-
+    
     bool bInteracting;
     int ZoomSpeed;
     
@@ -52,7 +52,8 @@ protected:
     
     float SphereRange = 200;
     bool bHit;
-    
+
+    FVector* Dir;
     FVector CurrentVelocity;
     TArray<AActor*> ActorsToIgnore;
     TArray<FHitResult> HitArray;

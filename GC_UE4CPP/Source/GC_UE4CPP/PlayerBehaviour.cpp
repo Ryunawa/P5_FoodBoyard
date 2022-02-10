@@ -11,6 +11,7 @@
 #include "GameFramework/SpringArmComponent.h"
 #include "Kismet/KismetSystemLibrary.h"
 #include "Math/UnitConversion.h"
+#include "Microsoft/AllowMicrosoftPlatformTypes.h"
 #include "Perception/AISense_Sight.h"
 
 // Sets default values
@@ -97,12 +98,16 @@ void APlayerBehaviour::LookUpAtRate(float Rate)
 
 void APlayerBehaviour::Move_XAxis(float Rate)
 {
-	AddMovementInput(GetFollowCamera()->GetForwardVector(),Rate * MovementSpeed);
+	Dir = new FVector(FollowCamera->GetForwardVector().X, FollowCamera->GetForwardVector().Y, 0.f);
+	Dir->Normalize();
+	AddMovementInput(*Dir,Rate * MovementSpeed);
 }
 
 void APlayerBehaviour::Move_YAxis(float Rate)
 {
-	AddMovementInput(GetFollowCamera()->GetRightVector(), Rate * MovementSpeed);
+	Dir = new FVector(-FollowCamera->GetForwardVector().Y, FollowCamera->GetForwardVector().X, 0.f);
+	Dir->Normalize();
+	AddMovementInput(*Dir, Rate * MovementSpeed);
 }
 
 // Set the distance between the player and the camera
@@ -143,17 +148,17 @@ void APlayerBehaviour::InteractFood()
 		{
 			if(Plate == nullptr)
 			{
-				Plate = Cast<AFoodSpot>(HitResult.Actor); // Check if the actor is a FoodSpot actor
+				Plate = Cast<AFoodSpot>(HitResult.Actor); // Check if one of the actors is a FoodSpot actor
 			}
 			
 			if(Food == nullptr)
 			{
-				Food = Cast<AFoodBehaviour>(HitResult.Actor); // Check if the the actor hit is a FoodBehaviour actor
+				Food = Cast<AFoodBehaviour>(HitResult.Actor); // Check if one of the actors hit is a FoodBehaviour actor
 			}
 
 			if(Chest == nullptr)
 			{
-				Chest = Cast<AChest>(HitResult.Actor); // Check is the actor hit is a Chest actor
+				Chest = Cast<AChest>(HitResult.Actor); // Check is one of the actors hit is a Chest actor
 			}
 			
 			//GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Blue, HitResult.Actor->GetName()); // debug
