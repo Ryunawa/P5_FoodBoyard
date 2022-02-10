@@ -38,7 +38,7 @@ void AItemHolder_Character::SetupPlayerInputComponent(UInputComponent* PlayerInp
 // To pick up food
 void AItemHolder_Character::PickupItem(AFoodBehaviour* FoodToEquip)
 {
-	FoodToEquip->TogglePhysics(false);
+	//FoodToEquip->TogglePhysics(false);
 	FoodToEquip->AttachToComponent(GetMesh(), FAttachmentTransformRules::SnapToTargetNotIncludingScale, TEXT("Fist_RSocket")); // Attach the food to the right hand
 	FoodToEquip->SetActorRelativeScale3D(FVector(0.03f, 0.03f, 0.03f)); // Set a smaller size to the food
 	GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Green, TEXT("Food picked")); // debug

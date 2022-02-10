@@ -25,7 +25,10 @@ protected:
 	TArray<AActor*> SpotArray;
 
 	UPROPERTY(EditAnywhere)
-		UBehaviorTree* BehaviorTree;
+		UBehaviorTree* DefaultBehaviorTree;
+
+	UPROPERTY(EditAnywhere)
+		UBehaviorTree* PatrolBehaviorTree;
 
 	UPROPERTY(VisibleAnywhere)
 		UAISenseConfig_Sight* SightConfig;

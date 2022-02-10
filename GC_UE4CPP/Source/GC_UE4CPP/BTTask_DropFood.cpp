@@ -10,6 +10,7 @@
 EBTNodeResult::Type UBTTask_DropFood::ExecuteTask(UBehaviorTreeComponent& OwnerComp, uint8* NodeMemory)
 {
 	AEnemy* NPC = Cast<AEnemy>(OwnerComp.GetAIOwner()->GetPawn());
+	if(!OwnerComp.GetAIOwner()->GetBlackboardComponent()->GetValueAsObject("DroppedFood")) return EBTNodeResult::Succeeded;
 	OwnerComp.GetAIOwner()->GetBlackboardComponent()->SetValueAsObject("DroppedFood", Cast<UObject>(NPC->GetItem()));
 	NPC->DropItem();
 	return EBTNodeResult::Succeeded;

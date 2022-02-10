@@ -33,11 +33,11 @@ void AGoblin_Controller::OnPossess(APawn* InPawn)
 {	
 	Super::OnPossess(InPawn);
 	FActorSpawnParameters SpawnParams;
-	
+	SpawnParams.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AdjustIfPossibleButAlwaysSpawn;
 	if (InPawn) {
 		
 		//starts the bt and configs the aiperceptioncomponent
-		RunBehaviorTree(BehaviorTree);
+		RunBehaviorTree(DefaultBehaviorTree);
 		Blackboard->SetValueAsObject("SelfActor", GetOwner());
 		Blackboard->SetValueAsObject("DroppedFood", nullptr);
 		Blackboard->SetValueAsVector("SpawnPoint", InPawn->GetActorLocation());
@@ -53,8 +53,9 @@ void AGoblin_Controller::OnPossess(APawn* InPawn)
 		PerceptionComponent->SetDominantSense(SightConfig->GetSenseImplementation());
 		PerceptionComponent->OnPerceptionUpdated.AddDynamic(this, &AGoblin_Controller::SeePlayer);
 		
-		//FoodToStore = GetWorld()->SpawnActor<AFoodBehaviour>(FoodToSpawn, InPawn->GetActorTransform(), SpawnParams);
-		//FoodToStore->AttachToComponent(Cast<AEnemy>(InPawn)->GetMesh(), FAttachmentTransformRules::SnapToTargetNotIncludingScale, TEXT("Fist_RSocket"));
+		FoodToStore = GetWorld()->SpawnActor<AFoodBehaviour>(FoodToSpawn, InPawn->GetActorTransform(), SpawnParams);
+		Cast<AEnemy>(InPawn)->PickupItem(FoodToStore);
+
 	}
 }
 

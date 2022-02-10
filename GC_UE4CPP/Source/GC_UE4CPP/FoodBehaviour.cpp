@@ -15,7 +15,7 @@ void AFoodBehaviour::BeginPlay()
 {
 	Super::BeginPlay();
 	RandomFood();
-	TogglePhysics(true);
+	//TogglePhysics(true);
 }
 
 // Called every frame
