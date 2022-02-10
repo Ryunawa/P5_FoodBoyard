@@ -26,7 +26,7 @@ void AFoodBehaviour::Tick(float DeltaTime)
 
 void AFoodBehaviour::RandomFood()
 {
-	RandIndex = FMath::RandRange(0, Foods.Num()-1); // Choose a random number between 0 and 12
+	RandIndex = FMath::RandRange(0, Foods.Num()-1); // Choose a random number in the array Foods
 	Food->SetStaticMesh(Foods[RandIndex]); // Set the static mesh component of the BP_Food
 }
 
