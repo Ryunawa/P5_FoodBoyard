@@ -40,7 +40,6 @@ void EmptyLinkFunctionForGeneratedCodeSeePlayer() {}
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_USeePlayer_Statics::Class_MetaDataParams[] = {
-		{ "Comment", "/**\n * \n */" },
 		{ "IncludePath", "SeePlayer.h" },
 		{ "ModuleRelativePath", "SeePlayer.h" },
 	};
@@ -72,7 +71,7 @@ void EmptyLinkFunctionForGeneratedCodeSeePlayer() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(USeePlayer, 1800921643);
+	IMPLEMENT_CLASS(USeePlayer, 4210095981);
 	template<> GC_UE4CPP_API UClass* StaticClass<USeePlayer>()
 	{
 		return USeePlayer::StaticClass();

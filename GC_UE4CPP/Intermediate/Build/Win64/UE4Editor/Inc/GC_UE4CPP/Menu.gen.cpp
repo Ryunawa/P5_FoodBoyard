@@ -46,7 +46,6 @@ void EmptyLinkFunctionForGeneratedCodeMenu() {}
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UMenu_Statics::Class_MetaDataParams[] = {
-		{ "Comment", "/**\n * \n */" },
 		{ "IncludePath", "Menu.h" },
 		{ "ModuleRelativePath", "Menu.h" },
 	};
@@ -89,7 +88,7 @@ void EmptyLinkFunctionForGeneratedCodeMenu() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UMenu, 3979403171);
+	IMPLEMENT_CLASS(UMenu, 949486952);
 	template<> GC_UE4CPP_API UClass* StaticClass<UMenu>()
 	{
 		return UMenu::StaticClass();

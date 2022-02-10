@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\GC_UE4CPP.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{60DB0EF3-F4FC-4C5E-B359-572DB4811E71}</UniqueIdentifier>
+      <UniqueIdentifier>{9ABB7409-D5EC-46AB-BF9E-C3E3134C86DF}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\GC_UE4CPP.Target.cs">
       <Filter>Source</Filter>
@@ -12,7 +12,7 @@
       <Filter>Source</Filter>
     </None>
     <Filter Include="Config">
-      <UniqueIdentifier>{7CEFEF41-44EB-41A0-886C-2BDE7B29996D}</UniqueIdentifier>
+      <UniqueIdentifier>{B1009EF9-6802-424C-8401-2242836F26AA}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -27,7 +27,7 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\GC_UE4CPP">
-      <UniqueIdentifier>{ECEEAAAC-6A71-4676-AF21-88DCDA8C767C}</UniqueIdentifier>
+      <UniqueIdentifier>{66A78707-CEC8-48A0-871D-896A1E65842C}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\GC_UE4CPP\BTTask_DestroySelf.cpp">
       <Filter>Source\GC_UE4CPP</Filter>
@@ -45,6 +45,18 @@
       <Filter>Source\GC_UE4CPP</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\GC_UE4CPP\BTTask_GrabFood.h">
+      <Filter>Source\GC_UE4CPP</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\GC_UE4CPP\BTTask_StoreFood.cpp">
+      <Filter>Source\GC_UE4CPP</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\GC_UE4CPP\BTTask_StoreFood.h">
+      <Filter>Source\GC_UE4CPP</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\GC_UE4CPP\ButtonInteraction.cpp">
+      <Filter>Source\GC_UE4CPP</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\GC_UE4CPP\ButtonInteraction.h">
       <Filter>Source\GC_UE4CPP</Filter>
     </ClInclude>
     <ClCompile Include="..\..\Source\GC_UE4CPP\Chest.cpp">

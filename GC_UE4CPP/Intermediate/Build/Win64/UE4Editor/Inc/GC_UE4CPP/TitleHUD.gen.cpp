@@ -47,7 +47,6 @@ void EmptyLinkFunctionForGeneratedCodeTitleHUD() {}
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ATitleHUD_Statics::Class_MetaDataParams[] = {
-		{ "Comment", "/**\n *\n */" },
 		{ "HideCategories", "Rendering Actor Input Replication" },
 		{ "IncludePath", "TitleHUD.h" },
 		{ "ModuleRelativePath", "TitleHUD.h" },
@@ -91,7 +90,7 @@ void EmptyLinkFunctionForGeneratedCodeTitleHUD() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ATitleHUD, 2995470019);
+	IMPLEMENT_CLASS(ATitleHUD, 4141391295);
 	template<> GC_UE4CPP_API UClass* StaticClass<ATitleHUD>()
 	{
 		return ATitleHUD::StaticClass();

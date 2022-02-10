@@ -11,6 +11,7 @@
 #include "GameFramework/SpringArmComponent.h"
 #include "Kismet/KismetSystemLibrary.h"
 #include "Math/UnitConversion.h"
+#include "Microsoft/AllowMicrosoftPlatformTypes.h"
 #include "Perception/AISense_Sight.h"
 
 // Sets default values

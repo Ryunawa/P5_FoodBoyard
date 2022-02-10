@@ -51,7 +51,6 @@ void EmptyLinkFunctionForGeneratedCodeMyPlayerController() {}
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AMyPlayerController_Statics::Class_MetaDataParams[] = {
-		{ "Comment", "/**\n * \n */" },
 		{ "HideCategories", "Collision Rendering Utilities|Transformation" },
 		{ "IncludePath", "MyPlayerController.h" },
 		{ "ModuleRelativePath", "MyPlayerController.h" },
@@ -102,7 +101,7 @@ void EmptyLinkFunctionForGeneratedCodeMyPlayerController() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AMyPlayerController, 1695810697);
+	IMPLEMENT_CLASS(AMyPlayerController, 3931442942);
 	template<> GC_UE4CPP_API UClass* StaticClass<AMyPlayerController>()
 	{
 		return AMyPlayerController::StaticClass();
